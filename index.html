@@ -4,13 +4,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Salvador Llácer Ivars. Perfil técnico-creativo: diseño, imagen y desarrollo multiplataforma." />
+    <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo: diseño de producto (CATIA), desarrollo multiplataforma, administración (ERP) e imagen corporativa. Abierto a nuevas oportunidades." />
     <meta name="theme-color" content="#0a0a0b" />
     <title>Salvador Llácer Ivars — Diseño + Desarrollo</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0b'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='none' stroke='%2300e08a' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300e08a'/%3E%3C/svg%3E" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Anti-flash de tema: aplica el tema guardado antes de pintar el CSS -->
+    <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('tema')||'dark')}catch(e){}})();</script>
 
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
@@ -38,10 +43,18 @@
           <div class="dropdown"><div class="dropdown__panel">
             <a href="#sobre-mi"><span data-i18n="nav.sobre">Sobre mí</span> <span class="flecha-menu">→</span></a>
             <a href="#programacion"><span data-i18n="nav.programacion">Programación</span> <span class="flecha-menu">→</span></a>
+            <a href="#formacion"><span data-i18n="nav.formacion">Formación</span> <span class="flecha-menu">→</span></a>
           </div></div>
         </li>
         <li class="nav__item">
-          <a href="#he-hecho" class="nav__label"><span data-i18n="nav.servicios">Servicios</span> <span class="caret">▾</span></a>
+          <a href="#empresas" class="nav__label"><span data-i18n="nav.empresas">Experiencia</span> <span class="caret">▾</span></a>
+          <div class="dropdown"><div class="dropdown__panel">
+            <a href="#empresas">Weidner Ibérica <span class="flecha-menu">→</span></a>
+            <a href="#empresas">Interpreta Natura <span class="flecha-menu">→</span></a>
+          </div></div>
+        </li>
+        <li class="nav__item">
+          <a href="#he-hecho" class="nav__label"><span data-i18n="nav.servicios">Competencias</span> <span class="caret">▾</span></a>
           <div class="dropdown"><div class="dropdown__panel">
             <a href="#he-hecho"><span data-i18n="s1.t">Diseño gráfico</span> <span class="flecha-menu">→</span></a>
             <a href="#he-hecho"><span data-i18n="s2.t">Fotografía</span> <span class="flecha-menu">→</span></a>
@@ -49,13 +62,6 @@
             <a href="#he-hecho"><span data-i18n="s4.t">Dibujo e ilustración</span> <span class="flecha-menu">→</span></a>
             <a href="#he-hecho"><span data-i18n="s5.t">Delineación industrial</span> <span class="flecha-menu">→</span></a>
             <a href="#he-hecho"><span data-i18n="s6.t">Gestión administrativa</span> <span class="flecha-menu">→</span></a>
-          </div></div>
-        </li>
-        <li class="nav__item">
-          <a href="#empresas" class="nav__label"><span data-i18n="nav.empresas">Empresas</span> <span class="caret">▾</span></a>
-          <div class="dropdown"><div class="dropdown__panel">
-            <a href="#empresas">Weidner Ibérica <span class="flecha-menu">→</span></a>
-            <a href="#empresas">Interpreta Natura <span class="flecha-menu">→</span></a>
           </div></div>
         </li>
         <li class="nav__item">
@@ -74,19 +80,23 @@
             <a href="#me-gusta"><span data-i18n="p4.t">Dibujo</span> <span class="flecha-menu">→</span></a>
           </div></div>
         </li>
+        <li class="nav__item nav__contacto-movil">
+          <a href="#contacto" class="nav__label js-contacto"><span data-i18n="nav.contacto">Contacto</span> <span class="flecha-menu">→</span></a>
+        </li>
       </ul>
 
       <div class="nav__derecha">
         <span class="status"><i></i><span data-i18n="status">Disponible</span></span>
         <div class="lang" role="group" aria-label="Idioma / Language">
-          <button class="lang__btn is-active" data-lang="es" aria-pressed="true" title="Español">🇪🇸</button>
-          <button class="lang__btn" data-lang="en" aria-pressed="false" title="English">🇬🇧</button>
+          <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="Español" title="Español">🇪🇸</button>
+          <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="English" title="English">🇬🇧</button>
         </div>
         <button class="tema" id="tema" aria-pressed="false" title="Modo claro/oscuro" aria-label="Cambiar tema">
           <svg class="tema__ico tema__ico--sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg>
           <svg class="tema__ico tema__ico--luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
         <a href="#contacto" class="nav__cta magnet js-contacto"><span data-i18n="nav.contacto">Contacto</span> <span class="flecha">→</span></a>
+        <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
       </div>
     </nav>
 
@@ -102,15 +112,15 @@
           </span>
           <span class="titulo-mask" aria-hidden="true">
             <span class="linea"><span data-i18n="word1">Diseño</span></span>
-            <span class="linea"><span data-i18n="word2">Edición</span></span>
-            <span class="linea"><span data-i18n="word3">Industria</span></span>
+            <span class="linea"><span data-i18n="word2">Fábrica</span></span>
+            <span class="linea"><span data-i18n="word3">Código</span></span>
           </span>
         </h1>
 
         <div class="hero__pie">
           <p class="hero__frase reveal"><span data-i18n="hero.frase">Pienso como diseñador y ejecuto como desarrollador. Convierto ideas en interfaces y aplicaciones que se ven profesionales y funcionan de verdad.</span></p>
           <div class="hero__acciones">
-            <a href="#sobre-mi" class="boton boton--verde magnet"><span data-i18n="btn.propuesta">Mi propuesta</span> <span class="flecha">→</span></a>
+            <a href="#empresas" class="boton boton--verde magnet"><span data-i18n="btn.propuesta">Mi experiencia</span> <span class="flecha">→</span></a>
             <a href="#contacto" class="boton boton--linea magnet js-contacto"><span data-i18n="btn.hablemos">Hablemos</span></a>
           </div>
         </div>
@@ -120,8 +130,8 @@
 
     <div class="marquee" aria-label="Herramientas y tecnologías">
       <div class="marquee__track">
-        <ul class="marquee__grupo"><li>Illustrator</li><li>InDesign</li><li>Premiere</li><li>Audition</li><li>Acrobat</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li><li>Android</li><li>DAM</li></ul>
-        <ul class="marquee__grupo" aria-hidden="true"><li>Illustrator</li><li>InDesign</li><li>Premiere</li><li>Audition</li><li>Acrobat</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li><li>Android</li><li>DAM</li></ul>
+        <ul class="marquee__grupo"><li>CATIA V5</li><li>CATIA Xperience</li><li>Geinprod</li><li>Illustrator</li><li>InDesign</li><li>Premiere</li><li>Audition</li><li>Acrobat</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li><li>Android</li></ul>
+        <ul class="marquee__grupo" aria-hidden="true"><li>CATIA V5</li><li>CATIA Xperience</li><li>Geinprod</li><li>Illustrator</li><li>InDesign</li><li>Premiere</li><li>Audition</li><li>Acrobat</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li><li>Android</li></ul>
       </div>
     </div>
 
@@ -148,78 +158,44 @@
         </div>
       </section>
 
-      <!-- 02 Lo que he hecho -->
-      <section id="he-hecho" class="seccion" aria-labelledby="t-hecho">
-        <div class="seccion__head"><span class="seccion__num">02</span><h2 id="t-hecho" class="seccion__titulo"><span data-i18n="sec.hecho">Lo que he hecho</span></h2></div>
-        <p class="seccion__sub reveal"><span data-i18n="sec.hecho.sub">Experiencia que se traduce en servicios: de la idea al entregable.</span></p>
-        <ul class="filas">
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg><h3 class="fila__titulo"><span data-i18n="s1.t">Diseño gráfico</span></h3><p class="fila__desc"><span data-i18n="s1.d">Identidad y piezas con intención, listas para producción.</span></p><span class="fila__marca">Illustrator · InDesign</span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><h3 class="fila__titulo"><span data-i18n="s2.t">Fotografía</span></h3><p class="fila__desc"><span data-i18n="s2.d">Composición, luz y narrativa al servicio de tu marca.</span></p><span class="fila__marca"><span data-i18n="s2.m">Luz · Encuadre</span></span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg><h3 class="fila__titulo"><span data-i18n="s3.t">Edición de vídeo</span></h3><p class="fila__desc"><span data-i18n="s3.d">Ritmo, sonido y montaje para contenido que retiene.</span></p><span class="fila__marca">Audition · Premiere</span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg><h3 class="fila__titulo"><span data-i18n="s4.t">Dibujo e ilustración</span></h3><p class="fila__desc"><span data-i18n="s4.d">Expresión y forma propia, sin recursos genéricos.</span></p><span class="fila__marca"><span data-i18n="s4.m">Trazo · Color</span></span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><h3 class="fila__titulo"><span data-i18n="s5.t">Delineación industrial</span></h3><p class="fila__desc"><span data-i18n="s5.d">Precisión y planos cuando el detalle importa.</span></p><span class="fila__marca"><span data-i18n="s5.m">Geometría</span></span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg><h3 class="fila__titulo"><span data-i18n="s6.t">Gestión administrativa</span></h3><p class="fila__desc"><span data-i18n="s6.d">Método y orden para que el proyecto fluya.</span></p><span class="fila__marca"><span data-i18n="s6.m">Organización</span></span></li>
-        </ul>
-      </section>
-
-      <!-- 03 Empresas -->
+      <!-- 02 Experiencia -->
       <section id="empresas" class="seccion" aria-labelledby="t-emp">
-        <div class="seccion__head"><span class="seccion__num">03</span><h2 id="t-emp" class="seccion__titulo"><span data-i18n="sec.empresas">Empresas</span></h2></div>
-        <p class="seccion__sub reveal"><span data-i18n="sec.empresas.sub">Colaboraciones y trabajo realizado para marcas del sector técnico, industrial y de producto natural.</span></p>
+        <div class="seccion__head"><span class="seccion__num">02</span><h2 id="t-emp" class="seccion__titulo"><span data-i18n="sec.empresas">Experiencia</span></h2></div>
+        <p class="seccion__sub reveal"><span data-i18n="sec.empresas.sub">Experiencia real que combina diseño, fabricación y trabajo administrativo.</span></p>
 
         <div class="empresas">
-          <!-- Weidner Ibérica -->
+          <!-- ⚠️ Si la empresa de las torres de apilamiento no es Weidner Ibérica, cambia el nombre aquí y en el nav -->
           <article class="empresa reveal">
             <div class="empresa__media">
-              <!-- Miniatura: portada de catálogo sobre plano industrial -->
               <svg class="empresa__blueprint" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <pattern id="gridW" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-                  </pattern>
-                </defs>
+                <defs><pattern id="gridW" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/></pattern></defs>
                 <rect width="400" height="220" fill="url(#gridW)"/>
-                <!-- Portada de catálogo -->
                 <rect x="34" y="44" width="150" height="150" fill="currentColor" opacity="0.06"/>
                 <rect x="28" y="38" width="150" height="150" fill="currentColor" opacity="0.05" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2"/>
                 <rect x="28" y="38" width="150" height="9" fill="currentColor" opacity="0.75"/>
                 <text x="40" y="72" font-family="Archivo, Arial, sans-serif" font-size="13" font-weight="800" fill="currentColor" opacity="0.85" letter-spacing="1">CATÁLOGO</text>
                 <text x="40" y="88" font-family="Archivo, Arial, sans-serif" font-size="9" font-weight="700" fill="currentColor" opacity="0.55" letter-spacing="3">TÉCNICO · 2024</text>
-                <g fill="currentColor">
-                  <rect x="40" y="102" width="110" height="3" opacity="0.3"/>
-                  <rect x="40" y="110" width="86" height="3" opacity="0.25"/>
-                  <rect x="40" y="118" width="98" height="3" opacity="0.3"/>
-                  <rect x="40" y="126" width="70" height="3" opacity="0.22"/>
-                </g>
-                <g fill="currentColor" opacity="0.6">
-                  <rect x="40" y="160" width="2" height="18"/><rect x="44" y="160" width="1" height="18"/><rect x="47" y="160" width="3" height="18"/><rect x="52" y="160" width="1" height="18"/><rect x="55" y="160" width="2" height="18"/><rect x="60" y="160" width="1" height="18"/><rect x="63" y="160" width="3" height="18"/><rect x="69" y="160" width="1" height="18"/><rect x="72" y="160" width="2" height="18"/><rect x="77" y="160" width="1" height="18"/><rect x="80" y="160" width="3" height="18"/><rect x="86" y="160" width="2" height="18"/><rect x="91" y="160" width="1" height="18"/><rect x="94" y="160" width="2" height="18"/>
-                </g>
+                <g fill="currentColor"><rect x="40" y="102" width="110" height="3" opacity="0.3"/><rect x="40" y="110" width="86" height="3" opacity="0.25"/><rect x="40" y="118" width="98" height="3" opacity="0.3"/><rect x="40" y="126" width="70" height="3" opacity="0.22"/></g>
+                <g fill="currentColor" opacity="0.6"><rect x="40" y="160" width="2" height="18"/><rect x="44" y="160" width="1" height="18"/><rect x="47" y="160" width="3" height="18"/><rect x="52" y="160" width="1" height="18"/><rect x="55" y="160" width="2" height="18"/><rect x="60" y="160" width="1" height="18"/><rect x="63" y="160" width="3" height="18"/><rect x="69" y="160" width="1" height="18"/><rect x="72" y="160" width="2" height="18"/><rect x="77" y="160" width="1" height="18"/><rect x="80" y="160" width="3" height="18"/><rect x="86" y="160" width="2" height="18"/><rect x="91" y="160" width="1" height="18"/><rect x="94" y="160" width="2" height="18"/></g>
                 <polygon points="150,150 162,157 162,171 150,178 138,171 138,157" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
                 <circle cx="150" cy="164" r="3" fill="currentColor" opacity="0.6"/>
-                <!-- Engranaje -->
-                <g fill="none" stroke="currentColor" opacity="0.6">
-                  <circle cx="298" cy="86" r="30" stroke-width="15" stroke-dasharray="5 9"/>
-                  <circle cx="298" cy="86" r="12" stroke-width="1.5"/>
-                  <line x1="298" y1="46" x2="298" y2="58"/><line x1="298" y1="114" x2="298" y2="126"/>
-                  <line x1="258" y1="86" x2="270" y2="86"/><line x1="326" y1="86" x2="338" y2="86"/>
-                </g>
+                <g fill="none" stroke="currentColor" opacity="0.6"><circle cx="298" cy="86" r="30" stroke-width="15" stroke-dasharray="5 9"/><circle cx="298" cy="86" r="12" stroke-width="1.5"/><line x1="298" y1="46" x2="298" y2="58"/><line x1="298" y1="114" x2="298" y2="126"/><line x1="258" y1="86" x2="270" y2="86"/><line x1="326" y1="86" x2="338" y2="86"/></g>
                 <circle cx="298" cy="86" r="3.5" fill="currentColor" opacity="0.6"/>
-                <!-- Llave allen -->
                 <polygon points="250,150 262,157 262,171 250,178 238,171 238,157" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55"/>
-                <!-- Cotas -->
-                <g stroke="currentColor" stroke-width="0.9" opacity="0.5">
-                  <line x1="268" y1="140" x2="328" y2="140"/><line x1="268" y1="135" x2="268" y2="145"/><line x1="328" y1="135" x2="328" y2="145"/>
-                  <line x1="352" y1="56" x2="352" y2="116"/><line x1="347" y1="56" x2="357" y2="56"/><line x1="347" y1="116" x2="357" y2="116"/>
-                </g>
-                <g fill="currentColor" opacity="0.5" font-family="Archivo, Arial, sans-serif" font-size="9">
-                  <text x="286" y="134">Ø 68</text><text x="358" y="88">60 mm</text>
-                </g>
+                <g stroke="currentColor" stroke-width="0.9" opacity="0.5"><line x1="268" y1="140" x2="328" y2="140"/><line x1="268" y1="135" x2="268" y2="145"/><line x1="328" y1="135" x2="328" y2="145"/><line x1="352" y1="56" x2="352" y2="116"/><line x1="347" y1="56" x2="357" y2="56"/><line x1="347" y1="116" x2="357" y2="116"/></g>
+                <g fill="currentColor" opacity="0.5" font-family="Archivo, Arial, sans-serif" font-size="9"><text x="286" y="134">Ø 68</text><text x="358" y="88">60 mm</text></g>
               </svg>
             </div>
             <div class="empresa__cuerpo">
+              <span class="empresa__etiqueta"><span data-i18n="exp.ultima">Última empresa</span></span>
               <h3 class="empresa__nombre">Weidner Ibérica</h3>
-              <span class="empresa__rol"><span data-i18n="emp.weidner.rol">Diseño de catálogos técnicos</span></span>
-              <p class="empresa__txt"><span data-i18n="emp.weidner.txt">Maquetación y diseño editorial de catálogos de producto industrial, de la retícula a la imprenta.</span></p>
+              <span class="empresa__rol"><span data-i18n="exp.weidner.puesto">Diseño de producto · Administración · Imagen corporativa</span></span>
+              <ul class="empresa__lista">
+                <li><span data-i18n="exp.weidner.l1">Diseño desde cero de torres de apilamiento para logística en automoción (CATIA V5 / CATIA Xperience) y elaboración de la planimetría.</span></li>
+                <li><span data-i18n="exp.weidner.l2">Creación de la estructura de artículos (BOM) en el ERP Geinprod, emisión de órdenes de fabricación y seguimiento con Producción.</span></li>
+                <li><span data-i18n="exp.weidner.l3">Pedidos a proveedores, seguimiento y solicitud de materiales para fabricar las torres.</span></li>
+                <li><span data-i18n="exp.weidner.l4">Imagen corporativa: catálogos, banners, folletos, tarjetas de visita, stands de feria y firmas de correo.</span></li>
+              </ul>
               <a class="empresa__link" href="https://www.weidneriberica.com" target="_blank" rel="noopener"><span data-i18n="emp.web">Web oficial</span> <span class="flecha">↗</span></a>
             </div>
           </article>
@@ -235,16 +211,51 @@
             <div class="empresa__cuerpo">
               <div class="wordmark wordmark--sm">INTERPRETA<span>NATURA</span></div>
               <span class="empresa__rol"><span data-i18n="emp.interpreta.rol">Producción audiovisual</span></span>
-              <p class="empresa__txt"><span data-i18n="emp.interpreta.txt">Colaboración en la creación de piezas y vídeos de producto para su canal.</span></p>
+              <ul class="empresa__lista">
+                <li><span data-i18n="emp.interpreta.l1">Producción de vídeos para el canal de la marca.</span></li>
+                <li><span data-i18n="emp.interpreta.l2">Composición de música original para algunos de los vídeos.</span></li>
+                <li><span data-i18n="emp.interpreta.l3">Colaboración en guiones y en la grabación del contenido audiovisual.</span></li>
+                <li><span data-i18n="emp.interpreta.l4">Montaje y edición de vídeo con Adobe Premiere y Adobe Audition.</span></li>
+              </ul>
               <a class="empresa__link" href="https://www.youtube.com/watch?v=IwEHOaWaUZY" target="_blank" rel="noopener"><span data-i18n="emp.ver">Ver en YouTube</span> <span class="flecha">↗</span></a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- 04 Catálogos -->
+      <!-- 03 Formación -->
+      <section id="formacion" class="seccion" aria-labelledby="t-form">
+        <div class="seccion__head"><span class="seccion__num">03</span><h2 id="t-form" class="seccion__titulo"><span data-i18n="sec.form">Formación</span></h2></div>
+        <p class="seccion__sub reveal"><span data-i18n="sec.form.sub">Cuatro títulos de grado superior que combinan diseño, técnica y programación.</span></p>
+        <div class="formacion">
+          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t1">Desarrollo de Aplicaciones Multiplataforma</span></h3><p><span data-i18n="form.t1d">Programación Java y Android y desarrollo de apps multiplataforma.</span></p></article>
+          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t2">Diseño en Fabricación Mecánica</span></h3><p><span data-i18n="form.t2d">Diseño de producto en 3D, planos y documentación de fabricación.</span></p></article>
+          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t3">Artes Gráficas</span></h3><p><span data-i18n="form.t3d">Maquetación editorial, preimpresión y producción gráfica.</span></p></article>
+          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t4">Imagen</span></h3><p><span data-i18n="form.t4d">Fotografía, vídeo y tratamiento de imagen.</span></p></article>
+        </div>
+        <p class="formacion__tools-titulo"><span data-i18n="form.tools">Herramientas</span></p>
+        <div class="stack">
+          <span class="chip">CATIA V5</span><span class="chip">CATIA Xperience</span><span class="chip">Geinprod (ERP)</span><span class="chip">Illustrator</span><span class="chip">InDesign</span><span class="chip">Photoshop</span><span class="chip">Premiere</span><span class="chip">Audition</span><span class="chip">Acrobat</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">Android</span>
+        </div>
+      </section>
+
+      <!-- 04 Competencias -->
+      <section id="he-hecho" class="seccion" aria-labelledby="t-hecho">
+        <div class="seccion__head"><span class="seccion__num">04</span><h2 id="t-hecho" class="seccion__titulo"><span data-i18n="sec.hecho">Competencias</span></h2></div>
+        <p class="seccion__sub reveal"><span data-i18n="sec.hecho.sub">Lo que aporto a un equipo, del diseño al código.</span></p>
+        <ul class="filas">
+          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg><h3 class="fila__titulo"><span data-i18n="s1.t">Diseño gráfico</span></h3><p class="fila__desc"><span data-i18n="s1.d">Identidad y piezas con intención, listas para producción.</span></p><span class="fila__marca">Illustrator · InDesign</span></li>
+          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><h3 class="fila__titulo"><span data-i18n="s2.t">Fotografía</span></h3><p class="fila__desc"><span data-i18n="s2.d">Composición, luz y narrativa al servicio de tu marca.</span></p><span class="fila__marca"><span data-i18n="s2.m">Luz · Encuadre</span></span></li>
+          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg><h3 class="fila__titulo"><span data-i18n="s3.t">Edición de vídeo</span></h3><p class="fila__desc"><span data-i18n="s3.d">Ritmo, sonido y montaje para contenido que retiene.</span></p><span class="fila__marca">Audition · Premiere</span></li>
+          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg><h3 class="fila__titulo"><span data-i18n="s4.t">Dibujo e ilustración</span></h3><p class="fila__desc"><span data-i18n="s4.d">Expresión y forma propia, sin recursos genéricos.</span></p><span class="fila__marca"><span data-i18n="s4.m">Trazo · Color</span></span></li>
+          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><h3 class="fila__titulo"><span data-i18n="s5.t">Delineación industrial</span></h3><p class="fila__desc"><span data-i18n="s5.d">Precisión y planos cuando el detalle importa.</span></p><span class="fila__marca"><span data-i18n="s5.m">Geometría</span></span></li>
+          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg><h3 class="fila__titulo"><span data-i18n="s6.t">Gestión administrativa</span></h3><p class="fila__desc"><span data-i18n="s6.d">Método y orden para que el proyecto fluya.</span></p><span class="fila__marca"><span data-i18n="s6.m">Organización</span></span></li>
+        </ul>
+      </section>
+
+      <!-- 05 Catálogos -->
       <section id="catalogos" class="seccion" aria-labelledby="t-cat">
-        <div class="seccion__head"><span class="seccion__num">04</span><h2 id="t-cat" class="seccion__titulo"><span data-i18n="sec.cat">Catálogos</span></h2></div>
+        <div class="seccion__head"><span class="seccion__num">05</span><h2 id="t-cat" class="seccion__titulo"><span data-i18n="sec.cat">Catálogos</span></h2></div>
         <p class="seccion__sub reveal"><span data-i18n="sec.cat.sub">Diseño editorial realizado en mi última empresa: catálogos corporativos e industriales, de la retícula a la producción.</span></p>
 
         <article class="catalogo-grande reveal">
@@ -260,7 +271,23 @@
 
         <a class="catalogo-sec reveal" href="https://www.flipsnack.com/6CDFF7CC5A8/cat-logo-weidner-ib-rica-espa-ol-c5evqww5s4/full-view.html" target="_blank" rel="noopener">
           <div class="catalogo-sec__mock">
-            <svg class="catalogo-sec__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <!-- Miniatura: folleto técnico abierto sobre plano -->
+            <svg class="catalogo-sec__arte" viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><pattern id="gridC" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M12 0H0V12" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.18"/></pattern></defs>
+              <rect width="120" height="160" fill="url(#gridC)"/>
+              <polygon points="96,14 106,14 106,24" fill="currentColor" opacity="0.18"/>
+              <rect x="14" y="14" width="92" height="132" fill="currentColor" opacity="0.05" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2"/>
+              <line x1="60" y1="14" x2="60" y2="146" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" opacity="0.4"/>
+              <rect x="14" y="14" width="92" height="8" fill="currentColor" opacity="0.8"/>
+              <text x="22" y="40" font-family="Archivo, Arial, sans-serif" font-size="11" font-weight="800" fill="currentColor" opacity="0.9" letter-spacing="0.5">WEIDNER</text>
+              <text x="22" y="51" font-family="Archivo, Arial, sans-serif" font-size="6" font-weight="700" fill="currentColor" opacity="0.55" letter-spacing="2.5">IBÉRICA · 2024</text>
+              <g fill="currentColor"><rect x="22" y="60" width="30" height="2.4" opacity="0.32"/><rect x="22" y="67" width="24" height="2.4" opacity="0.26"/><rect x="22" y="74" width="28" height="2.4" opacity="0.3"/><rect x="22" y="81" width="18" height="2.4" opacity="0.22"/></g>
+              <g fill="none" stroke="currentColor" opacity="0.6"><circle cx="84" cy="86" r="15" stroke-width="7" stroke-dasharray="3 5"/><circle cx="84" cy="86" r="6" stroke-width="1.2"/></g>
+              <circle cx="84" cy="86" r="1.8" fill="currentColor" opacity="0.6"/>
+              <polygon points="34,104 42,108 42,118 34,122 26,118 26,108" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.5"/>
+              <g fill="currentColor" opacity="0.6"><rect x="22" y="132" width="1.6" height="9"/><rect x="25" y="132" width="1" height="9"/><rect x="28" y="132" width="2.4" height="9"/><rect x="32" y="132" width="1" height="9"/><rect x="35" y="132" width="1.6" height="9"/><rect x="38" y="132" width="2.4" height="9"/><rect x="43" y="132" width="1" height="9"/><rect x="46" y="132" width="1.6" height="9"/></g>
+              <text x="70" y="140" font-family="Archivo, Arial, sans-serif" font-size="6" fill="currentColor" opacity="0.5" letter-spacing="1">REF · 4000</text>
+            </svg>
             <span class="catalogo-sec__chip">Flipsnack</span>
           </div>
           <div class="catalogo-sec__info">
@@ -272,9 +299,9 @@
         </a>
       </section>
 
-      <!-- 05 Me gusta -->
+      <!-- 06 Me gusta -->
       <section id="me-gusta" class="seccion" aria-labelledby="t-gusta">
-        <div class="seccion__head"><span class="seccion__num">05</span><h2 id="t-gusta" class="seccion__titulo"><span data-i18n="sec.gusta">Me gusta</span></h2></div>
+        <div class="seccion__head"><span class="seccion__num">06</span><h2 id="t-gusta" class="seccion__titulo"><span data-i18n="sec.gusta">Me gusta</span></h2></div>
         <p class="seccion__sub reveal"><span data-i18n="sec.gusta.sub">Lo que consumo y creo alimenta cómo diseño y programo.</span></p>
         <div class="bloques">
           <article class="bloque bloque--morado reveal"><svg class="bloque__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 6H9l-2-3H2v15h18a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"/><line x1="17" y1="6" x2="15" y2="12"/><line x1="11" y1="6" x2="9" y2="12"/></svg><h3><span data-i18n="p1.t">Cine y series</span></h3><p><span data-i18n="p1.d">Estudio narrativa y ritmo para contar mejor.</span></p></article>
@@ -290,24 +317,24 @@
         <div class="pie__grid">
           <div class="pie__info">
             <p class="pie__eyebrow reveal"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
-            <a href="#contacto" class="pie__mail reveal js-contacto">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
-            <p class="pie__nota reveal"><span data-i18n="pie.nota">Disponible para aprender, mejorar y crear con criterio. Diseño + desarrollo en una sola persona.</span></p>
+            <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+            <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
           </div>
-
-          <!-- Ubicación: Google Maps incrustado + dirección -->
           <div class="pie__loc reveal">
             <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
             <div class="mapa">
-              <!-- ⚠️ Si tu IES Luis Simarro es de otra ciudad, añade la ciudad al "q=" (ej. IES+Luis+Simarro+Madrid) -->
-              <iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+              <iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
-            <!-- ⚠️ Revisa/ajusta la dirección exacta de tu centro -->
-            <address class="pie__dir">IES Luis Simarro · Logroño (La Rioja)</address>
+            <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
           </div>
         </div>
         <p class="copyright">© <span id="anio"></span> Salvador Llácer Ivars</p>
       </div>
     </footer>
+
+    <button class="top-btn" id="topBtn" aria-label="Volver arriba">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
 
     <div class="modal" id="modal" aria-hidden="true">
       <div class="modal__fondo" data-cerrar></div>
@@ -320,8 +347,7 @@
           <label class="form__campo"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email" placeholder="tu@correo.com" data-i18n-ph="form.ph_email" /></label>
           <label class="form__campo"><span data-i18n="form.mensaje">Mensaje</span><textarea name="mensaje" rows="4" required placeholder="¿En qué puedo ayudarte?" data-i18n-ph="form.ph_mensaje"></textarea></label>
           <button type="submit" class="boton boton--verde"><span data-i18n="form.enviar">Enviar mensaje</span> <span class="flecha">→</span></button>
-          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">¡Gracias! Tu mensaje está listo. Ábrelo en tu correo para enviarlo.</span></p>
-          <a class="form__mailto" id="mailto" href="mailto:salllaiva@alu.edu.gva.es" hidden><span data-i18n="form.abrir">Abrir mi correo</span> <span class="flecha">↗</span></a>
+          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado correctamente.</span></p>
         </form>
       </div>
     </div>
