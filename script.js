@@ -11,14 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ── Tema ── */
   const temaBtn = document.getElementById("tema");
   const metaTema = document.querySelector('meta[name="theme-color"]');
-  const setTema = (t) => { html.setAttribute("data-theme", t); if (temaBtn) temaBtn.setAttribute("aria-pressed", String(t === "light")); if (metaTema) metaTema.setAttribute("content", t === "light" ? "#f4f4f2" : "#0a0a0b"); try { localStorage.setItem("tema", t); } catch (e) {} };
+  const setTema = (t) => {
+    html.setAttribute("data-theme", t);
+    if (temaBtn) temaBtn.setAttribute("aria-pressed", String(t === "light"));
+    if (metaTema) metaTema.setAttribute("content", t === "light" ? "#f4f4f2" : "#0a0a0b");
+    try { localStorage.setItem("tema", t); } catch (e) {}
+  };
   const temaGuardado = (() => { try { return localStorage.getItem("tema"); } catch (e) { return null; } })();
   if (temaGuardado) setTema(temaGuardado);
   if (temaBtn) temaBtn.addEventListener("click", () => setTema(html.getAttribute("data-theme") === "light" ? "dark" : "light"));
 
   /* ── Cerrar menú ── */
   const burger = document.querySelector(".nav__burger");
-  function cerrarMenu() { document.body.classList.remove("nav-open"); if (burger) burger.setAttribute("aria-expanded", "false"); }
+  function cerrarMenu() {
+    document.body.classList.remove("nav-open");
+    if (burger) burger.setAttribute("aria-expanded", "false");
+  }
 
   /* ── VÍDEOS ── */
   const VIDEOS = [
@@ -80,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const bloque = document.getElementById('exp-' + cat);
       if (bloque) setTimeout(() => bloque.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }), 380);
     } else {
-      expVista.querySelector('.experiencia__body').scrollTop = 0;
+      const body = expVista.querySelector('.experiencia__body');
+      if (body) body.scrollTop = 0;
     }
     if (!esTactil) document.body.classList.remove("cursor-on");
     const cerrarBtn = expVista.querySelector('.experiencia__cerrar');
@@ -95,7 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   document.querySelectorAll(".js-experiencia").forEach(a => a.addEventListener("click", (e) => { e.preventDefault(); cerrarMenu(); abrirExp(a.dataset.cat); }));
   if (expVista) {
-    expVista.querySelector('[data-cerrar-exp]').addEventListener('click', cerrarExp);
+    const cerrarExpBtn = expVista.querySelector('[data-cerrar-exp]');
+    if (cerrarExpBtn) cerrarExpBtn.addEventListener('click', cerrarExp);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && expVista.classList.contains('is-open')) cerrarExp(); });
   }
 
@@ -127,9 +137,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnEnviar = form ? form.querySelector("button[type=submit]") : null;
   const campos = form ? form.querySelectorAll(".form__campo") : null;
   let timer = 0;
-  function abrirModal() { if (!modal || !form) return; modal.classList.add("is-open"); modal.setAttribute("aria-hidden", "false"); document.body.classList.remove("cursor-on"); const p = form.querySelector("input"); if (p) setTimeout(() => p.focus(), 200); }
-  function limpiarModal() { form.reset(); if (btnEnviar) btnEnviar.style.display = ""; if (campos) campos.forEach(c => c.style.display = ""); if (exito) exito.hidden = true; }
-  function cerrarModal() { if (!modal || !form) return; modal.classList.remove("is-open"); modal.setAttribute("aria-hidden", "true"); if (!esTactil && document.body.classList.contains("is-loaded")) document.body.classList.add("cursor-on"); clearTimeout(timer); limpiarModal(); }
+  function abrirModal() {
+    if (!modal || !form) return;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.remove("cursor-on");
+    const p = form.querySelector("input");
+    if (p) setTimeout(() => p.focus(), 200);
+  }
+  function limpiarModal() {
+    if (!form) return;
+    form.reset();
+    if (btnEnviar) btnEnviar.style.display = "";
+    if (campos) campos.forEach(c => c.style.display = "");
+    if (exito) exito.hidden = true;
+  }
+  function cerrarModal() {
+    if (!modal || !form) return;
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    if (!esTactil && document.body.classList.contains("is-loaded")) document.body.classList.add("cursor-on");
+    clearTimeout(timer);
+    limpiarModal();
+  }
   if (modal && form) {
     document.querySelectorAll(".js-contacto").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); cerrarMenu(); abrirModal(); }));
     modal.querySelectorAll("[data-cerrar]").forEach((el) => el.addEventListener("click", cerrarModal));
@@ -236,18 +266,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const i18nEls = [...document.querySelectorAll("[data-i18n]")];
+  const i18nPhEls = [...document.querySelectorAll("[data-i18n-ph]")];
+  const langBtns = [...document.querySelectorAll(".lang__btn")];
+
   let idioma = "es";
   function aplicarIdioma(lang) {
     idioma = lang;
     const dic = I18N[lang];
-    document.querySelectorAll("[data-i18n]").forEach((el) => { const k = el.getAttribute("data-i18n"); if (dic[k]) el.textContent = dic[k]; });
-    document.querySelectorAll("[data-i18n-ph]").forEach((el) => { const k = el.getAttribute("data-i18n-ph"); if (dic[k]) el.setAttribute("placeholder", dic[k]); });
+    i18nEls.forEach((el) => { const k = el.getAttribute("data-i18n"); if (dic[k]) el.textContent = dic[k]; });
+    i18nPhEls.forEach((el) => { const k = el.getAttribute("data-i18n-ph"); if (dic[k]) el.setAttribute("placeholder", dic[k]); });
     html.setAttribute("lang", lang);
     document.title = lang === "en" ? "Salvador Llácer Ivars — Design + Development" : "Salvador Llácer Ivars — Diseño + Desarrollo";
-    document.querySelectorAll(".lang__btn").forEach((b) => { const on = b.dataset.lang === lang; b.classList.toggle("is-active", on); b.setAttribute("aria-pressed", String(on)); });
+    langBtns.forEach((b) => { const on = b.dataset.lang === lang; b.classList.toggle("is-active", on); b.setAttribute("aria-pressed", String(on)); });
     try { localStorage.setItem("idioma", lang); } catch (e) {}
   }
-  document.querySelectorAll(".lang__btn").forEach((b) => b.addEventListener("click", () => aplicarIdioma(b.dataset.lang)));
+  langBtns.forEach((b) => b.addEventListener("click", () => aplicarIdioma(b.dataset.lang)));
   const idiomaGuardado = (() => { try { return localStorage.getItem("idioma"); } catch (e) { return null; } })();
   if (idiomaGuardado && I18N[idiomaGuardado]) aplicarIdioma(idiomaGuardado);
 
@@ -270,11 +304,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const titulo = document.getElementById("titulo");
     const mask = document.querySelector(".titulo-mask");
     if (titulo && mask) {
-      let tx = 0, ty = 0, cx = 0, cy = 0, activo = false;
-      titulo.addEventListener("mousemove", (e) => { const r = titulo.getBoundingClientRect(); const nx = e.clientX - r.left, ny = e.clientY - r.top; if (!activo) { cx = nx; cy = ny; } tx = nx; ty = ny; activo = true; });
+      let tx = 0, ty = 0, cx = 0, cy = 0, activo = false, raf = 0;
+      const loop = () => {
+        if (!activo) { raf = 0; return; }
+        cx += (tx - cx) * 0.16;
+        cy += (ty - cy) * 0.16;
+        mask.style.setProperty("--mx", cx + "px");
+        mask.style.setProperty("--my", cy + "px");
+        raf = requestAnimationFrame(loop);
+      };
+      titulo.addEventListener("mousemove", (e) => {
+        const r = titulo.getBoundingClientRect();
+        const nx = e.clientX - r.left, ny = e.clientY - r.top;
+        if (!activo) { cx = nx; cy = ny; }
+        tx = nx; ty = ny; activo = true;
+        if (!raf) raf = requestAnimationFrame(loop);
+      });
       titulo.addEventListener("mouseleave", () => { activo = false; });
-      const loop = () => { if (activo) { cx += (tx - cx) * 0.16; cy += (ty - cy) * 0.16; mask.style.setProperty("--mx", cx + "px"); mask.style.setProperty("--my", cy + "px"); } requestAnimationFrame(loop); };
-      loop();
     }
 
     const punto = document.querySelector(".cursor--punto");
@@ -285,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
       addEventListener("mousemove", pos);
       const crece = () => { punto.classList.add("cursor--big"); anillo.classList.add("cursor--big"); };
       const encoge = () => { punto.classList.remove("cursor--big"); anillo.classList.remove("cursor--big"); };
-      document.querySelectorAll("a, button, .magnet, .fila, .bloque, .nav__item, .catalogo-grande, .catalogo-sec, .empresa, .formacion__item, .chip, .prod__tarjeta, .video-card").forEach((el) => { el.addEventListener("mouseenter", crece); el.addEventListener("mouseleave", encoge); });
+      document.querySelectorAll("a, button, .magnet, .fila, .bloque, .nav__item, .catalogo-grande, .formacion__item, .chip, .prod__tarjeta, .video-card").forEach((el) => { el.addEventListener("mouseenter", crece); el.addEventListener("mouseleave", encoge); });
     }
 
     if (!reduce) {
@@ -319,13 +365,14 @@ document.addEventListener("DOMContentLoaded", () => {
      ════════════════════════════════════════════════════════════ */
   (function clima(){
     const box = document.getElementById("clima");
-    if (!box) return;
     const elIco = document.getElementById("climaIco");
     const elLugar = document.getElementById("climaLugar");
     const elTemp = document.getElementById("climaTemp");
     const elDesc = document.getElementById("climaDesc");
     const elMeta = document.getElementById("climaMeta");
     const sel = document.getElementById("climaSelect");
+
+    if (!box || !elIco || !elLugar || !elTemp || !elDesc || !elMeta || !sel) return;
 
     // ⚠️ Cambia lat/lon de "jaraguas" si es otra ciudad
     const UBIS = {
@@ -372,15 +419,25 @@ document.addEventListener("DOMContentLoaded", () => {
     try { const g = localStorage.getItem("climaUbi"); if (g && UBIS[g]) actual = g; } catch (e) {}
     let ultimo = null, pid = 0;
 
-    const lang = () => document.documentElement.getAttribute("lang") || "es";
+    const lang = () => html.getAttribute("lang") || "es";
     const url = (u) => `https://api.open-meteo.com/v1/forecast?latitude=${u.lat}&longitude=${u.lon}&current=temperature_2m,weather_code,wind_speed_10m&daily=temperature_2m_min,temperature_2m_max&timezone=auto&forecast_days=1`;
 
     function pintar(){
       const L = lang();
       elLugar.textContent = UBIS[actual].nombre;
-      if (!ultimo) { elIco.innerHTML = ""; elTemp.textContent = "–"; elDesc.textContent = TXT[L].error; elMeta.textContent = ""; return; }
+      if (!ultimo) {
+        elIco.innerHTML = "";
+        elIco.dataset.icono = "";
+        elTemp.textContent = "–";
+        elDesc.textContent = TXT[L].error;
+        elMeta.textContent = "";
+        return;
+      }
       const w = WMO[ultimo.code] || { c:"nube", es:"—", en:"—" };
-      elIco.innerHTML = ICONO[w.c];
+      if (elIco.dataset.icono !== w.c) {
+        elIco.innerHTML = ICONO[w.c] || ICONO.nube;
+        elIco.dataset.icono = w.c;
+      }
       elTemp.textContent = Math.round(ultimo.temp) + "°";
       elDesc.textContent = L === "en" ? w.en : w.es;
       elMeta.textContent = `${TXT[L].min} ${Math.round(ultimo.min)}° · ${TXT[L].max} ${Math.round(ultimo.max)}° · ${TXT[L].viento} ${Math.round(ultimo.viento)} km/h`;
@@ -390,7 +447,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const u = UBIS[actual], id = ++pid;
       ultimo = null;
       elLugar.textContent = u.nombre;
-      elIco.innerHTML = ""; elTemp.textContent = "–"; elDesc.textContent = TXT[lang()].cargando; elMeta.textContent = "";
+      elIco.innerHTML = "";
+      elIco.dataset.icono = "";
+      elTemp.textContent = "–";
+      elDesc.textContent = TXT[lang()].cargando;
+      elMeta.textContent = "";
       try {
         const r = await fetch(url(u));
         if (!r.ok) throw new Error("http");
@@ -412,7 +473,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cargar();
     });
     // Repinta al cambiar idioma (sin tocar aplicarIdioma)
-    new MutationObserver(pintar).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+    new MutationObserver(pintar).observe(html, { attributes: true, attributeFilter: ["lang"] });
     cargar();
   })();
 });
