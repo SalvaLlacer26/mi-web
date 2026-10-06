@@ -1,4 +1,4 @@
-/* script.js · modo, fondos por hover, color propio por enlace, menu, modal, slideshow, idioma, clima */
+/* script.js · modo, degradado por hover, color propio en menu, modal, slideshow, idioma, clima */
 
 document.addEventListener("DOMContentLoaded", () => {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const c = GAMAS[a.dataset.tema]; if (c) a.style.setProperty("--lc", c[0]);
   });
 
-  /* Gama activa: en subweb es fija (data-tema); en hub cambia con hover */
-  const esHub = html.getAttribute("data-bg") === "anterior";
+  /* Gama activa: en subweb es fija (data-tema); en hub cambia con hover (default "hub") */
+  const esHub = html.getAttribute("data-bg") === "hub";
   if (esHub) {
-    const neutro = () => { html.setAttribute("data-bg","anterior"); html.style.removeProperty("--t1"); html.style.removeProperty("--t2"); html.style.removeProperty("--t3"); };
+    const neutro = () => { html.setAttribute("data-bg","hub"); html.style.removeProperty("--t1"); html.style.removeProperty("--t2"); html.style.removeProperty("--t3"); };
     const activar = (tema) => {
       const c = GAMAS[tema]; if (!c) return;
       html.setAttribute("data-bg", tema);
@@ -64,15 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     clearTimeout(toastEl._t); toastEl._t = setTimeout(() => toastEl.classList.remove("is-on"), 2200);
   };
   document.querySelectorAll("[data-soon]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); cerrarMenu(); toast("Subweb en construcción"); }));
-
-  /* Parallax manchas (fondo anterior) */
-  const capas = document.querySelectorAll(".parallax__forma");
-  if (capas.length && !reduce) {
-    let pend = false;
-    const mover = () => { const y = window.scrollY; capas.forEach((c) => { c.style.transform = `translate3d(0, ${y * (parseFloat(c.dataset.speed)||0)}px, 0)`; }); pend = false; };
-    window.addEventListener("scroll", () => { if (!pend) { requestAnimationFrame(mover); pend = true; } }, { passive: true });
-    mover();
-  }
 
   /* Modal contacto */
   const modal = document.getElementById("modal"), form = document.getElementById("form"), exito = document.getElementById("exito");

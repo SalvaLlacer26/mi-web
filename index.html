@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="es" data-mode="dark" data-bg="anterior">
-    <head>
+<html lang="es" data-mode="dark" data-bg="hub">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo. Elige una disciplina para entrar en cada subweb." />
@@ -21,27 +21,23 @@
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
 
-    <!-- ░░ FONDO: degradado animado + patron + (foto) objetos flotantes ░░ -->
+    <!-- ░░ FONDO: degradado dinamico + velo de contraste + indiana flotante + objetos(foto) ░░ -->
     <div class="fondo" aria-hidden="true">
       <span class="fondo__degradado"></span>
-      <span class="fondo__manchas">
-        <i class="parallax__forma" data-speed="0.06"></i><i class="parallax__forma" data-speed="0.12"></i>
-        <i class="parallax__forma" data-speed="0.09"></i><i class="parallax__forma" data-speed="0.16"></i>
-      </span>
+      <span class="fondo__velo"></span>
       <span class="fondo__patron"></span>
       <span class="fondo__objetos">
-        <svg class="obj obj--1" viewBox="0 0 24 24"><path d="M4 8h11l1.5-3H20v14H4z"/><circle cx="11" cy="13" r="3.5"/></svg>
-        <svg class="obj obj--2" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="1"/><rect x="7" y="6" width="10" height="9"/><path d="M7 18h10"/></svg>
-        <svg class="obj obj--3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
-        <svg class="obj obj--4" viewBox="0 0 24 24"><path d="M9 2h6l-1 5h4L8 22l1-9H5z"/></svg>
-        <svg class="obj obj--5" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+        <svg class="obj obj--1" viewBox="0 0 24 24"><path d="M4 7h3l1.2-1.8A1 1 0 0 1 9 5h6a1 1 0 0 1 .8.4L17 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+        <svg class="obj obj--2" viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2 2v8l3-3 2 2 3-4 2 2V6z"/></svg>
+        <svg class="obj obj--3" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg>
+        <svg class="obj obj--4" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
       </span>
-      <span class="fondo__velo"></span>
     </div>
 
     <header class="nav" aria-label="Principal">
       <a class="logo" href="index.html" aria-label="Salvador Llácer, inicio">
-        <span class="logo__marcas" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="logo__marcas" aria-hidden="true"></span>
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
 
@@ -76,32 +72,32 @@
 
           <nav class="selector" aria-label="Subwebs por disciplina">
             <a class="selector__item reveal" href="fotografia.html" data-tema="foto" style="--c1:#8a5a2b;--c2:#161411;--c3:#8b857c">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h11l1.5-3H20v14H4z"/><circle cx="11" cy="13" r="3.5"/></svg>
+              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M4 7h3l1.2-1.8A1 1 0 0 1 9 5h6a1 1 0 0 1 .8.4L17 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
               <span class="selector__titulo"><span data-i18n="sel.foto">Fotografía</span></span>
               <span class="selector__sub"><span data-i18n="sel.foto.sub">Luz, encuadre y narrativa</span></span>
             </a>
             <a class="selector__item selector__item--dark reveal" href="#" data-soon data-tema="diseno" style="--c1:#19b6d6;--c2:#e0118a;--c3:#f2b705">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
+              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.5 2 2 6.2 2 11.5 2 16.7 6.2 21 11.5 21c1.4 0 2.5-1.1 2.5-2.5 0-.7-.3-1.3-.7-1.7-.4-.5-.7-1-.7-1.6 0-1 .8-1.9 1.9-1.9h1.5c3.3 0 6-2.7 6-6C22 5.6 17.5 2 12 2zM8 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm3.5-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm3.5 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
               <span class="selector__titulo"><span data-i18n="sel.diseno">Diseño gráfico e ilustración</span></span>
               <span class="selector__sub"><span data-i18n="sel.diseno.sub">Retícula, tinta y trazo</span></span>
             </a>
             <a class="selector__item reveal" href="#" data-soon data-tema="video" style="--c1:#5b86dd;--c2:#e06a66;--c3:#6fbf73">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg>
+              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 8 5 4.2A2 2 0 0 1 6.8 3h12.4a2 2 0 0 1 1.8 1.2L22.6 8H3.4zM3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg>
               <span class="selector__titulo"><span data-i18n="sel.video">Edición de vídeo</span></span>
               <span class="selector__sub"><span data-i18n="sel.video.sub">Ritmo, sonido y color</span></span>
             </a>
             <a class="selector__item reveal" href="#" data-soon data-tema="musica" style="--c1:#b8923a;--c2:#161411;--c3:#ece8e1">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18a3 3 0 1 1-2-2.83V6a1 1 0 0 1 .76-.97l8-2A1 1 0 0 1 17 4v10.17A3 3 0 1 1 15 18V7.3l-6 1.5V18z"/></svg>
               <span class="selector__titulo"><span data-i18n="sel.musica">Música</span></span>
               <span class="selector__sub"><span data-i18n="sel.musica.sub">Composición y montaje sonoro</span></span>
             </a>
             <a class="selector__item reveal" href="#" data-soon data-tema="dam" style="--c1:#e23b3b;--c2:#1f9d57;--c3:#3b82f6">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="13" r="1"/></svg>
+              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7 8h10a5 5 0 0 1 4.86 3.73l.7 3.5A2.5 2.5 0 0 1 18.2 17.7L17 16H7l-1.2 1.7A2.5 2.5 0 0 1 .44 15.23l.7-3.5A5 5 0 0 1 7 8zM6 11v1.5H4.5V14H6v1.5h1.5V14H9v-1.5H7.5V11H6zm10.5 1a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5zm2 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z"/></svg>
               <span class="selector__titulo"><span data-i18n="sel.dam">DAM y videojuegos</span></span>
               <span class="selector__sub"><span data-i18n="sel.dam.sub">Código, apps y Simon Says</span></span>
             </a>
             <a class="selector__item reveal" href="#" data-soon data-tema="fab" style="--c1:#7c8aa0;--c2:#2b56c9;--c3:#eef2f7">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.4 13a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
               <span class="selector__titulo"><span data-i18n="sel.fab">Fabricación mecánica</span></span>
               <span class="selector__sub"><span data-i18n="sel.fab.sub">CATIA, planos y ERP</span></span>
             </a>
