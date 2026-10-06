@@ -1,4 +1,4 @@
-/* script.js · modo, fondos por hover, menu, modal, slideshow, idioma, clima */
+/* script.js · modo, fondos por hover, color propio por enlace, menu, modal, slideshow, idioma, clima */
 
 document.addEventListener("DOMContentLoaded", () => {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -28,13 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
     burger.setAttribute("aria-expanded", String(open));
   });
 
-  /* Gama activa: en subweb es fija (data-tema); en hub cambia con hover */
-  const esHub = html.getAttribute("data-bg") === "anterior";
   const GAMAS = {
     foto:["#8a5a2b","#161411","#8b857c"], diseno:["#19b6d6","#e0118a","#f2b705"],
     video:["#5b86dd","#e06a66","#6fbf73"], musica:["#b8923a","#161411","#ece8e1"],
     dam:["#e23b3b","#1f9d57","#3b82f6"], fab:["#7c8aa0","#2b56c9","#eef2f7"]
   };
+
+  /* Cada enlace del menu se pinta de SU color principal al pasar el raton */
+  document.querySelectorAll(".nav__menu a[data-tema]").forEach((a) => {
+    const c = GAMAS[a.dataset.tema]; if (c) a.style.setProperty("--lc", c[0]);
+  });
+
+  /* Gama activa: en subweb es fija (data-tema); en hub cambia con hover */
+  const esHub = html.getAttribute("data-bg") === "anterior";
   if (esHub) {
     const neutro = () => { html.setAttribute("data-bg","anterior"); html.style.removeProperty("--t1"); html.style.removeProperty("--t2"); html.style.removeProperty("--t3"); };
     const activar = (tema) => {
