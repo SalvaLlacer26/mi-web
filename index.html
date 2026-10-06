@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo. Elige una disciplina para entrar en cada subweb: fotografía, diseño, vídeo, música, desarrollo y fabricación." />
+    <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo. Elige una disciplina para entrar en cada subweb." />
     <meta name="theme-color" content="#0a0a0b" />
     <title>Salvador Llácer Ivars — Diseño + Desarrollo</title>
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0b'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='none' stroke='%2300e08a' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300e08a'/%3E%3C/svg%3E" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-    <!-- Evita parpadeo de tema antes de pintar -->
     <script>(function(){try{document.documentElement.setAttribute('data-mode',localStorage.getItem('tema')||'dark')}catch(e){}})();</script>
 
     <link rel="stylesheet" href="estilos.css" />
@@ -24,15 +19,11 @@
     <a class="skip" href="#contenido">Saltar al contenido</a>
     <div class="grano" aria-hidden="true"></div>
 
-    <!-- ░░ HEADER · franjas diagonales con la gama de la disciplina activa ░░ -->
     <header class="nav" aria-label="Principal">
       <a class="logo" href="index.html" aria-label="Salvador Llácer, inicio">
-        <span class="logo__marcas" aria-hidden="true">
-          <span class="logo__barra"></span><span class="logo__barra"></span><span class="logo__barra"></span>
-        </span>
+        <span class="logo__marcas" aria-hidden="true"></span>
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
-
       <div class="nav__derecha">
         <span class="status"><i></i><span data-i18n="status">Disponible</span></span>
         <div class="lang" role="group" aria-label="Idioma / Language">
@@ -46,7 +37,6 @@
     </header>
 
     <main id="contenido">
-      <!-- ░░ HERO · el selector ocupa el lugar del antiguo título ░░ -->
       <section class="hub" aria-labelledby="hub-titulo">
         <div class="contenedor">
           <p class="eyebrow reveal"><span data-i18n="eyebrow">Diseño + Desarrollo · Perfil técnico-creativo</span></p>
@@ -54,43 +44,37 @@
           <p class="hub__frase reveal"><span data-i18n="hub.frase">Seis disciplinas, una sola forma de trabajar: pensar como diseñador y ejecutar como desarrollador. Elige por dónde entrar.</span></p>
 
           <nav class="selector" aria-label="Subwebs por disciplina">
-            <a class="selector__item reveal" href="sub/fotografia.html" data-tema="foto"
-               style="--c1:#b23a2e;--c2:#e0a458;--c3:#4fb3c9">
+            <a class="selector__item reveal" href="fotografia.html" data-tema="foto" style="--c1:#7a4a1e;--c2:#161411;--c3:#8b857c">
               <span class="selector__num">01</span>
               <span class="selector__titulo"><span data-i18n="sel.foto">Fotografía</span></span>
               <span class="selector__sub"><span data-i18n="sel.foto.sub">Luz, encuadre y narrativa</span></span>
               <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
             </a>
-            <a class="selector__item reveal" href="sub/diseno.html" data-tema="diseno"
-               style="--c1:#c2185b;--c2:#0097b2;--c3:#d4a017">
+            <a class="selector__item selector__item--dark reveal" href="#" data-soon data-tema="diseno" style="--c1:#00b4d8;--c2:#e0118a;--c3:#f2b705">
               <span class="selector__num">02</span>
               <span class="selector__titulo"><span data-i18n="sel.diseno">Diseño gráfico e ilustración</span></span>
               <span class="selector__sub"><span data-i18n="sel.diseno.sub">Retícula, tinta y trazo</span></span>
               <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
             </a>
-            <a class="selector__item reveal" href="sub/video.html" data-tema="video"
-               style="--c1:#0f766e;--c2:#e07a3f;--c3:#b5387a">
+            <a class="selector__item reveal" href="#" data-soon data-tema="video" style="--c1:#4a78d0;--c2:#d9534f;--c3:#5cb85c">
               <span class="selector__num">03</span>
               <span class="selector__titulo"><span data-i18n="sel.video">Edición de vídeo</span></span>
               <span class="selector__sub"><span data-i18n="sel.video.sub">Ritmo, sonido y color</span></span>
               <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
             </a>
-            <a class="selector__item reveal" href="sub/musica.html" data-tema="musica"
-               style="--c1:#6d28d9;--c2:#db2777;--c3:#0891b2">
+            <a class="selector__item reveal" href="#" data-soon data-tema="musica" style="--c1:#a8842f;--c2:#161411;--c3:#ece8e1">
               <span class="selector__num">04</span>
               <span class="selector__titulo"><span data-i18n="sel.musica">Música</span></span>
               <span class="selector__sub"><span data-i18n="sel.musica.sub">Composición y montaje sonoro</span></span>
               <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
             </a>
-            <a class="selector__item reveal" href="sub/dam.html" data-tema="dam"
-               style="--c1:#15803d;--c2:#2563eb;--c3:#dc2626">
+            <a class="selector__item reveal" href="#" data-soon data-tema="dam" style="--c1:#dc2626;--c2:#15803d;--c3:#2563eb">
               <span class="selector__num">05</span>
               <span class="selector__titulo"><span data-i18n="sel.dam">DAM y videojuegos</span></span>
               <span class="selector__sub"><span data-i18n="sel.dam.sub">Código, apps y Simon Says</span></span>
               <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
             </a>
-            <a class="selector__item reveal" href="sub/fabricacion.html" data-tema="fab"
-               style="--c1:#1e40af;--c2:#64748b;--c3:#c2410c">
+            <a class="selector__item reveal" href="#" data-soon data-tema="fab" style="--c1:#64748b;--c2:#1e40af;--c3:#f4f4f2">
               <span class="selector__num">06</span>
               <span class="selector__titulo"><span data-i18n="sel.fab">Fabricación mecánica</span></span>
               <span class="selector__sub"><span data-i18n="sel.fab.sub">CATIA, planos y ERP</span></span>
@@ -103,7 +87,6 @@
       </section>
     </main>
 
-    <!-- ░░ FOOTER · contacto + clima (se conserva) ░░ -->
     <footer class="pie">
       <div class="contenedor">
         <div class="pie__grid">
@@ -111,7 +94,6 @@
             <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
             <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
             <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
-
             <div class="clima" id="clima">
               <span class="clima__ico" id="climaIco" aria-hidden="true"></span>
               <div class="clima__cuerpo" aria-live="polite">
@@ -122,19 +104,15 @@
               <label class="clima__selector">
                 <span class="clima__selector-txt" data-i18n="clima.ubicacion">Ubicación</span>
                 <select id="climaSelect" aria-label="Elegir ubicación del tiempo">
-                  <option value="xativa">Xàtiva</option>
-                  <option value="valencia">Valencia</option>
-                  <option value="jaraguas">Jaraguas</option>
-                  <option value="lapobla">La Pobla Llarga</option>
+                  <option value="xativa">Xàtiva</option><option value="valencia">Valencia</option>
+                  <option value="jaraguas">Jaraguas</option><option value="lapobla">La Pobla Llarga</option>
                 </select>
               </label>
             </div>
           </div>
           <div class="pie__loc reveal">
             <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
-            <div class="mapa">
-              <iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-            </div>
+            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
             <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
           </div>
         </div>

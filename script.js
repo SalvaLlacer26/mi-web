@@ -1,4 +1,4 @@
-/* script.js · rediseño · modo, franjas del logo, reveal, idioma, clima */
+/* script.js · modo, franjas del hub, reveal, slideshow, toast, idioma, clima */
 
 document.addEventListener("DOMContentLoaded", () => {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const anio = document.getElementById("anio");
   if (anio) anio.textContent = new Date().getFullYear();
 
-  /* ── Modo claro / oscuro ── */
+  /* Modo claro / oscuro */
   const modoBtn = document.getElementById("modo");
   const metaTema = document.querySelector('meta[name="theme-color"]');
   const setModo = (m) => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (guardado) setModo(guardado);
   if (modoBtn) modoBtn.addEventListener("click", () => setModo(html.getAttribute("data-mode") === "light" ? "dark" : "light"));
 
-  /* ── El logo sigue la gama de la disciplina que se está mirando ── */
+  /* El logo sigue la gama de la disciplina que se mira (solo hub) */
   const items = [...document.querySelectorAll(".selector__item")];
   const neutro = () => { html.style.removeProperty("--t1"); html.style.removeProperty("--t2"); html.style.removeProperty("--t3"); };
   items.forEach((it) => {
@@ -36,7 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
     it.addEventListener("blur", neutro);
   });
 
-  /* ── Revelado al hacer scroll ── */
+  /* Toast "en construcción" para las subwebs aún no creadas */
+  let toastEl;
+  const toast = (msg) => {
+    if (!toastEl) { toastEl = document.createElement("div"); toastEl.className = "toast"; toastEl.setAttribute("role", "status"); document.body.appendChild(toastEl); }
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-on");
+    clearTimeout(toastEl._t);
+    toastEl._t = setTimeout(() => toastEl.classList.remove("is-on"), 2200);
+  };
+  document.querySelectorAll(".selector__item[data-soon]").forEach((a) =>
+    a.addEventListener("click", (e) => { e.preventDefault(); toast("Subweb en construcción"); }));
+
+  /* Revelado al hacer scroll */
   const rev = document.querySelectorAll(".reveal");
   if (!reduce && "IntersectionObserver" in window) {
     rev.forEach((el, i) => { el.style.animationDelay = (i % 6) * 0.07 + "s"; });
@@ -44,15 +56,42 @@ document.addEventListener("DOMContentLoaded", () => {
     rev.forEach((el) => obs.observe(el));
   } else { rev.forEach((el) => el.classList.add("visible")); }
 
-  /* ── Idioma (mínimo, se ampliará con las subwebs) ── */
+  /* Slideshow generico (placeholders o fotos reales) */
+  (function slideshow(){
+    const ss = document.querySelector(".slideshow");
+    if (!ss) return;
+    const slides = [...ss.querySelectorAll(".slideshow__slide")];
+    if (slides.length < 2) return;
+    const dotsWrap = ss.querySelector(".slideshow__dots");
+    let i = 0;
+    const dots = slides.map((_, k) => {
+      const b = document.createElement("button");
+      b.className = "slideshow__dot";
+      b.setAttribute("aria-label", "Imagen " + (k + 1));
+      b.addEventListener("click", () => go(k));
+      if (dotsWrap) dotsWrap.appendChild(b);
+      return b;
+    });
+    function go(n){
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
+      dots.forEach((d, k) => d.classList.toggle("is-active", k === i));
+    }
+    const prev = ss.querySelector("[data-ss-prev]"), next = ss.querySelector("[data-ss-next]");
+    if (prev) prev.addEventListener("click", () => go(i - 1));
+    if (next) next.addEventListener("click", () => go(i + 1));
+    go(0);
+  })();
+
+  /* Idioma (header/footer; subwebs se traducen con textos reales) */
   const I18N = {
-    es: { "status":"Disponible","eyebrow":"Diseño + Desarrollo · Perfil técnico-creativo","hub.nombre":"Salvador Llácer Ivars",
+    es: { "status":"Disponible","volver":"Volver al inicio","eyebrow":"Diseño + Desarrollo · Perfil técnico-creativo","hub.nombre":"Salvador Llácer Ivars",
       "hub.frase":"Seis disciplinas, una sola forma de trabajar: pensar como diseñador y ejecutar como desarrollador. Elige por dónde entrar.",
       "sel.foto":"Fotografía","sel.foto.sub":"Luz, encuadre y narrativa","sel.diseno":"Diseño gráfico e ilustración","sel.diseno.sub":"Retícula, tinta y trazo",
       "sel.video":"Edición de vídeo","sel.video.sub":"Ritmo, sonido y color","sel.musica":"Música","sel.musica.sub":"Composición y montaje sonoro",
       "sel.dam":"DAM y videojuegos","sel.dam.sub":"Código, apps y Simon Says","sel.fab":"Fabricación mecánica","sel.fab.sub":"CATIA, planos y ERP",
       "pie.eyebrow":"¿Tienes un proyecto?","pie.nota":"Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.","pie.loc":"Localización","clima.ubicacion":"Ubicación" },
-    en: { "status":"Available","eyebrow":"Design + Development · Technical-creative profile","hub.nombre":"Salvador Llácer Ivars",
+    en: { "status":"Available","volver":"Back to start","eyebrow":"Design + Development · Technical-creative profile","hub.nombre":"Salvador Llácer Ivars",
       "hub.frase":"Six disciplines, one way of working: think like a designer, build like a developer. Choose where to enter.",
       "sel.foto":"Photography","sel.foto.sub":"Light, framing and narrative","sel.diseno":"Graphic design & illustration","sel.diseno.sub":"Grid, ink and line",
       "sel.video":"Video editing","sel.video.sub":"Rhythm, sound and colour","sel.musica":"Music","sel.musica.sub":"Composition and sound editing",
@@ -65,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const dic = I18N[lang]; if (!dic) return;
     i18nEls.forEach((el) => { const k = el.getAttribute("data-i18n"); if (dic[k]) el.textContent = dic[k]; });
     html.setAttribute("lang", lang);
-    document.title = lang === "en" ? "Salvador Llácer Ivars — Design + Development" : "Salvador Llácer Ivars — Diseño + Desarrollo";
     langBtns.forEach((b) => { const on = b.dataset.lang === lang; b.classList.toggle("is-active", on); b.setAttribute("aria-pressed", String(on)); });
     try { localStorage.setItem("idioma", lang); } catch (e) {}
   }
@@ -73,22 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
   let idioma = "es"; try { idioma = localStorage.getItem("idioma") || "es"; } catch (e) {}
   if (idioma === "en") aplicarIdioma("en");
 
-  /* ── Clima Open-Meteo (sin key) ── */
+  /* Clima Open-Meteo (solo en el hub) */
   (function clima() {
     const box = document.getElementById("clima");
     const ico = document.getElementById("climaIco"), lugar = document.getElementById("climaLugar");
     const temp = document.getElementById("climaTemp"), desc = document.getElementById("climaDesc"), meta = document.getElementById("climaMeta");
     const sel = document.getElementById("climaSelect");
     if (!box || !sel) return;
-
     const UBIS = {
-      xativa:   { nombre:"Xàtiva · Valencia", lat:38.9935, lon:-0.5181 },
-      valencia: { nombre:"Valencia",          lat:39.4699, lon:-0.3763 },
-      jaraguas: { nombre:"Jaraguas",          lat:38.947,  lon:-0.928  },
-      lapobla:  { nombre:"La Pobla Llarga",   lat:39.2167, lon:-0.5519 }
+      xativa:{nombre:"Xàtiva · Valencia",lat:38.9935,lon:-0.5181}, valencia:{nombre:"Valencia",lat:39.4699,lon:-0.3763},
+      jaraguas:{nombre:"Jaraguas",lat:38.947,lon:-0.928}, lapobla:{nombre:"La Pobla Llarga",lat:39.2167,lon:-0.5519}
     };
     const TXT = { es:{carg:"Cargando…",err:"Tiempo no disponible",min:"Mín",max:"Máx",viento:"Viento"},
-                  en:{carg:"Loading…", err:"Weather unavailable", min:"Min",max:"Max",viento:"Wind"} };
+                  en:{carg:"Loading…",err:"Weather unavailable",min:"Min",max:"Max",viento:"Wind"} };
     const WMO = { 0:["sol","Despejado","Clear"],1:["sol","Mayormente despejado","Mostly clear"],2:["nube","Parcialmente nublado","Partly cloudy"],3:["nube","Nublado","Overcast"],
       45:["niebla","Niebla","Fog"],48:["niebla","Niebla helada","Rime fog"],51:["lluvia","Llovizna ligera","Light drizzle"],53:["lluvia","Llovizna","Drizzle"],55:["lluvia","Llovizna intensa","Dense drizzle"],
       61:["lluvia","Lluvia ligera","Light rain"],63:["lluvia","Lluvia","Rain"],65:["lluvia","Lluvia intensa","Heavy rain"],71:["nieve","Nieve ligera","Light snow"],73:["nieve","Nieve","Snow"],
@@ -102,12 +137,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nieve:`<svg viewBox="0 0 24 24"><path d="M17.5 14a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.6 1.6A3.5 3.5 0 0 0 6 14"/><path d="M8 18v3M13 18v3M18 18v3"/></svg>`,
       tormenta:`<svg viewBox="0 0 24 24"><path d="M17.5 13a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.6 1.6A3.5 3.5 0 0 0 6 13"/><path d="M13 15l-3 4h3l-1 4 4-5h-3z"/></svg>`
     };
-
     let actual = "xativa"; try { const g = localStorage.getItem("climaUbi"); if (g && UBIS[g]) actual = g; } catch (e) {}
     let ultimo = null, pid = 0;
     const L = () => html.getAttribute("lang") || "es";
     const url = (u) => `https://api.open-meteo.com/v1/forecast?latitude=${u.lat}&longitude=${u.lon}&current=temperature_2m,weather_code,wind_speed_10m&daily=temperature_2m_min,temperature_2m_max&timezone=auto&forecast_days=1`;
-
     function pintar() {
       const l = L(); lugar.textContent = UBIS[actual].nombre;
       if (!ultimo) { ico.innerHTML = ""; temp.textContent = "–"; desc.textContent = TXT[l].err; meta.textContent = ""; return; }
