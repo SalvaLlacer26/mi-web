@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-mode="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo: diseño de producto (CATIA), desarrollo multiplataforma, administración (ERP) e imagen corporativa. Abierto a nuevas oportunidades." />
+    <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo. Elige una disciplina para entrar en cada subweb: fotografía, diseño, vídeo, música, desarrollo y fabricación." />
     <meta name="theme-color" content="#0a0a0b" />
     <title>Salvador Llácer Ivars — Diseño + Desarrollo</title>
 
@@ -13,261 +13,105 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('tema')||'dark')}catch(e){}})();</script>
+    <!-- Evita parpadeo de tema antes de pintar -->
+    <script>(function(){try{document.documentElement.setAttribute('data-mode',localStorage.getItem('tema')||'dark')}catch(e){}})();</script>
 
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
   </head>
 
   <body>
-    <!-- ░░ ACCESIBILIDAD · salto rápido al contenido ░░ -->
     <a class="skip" href="#contenido">Saltar al contenido</a>
-
-    <!-- ░░ CAPAS DECORATIVAS FIJAS ░░ -->
     <div class="grano" aria-hidden="true"></div>
 
-    <div class="parallax" aria-hidden="true">
-      <span class="parallax__forma parallax__forma--1" data-speed="0.06"></span>
-      <span class="parallax__forma parallax__forma--2" data-speed="0.12"></span>
-      <span class="parallax__forma parallax__forma--3" data-speed="0.09"></span>
-      <span class="parallax__forma parallax__forma--4" data-speed="0.16"></span>
-    </div>
-
-    <div class="cursor cursor--punto" aria-hidden="true"></div>
-    <div class="cursor cursor--anillo" aria-hidden="true"></div>
-
-    <nav class="nav" aria-label="Principal">
-      <a class="nav__logo" href="#top">Salvador <span>Llácer</span></a>
-
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a href="#sobre-mi" class="nav__label"><span data-i18n="nav.sobre">Sobre mí</span> <span class="caret">▾</span></a>
-          <div class="dropdown"><div class="dropdown__panel">
-            <a href="#programacion"><span data-i18n="nav.programacion">Programación</span> <span class="flecha-menu">→</span></a>
-            <a href="#formacion"><span data-i18n="nav.formacion">Formación</span> <span class="flecha-menu">→</span></a>
-          </div></div>
-        </li>
-        <li class="nav__item">
-          <a href="#experiencia" class="nav__label js-experiencia"><span data-i18n="nav.experiencia">Experiencia</span> <span class="caret">▾</span></a>
-          <div class="dropdown"><div class="dropdown__panel">
-            <a href="#experiencia" class="js-experiencia" data-cat="diseno"><span data-i18n="nav.diseno">Diseño gráfico</span> <span class="flecha-menu">→</span></a>
-            <a href="#experiencia" class="js-experiencia" data-cat="audiovisual"><span data-i18n="nav.audiovisual">Producción audiovisual</span> <span class="flecha-menu">→</span></a>
-          </div></div>
-        </li>
-        <li class="nav__item">
-          <a href="#competencias" class="nav__label"><span data-i18n="nav.servicios">Competencias</span></a>
-        </li>
-        <li class="nav__item">
-          <a href="#pasiones" class="nav__label"><span data-i18n="nav.pasiones">Mis pasiones</span></a>
-        </li>
-        <li class="nav__item nav__contacto-movil">
-          <a href="#contacto" class="nav__label js-contacto"><span data-i18n="nav.contacto">Contacto</span> <span class="flecha-menu">→</span></a>
-        </li>
-      </ul>
+    <!-- ░░ HEADER · franjas diagonales con la gama de la disciplina activa ░░ -->
+    <header class="nav" aria-label="Principal">
+      <a class="logo" href="index.html" aria-label="Salvador Llácer, inicio">
+        <span class="logo__marcas" aria-hidden="true">
+          <span class="logo__barra"></span><span class="logo__barra"></span><span class="logo__barra"></span>
+        </span>
+        <span class="logo__nombre">Salvador <span>Llácer</span></span>
+      </a>
 
       <div class="nav__derecha">
         <span class="status"><i></i><span data-i18n="status">Disponible</span></span>
         <div class="lang" role="group" aria-label="Idioma / Language">
-          <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="Español" title="Español">ES</button>
-          <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+          <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="Español">ES</button>
+          <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
         </div>
-        <button class="tema" id="tema" aria-pressed="false" title="Modo claro/oscuro" aria-label="Cambiar tema">
-          <svg class="tema__ico tema__ico--sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg>
-          <svg class="tema__ico tema__ico--luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <button class="modo" id="modo" aria-pressed="false" aria-label="Cambiar modo claro u oscuro">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
         </button>
-        <a href="#contacto" class="nav__cta magnet js-contacto"><span data-i18n="nav.contacto">Contacto</span> <span class="flecha">→</span></a>
-        <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
-      </div>
-    </nav>
-
-    <header class="hero" id="top">
-      <div class="contenedor">
-        <p class="eyebrow reveal"><span data-i18n="eyebrow">Diseño + Desarrollo · Perfil técnico-creativo</span></p>
-
-        <h1 class="hero__titulo" id="titulo">
-          <span class="titulo-base">
-            <span class="linea"><span>Salvador</span></span>
-            <span class="linea"><span>Llácer</span></span>
-            <span class="linea"><span>Ivars</span></span>
-          </span>
-          <span class="titulo-mask" aria-hidden="true">
-            <span class="linea"><span data-i18n="word1">Edición</span></span>
-            <span class="linea"><span data-i18n="word2">Diseño</span></span>
-            <span class="linea"><span data-i18n="word3">Código</span></span>
-          </span>
-        </h1>
-
-        <div class="hero__pie">
-          <p class="hero__frase reveal"><span data-i18n="hero.frase">Pienso como diseñador y ejecuto como desarrollador. Convierto ideas en interfaces y aplicaciones que se ven profesionales y funcionan de verdad.</span></p>
-          <div class="hero__acciones">
-            <a href="#experiencia" class="boton boton--verde magnet js-experiencia"><span data-i18n="btn.propuesta">Mi experiencia</span> <span class="flecha">→</span></a>
-            <a href="#contacto" class="boton boton--linea magnet js-contacto"><span data-i18n="btn.hablemos">Hablemos</span></a>
-          </div>
-        </div>
-        <div class="separador" aria-hidden="true"><span></span><i></i><span></span></div>
       </div>
     </header>
 
-    <div class="marquee" aria-label="Herramientas y tecnologías">
-      <div class="marquee__track">
-        <ul class="marquee__grupo"><li>CATIA V5</li><li>CATIA Xperience</li><li>Geinprod</li><li>Illustrator</li><li>InDesign</li><li>Premiere</li><li>Audition</li><li>Acrobat</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li><li>Android</li></ul>
-        <ul class="marquee__grupo" aria-hidden="true"><li>CATIA V5</li><li>CATIA Xperience</li><li>Geinprod</li><li>Illustrator</li><li>InDesign</li><li>Premiere</li><li>Audition</li><li>Acrobat</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li><li>Android</li></ul>
-      </div>
-    </div>
+    <main id="contenido">
+      <!-- ░░ HERO · el selector ocupa el lugar del antiguo título ░░ -->
+      <section class="hub" aria-labelledby="hub-titulo">
+        <div class="contenedor">
+          <p class="eyebrow reveal"><span data-i18n="eyebrow">Diseño + Desarrollo · Perfil técnico-creativo</span></p>
+          <h1 class="hub__nombre reveal" id="hub-titulo"><span data-i18n="hub.nombre">Salvador Llácer Ivars</span></h1>
+          <p class="hub__frase reveal"><span data-i18n="hub.frase">Seis disciplinas, una sola forma de trabajar: pensar como diseñador y ejecutar como desarrollador. Elige por dónde entrar.</span></p>
 
-    <main id="contenido" class="contenedor">
-      <!-- 01 Sobre mí -->
-      <section id="sobre-mi" class="seccion" aria-labelledby="t-sobre">
-        <div class="seccion__head"><span class="seccion__num">01</span><h2 id="t-sobre" class="seccion__titulo"><span data-i18n="sec.sobre">Sobre mí</span></h2></div>
-        <div class="sobre">
-          <article class="ficha reveal">
-            <p class="ficha__texto"><span data-i18n="ficha">Soy Salvador Llácer Ivars, técnico superior en Imagen, Artes Gráficas, Diseño en Fabricación Mecánica y Desarrollo de Aplicaciones Multiplataforma. Esa mezcla me permite llevar una idea desde el boceto hasta el producto final sin perder el criterio visual ni la solidez del código. Busco proyectos donde el detalle y el código limpio importen tanto como la idea.</span></p>
-          </article>
-          <article id="programacion" class="programacion reveal">
-            <span class="programacion__marca"><span data-i18n="prog.marca">Programación</span></span>
-            <h3 class="programacion__titulo"><span data-i18n="prog.titulo">Un perfil difícil de encontrar</span></h3>
-            <p class="programacion__texto"><span data-i18n="prog.texto">Formado en DAM y con origen en las artes gráficas: escribo código ordenado y cuido cada interfaz como una pieza de diseño. Piensas en producto, no solo en pantalla.</span></p>
-            <ul class="check">
-              <li><span data-i18n="chk1">Desarrollo multiplataforma</span></li>
-              <li><span data-i18n="chk2">Interfaces claras y coherentes</span></li>
-              <li><span data-i18n="chk3">Pensamiento de producto</span></li>
-              <li><span data-i18n="chk4">Materializo ideas</span></li>
-            </ul>
-            <a href="#contacto" class="boton boton--linea boton--compacto magnet js-contacto"><span data-i18n="prog.btn">¿Trabajamos juntos?</span> <span class="flecha">→</span></a>
-          </article>
-        </div>
-      </section>
+          <nav class="selector" aria-label="Subwebs por disciplina">
+            <a class="selector__item reveal" href="sub/fotografia.html" data-tema="foto"
+               style="--c1:#b23a2e;--c2:#e0a458;--c3:#4fb3c9">
+              <span class="selector__num">01</span>
+              <span class="selector__titulo"><span data-i18n="sel.foto">Fotografía</span></span>
+              <span class="selector__sub"><span data-i18n="sel.foto.sub">Luz, encuadre y narrativa</span></span>
+              <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
+            </a>
+            <a class="selector__item reveal" href="sub/diseno.html" data-tema="diseno"
+               style="--c1:#c2185b;--c2:#0097b2;--c3:#d4a017">
+              <span class="selector__num">02</span>
+              <span class="selector__titulo"><span data-i18n="sel.diseno">Diseño gráfico e ilustración</span></span>
+              <span class="selector__sub"><span data-i18n="sel.diseno.sub">Retícula, tinta y trazo</span></span>
+              <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
+            </a>
+            <a class="selector__item reveal" href="sub/video.html" data-tema="video"
+               style="--c1:#0f766e;--c2:#e07a3f;--c3:#b5387a">
+              <span class="selector__num">03</span>
+              <span class="selector__titulo"><span data-i18n="sel.video">Edición de vídeo</span></span>
+              <span class="selector__sub"><span data-i18n="sel.video.sub">Ritmo, sonido y color</span></span>
+              <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
+            </a>
+            <a class="selector__item reveal" href="sub/musica.html" data-tema="musica"
+               style="--c1:#6d28d9;--c2:#db2777;--c3:#0891b2">
+              <span class="selector__num">04</span>
+              <span class="selector__titulo"><span data-i18n="sel.musica">Música</span></span>
+              <span class="selector__sub"><span data-i18n="sel.musica.sub">Composición y montaje sonoro</span></span>
+              <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
+            </a>
+            <a class="selector__item reveal" href="sub/dam.html" data-tema="dam"
+               style="--c1:#15803d;--c2:#2563eb;--c3:#dc2626">
+              <span class="selector__num">05</span>
+              <span class="selector__titulo"><span data-i18n="sel.dam">DAM y videojuegos</span></span>
+              <span class="selector__sub"><span data-i18n="sel.dam.sub">Código, apps y Simon Says</span></span>
+              <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
+            </a>
+            <a class="selector__item reveal" href="sub/fabricacion.html" data-tema="fab"
+               style="--c1:#1e40af;--c2:#64748b;--c3:#c2410c">
+              <span class="selector__num">06</span>
+              <span class="selector__titulo"><span data-i18n="sel.fab">Fabricación mecánica</span></span>
+              <span class="selector__sub"><span data-i18n="sel.fab.sub">CATIA, planos y ERP</span></span>
+              <span class="selector__gama" aria-hidden="true"><i></i><i></i><i></i></span>
+            </a>
+          </nav>
 
-      <!-- 02 Formación -->
-      <section id="formacion" class="seccion" aria-labelledby="t-form">
-        <div class="seccion__head"><span class="seccion__num">02</span><h2 id="t-form" class="seccion__titulo"><span data-i18n="sec.form">Formación</span></h2></div>
-        <p class="seccion__sub reveal"><span data-i18n="sec.form.sub">Cuatro títulos de grado superior que combinan diseño, técnica y programación.</span></p>
-        <div class="formacion">
-          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t1">Desarrollo de Aplicaciones Multiplataforma</span></h3><p><span data-i18n="form.t1d">Programación Java y Android y desarrollo de apps multiplataforma.</span></p></article>
-          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t2">Diseño en Fabricación Mecánica</span></h3><p><span data-i18n="form.t2d">Diseño de producto en 3D, planos y documentación de fabricación.</span></p></article>
-          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t3">Artes Gráficas</span></h3><p><span data-i18n="form.t3d">Maquetación editorial, preimpresión y producción gráfica.</span></p></article>
-          <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3><span data-i18n="form.t4">Imagen</span></h3><p><span data-i18n="form.t4d">Fotografía, vídeo y tratamiento de imagen.</span></p></article>
-        </div>
-        <p class="formacion__tools-titulo"><span data-i18n="form.tools">Herramientas</span></p>
-        <div class="stack">
-          <span class="chip">CATIA V5</span><span class="chip">CATIA Xperience</span><span class="chip">Geinprod (ERP)</span><span class="chip">Illustrator</span><span class="chip">InDesign</span><span class="chip">Photoshop</span><span class="chip">Premiere</span><span class="chip">Audition</span><span class="chip">Acrobat</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">Android</span>
-        </div>
-      </section>
-
-      <!-- 03 Experiencia (sneak peak) -->
-      <section id="experiencia" class="seccion" aria-labelledby="t-exp">
-        <div class="seccion__head"><span class="seccion__num">03</span><h2 id="t-exp" class="seccion__titulo"><span data-i18n="sec.exp">Experiencia</span></h2></div>
-        <p class="seccion__sub reveal"><span data-i18n="sec.exp.sub">Un vistazo a los productos que he entregado. Entra en la experiencia para ver cada trabajo por dentro.</span></p>
-
-        <article class="catalogo-grande reveal">
-          <div class="catalogo-grande__barra">
-            <span class="catalogo-grande__chip">Adobe Publish Online</span>
-            <h3 class="catalogo-grande__nombre"><span data-i18n="cat.titulo">Catálogo interactivo</span></h3>
-            <a class="catalogo-grande__full" href="https://indd.adobe.com/embed/a1179662-baab-4f7f-8e86-5744623847b4?startpage=1&allowFullscreen=true" target="_blank" rel="noopener"><span data-i18n="cat.full">Ver a pantalla completa</span> <span class="flecha">↗</span></a>
-          </div>
-          <div class="catalogo-grande__embed">
-            <iframe src="https://indd.adobe.com/embed/a1179662-baab-4f7f-8e86-5744623847b4?startpage=1&allowFullscreen=true" title="Catálogo interactivo" loading="lazy" allow="fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </article>
-
-        <div class="prod">
-          <a href="#experiencia" class="prod__tarjeta js-experiencia reveal" data-cat="audiovisual">
-            <div class="prod__media">
-              <img src="https://img.youtube.com/vi/IwEHOaWaUZY/hqdefault.jpg" alt="Producción audiovisual" loading="lazy" />
-              <span class="empresa__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-            </div>
-            <div class="prod__cuerpo">
-              <span class="prod__etiqueta"><span data-i18n="nav.audiovisual">Producción audiovisual</span></span>
-              <h3 class="prod__nombre"><span data-i18n="exp.audio.t">Vídeos, música y edición</span></h3>
-              <p class="prod__txt"><span data-i18n="prod.audio.d">Grabación, montaje y composición de música original para series de marca.</span></p>
-              <span class="prod__cta"><span data-i18n="exp.abrir">Ver trabajo</span> <span class="flecha">→</span></span>
-            </div>
-          </a>
-
-          <a href="#experiencia" class="prod__tarjeta js-experiencia reveal" data-cat="diseno">
-            <div class="prod__media prod__media--mock">
-              <svg class="catalogo-sec__arte" viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs><pattern id="gridC2" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M12 0H0V12" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.18"/></pattern></defs>
-                <rect width="120" height="160" fill="url(#gridC2)"/>
-                <rect x="14" y="14" width="92" height="132" fill="currentColor" opacity="0.05" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2"/>
-                <line x1="60" y1="14" x2="60" y2="146" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" opacity="0.4"/>
-                <rect x="14" y="14" width="92" height="8" fill="currentColor" opacity="0.8"/>
-                <g fill="currentColor"><rect x="22" y="60" width="30" height="2.4" opacity="0.32"/><rect x="22" y="67" width="24" height="2.4" opacity="0.26"/><rect x="22" y="74" width="28" height="2.4" opacity="0.3"/><rect x="22" y="81" width="18" height="2.4" opacity="0.22"/></g>
-                <g fill="none" stroke="currentColor" opacity="0.6"><circle cx="84" cy="86" r="15" stroke-width="7" stroke-dasharray="3 5"/><circle cx="84" cy="86" r="6" stroke-width="1.2"/></g>
-                <polygon points="34,104 42,108 42,118 34,122 26,118 26,108" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.5"/>
-                <g fill="currentColor" opacity="0.6"><rect x="22" y="132" width="1.6" height="9"/><rect x="25" y="132" width="1" height="9"/><rect x="28" y="132" width="2.4" height="9"/><rect x="32" y="132" width="1" height="9"/><rect x="35" y="132" width="1.6" height="9"/><rect x="38" y="132" width="2.4" height="9"/><rect x="43" y="132" width="1" height="9"/><rect x="46" y="132" width="1.6" height="9"/></g>
-              </svg>
-            </div>
-            <div class="prod__cuerpo">
-              <span class="prod__etiqueta"><span data-i18n="nav.diseno">Diseño gráfico</span></span>
-              <h3 class="prod__nombre"><span data-i18n="exp.diseno.t">Catálogos e imagen de marca</span></h3>
-              <p class="prod__txt"><span data-i18n="prod.diseno.d">Catálogos, folletos, tarjetas, firmas, stands y totems de feria.</span></p>
-              <span class="prod__cta"><span data-i18n="exp.abrir">Ver trabajo</span> <span class="flecha">→</span></span>
-            </div>
-          </a>
-
-          <a href="#experiencia" class="prod__tarjeta js-experiencia reveal" data-cat="diseno">
-            <div class="prod__media">
-              <svg class="empresa__blueprint" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs><pattern id="gridW2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/></pattern></defs>
-                <rect width="400" height="220" fill="url(#gridW2)"/>
-                <rect x="28" y="38" width="150" height="150" fill="currentColor" opacity="0.05" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2"/>
-                <rect x="28" y="38" width="150" height="9" fill="currentColor" opacity="0.75"/>
-                <text x="40" y="72" font-family="Archivo, Arial, sans-serif" font-size="13" font-weight="800" fill="currentColor" opacity="0.85" letter-spacing="1">PLANO</text>
-                <g fill="currentColor"><rect x="40" y="102" width="110" height="3" opacity="0.3"/><rect x="40" y="110" width="86" height="3" opacity="0.25"/><rect x="40" y="118" width="98" height="3" opacity="0.3"/></g>
-                <g fill="none" stroke="currentColor" opacity="0.6"><circle cx="298" cy="86" r="30" stroke-width="15" stroke-dasharray="5 9"/><circle cx="298" cy="86" r="12" stroke-width="1.5"/></g>
-                <polygon points="250,150 262,157 262,171 250,178 238,171 238,157" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55"/>
-                <g stroke="currentColor" stroke-width="0.9" opacity="0.5"><line x1="268" y1="140" x2="328" y2="140"/><line x1="268" y1="135" x2="268" y2="145"/><line x1="328" y1="135" x2="328" y2="145"/></g>
-              </svg>
-            </div>
-            <div class="prod__cuerpo">
-              <span class="prod__etiqueta"><span data-i18n="s5.t">Delineación industrial</span></span>
-              <h3 class="prod__nombre"><span data-i18n="exp.ind.t">Diseño de producto y planimetría</span></h3>
-              <p class="prod__txt"><span data-i18n="prod.ind.d">Torres de apilamiento, BOM en ERP y órdenes de fabricación.</span></p>
-              <span class="prod__cta"><span data-i18n="exp.abrir">Ver trabajo</span> <span class="flecha">→</span></span>
-            </div>
-          </a>
-        </div>
-
-        <div class="prod-mas"><a href="#experiencia" class="boton boton--linea magnet js-experiencia"><span data-i18n="exp.completa">Ver la experiencia completa</span> <span class="flecha">→</span></a></div>
-      </section>
-
-      <!-- 04 Competencias -->
-      <section id="competencias" class="seccion" aria-labelledby="t-hecho">
-        <div class="seccion__head"><span class="seccion__num">04</span><h2 id="t-hecho" class="seccion__titulo"><span data-i18n="sec.hecho">Competencias</span></h2></div>
-        <p class="seccion__sub reveal"><span data-i18n="sec.hecho.sub">Lo que aporto a un equipo, del diseño al código.</span></p>
-        <ul class="filas">
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg><h3 class="fila__titulo"><span data-i18n="s1.t">Diseño gráfico</span></h3><p class="fila__desc"><span data-i18n="s1.d">Identidad y piezas con intención, listas para producción.</span></p><span class="fila__marca">Illustrator · InDesign</span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><h3 class="fila__titulo"><span data-i18n="s2.t">Fotografía</span></h3><p class="fila__desc"><span data-i18n="s2.d">Composición, luz y narrativa al servicio de tu marca.</span></p><span class="fila__marca"><span data-i18n="s2.m">Luz · Encuadre</span></span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg><h3 class="fila__titulo"><span data-i18n="s3.t">Edición de vídeo</span></h3><p class="fila__desc"><span data-i18n="s3.d">Ritmo, sonido y montaje para contenido que retiene.</span></p><span class="fila__marca">Audition · Premiere</span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg><h3 class="fila__titulo"><span data-i18n="s4.t">Dibujo e ilustración</span></h3><p class="fila__desc"><span data-i18n="s4.d">Expresión y forma propia, sin recursos genéricos.</span></p><span class="fila__marca"><span data-i18n="s4.m">Trazo · Color</span></span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><h3 class="fila__titulo"><span data-i18n="s5.t">Delineación industrial</span></h3><p class="fila__desc"><span data-i18n="s5.d">Precisión y planos cuando el detalle importa.</span></p><span class="fila__marca"><span data-i18n="s5.m">Geometría</span></span></li>
-          <li class="fila reveal"><svg class="fila__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg><h3 class="fila__titulo"><span data-i18n="s6.t">Gestión administrativa</span></h3><p class="fila__desc"><span data-i18n="s6.d">Método y orden para que el proyecto fluya.</span></p><span class="fila__marca"><span data-i18n="s6.m">Organización</span></span></li>
-        </ul>
-      </section>
-
-      <!-- 05 Mis pasiones -->
-      <section id="pasiones" class="seccion" aria-labelledby="t-pas">
-        <div class="seccion__head"><span class="seccion__num">05</span><h2 id="t-pas" class="seccion__titulo"><span data-i18n="sec.gusta">Mis pasiones</span></h2></div>
-        <p class="seccion__sub reveal"><span data-i18n="sec.gusta.sub">Lo que consumo y creo alimenta cómo diseño y programo.</span></p>
-        <div class="bloques">
-          <article class="bloque bloque--morado reveal"><svg class="bloque__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 6H9l-2-3H2v15h18a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"/><line x1="17" y1="6" x2="15" y2="12"/><line x1="11" y1="6" x2="9" y2="12"/></svg><h3><span data-i18n="p1.t">Cine y series</span></h3><p><span data-i18n="p1.d">Estudio narrativa y ritmo para contar mejor.</span></p></article>
-          <article class="bloque bloque--verde reveal"><svg class="bloque__icono" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg><h3><span data-i18n="p2.t">Videojuegos</span></h3><p><span data-i18n="p2.d">Referente de UX, interacción y mundos coherentes.</span></p></article>
-          <article class="bloque bloque--gris reveal"><svg class="bloque__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><h3><span data-i18n="p3.t">Crear música</span></h3><p><span data-i18n="p3.d">Ritmo y estructura como criterio de diseño.</span></p></article>
-          <article class="bloque bloque--gris-claro reveal"><svg class="bloque__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg><h3><span data-i18n="p4.t">Dibujo</span></h3><p><span data-i18n="p4.d">Forma y mirada aplicadas a cada entregable.</span></p></article>
+          <div class="separador" aria-hidden="true"><span></span><i></i><span></span></div>
         </div>
       </section>
     </main>
 
-    <footer id="contacto" class="pie">
+    <!-- ░░ FOOTER · contacto + clima (se conserva) ░░ -->
+    <footer class="pie">
       <div class="contenedor">
         <div class="pie__grid">
-          <div class="pie__info">
-            <p class="pie__eyebrow reveal"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
+          <div>
+            <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
             <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
             <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
 
-            <!-- ░░ API CLIMA · Open-Meteo (sin key) · bajo el contacto ░░ -->
             <div class="clima" id="clima">
               <span class="clima__ico" id="climaIco" aria-hidden="true"></span>
               <div class="clima__cuerpo" aria-live="polite">
@@ -297,73 +141,5 @@
         <p class="copyright">© <span id="anio"></span> Salvador Llácer Ivars</p>
       </div>
     </footer>
-
-    <button class="top-btn" id="topBtn" aria-label="Volver arriba">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-    </button>
-
-    <!-- ░░ VISTA DE DETALLE · EXPERIENCIA ░░ -->
-    <div class="experiencia" id="experiencia-vista" role="dialog" aria-modal="true" aria-labelledby="exp-vista-t" aria-hidden="true">
-      <div class="experiencia__top">
-        <div class="contenedor experiencia__top-in">
-          <div>
-            <p class="experiencia__eyebrow"><span data-i18n="nav.experiencia">Experiencia</span></p>
-            <h2 class="experiencia__titulo" id="exp-vista-t"><span data-i18n="exp.vista.t">Trabajos, por dentro</span></h2>
-          </div>
-          <button class="experiencia__cerrar" data-cerrar-exp aria-label="Cerrar"><span>✕</span></button>
-        </div>
-      </div>
-
-      <div class="experiencia__body">
-        <div class="contenedor">
-          <section class="exp-bloque" id="exp-diseno">
-            <div class="exp-bloque__head"><span class="exp-bloque__num">A</span><h3 class="exp-bloque__titulo"><span data-i18n="exp.diseno.t">Catálogos e imagen de marca</span></h3></div>
-            <p class="exp-bloque__intro"><span data-i18n="exp.diseno.intro">Diseño editorial y de identidad para empresas del sector de la automoción. De la retícula a la imprenta y a la feria.</span></p>
-            <div class="exp-orgs">
-              <span class="exp-org">Weidner Ibérica</span>
-              <span class="exp-org">Weidner México</span>
-            </div>
-            <ul class="exp-lista">
-              <li><span data-i18n="exp.d.l1">Catálogos corporativos e industriales maquetados en InDesign (impreso y digital interactivo).</span></li>
-              <li><span data-i18n="exp.d.l2">Folletos, tarjetas de visita y firmas de correo.</span></li>
-              <li><span data-i18n="exp.d.l3">Stands y totems para ferias de automoción.</span></li>
-              <li><span data-i18n="exp.d.l4">Diseño desde cero de torres de apilamiento (CATIA) y planimetría.</span></li>
-              <li><span data-i18n="exp.d.l5">BOM en el ERP Geinprod, órdenes de fabricación y seguimiento con Producción.</span></li>
-            </ul>
-            <div class="exp-links">
-              <a class="boton boton--linea boton--compacto" href="https://indd.adobe.com/embed/a1179662-baab-4f7f-8e86-5744623847b4?startpage=1&allowFullscreen=true" target="_blank" rel="noopener"><span data-i18n="cat.titulo">Catálogo interactivo</span> <span class="flecha">↗</span></a>
-              <a class="boton boton--linea boton--compacto" href="https://www.flipsnack.com/6CDFF7CC5A8/cat-logo-weidner-ib-rica-espa-ol-c5evqww5s4/full-view.html" target="_blank" rel="noopener"><span data-i18n="flip.titulo">Catálogo Weidner</span> <span class="flecha">↗</span></a>
-            </div>
-          </section>
-
-          <section class="exp-bloque" id="exp-audiovisual">
-            <div class="exp-bloque__head"><span class="exp-bloque__num">B</span><h3 class="exp-bloque__titulo"><span data-i18n="exp.audio.t">Vídeos, música y edición</span></h3></div>
-            <p class="exp-bloque__intro"><span data-i18n="exp.audio.intro">Colaboración en grabación, edición y composición de música original para series de marca.</span></p>
-            <div class="exp-orgs">
-              <span class="exp-org">Interpreta Natura</span>
-              <span class="exp-org">Proyecto Ulges</span>
-              <span class="exp-org">Rural Labscape</span>
-            </div>
-            <div class="videos-grid" id="videos-grid"><!-- relleno por JS --></div>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal" id="modal" aria-hidden="true">
-      <div class="modal__fondo" data-cerrar></div>
-      <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-        <button class="modal__cerrar" data-cerrar aria-label="Cerrar">✕</button>
-        <p class="modal__eyebrow"><span data-i18n="modal.eyebrow">Hablemos</span></p>
-        <h2 class="modal__titulo" id="modal-titulo"><span data-i18n="modal.titulo">Cuéntame tu proyecto</span></h2>
-        <form class="form" id="form" novalidate>
-          <label class="form__campo"><span data-i18n="form.nombre">Nombre</span><input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre" data-i18n-ph="form.ph_nombre" /></label>
-          <label class="form__campo"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email" placeholder="tu@correo.com" data-i18n-ph="form.ph_email" /></label>
-          <label class="form__campo"><span data-i18n="form.mensaje">Mensaje</span><textarea name="mensaje" rows="4" required placeholder="¿En qué puedo ayudarte?" data-i18n-ph="form.ph_mensaje"></textarea></label>
-          <button type="submit" class="boton boton--verde"><span data-i18n="form.enviar">Enviar mensaje</span> <span class="flecha">→</span></button>
-          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado correctamente.</span></p>
-        </form>
-      </div>
-    </div>
   </body>
 </html>
