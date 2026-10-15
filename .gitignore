@@ -1,0 +1,13 @@
+# 1. Ignorar absolutamente todo por defecto
+*
+
+# 2. Permitir que Git recorra las carpetas
+!*/
+
+# 3. No ignorar los archivos HTML, CSS y JS
+!*.html
+!*.css
+!*.js
+
+# 4. No ignorar este propio archivo de configuración
+!.gitignore

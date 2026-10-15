@@ -1,109 +1,165 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="es" data-mode="dark" data-bg="hub">
+<html lang="es" data-mode="dark" data-view="std">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo. Elige una disciplina para entrar en cada subweb." />
+    <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo: fotografía, diseño, vídeo, música, DAM y fabricación mecánica." />
     <meta name="theme-color" content="#0a0a0b" />
     <title>Salvador Llácer Ivars — Diseño + Desarrollo</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0b'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='none' stroke='%2300e08a' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300e08a'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0b'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='none' stroke='%238a5a2b' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%238a5a2b'/%3E%3C/svg%3E" />
 
-    <!-- Tipografia Apple (SF Pro) via CDN; fallback a la fuente del sistema -->
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/sf-pro-text" rel="stylesheet" />
 
-    <script>(function(){try{document.documentElement.setAttribute('data-mode',localStorage.getItem('tema')||'dark')}catch(e){}})();</script>
+    <script>(function(){try{document.documentElement.setAttribute('data-view',localStorage.getItem('viewMode')||'std')}catch(e){}})();</script>
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
+    <noscript><style>.reveal{opacity:1}</style></noscript>
   </head>
 
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
-
-    <!-- ░░ FONDO: degradado dinamico + velo de contraste + indiana flotante + objetos(foto) ░░ -->
     <div class="fondo" aria-hidden="true">
       <span class="fondo__degradado"></span>
       <span class="fondo__velo"></span>
       <span class="fondo__patron"></span>
       <span class="fondo__objetos">
-        <svg class="obj obj--1" viewBox="0 0 24 24"><path d="M4 7h3l1.2-1.8A1 1 0 0 1 9 5h6a1 1 0 0 1 .8.4L17 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
-        <svg class="obj obj--2" viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2 2v8l3-3 2 2 3-4 2 2V6z"/></svg>
-        <svg class="obj obj--3" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg>
+        <svg class="obj obj--1" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2L8 5h8l1.5 2h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.5"/></svg>
+        <svg class="obj obj--2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6l5.2 3v6l-5.2 3-5.2-3V9z"/><circle cx="12" cy="12" r="1.4"/></svg>
+        <svg class="obj obj--3" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 5v14M16 5v14M4 9h4M4 15h4M16 9h4M16 15h4"/></svg>
         <svg class="obj obj--4" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
-        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+        <svg class="obj obj--6" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13V9M9.5 3h5M12 3v2"/></svg>
+        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1.6"/></svg>
+        <svg class="obj obj--7" viewBox="0 0 24 24"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3"/><path d="M8 12h8"/></svg>
+        <svg class="obj obj--8" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1.6"/></svg>
       </span>
     </div>
 
     <header class="nav" aria-label="Principal">
-      <a class="logo" href="index.html" aria-label="Salvador Llácer, inicio">
+      <a class="logo" href="index.html" aria-label="Volver al inicio">
         <span class="logo__marcas" aria-hidden="true"></span>
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
-
       <nav class="nav__menu" aria-label="Secciones">
-        <a href="fotografia.html" data-tema="foto"><span data-i18n="m.foto">Foto</span></a>
+        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+          <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.foto">Foto</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="fotografia.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-paisaje"><span data-i18n="sub.paisaje">Paisaje</span></a>
+                <a href="fotografia.html#sub-robados"><span data-i18n="sub.robados">Robados</span></a>
+                <a href="fotografia.html#sub-personal"><span data-i18n="sub.personal">Visión personal</span></a>
+                <a href="fotografia.html#sub-bodegon"><span data-i18n="sub.bodegon">Bodegón publicitario</span></a>
+                <a href="fotografia.html#sub-moda"><span data-i18n="sub.moda">Moda</span></a>
+                <a href="fotografia.html#sub-retrato"><span data-i18n="sub.retrato">Retrato</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="fotografia.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="fotografia.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-etsid"><span data-i18n="sub.etsid">ETSID · UPV</span></a>
+                <a href="fotografia.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+                <a href="fotografia.html#sub-bodas"><span data-i18n="sub.bodas">Bodas y eventos</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="fotografia.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="fotografia.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
         <a href="#" data-soon data-tema="diseno"><span data-i18n="m.diseno">Diseño</span></a>
         <a href="#" data-soon data-tema="video"><span data-i18n="m.video">Vídeo</span></a>
         <a href="#" data-soon data-tema="musica"><span data-i18n="m.musica">Música</span></a>
         <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
         <a href="#" data-soon data-tema="fab"><span data-i18n="m.mec">Mecánica</span></a>
-        <a href="#" class="js-contacto"><span data-i18n="m.contacto">Contacto</span></a>
       </nav>
-
       <div class="nav__derecha">
+        <button class="viewbtn" id="viewToggle" type="button" aria-pressed="false" aria-label="Cambiar visualización a mosaico" title="Cambiar visualización">
+          <span class="viewbtn__ico viewbtn__ico--grid" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <span class="viewbtn__ico viewbtn__ico--slide" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span>
+          <span class="viewbtn__label">Mosaico</span>
+        </button>
+        <span class="nav__sep" aria-hidden="true"></span>
         <div class="lang" role="group" aria-label="Idioma / Language">
           <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="Español">ES</button>
           <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
         </div>
-        <button class="modo" id="modo" aria-pressed="false" aria-label="Cambiar modo claro u oscuro">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <button class="nav__cta js-contacto" type="button">
+          <span data-i18n="m.contacto">Contacto</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
         </button>
         <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
       </div>
     </header>
 
-    <main id="contenido">
-      <section class="hub" aria-labelledby="hub-titulo">
-        <div class="contenedor">
-          <p class="eyebrow reveal"><span data-i18n="eyebrow">Diseño + Desarrollo · Perfil técnico-creativo</span></p>
-          <h1 class="hub__nombre reveal" id="hub-titulo"><span data-i18n="hub.nombre">Salvador Llácer Ivars</span></h1>
-          <p class="hub__frase reveal"><span data-i18n="hub.frase">Seis disciplinas, una sola forma de trabajar: pensar como diseñador y ejecutar como desarrollador. Elige por dónde entrar.</span></p>
+    <main id="contenido" tabindex="-1">
+      <section class="hub" aria-labelledby="t-hub">
+        <div class="contenedor reveal">
+          <p class="eyebrow"><span data-i18n="eyebrow">Diseño + Desarrollo · Perfil técnico-creativo</span></p>
+          <h1 class="hub__nombre" id="t-hub"><span data-i18n="hub.nombre">Salvador Llácer Ivars</span></h1>
+          <p class="hub__frase"><span data-i18n="hub.frase">Seis disciplinas, una sola forma de trabajar: pensar como diseñador y ejecutar como desarrollador. Elige por dónde entrar.</span></p>
 
-          <nav class="selector" aria-label="Subwebs por disciplina">
-            <a class="selector__item reveal" href="fotografia.html" data-tema="foto" style="--c1:#8a5a2b;--c2:#161411;--c3:#8b857c">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M4 7h3l1.2-1.8A1 1 0 0 1 9 5h6a1 1 0 0 1 .8.4L17 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
-              <span class="selector__titulo"><span data-i18n="sel.foto">Fotografía</span></span>
-              <span class="selector__sub"><span data-i18n="sel.foto.sub">Luz, encuadre y narrativa</span></span>
+          <div class="selector">
+            <a class="selector__item" href="fotografia.html" data-tema="foto" aria-label="Fotografía">
+              <span class="selector__icono"><svg viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2L8 5h8l1.5 2h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.5"/></svg></span>
+              <span class="selector__titulo" data-i18n="sel.foto">Fotografía</span>
+              <span class="selector__sub" data-i18n="sel.foto.sub">Luz, encuadre y narrativa</span>
             </a>
-            <a class="selector__item selector__item--dark reveal" href="#" data-soon data-tema="diseno" style="--c1:#19b6d6;--c2:#e0118a;--c3:#f2b705">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.5 2 2 6.2 2 11.5 2 16.7 6.2 21 11.5 21c1.4 0 2.5-1.1 2.5-2.5 0-.7-.3-1.3-.7-1.7-.4-.5-.7-1-.7-1.6 0-1 .8-1.9 1.9-1.9h1.5c3.3 0 6-2.7 6-6C22 5.6 17.5 2 12 2zM8 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm3.5-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm3.5 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
-              <span class="selector__titulo"><span data-i18n="sel.diseno">Diseño gráfico e ilustración</span></span>
-              <span class="selector__sub"><span data-i18n="sel.diseno.sub">Retícula, tinta y trazo</span></span>
+            <a class="selector__item" href="#" data-soon data-tema="diseno" aria-label="Diseño gráfico e ilustración">
+              <span class="selector__icono"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
+              <span class="selector__titulo" data-i18n="sel.diseno">Diseño gráfico e ilustración</span>
+              <span class="selector__sub" data-i18n="sel.diseno.sub">Retícula, tinta y trazo</span>
             </a>
-            <a class="selector__item reveal" href="#" data-soon data-tema="video" style="--c1:#5b86dd;--c2:#e06a66;--c3:#6fbf73">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 8 5 4.2A2 2 0 0 1 6.8 3h12.4a2 2 0 0 1 1.8 1.2L22.6 8H3.4zM3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg>
-              <span class="selector__titulo"><span data-i18n="sel.video">Edición de vídeo</span></span>
-              <span class="selector__sub"><span data-i18n="sel.video.sub">Ritmo, sonido y color</span></span>
+            <a class="selector__item" href="#" data-soon data-tema="video" aria-label="Edición de vídeo">
+              <span class="selector__icono"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M3 15h18M8 5v14M16 5v14"/></svg></span>
+              <span class="selector__titulo" data-i18n="sel.video">Edición de vídeo</span>
+              <span class="selector__sub" data-i18n="sel.video.sub">Ritmo, sonido y color</span>
             </a>
-            <a class="selector__item reveal" href="#" data-soon data-tema="musica" style="--c1:#b8923a;--c2:#161411;--c3:#ece8e1">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18a3 3 0 1 1-2-2.83V6a1 1 0 0 1 .76-.97l8-2A1 1 0 0 1 17 4v10.17A3 3 0 1 1 15 18V7.3l-6 1.5V18z"/></svg>
-              <span class="selector__titulo"><span data-i18n="sel.musica">Música</span></span>
-              <span class="selector__sub"><span data-i18n="sel.musica.sub">Composición y montaje sonoro</span></span>
+            <a class="selector__item" href="#" data-soon data-tema="musica" aria-label="Música">
+              <span class="selector__icono"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
+              <span class="selector__titulo" data-i18n="sel.musica">Música</span>
+              <span class="selector__sub" data-i18n="sel.musica.sub">Composición y montaje sonoro</span>
             </a>
-            <a class="selector__item reveal" href="#" data-soon data-tema="dam" style="--c1:#e23b3b;--c2:#1f9d57;--c3:#3b82f6">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7 8h10a5 5 0 0 1 4.86 3.73l.7 3.5A2.5 2.5 0 0 1 18.2 17.7L17 16H7l-1.2 1.7A2.5 2.5 0 0 1 .44 15.23l.7-3.5A5 5 0 0 1 7 8zM6 11v1.5H4.5V14H6v1.5h1.5V14H9v-1.5H7.5V11H6zm10.5 1a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5zm2 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z"/></svg>
-              <span class="selector__titulo"><span data-i18n="sel.dam">DAM y videojuegos</span></span>
-              <span class="selector__sub"><span data-i18n="sel.dam.sub">Código, apps y Simon Says</span></span>
+            <a class="selector__item" href="#" data-soon data-tema="dam" aria-label="DAM y videojuegos">
+              <span class="selector__icono"><svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14"/></svg></span>
+              <span class="selector__titulo" data-i18n="sel.dam">DAM y videojuegos</span>
+              <span class="selector__sub" data-i18n="sel.dam.sub">Código, apps y Simon Says</span>
             </a>
-            <a class="selector__item reveal" href="#" data-soon data-tema="fab" style="--c1:#7c8aa0;--c2:#2b56c9;--c3:#eef2f7">
-              <svg class="selector__icono" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.4 13a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
-              <span class="selector__titulo"><span data-i18n="sel.fab">Fabricación mecánica</span></span>
-              <span class="selector__sub"><span data-i18n="sel.fab.sub">CATIA, planos y ERP</span></span>
+            <a class="selector__item" href="#" data-soon data-tema="fab" aria-label="Fabricación mecánica">
+              <span class="selector__icono"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+              <span class="selector__titulo" data-i18n="sel.fab">Fabricación mecánica</span>
+              <span class="selector__sub" data-i18n="sel.fab.sub">CATIA, planos y ERP</span>
             </a>
-          </nav>
+          </div>
 
-          <div class="separador" aria-hidden="true"><span></span><i></i><span></span></div>
+          <div class="separador"><span></span><i></i><span></span></div>
+
+          <div class="clima reveal" data-clima>
+            <span class="clima__ico" aria-hidden="true"></span>
+            <div class="clima__cuerpo">
+              <span class="clima__lugar">Xàtiva · Valencia</span>
+              <div class="clima__fila"><span class="clima__temp">–</span><span class="clima__desc">Cargando…</span></div>
+              <span class="clima__meta"></span>
+            </div>
+            <label class="clima__selector">
+              <span class="clima__selector-txt"><span data-i18n="clima.ubicacion">Ubicación</span></span>
+              <select class="clima__select" aria-label="Elegir ubicación">
+                <option value="xativa">Xàtiva</option>
+                <option value="valencia">València</option>
+                <option value="jaraguas">Jaraguas</option>
+                <option value="lapobla">La Pobla Llarga</option>
+              </select>
+            </label>
+          </div>
         </div>
       </section>
     </main>
@@ -115,21 +171,6 @@
             <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
             <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
             <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
-            <div class="clima" id="clima">
-              <span class="clima__ico" id="climaIco" aria-hidden="true"></span>
-              <div class="clima__cuerpo" aria-live="polite">
-                <span class="clima__lugar" id="climaLugar">Xàtiva</span>
-                <span class="clima__fila"><span class="clima__temp" id="climaTemp">–°</span><span class="clima__desc" id="climaDesc">Cargando…</span></span>
-                <span class="clima__meta" id="climaMeta"></span>
-              </div>
-              <label class="clima__selector">
-                <span class="clima__selector-txt" data-i18n="clima.ubicacion">Ubicación</span>
-                <select id="climaSelect" aria-label="Elegir ubicación del tiempo">
-                  <option value="xativa">Xàtiva</option><option value="valencia">Valencia</option>
-                  <option value="jaraguas">Jaraguas</option><option value="lapobla">La Pobla Llarga</option>
-                </select>
-              </label>
-            </div>
           </div>
           <div class="pie__loc reveal">
             <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
@@ -137,9 +178,45 @@
             <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
           </div>
         </div>
-        <p class="copyright">© <span id="anio"></span> Salvador Llácer Ivars</p>
+
+        <div class="pie__clima clima reveal" data-clima>
+          <span class="clima__ico" aria-hidden="true"></span>
+          <div class="clima__cuerpo">
+            <span class="clima__lugar">Xàtiva · Valencia</span>
+            <div class="clima__fila"><span class="clima__temp">–</span><span class="clima__desc">Cargando…</span></div>
+            <span class="clima__meta"></span>
+          </div>
+          <label class="clima__selector">
+            <span class="clima__selector-txt"><span data-i18n="clima.ubicacion">Ubicación</span></span>
+            <select class="clima__select" aria-label="Elegir ubicación">
+              <option value="xativa">Xàtiva</option>
+              <option value="valencia">València</option>
+              <option value="jaraguas">Jaraguas</option>
+              <option value="lapobla">La Pobla Llarga</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="copyright"><a class="nav__volver" href="index.html">← Volver al inicio</a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
       </div>
     </footer>
+
+    <div class="fab">
+      <button class="fab__btn fab__top" id="toTop" type="button" aria-label="Subir arriba">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+      <button class="fab__btn fab__toc" id="tocBtn" type="button" aria-label="Índice de secciones" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      </button>
+    </div>
+    <div class="toc__scrim" id="tocScrim"></div>
+    <aside class="toc" id="toc" aria-hidden="true" aria-label="Índice de secciones">
+      <header class="toc__head">
+        <h3>Secciones</h3>
+        <button class="toc__cerrar" id="tocClose" aria-label="Cerrar índice">✕</button>
+      </header>
+      <nav class="toc__list" id="tocList"></nav>
+    </aside>
 
     <div class="modal" id="modal" aria-hidden="true">
       <div class="modal__fondo" data-cerrar></div>
@@ -154,6 +231,22 @@
           <button type="submit" class="boton boton--verde"><span data-i18n="form.enviar">Enviar mensaje</span> <span class="flecha">→</span></button>
           <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado correctamente.</span></p>
         </form>
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+      <div class="lightbox__fondo" data-lb-fondo></div>
+      <button class="lightbox__cerrar" data-lb-cerrar aria-label="Cerrar">✕</button>
+      <button class="lightbox__nav lightbox__nav--prev" data-lb-prev aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="lightbox__nav lightbox__nav--next" data-lb-next aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      <figure class="lightbox__fig"><img src="" alt="" /></figure>
+    </div>
+
+    <div class="gridmodal" id="gridmodal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Todas las fotos de la serie">
+      <div class="gridmodal__fondo" data-gm-fondo></div>
+      <div class="gridmodal__caja">
+        <header class="gridmodal__head"><h3 id="gm-title">Serie</h3><button class="gridmodal__cerrar" data-gm-cerrar aria-label="Cerrar">✕</button></header>
+        <div class="gridmodal__grid" id="gm-grid"></div>
       </div>
     </div>
   </body>
