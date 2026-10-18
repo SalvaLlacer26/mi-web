@@ -737,4 +737,97 @@ document.addEventListener("DOMContentLoaded", () => {
     new MutationObserver(pintar).observe(html,{attributes:true,attributeFilter:["lang"]});
     cargar();
   })();
+
+  /* ░░ Pantonera (índice): hover en lámina → la web adopta su paleta ░░ */
+  (() => {
+    const pantone = document.querySelector(".pantone");
+    if (!pantone) return;
+    const html = document.documentElement;
+    const laminas = Array.from(pantone.querySelectorAll(".pantone-lamina"));
+    const volver = () => { if (html.getAttribute("data-tema") !== "index") html.setAttribute("data-tema", "index"); };
+    laminas.forEach((l) => {
+      const t = l.dataset.tema;
+      if (!t) return;
+      const poner = () => html.setAttribute("data-tema", t);
+      l.addEventListener("mouseenter", poner);
+      l.addEventListener("focus", poner);
+      l.addEventListener("mouseleave", volver);
+      l.addEventListener("blur", volver);
+    });
+    pantone.addEventListener("mouseleave", volver);
+  })();
+
+  /* ░░ Chatbot del índice: preguntas frecuentes → secciones y subwebs ░░ */
+  (() => {
+    const root = document.querySelector("[data-bot]");
+    if (!root) return;
+    const log = root.querySelector("[data-bot-log]");
+    const form = root.querySelector("[data-bot-form]");
+    const input = root.querySelector("[data-bot-in]");
+    const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const REGLAS = [
+      { k:["contacto","contactar","email","correo","escribir","formulario","contratar"],
+        t:"Puedes contactar conmigo desde el botón «Contacto» de la cabecera o desde el pie de página: allí tienes mi correo (salllaiva@alu.edu.gva.es) y un formulario rápido.",
+        b:[["mailto:salllaiva@alu.edu.gva.es","Enviar email"]] },
+      { k:["photoshop","illustrator","indesign","acrobat","lightroom","premiere","audition","paquete adobe","adobe"],
+        t:"Sí, manejo el paquete Adobe completo: Photoshop, Illustrator, InDesign, Acrobat, Premiere, Audition y Lightroom. La evidencia está en mi obra de diseño gráfico y en mi trabajo fotográfico.",
+        b:[["diseno.html","Ver diseño"],["fotografia.html","Ver fotografía"]] },
+      { k:["fotograf","camara","luz","retrato","paisaje","bodegon","lightroom"],
+        t:"Formé mi criterio fotográfico en la EASD de València y trabajé en encargos para la ETSID de la UPV: paisaje, arquitectura, reportaje, moda, bodegón y retrato. Puedes verlo en la subweb de fotografía, incluida la sección de herramientas.",
+        b:[["fotografia.html","Ver fotografía"],["fotografia.html#t-tools","Herramientas"]] },
+      { k:["catia","autocad","inventor","mecanic","fabricac","matrices","moldes","geinprod","delineante","stacking","plano"],
+        t:"Sí: más de cinco años en Weidner Ibérica diseñando stacking columns con CATIA V5, planimetría y gestión de fabricación con el ERP Geinprod (además de Inventor). El detalle está en Sobre mí; la subweb de mecánica aún está en preparación.",
+        b:[["#t-sobre","Ver en Sobre mí"]] },
+      { k:["diseñ","disen","grafic","editorial","identidad","logo","folio","poster","portfolio","ilustr","dibujo"],
+        t:"Sí: diseño gráfico y editorial (retícula, identidad, catálogos, folletos, pósters) con Illustrator e InDesign, aplicado en proyectos reales como Weidner Ibérica y SEF UV. Toda la obra está en la subweb de diseño.",
+        b:[["diseno.html","Ver diseño"],["diseno.html#sub-identidad","Identidad"],["diseno.html#sub-posters","Pósters"]] },
+      { k:["program","codigo","html","css","javascript","python","java","android","dam","git","base de datos","videojuego","simon"],
+        t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La sección DAM de la web está en preparación; mientras tanto, el resumen está en Sobre mí.",
+        b:[["#t-sobre","Ver en Sobre mí"]] },
+      { k:["video","montaje","edicion","postproduccion"],
+        t:"Edición de vídeo con Premiere y audio con Audition (montajes y podcasts para Interpreta Natura). La subweb de vídeo está en preparación; puedes ver el contexto en Sobre mí.",
+        b:[["#t-sobre","Ver en Sobre mí"]] },
+      { k:["musica","audio","garageband","banda sonora","podcast","cancion"],
+        t:"Creo música con GarageBand y he compuesto bandas sonoras y podcasts para Interpreta Natura. La subweb de música está en preparación; el detalle está en Sobre mí.",
+        b:[["#t-sobre","Ver en Sobre mí"]] },
+      { k:["quien","salvador","sobre mi","perfil","cv","experiencia","formacion","resumen"],
+        t:"Salvador Llácer Ivars, técnico superior multidisciplinar de Valencia: fotografía, diseño gráfico/editorial, fabricación mecánica (CATIA) y DAM en curso, con experiencia en Weidner Ibérica e Interpreta Natura. Tienes el resumen completo en Sobre mí.",
+        b:[["#t-sobre","Leer Sobre mí"]] },
+      { k:["hola","buenas","buenos dias","que tal","hey","hello"],
+        t:"¡Hola! Soy el asistente del portfolio de Salvador. Pregúntame por software (Photoshop, CATIA…), disciplinas o por dónde ver su obra." },
+      { k:["gracias","genial","perfecto"],
+        t:"¡A ti! Si quieres, pregunta por alguna habilidad concreta o te llevo directo a la subweb que te interese." }
+    ];
+    const FALLBACK = { t:"No tengo una respuesta para eso todavía. Puedo ayudarte con sus habilidades (Adobe, CATIA, programación, fotografía, música…), contarte quién es o llevarte a las subwebs.", b:[["fotografia.html","Ver fotografía"],["diseno.html","Ver diseño"],["#t-sobre","Sobre mí"]] };
+    const buscar = (q) => { const n = norm(q); for (const r of REGLAS) if (r.k.some((k) => n.includes(norm(k)))) return r; return FALLBACK; };
+    const addMsg = (quien, txt, btns) => {
+      const m = document.createElement("div");
+      m.className = "bot__msg bot__msg--" + quien;
+      const p = document.createElement("span");
+      p.textContent = txt;
+      m.appendChild(p);
+      if (btns && btns.length) {
+        const wrap = document.createElement("span");
+        wrap.className = "bot__btns";
+        btns.forEach(([h, t]) => {
+          const a = document.createElement("a");
+          a.className = "bot__ir";
+          a.href = h;
+          a.textContent = t;
+          wrap.appendChild(a);
+        });
+        m.appendChild(wrap);
+      }
+      log.appendChild(m);
+      log.scrollTop = log.scrollHeight;
+    };
+    const responder = (q) => {
+      addMsg("yo", q);
+      const r = buscar(q);
+      setTimeout(() => addMsg("bot", r.t, r.b), 320);
+    };
+    addMsg("bot", "¡Hola! Soy el asistente del portfolio de Salvador Llácer. Pregúntame si maneja alguna herramienta (Photoshop, CATIA, código…) o dime qué quieres ver y te llevo a la sección adecuada.");
+    if (form) form.addEventListener("submit", (e) => { e.preventDefault(); const q = input.value.trim(); if (!q) return; input.value = ""; responder(q); });
+    root.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => responder(b.dataset.q)));
+  })();
 });
