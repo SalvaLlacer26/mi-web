@@ -73,6 +73,23 @@ document.addEventListener("DOMContentLoaded", () => {
       "sub.posters":"Pósters","sub.folletos":"Folletos","sub.flyers":"Flyers","sub.identidad":"Identidad","sub.otros":"Otros productos","sub.portfolio":"Portfolio","sub.encantado":"Universo encantado","sub.sef":"SEF · Deporte UV","sub.weidner":"Weidner",
       "view.toGrid":"Mosaico","view.toStd":"Carrusel",
       "eyebrow":"Diseño + Desarrollo · Perfil técnico-creativo","hub.nombre":"Salvador Llácer Ivars","hub.frase":"Seis disciplinas, una sola forma de trabajar: pensar como diseñador y ejecutar como desarrollador. Elige por dónde entrar.",
+      "hub.lema":"Diseño · Imagen · Desarrollo",
+      "bn.piensa":"Piensa","bn.piensa.pop":"Toda pieza empieza con una pregunta: investigo, esbozo y doy estructura a la idea antes de tocar la herramienta.",
+      "bn.disena":"Diseña","bn.disena.pop":"Tipografía, color y composición al servicio del mensaje: que algo se vea bien antes de que se lea.",
+      "bn.desarrolla":"Desarrolla","bn.desarrolla.pop":"Del boceto al navegador con HTML, CSS y JavaScript puro: rápido, accesible y sin frameworks de por medio.",
+      "bn.instr":"Haz clic y arrastra hacia la izquierda","bn.instr.sub":"o navega con las flechas ← →",
+      "bn.ver":"VER PORTFOLIO","bn.rec":"REC · 01 — FOTOGRAFÍA",
+      "bn.diseno.etq":"02 — DISEÑO GRÁFICO","bn.diseno.tit":"Ideas que se ven","bn.diseno.desc":"Flyers, marca, editorial e iconografía. Haz clic en el mosaico para descubrir el portfolio.",
+      "bot.titulo":"Asistente PORTFOLIO","bot.sub":"Pregúntame por mis habilidades o por dónde verlas","bot.ph":"Escribe tu pregunta…","bot.enviar":"Enviar",
+      "bot.q1":"¿Maneja Photoshop?","bot.q2":"Ver fotografía","bot.q3":"Ver diseño","bot.q4":"¿Quién es Salvador?","bot.q5":"¿Cómo contacto?",
+      "consejo.titulo":"Un consejo al día","consejo.otro":"Otro consejo","consejo.carga":"Cargando consejo…","consejo.fuente":"Advice Slip API","consejo.error":"No se pudo cargar el consejo. Inténtalo de nuevo.",
+      "f.inspo.titulo":"Inspiración viva","f.inspo.sub":"Una ventana aleatoria a Unsplash: paisaje, retrato y bodegón para seguir mirando.","f.inspo.c1":"Paisaje","f.inspo.c2":"Retrato","f.inspo.c3":"Bodegón","f.inspo.c4":"Arquitectura","f.inspo.c5":"Blanco y negro","f.inspo.carga":"Cargando imágenes…","f.inspo.error":"No se pudieron cargar las imágenes. Inténtalo de nuevo.","f.inspo.credito":"Fotografías de la comunidad de","f.inspo.otra":"Otra tanda",
+      "d.lab.titulo":"Tipografía &amp; motion","d.lab.sub":"Muestras en vivo de Google Fonts e iconografía animada con Lordicon: dos librerías gratuitas que uso en prototipos.","d.lab.fuentes":"Tipografías","d.lab.texto":"Texto de muestra","d.lab.fuente":"Fuentes servidas por la API pública de","d.lab.iconos":"Iconos animados","d.lab.iconos.nota":"Animaciones Lottie de","d.lab.iconos.plan":"(plan gratuito)","cargando":"Cargando…",
+      "sobre.p1":"Soy <strong>Salvador Llácer Ivars</strong>, nacido en Valencia. Técnico superior en Imagen y Artes Gráficas, en Diseño y Producción Editorial, en Diseño en Fabricación Mecánica y, actualmente, en Desarrollo de Aplicaciones Multiplataforma. Desde pequeño me apasionan el dibujo, la música y la idea de crear historias propias; esa curiosidad me ha llevado a estudiar siempre algo nuevo y a cruzar disciplinas que normalmente van por separado.",
+      "sobre.p2":"Mi trayectoria une la imagen y el diseño: fotografía artística formada en la <strong>EASD de València</strong> (paisaje, arquitectura, reportaje, moda, bodegón y retrato), encargos de fotografía de interior para la <strong>ETSID de la UPV</strong> y fotografía de bodas; diseño gráfico y editorial aprendido en el <strong>CIPFP Ciudad del Aprendizaje</strong> y aplicado en <strong>Weidner Ibérica</strong>, donde me encargué de la imagen de la empresa: catálogos —también interactivos—, displays y tótems para ferias de automoción, identidad y firmas de correo.",
+      "sobre.p3":"En el lado técnico llevé más de cinco años en Weidner Ibérica diseñando torres de apilamiento (<em>stacking columns</em>) para el sector de la automoción con <strong>CATIA V5</strong> y planimetría, además de tareas administrativas con el ERP <strong>Geinprod</strong>. Hoy curso el CFGS de <strong>DAM</strong>, donde programo, trabajo con bases de datos, Figma e inteligencia artificial. Completo el cuadro la creación musical con <strong>GarageBand</strong> —bandas sonoras y podcasts para Interpreta Natura—, la ilustración y el dibujo.",
+      "sobre.p4":"Me va el minimalista con corrección geométrica y pesos visuales equilibrados: paletas complementarias, orden minucioso y resultados sencillos pero profesionales. Busco estabilidad laboral sin renunciar a la ambición de mejorar, y llevar todas mis habilidades a cada proyecto para que se aprecie un perfil completo y <strong>multidisciplinar</strong>.",
+      "pie.volver":"← Volver al inicio",
       "sel.foto":"Fotografía","sel.foto.sub":"Luz, encuadre y narrativa","sel.diseno":"Diseño gráfico e ilustración","sel.diseno.sub":"Retícula, tinta y trazo","sel.video":"Edición de vídeo","sel.video.sub":"Ritmo, sonido y color","sel.musica":"Música","sel.musica.sub":"Composición y montaje sonoro","sel.dam":"DAM y videojuegos","sel.dam.sub":"Código, apps y Simon Says","sel.fab":"Fabricación mecánica","sel.fab.sub":"CATIA, planos y ERP",
       "pie.eyebrow":"¿Tienes un proyecto?","pie.nota":"Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.","pie.loc":"Localización","clima.ubicacion":"Ubicación",
       "modal.eyebrow":"Hablemos","modal.titulo":"Cuéntame tu proyecto","form.nombre":"Nombre","form.email":"Email","form.mensaje":"Mensaje","form.enviar":"Enviar mensaje","form.exito":"✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.","toast.soon":"Subweb en construcción",
@@ -200,6 +217,23 @@ document.addEventListener("DOMContentLoaded", () => {
       "sub.posters":"Posters","sub.folletos":"Brochures","sub.flyers":"Flyers","sub.identidad":"Identity","sub.otros":"Other products","sub.portfolio":"Portfolio","sub.encantado":"Enchanted universe","sub.sef":"SEF · UV Sport","sub.weidner":"Weidner",
       "view.toGrid":"Mosaic","view.toStd":"Carousel",
       "eyebrow":"Design + Development · Technical-creative profile","hub.nombre":"Salvador Llácer Ivars","hub.frase":"Six disciplines, one way of working: think like a designer, build like a developer. Choose where to enter.",
+      "hub.lema":"Design · Image · Development",
+      "bn.piensa":"Think","bn.piensa.pop":"Every piece starts with a question: I research, sketch and give structure to the idea before touching the tool.",
+      "bn.disena":"Design","bn.disena.pop":"Typography, colour and composition at the service of the message: something must look right before it is read.",
+      "bn.desarrolla":"Build","bn.desarrolla.pop":"From sketch to browser with pure HTML, CSS and JavaScript: fast, accessible and with no frameworks in between.",
+      "bn.instr":"Click and drag to the left","bn.instr.sub":"or navigate with the arrows ← →",
+      "bn.ver":"VIEW PORTFOLIO","bn.rec":"REC · 01 — PHOTOGRAPHY",
+      "bn.diseno.etq":"02 — GRAPHIC DESIGN","bn.diseno.tit":"Ideas you can see","bn.diseno.desc":"Flyers, branding, editorial and iconography. Click the mosaic to discover the portfolio.",
+      "bot.titulo":"PORTFOLIO Assistant","bot.sub":"Ask me about my skills or where to see them","bot.ph":"Type your question…","bot.enviar":"Send",
+      "bot.q1":"Do you use Photoshop?","bot.q2":"See photography","bot.q3":"See design","bot.q4":"Who is Salvador?","bot.q5":"How can I contact you?",
+      "consejo.titulo":"A daily piece of advice","consejo.otro":"Another one","consejo.carga":"Loading advice…","consejo.fuente":"Advice Slip API","consejo.error":"Could not load the advice. Try again.",
+      "f.inspo.titulo":"Live inspiration","f.inspo.sub":"A random window into Unsplash: landscape, portrait and still life to keep looking.","f.inspo.c1":"Landscape","f.inspo.c2":"Portrait","f.inspo.c3":"Still life","f.inspo.c4":"Architecture","f.inspo.c5":"Black and white","f.inspo.carga":"Loading images…","f.inspo.error":"Could not load the images. Try again.","f.inspo.credito":"Photos from the","f.inspo.otra":"Another batch",
+      "d.lab.titulo":"Typography &amp; motion","d.lab.sub":"Live specimens from Google Fonts and animated iconography with Lordicon: two free libraries I use in prototypes.","d.lab.fuentes":"Typefaces","d.lab.texto":"Sample text","d.lab.fuente":"Fonts served by the public API of","d.lab.iconos":"Animated icons","d.lab.iconos.nota":"Lottie animations by","d.lab.iconos.plan":"(free plan)","cargando":"Loading…",
+      "sobre.p1":"I am <strong>Salvador Llácer Ivars</strong>, born in Valencia. Higher Technician in Image and Graphic Arts, in Editorial Design and Production, in Mechanical Manufacturing Design and, currently, in Multiplatform Application Development. Drawing, music and the idea of creating my own stories have driven me since I was a child; that curiosity has led me to always study something new and to cross disciplines that usually stay apart.",
+      "sobre.p2":"My path unites image and design: artistic photography trained at the <strong>EASD de València</strong> (landscape, architecture, reportage, fashion, still life and portrait), interior photography commissions for the <strong>ETSID at the UPV</strong> and wedding photography; graphic and editorial design learned at the <strong>CIPFP Ciudad del Aprendizaje</strong> and applied at <strong>Weidner Ibérica</strong>, where I ran the company's image: catalogues —also interactive—, displays and totems for automotive fairs, identity and email signatures.",
+      "sobre.p3":"On the technical side I spent over five years at Weidner Ibérica designing <em>stacking columns</em> for the automotive sector with <strong>CATIA V5</strong> and drafting, plus administrative tasks with the <strong>Geinprod</strong> ERP. Today I study the <strong>DAM</strong> higher degree, where I program, work with databases, Figma and artificial intelligence. Music production with <strong>GarageBand</strong> —soundtracks and podcasts for Interpreta Natura—, illustration and drawing complete the picture.",
+      "sobre.p4":"I go for minimalism with geometric correctness and balanced visual weights: complementary palettes, meticulous order and simple yet professional results. I am looking for job stability without giving up the ambition to improve, and to bring all my skills to every project so a complete, <strong>multidisciplinary</strong> profile is evident.",
+      "pie.volver":"← Back to home",
       "sel.foto":"Photography","sel.foto.sub":"Light, framing and narrative","sel.diseno":"Graphic design & illustration","sel.diseno.sub":"Grid, ink and line","sel.video":"Video editing","sel.video.sub":"Rhythm, sound and colour","sel.musica":"Music","sel.musica.sub":"Composition and sound editing","sel.dam":"DAM & video games","sel.dam.sub":"Code, apps and Simon Says","sel.fab":"Mechanical manufacturing","sel.fab.sub":"CATIA, blueprints and ERP",
       "pie.eyebrow":"Have a project?","pie.nota":"Open to new opportunities. Design, development and administration in one person.","pie.loc":"Location","clima.ubicacion":"Location",
       "modal.eyebrow":"Let's talk","modal.titulo":"Tell me about your project","form.nombre":"Name","form.email":"Email","form.mensaje":"Message","form.enviar":"Send message","form.exito":"✓ Message sent. Thank you for reaching out; I'll get back to you very soon.","toast.soon":"Sub-web under construction",
@@ -324,7 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   const i18nEls = [...document.querySelectorAll("[data-i18n]")];
   const langBtns = [...document.querySelectorAll(".lang__btn")];
-  function aplicarIdioma(lang){ const dic=I18N[lang]; if(!dic) return; i18nEls.forEach((el)=>{const k=el.getAttribute("data-i18n"); if(dic[k]) el.innerHTML=dic[k];}); html.setAttribute("lang",lang); langBtns.forEach((b)=>{const on=b.dataset.lang===lang;b.classList.toggle("is-active",on);b.setAttribute("aria-pressed",String(on));}); try{localStorage.setItem("idioma",lang);}catch(e){} if(window.__updateViewBtn) window.__updateViewBtn(); }
+  function aplicarIdioma(lang){ const dic=I18N[lang]; if(!dic) return; i18nEls.forEach((el)=>{const k=el.getAttribute("data-i18n"); if(dic[k]) el.innerHTML=dic[k];}); document.querySelectorAll("[data-i18n-ph]").forEach((el)=>{const k=el.getAttribute("data-i18n-ph"); if(dic[k]) el.placeholder=dic[k];}); html.setAttribute("lang",lang); langBtns.forEach((b)=>{const on=b.dataset.lang===lang;b.classList.toggle("is-active",on);b.setAttribute("aria-pressed",String(on));}); try{localStorage.setItem("idioma",lang);}catch(e){} if(window.__updateViewBtn) window.__updateViewBtn(); }
   langBtns.forEach((b)=>b.addEventListener("click",()=>aplicarIdioma(b.dataset.lang)));
   let idioma="es"; try{idioma=localStorage.getItem("idioma")||"es";}catch(e){} if(idioma==="en") aplicarIdioma("en");
   const langActual=()=>html.getAttribute("lang")||"es";
@@ -995,39 +1029,52 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = root.querySelector("[data-bot-in]");
     const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     const REGLAS = [
-      { k:["contacto","contactar","email","correo","escribir","formulario","contratar"],
+      { k:["contacto","contactar","email","correo","escribir","formulario","contratar","contact","reach","hire"],
         t:"Puedes contactar conmigo desde el botón «Contacto» de la cabecera o desde el pie de página: allí tienes mi correo (salllaiva@alu.edu.gva.es) y un formulario rápido.",
-        b:[["mailto:salllaiva@alu.edu.gva.es","Enviar email"]] },
+        tEn:"You can reach me from the «Contact» button in the header or from the footer: my email (salllaiva@alu.edu.gva.es) and a quick form are there.",
+        b:[["mailto:salllaiva@alu.edu.gva.es","Enviar email","Send email"]] },
       { k:["photoshop","illustrator","indesign","acrobat","lightroom","premiere","audition","paquete adobe","adobe"],
         t:"Sí, manejo el paquete Adobe completo: Photoshop, Illustrator, InDesign, Acrobat, Premiere, Audition y Lightroom. La evidencia está en mi obra de diseño gráfico y en mi trabajo fotográfico.",
-        b:[["diseno.html","Ver diseño"],["fotografia.html","Ver fotografía"]] },
-      { k:["fotograf","camara","luz","retrato","paisaje","bodegon","lightroom"],
+        tEn:"Yes, I use the full Adobe suite: Photoshop, Illustrator, InDesign, Acrobat, Premiere, Audition and Lightroom. The proof is in my graphic design work and my photography.",
+        b:[["diseno.html","Ver diseño","See design"],["fotografia.html","Ver fotografía","See photography"]] },
+      { k:["fotograf","camara","luz","retrato","paisaje","bodegon","lightroom","photo","camera"],
         t:"Formé mi criterio fotográfico en la EASD de València y trabajé en encargos para la ETSID de la UPV: paisaje, arquitectura, reportaje, moda, bodegón y retrato. Puedes verlo en la subweb de fotografía, incluida la sección de herramientas.",
-        b:[["fotografia.html","Ver fotografía"],["fotografia.html#t-tools","Herramientas"]] },
-      { k:["catia","autocad","inventor","mecanic","fabricac","matrices","moldes","geinprod","delineante","stacking","plano"],
+        tEn:"I trained my eye at the EASD de València and worked on commissions for the ETSID at the UPV: landscape, architecture, reportage, fashion, still life and portrait. You can see it in the photography sub-site, including the tools section.",
+        b:[["fotografia.html","Ver fotografía","See photography"],["fotografia.html#t-tools","Herramientas","Tools"]] },
+      { k:["catia","autocad","inventor","mecanic","fabricac","matrices","moldes","geinprod","delineante","stacking","plano","cad"],
         t:"Sí: más de cinco años en Weidner Ibérica diseñando stacking columns con CATIA V5, planimetría y gestión de fabricación con el ERP Geinprod (además de Inventor). El detalle está en Sobre mí; la subweb de mecánica aún está en preparación.",
-        b:[["#t-sobre","Ver en Sobre mí"]] },
-      { k:["diseñ","disen","grafic","editorial","identidad","logo","folio","poster","portfolio","ilustr","dibujo"],
+        tEn:"Yes: over five years at Weidner Ibérica designing stacking columns with CATIA V5, drafting and manufacturing management with the Geinprod ERP (plus Inventor). The details are in About me; the machining sub-site is still under preparation.",
+        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
+      { k:["diseñ","disen","grafic","editorial","identidad","logo","folio","poster","portfolio","ilustr","dibujo","design"],
         t:"Sí: diseño gráfico y editorial (retícula, identidad, catálogos, folletos, pósters) con Illustrator e InDesign, aplicado en proyectos reales como Weidner Ibérica y SEF UV. Toda la obra está en la subweb de diseño.",
-        b:[["diseno.html","Ver diseño"],["diseno.html#sub-identidad","Identidad"],["diseno.html#sub-posters","Pósters"]] },
-      { k:["program","codigo","html","css","javascript","python","java","android","dam","git","base de datos","videojuego","simon"],
+        tEn:"Yes: graphic and editorial design (grid, identity, catalogues, brochures, posters) with Illustrator and InDesign, applied on real projects like Weidner Ibérica and SEF UV. All the work is in the design sub-site.",
+        b:[["diseno.html","Ver diseño","See design"],["diseno.html#sub-identidad","Identidad","Identity"],["diseno.html#sub-posters","Pósters","Posters"]] },
+      { k:["program","codigo","html","css","javascript","python","java","android","dam","git","base de datos","videojuego","simon","code","programming"],
         t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La sección DAM de la web está en preparación; mientras tanto, el resumen está en Sobre mí.",
-        b:[["#t-sobre","Ver en Sobre mí"]] },
+        tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The DAM section of the site is under construction; meanwhile, the summary is in About me.",
+        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
       { k:["video","montaje","edicion","postproduccion"],
         t:"Edición de vídeo con Premiere y audio con Audition (montajes y podcasts para Interpreta Natura). La subweb de vídeo está en preparación; puedes ver el contexto en Sobre mí.",
-        b:[["#t-sobre","Ver en Sobre mí"]] },
-      { k:["musica","audio","garageband","banda sonora","podcast","cancion"],
+        tEn:"Video editing with Premiere and audio with Audition (edits and podcasts for Interpreta Natura). The video sub-site is under preparation; you can see the context in About me.",
+        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
+      { k:["musica","audio","garageband","banda sonora","podcast","cancion","music"],
         t:"Creo música con GarageBand y he compuesto bandas sonoras y podcasts para Interpreta Natura. La subweb de música está en preparación; el detalle está en Sobre mí.",
-        b:[["#t-sobre","Ver en Sobre mí"]] },
-      { k:["quien","salvador","sobre mi","perfil","cv","experiencia","formacion","resumen"],
+        tEn:"I create music with GarageBand and have composed soundtracks and podcasts for Interpreta Natura. The music sub-site is under preparation; the details are in About me.",
+        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
+      { k:["quien","salvador","sobre mi","perfil","cv","experiencia","formacion","resumen","who"],
         t:"Salvador Llácer Ivars, técnico superior multidisciplinar de Valencia: fotografía, diseño gráfico/editorial, fabricación mecánica (CATIA) y DAM en curso, con experiencia en Weidner Ibérica e Interpreta Natura. Tienes el resumen completo en Sobre mí.",
-        b:[["#t-sobre","Leer Sobre mí"]] },
-      { k:["hola","buenas","buenos dias","que tal","hey","hello"],
-        t:"¡Hola! Soy el asistente del portfolio de Salvador. Pregúntame por software (Photoshop, CATIA…), disciplinas o por dónde ver su obra." },
-      { k:["gracias","genial","perfecto"],
-        t:"¡A ti! Si quieres, pregunta por alguna habilidad concreta o te llevo directo a la subweb que te interese." }
+        tEn:"Salvador Llácer Ivars, multidisciplinary higher technician from Valencia: photography, graphic/editorial design, mechanical manufacturing (CATIA) and DAM in progress, with experience at Weidner Ibérica and Interpreta Natura. The full summary is in About me.",
+        b:[["#t-sobre","Leer Sobre mí","Read About me"]] },
+      { k:["hola","buenas","buenos dias","que tal","hey","hello","hi"],
+        t:"¡Hola! Soy el asistente del portfolio de Salvador. Pregúntame por software (Photoshop, CATIA…), disciplinas o por dónde ver su obra.",
+        tEn:"Hello! I am Salvador's portfolio assistant. Ask me about software (Photoshop, CATIA…), disciplines or where to see his work." },
+      { k:["gracias","genial","perfecto","thanks","great"],
+        t:"¡A ti! Si quieres, pregunta por alguna habilidad concreta o te llevo directo a la subweb que te interese.",
+        tEn:"You're welcome! If you like, ask about a specific skill and I'll take you straight to the sub-site you're interested in." }
     ];
-    const FALLBACK = { t:"No tengo una respuesta para eso todavía. Puedo ayudarte con sus habilidades (Adobe, CATIA, programación, fotografía, música…), contarte quién es o llevarte a las subwebs.", b:[["fotografia.html","Ver fotografía"],["diseno.html","Ver diseño"],["#t-sobre","Sobre mí"]] };
+    const FALLBACK = { t:"No tengo una respuesta para eso todavía. Puedo ayudarte con sus habilidades (Adobe, CATIA, programación, fotografía, música…), contarte quién es o llevarte a las subwebs.",
+      tEn:"I don't have an answer for that yet. I can help with his skills (Adobe, CATIA, programming, photography, music…), tell you who he is, or take you to the sub-sites.",
+      b:[["fotografia.html","Ver fotografía","See photography"],["diseno.html","Ver diseño","See design"],["#t-sobre","Sobre mí","About me"]] };
     const buscar = (q) => { const n = norm(q); for (const r of REGLAS) if (r.k.some((k) => n.includes(norm(k)))) return r; return FALLBACK; };
     const addMsg = (quien, txt, btns) => {
       const m = document.createElement("div");
@@ -1038,11 +1085,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (btns && btns.length) {
         const wrap = document.createElement("span");
         wrap.className = "bot__btns";
-        btns.forEach(([h, t]) => {
+        btns.forEach(([h, t, tEn]) => {
           const a = document.createElement("a");
           a.className = "bot__ir";
           a.href = h;
-          a.textContent = t;
+          a.textContent = (langActual() === "en" && tEn) ? tEn : t;
           wrap.appendChild(a);
         });
         m.appendChild(wrap);
@@ -1053,10 +1100,153 @@ document.addEventListener("DOMContentLoaded", () => {
     const responder = (q) => {
       addMsg("yo", q);
       const r = buscar(q);
-      setTimeout(() => addMsg("bot", r.t, r.b), 320);
+      const en = langActual() === "en";
+      setTimeout(() => addMsg("bot", en && r.tEn ? r.tEn : r.t, r.b), 320);
     };
-    addMsg("bot", "¡Hola! Soy el asistente del portfolio de Salvador Llácer. Pregúntame si maneja alguna herramienta (Photoshop, CATIA, código…) o dime qué quieres ver y te llevo a la sección adecuada.");
+    const SALUDO = { t:"¡Hola! Soy el asistente del portfolio de Salvador Llácer. Pregúntame si maneja alguna herramienta (Photoshop, CATIA, código…) o dime qué quieres ver y te llevo a la sección adecuada.",
+      tEn:"Hello! I am Salvador Llácer's portfolio assistant. Ask me about any tool he uses (Photoshop, CATIA, code…) or tell me what you want to see and I'll take you to the right section." };
+    const en0 = langActual() === "en";
+    addMsg("bot", en0 && SALUDO.tEn ? SALUDO.tEn : SALUDO.t);
     if (form) form.addEventListener("submit", (e) => { e.preventDefault(); const q = input.value.trim(); if (!q) return; input.value = ""; responder(q); });
-    root.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => responder(b.dataset.q)));
+    root.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => {
+      const en = langActual() === "en";
+      responder(en && b.dataset.qEn ? b.dataset.qEn : b.dataset.q);
+    }));
+  })();
+
+  /* ░░ Widget consejo (índice): Advice Slip API ░░ */
+  (() => {
+    const root = document.querySelector("[data-consejo]");
+    if (!root) return;
+    const cita = root.querySelector("[data-consejo-cita]");
+    const btn = root.querySelector("[data-consejo-btn]");
+    const dic = () => I18N[langActual()] || I18N.es;
+    let cargando = false;
+    const pedir = async () => {
+      if (cargando) return;
+      cargando = true;
+      cita.classList.remove("is-err");
+      cita.textContent = dic()["consejo.carga"];
+      try {
+        const r = await fetch("https://api.adviceslip.com/advice", { cache: "no-store" });
+        if (!r.ok) throw 0;
+        const d = await r.json();
+        cita.textContent = d.slip && d.slip.advice ? d.slip.advice : dic()["consejo.error"];
+        if (!(d.slip && d.slip.advice)) cita.classList.add("is-err");
+      } catch (e) {
+        cita.textContent = dic()["consejo.error"];
+        cita.classList.add("is-err");
+      } finally { cargando = false; }
+    };
+    if (btn) btn.addEventListener("click", pedir);
+    pedir();
+  })();
+
+  /* ░░ Widget inspiración (fotografía): Unsplash API ░░ */
+  (() => {
+    const root = document.querySelector("[data-inspo]");
+    if (!root) return;
+    const grid = root.querySelector("[data-inspo-grid]");
+    const btn = root.querySelector("[data-inspo-btn]");
+    const chips = [...root.querySelectorAll("[data-inspo-q]")];
+    const ACCESS = "";
+    const dic = () => I18N[langActual()] || I18N.es;
+    let q = "landscape", cargando = false;
+    const pintar = (fotos) => {
+      grid.textContent = "";
+      fotos.forEach((f) => {
+        const fig = document.createElement("figure");
+        fig.className = "inspo__fig";
+        const img = document.createElement("img");
+        img.src = f.urls.small;
+        img.alt = f.alt_description || "Unsplash";
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.width = 400; img.height = 533;
+        const cap = document.createElement("figcaption");
+        const nombre = document.createElement("span");
+        nombre.textContent = f.user && f.user.name ? f.user.name : "Unsplash";
+        const enlace = document.createElement("a");
+        enlace.href = f.links.html + "?utm_source=mi-web&utm_medium=referral";
+        enlace.target = "_blank"; enlace.rel = "noopener";
+        enlace.textContent = "Unsplash";
+        cap.appendChild(nombre); cap.appendChild(enlace);
+        fig.appendChild(img); fig.appendChild(cap);
+        grid.appendChild(fig);
+      });
+    };
+    const pedir = async () => {
+      if (cargando) return;
+      cargando = true;
+      grid.textContent = "";
+      const e = document.createElement("p");
+      e.className = "inspo__estado";
+      e.setAttribute("data-inspo-estado", "");
+      e.textContent = dic()["f.inspo.carga"];
+      grid.appendChild(e);
+      if (!ACCESS) {
+        e.textContent = dic()["f.inspo.error"];
+        e.style.opacity = ".55";
+        cargando = false;
+        return;
+      }
+      try {
+        const url = "https://api.unsplash.com/search/photos?query=" + encodeURIComponent(q) + "&per_page=6&orientation=portrait&content_filter=high";
+        const r = await fetch(url, { headers: { Authorization: "Client-ID " + ACCESS } });
+        if (!r.ok) throw 0;
+        const d = await r.json();
+        if (!d.results || !d.results.length) throw 0;
+        pintar(d.results);
+      } catch (err) {
+        grid.textContent = "";
+        const e2 = document.createElement("p");
+        e2.className = "inspo__estado";
+        e2.textContent = dic()["f.inspo.error"];
+        grid.appendChild(e2);
+      } finally { cargando = false; }
+    };
+    chips.forEach((c) => c.addEventListener("click", () => {
+      chips.forEach((x) => x.classList.toggle("is-on", x === c));
+      q = c.dataset.inspoQ;
+      pedir();
+    }));
+    if (btn) btn.addEventListener("click", pedir);
+    pedir();
+  })();
+
+  /* ░░ Widget lab (diseño): specimens Google Fonts ░░ */
+  (() => {
+    const root = document.querySelector("[data-lab-fonts]");
+    if (!root) return;
+    const input = document.querySelector("[data-lab-input]");
+    const FUENTES = [
+      { fam: "Playfair Display", css: "'Playfair Display', serif" },
+      { fam: "Bebas Neue", css: "'Bebas Neue', sans-serif" },
+      { fam: "Archivo", css: "'Archivo', sans-serif" },
+      { fam: "DM Serif Display", css: "'DM Serif Display', serif" },
+      { fam: "Oswald", css: "'Oswald', sans-serif" },
+      { fam: "Lora", css: "'Lora', serif" }
+    ];
+    const pintar = () => {
+      const t = input && input.value.trim() ? input.value.trim() : "El veloz murciélago hindú comía feliz cardillo y kiwi.";
+      root.textContent = "";
+      FUENTES.forEach((f) => {
+        const box = document.createElement("div");
+        box.className = "lab__spec";
+        const n = document.createElement("span");
+        n.className = "lab__spec-n";
+        n.textContent = f.fam;
+        const p = document.createElement("span");
+        p.className = "lab__spec-t";
+        p.style.fontFamily = f.css;
+        p.textContent = t;
+        box.appendChild(n); box.appendChild(p);
+        root.appendChild(box);
+      });
+    };
+    if (input) input.addEventListener("input", pintar);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(pintar);
+    else pintar();
+    pintar();
   })();
 });
