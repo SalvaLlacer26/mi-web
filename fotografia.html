@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="es" data-mode="dark" data-tema="foto" data-bg="foto">
+<html lang="es" data-mode="dark" data-tema="foto" data-view="std">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Salvador Llácer Ivars — Fotografía. Luz, encuadre y narrativa en blanco y negro y sepia." />
+    <meta name="description" content="Salvador Llácer Ivars — Fotografía. Interior, arquitectura, bodegón y reportaje social. Perfil técnico-creativo." />
     <meta name="theme-color" content="#161210" />
     <title>Fotografía — Salvador Llácer Ivars</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161210'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='none' stroke='%238a5a2b' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%238a5a2b'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161210'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='none' stroke='%23a06f3a' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23a06f3a'/%3E%3C/svg%3E" />
 
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/sf-pro-text" rel="stylesheet" />
 
-    <script>(function(){try{document.documentElement.setAttribute('data-mode',localStorage.getItem('tema')||'dark')}catch(e){}})();</script>
+    <link rel="preload" as="image" href="Imagenes/Fotografia_sobremi.webp" fetchpriority="high" />
+
+    <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var low=m||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
+    <noscript><style>.reveal{opacity:1}</style></noscript>
   </head>
 
   <body>
@@ -24,11 +27,14 @@
       <span class="fondo__velo"></span>
       <span class="fondo__patron"></span>
       <span class="fondo__objetos">
-        <svg class="obj obj--1" viewBox="0 0 24 24"><path d="M4 7h3l1.2-1.8A1 1 0 0 1 9 5h6a1 1 0 0 1 .8.4L17 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
-        <svg class="obj obj--2" viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2 2v8l3-3 2 2 3-4 2 2V6z"/></svg>
-        <svg class="obj obj--3" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg>
+        <svg class="obj obj--1" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2L8 5h8l1.5 2h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.5"/></svg>
+        <svg class="obj obj--2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6l5.2 3v6l-5.2 3-5.2-3V9z"/><circle cx="12" cy="12" r="1.4"/></svg>
+        <svg class="obj obj--3" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 5v14M16 5v14M4 9h4M4 15h4M16 9h4M16 15h4"/></svg>
         <svg class="obj obj--4" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
-        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+        <svg class="obj obj--6" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13V9M9.5 3h5M12 3v2"/></svg>
+        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1.6"/></svg>
+        <svg class="obj obj--7" viewBox="0 0 24 24"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3"/><path d="M8 12h8"/></svg>
+        <svg class="obj obj--8" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1.6"/></svg>
       </span>
     </div>
 
@@ -38,111 +44,459 @@
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
       <nav class="nav__menu" aria-label="Secciones">
-        <a href="fotografia.html" data-tema="foto" aria-current="page"><span data-i18n="m.foto">Foto</span></a>
-        <a href="#" data-soon data-tema="diseno"><span data-i18n="m.diseno">Diseño</span></a>
+        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+          <a href="fotografia.html" data-tema="foto" aria-current="page" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.foto">Foto</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="fotografia.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-paisaje"><span data-i18n="sub.paisaje">Paisaje</span></a>
+                <a href="fotografia.html#sub-robados"><span data-i18n="sub.robados">Robados</span></a>
+                <a href="fotografia.html#sub-personal"><span data-i18n="sub.personal">Visión personal</span></a>
+                <a href="fotografia.html#sub-bodegon"><span data-i18n="sub.bodegon">Bodegón publicitario</span></a>
+                <a href="fotografia.html#sub-moda"><span data-i18n="sub.moda">Moda</span></a>
+                <a href="fotografia.html#sub-retrato"><span data-i18n="sub.retrato">Retrato</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="fotografia.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="fotografia.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-etsid"><span data-i18n="sub.etsid">ETSID · UPV</span></a>
+                <a href="fotografia.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+                <a href="fotografia.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="fotografia.html#sub-bodas"><span data-i18n="sub.bodas">Bodas y eventos</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="fotografia.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="fotografia.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="diseno.html" data-tema="diseno" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.diseno">Diseño</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="diseno.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-posters"><span data-i18n="sub.posters">Pósters</span></a>
+                <a href="diseno.html#sub-folletos"><span data-i18n="sub.folletos">Folletos</span></a>
+                <a href="diseno.html#sub-flyers"><span data-i18n="sub.flyers">Flyers</span></a>
+                <a href="diseno.html#sub-identidad"><span data-i18n="sub.identidad">Identidad</span></a>
+                <a href="diseno.html#sub-otros"><span data-i18n="sub.otros">Otros productos</span></a>
+                <a href="diseno.html#sub-portfolio"><span data-i18n="sub.portfolio">Portfolio</span></a>
+                <a href="diseno.html#sub-encantado"><span data-i18n="sub.encantado">Universo encantado</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="diseno.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="diseno.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-sef"><span data-i18n="sub.sef">SEF · Deporte UV</span></a>
+                <a href="diseno.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="diseno.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="diseno.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="diseno.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
         <a href="#" data-soon data-tema="video"><span data-i18n="m.video">Vídeo</span></a>
         <a href="#" data-soon data-tema="musica"><span data-i18n="m.musica">Música</span></a>
         <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
         <a href="#" data-soon data-tema="fab"><span data-i18n="m.mec">Mecánica</span></a>
-        <a href="#" class="js-contacto"><span data-i18n="m.contacto">Contacto</span></a>
       </nav>
       <div class="nav__derecha">
+        <button class="viewbtn" id="viewToggle" type="button" aria-pressed="false" aria-label="Cambiar visualización a mosaico" title="Cambiar visualización">
+          <span class="viewbtn__ico viewbtn__ico--grid" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <span class="viewbtn__ico viewbtn__ico--slide" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span>
+          <span class="viewbtn__label">Mosaico</span>
+        </button>
+        <span class="nav__sep" aria-hidden="true"></span>
         <div class="lang" role="group" aria-label="Idioma / Language">
           <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="Español">ES</button>
           <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
         </div>
-        <button class="modo" id="modo" aria-pressed="false" aria-label="Cambiar modo claro u oscuro">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <button class="nav__cta js-contacto" type="button">
+          <span data-i18n="m.contacto">Contacto</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
         </button>
         <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
       </div>
     </header>
 
-    <main id="contenido">
-      <section class="seccion" aria-labelledby="t-sobre">
-        <div class="contenedor">
-          <div class="seccion__head"><span class="seccion__num">01</span><h2 class="seccion__titulo" id="t-sobre">Sobre mí</h2></div>
-          <div class="sobre">
-            <article class="ficha reveal"><p class="ficha__texto">La fotografía es mi forma de mirar antes de escribir código. Trabajo la luz como un recurso, no como un accidente: elijo el encuadre, espero el instante y revelo con criterio. Me mueve el blanco y negro con textura, el sepia cálido de la película y el retrato que cuenta algo sin gritar.</p></article>
-            <aside class="destacado reveal">
-              <span class="destacado__marca">Fotografía</span>
-              <h3 class="destacado__titulo">Mirar antes de disparar</h3>
-              <p class="destacado__texto">Formado en Imagen y en diseño: compongo con retícula, expongo con intención y proceso sin deformar la realidad.</p>
-              <ul class="check"><li>Luz y exposición medida</li><li>Composición y encuadre</li><li>Revelado RAW coherente</li><li>Retrato y paisaje</li></ul>
-            </aside>
-          </div>
+    <main id="contenido" tabindex="-1">
+      <section class="seccion seccion--hero" aria-labelledby="t-sobre">
+        <div class="contenedor reveal">
+          <div class="seccion__head"><span class="seccion__num">01</span><h2 class="seccion__titulo" id="t-sobre"><span data-i18n="f.sobre.titulo">Sobre mí</span></h2></div>
+          <figure class="escena">
+            <img class="escena__foto" src="Imagenes/Fotografia_sobremi.webp" alt="Fotografía de Salvador Llácer Ivars" width="1500" height="1000" fetchpriority="high" decoding="async" />
+            <figcaption class="escena__texto">
+              <h3 class="escena__titulo"><span data-i18n="f.escena.titulo">Fotografía: mirada, luz y oficio</span></h3>
+              <p><span data-i18n="f.escena.texto">Nací en Valencia y aprendí a mirar antes que a escribir. En la EASD de València cursé Fotografía Artística —paisaje, arquitectura, interiorismo, reportaje social, moda y bodegón publicitario— y aprendí a moldear la luz en lugar de sufrirla. Mi criterio bebe de Ansel Adams, Henri Cartier-Bresson y Richard Avedon: medida, instante y gesto. He firmado encargos de imagen para la ETSID de la UPV y reportajes de bodas; en cada serie busco una fotografía honesta, coherente y bien revelada, sin artificio.</span></p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="seccion" aria-labelledby="t-obra">
-        <div class="contenedor">
-          <div class="seccion__head"><span class="seccion__num">02</span><h2 class="seccion__titulo" id="t-obra">Obra</h2></div>
-          <p class="seccion__sub reveal">Pase de diapositivas y galería. Los huecos mantienen su forma: al llegar tus fotos reales, se recortan con <code>object-fit: cover</code> sin deformar el diseño.</p>
-          <div class="slideshow reveal" aria-roledescription="carrusel" aria-label="Selección de fotografías">
-            <div class="slideshow__pista">
-              <div class="slideshow__slide is-active"><div class="ph"><span class="ph__etq">Retrato · B/N</span></div></div>
-              <div class="slideshow__slide"><div class="ph"><span class="ph__etq">Paisaje · sepia</span></div></div>
-              <div class="slideshow__slide"><div class="ph"><span class="ph__etq">Bodegón · luz dura</span></div></div>
-              <div class="slideshow__slide"><div class="ph"><span class="ph__etq">Calle · instante</span></div></div>
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">02</span><h2 class="seccion__titulo" id="t-obra"><span data-i18n="f.obra.titulo">Obra</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="f.obra.sub">Lo que aprendí en la EASD, aplicado: <strong>Paisaje</strong>, <strong>Robados</strong>, <strong>Visión personal</strong>, <strong>Bodegón publicitario</strong>, <strong>Moda</strong> y <strong>Retrato</strong>. Seis formas de mirar —la luz quieta del paisaje, el instante robado de la calle, la mirada propia, el objeto bien iluminado, el gesto de la prenda y el rostro sin artificio—, cada una en su sitio.</span></p>
+
+          <div class="subserie" id="sub-paisaje">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="f.obra.paisaje.titulo">Paisaje</span></h3>
+                <button class="subview" type="button" data-subview aria-pressed="false" aria-label="Cambiar vista de esta sección"><span class="subview__ico subview__ico--grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="subview__ico subview__ico--slide"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span></button>
+              </div>
+              <p class="serie__desc"><span data-i18n="f.obra.paisaje.desc">Del prado a la ciudad: luz quieta, atmósfera y encuadre medido. El paisaje como ejercicio de paciencia, donde el terreno revela su carácter.</span></p>
             </div>
-            <button class="slideshow__nav slideshow__nav--prev" data-ss-prev aria-label="Anterior">‹</button>
-            <button class="slideshow__nav slideshow__nav--next" data-ss-next aria-label="Siguiente">›</button>
-            <div class="slideshow__dots"></div>
+            <div class="slider-pair">
+              <div class="slider-col"><div class="serie" data-slider="paisaje-h" data-orient="h"></div></div>
+              <div class="slider-col"><div class="serie" data-slider="paisaje-v" data-orient="v"></div></div>
+            </div>
           </div>
-          <div class="galeria reveal">
-            <div class="ph ph--4-3"><span class="ph__etq">Foto 1</span></div><div class="ph ph--4-3"><span class="ph__etq">Foto 2</span></div>
-            <div class="ph ph--4-3"><span class="ph__etq">Foto 3</span></div><div class="ph ph--4-3"><span class="ph__etq">Foto 4</span></div>
-            <div class="ph ph--4-3"><span class="ph__etq">Foto 5</span></div><div class="ph ph--4-3"><span class="ph__etq">Foto 6</span></div>
+
+          <div class="subserie" id="sub-robados">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="f.obra.robados.titulo">Robados</span></h3>
+                <button class="subview" type="button" data-subview aria-pressed="false" aria-label="Cambiar vista de esta sección"><span class="subview__ico subview__ico--grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="subview__ico subview__ico--slide"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span></button>
+              </div>
+              <p class="serie__desc"><span data-i18n="f.obra.robados.desc">Reportaje social en la estela de Cartier-Bresson: el instante decisivo. No se retrata a nadie, se sorprende el gesto verdadero antes de que se componga para la cámara.</span></p>
+            </div>
+            <div class="slider-pair">
+              <div class="slider-col"><div class="serie" data-slider="robados-h" data-orient="h"></div></div>
+              <div class="slider-col"><div class="serie" data-slider="robados-v" data-orient="v"></div></div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-personal">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="f.obra.personal.titulo">Visión personal</span></h3>
+                <button class="subview" type="button" data-subview aria-pressed="false" aria-label="Cambiar vista de esta sección"><span class="subview__ico subview__ico--grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="subview__ico subview__ico--slide"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span></button>
+              </div>
+              <p class="serie__desc"><span data-i18n="f.obra.personal.desc">Una mirada introspectiva que cuestiona lo establecido y abraza una visión generalista del mundo. Aquí la fotografía no documenta una realidad externa: compone, duda y relaciona, usando el encuadre como forma de pensar.</span></p>
+            </div>
+            <div class="slider-pair">
+              <div class="slider-col"><div class="serie" data-slider="personal-h" data-orient="h"></div></div>
+              <div class="slider-col"><div class="serie" data-slider="personal-v" data-orient="v"></div></div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-bodegon">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="f.obra.bodegon.titulo">Bodegón publicitario</span></h3>
+                <button class="subview" type="button" data-subview aria-pressed="false" aria-label="Cambiar vista de esta sección"><span class="subview__ico subview__ico--grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="subview__ico subview__ico--slide"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span></button>
+              </div>
+              <p class="serie__desc"><span data-i18n="f.obra.bodegon.desc">Composición, textura y luz dirigida para dar peso al objeto. El producto como protagonista: control del reflejo, del fondo y del punto de luz que lo hace deseable.</span></p>
+            </div>
+            <div class="slider-pair">
+              <div class="slider-col"><div class="serie" data-slider="bodegon-h" data-orient="h"></div></div>
+              <div class="slider-col"><div class="serie" data-slider="bodegon-v" data-orient="v"></div></div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-moda">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="f.obra.moda.titulo">Moda</span></h3>
+                <button class="subview" type="button" data-subview aria-pressed="false" aria-label="Cambiar vista de esta sección"><span class="subview__ico subview__ico--grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="subview__ico subview__ico--slide"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span></button>
+              </div>
+              <p class="serie__desc"><span data-i18n="f.obra.moda.desc">Dirección de imagen, gesto y luz al servicio de la prenda. El cuerpo en movimiento como línea compositiva: aire, ritmo y una historia contada con el encuadre.</span></p>
+            </div>
+            <div class="slider-pair">
+              <div class="slider-col"><div class="serie" data-slider="moda-h" data-orient="h"></div></div>
+              <div class="slider-col"><div class="serie" data-slider="moda-v" data-orient="v"></div></div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-retrato">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="f.obra.retrato.titulo">Retrato</span></h3>
+                <button class="subview" type="button" data-subview aria-pressed="false" aria-label="Cambiar vista de esta sección"><span class="subview__ico subview__ico--grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="subview__ico subview__ico--slide"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span></button>
+              </div>
+              <p class="serie__desc"><span data-i18n="f.obra.retrato.desc">Fondo limpio, tensión elegante y la mirada por delante del artificio: buscar a la persona, no la pose. Retrato como encuentro, medido en la luz y en el silencio.</span></p>
+            </div>
+            <div class="slider-pair slider-pair--igual">
+              <div class="slider-col"><div class="serie" data-slider="retrato-a" data-orient="v"></div></div>
+              <div class="slider-col"><div class="serie" data-slider="retrato-b" data-orient="v"></div></div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="seccion" aria-labelledby="t-form">
-        <div class="contenedor">
-          <div class="seccion__head"><span class="seccion__num">03</span><h2 class="seccion__titulo" id="t-form">Formación</h2></div>
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">03</span><h2 class="seccion__titulo" id="t-form"><span data-i18n="f.form.titulo">Formación</span></h2></div>
           <div class="formacion">
-            <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3>Imagen</h3><p>Técnico superior en Imagen: toma, iluminación, revelado digital y tratamiento fotográfico.</p><p class="formacion__centro">EASD València · Escola d'Art i Superior de Disseny</p></article>
-            <article class="formacion__item reveal"><span class="formacion__grado">CFGS</span><h3>Artes Gráficas</h3><p>Base de color, preimpresión y maquetación: el origen de mi ojo para el encuadre y el tono.</p><p class="formacion__centro">Centro formativo · Valencia</p></article>
+            <article class="formacion__item">
+              <a class="media" href="https://www.easdvalencia.com/" target="_blank" rel="noopener" data-wiki="Escola d'Art i Superior de Disseny de València">
+                <img src="https://www.uv.es/rutaseda/Novedades/easd2" alt="Fachada de la EASD València" width="1200" height="675" loading="lazy" decoding="async" />
+                <span class="media__fb">EASD València</span>
+              </a>
+              <span class="formacion__grado">CFGS</span>
+              <h3><span data-i18n="f.form.item1.titulo">Fotografía Artística</span></h3>
+              <p><span data-i18n="f.form.item1.texto">Técnico superior en Imagen: paisaje, arquitectura, interiorismo, reportaje social, moda y bodegón publicitario. La base técnica de todo lo que hay en esta página.</span></p>
+              <p class="formacion__centro"><span data-i18n="f.form.item1.centro">EASD València · Escola d'Art i Superior de Disseny</span></p>
+            </article>
+            <article class="formacion__item">
+              <a class="media" href="https://fpaprenent.com/" target="_blank" rel="noopener" data-wiki="CIPFP Ciudad del Aprendiz Torrent">
+                <img src="https://vlcparticipa.valencia.es/system/images/attachments/000/000/536/large/054c3da4bcec2a034bd5f74022ce784d9c6548eb.jpg" alt="Fachada del CIPFP Ciudad del Aprendiz" width="1200" height="675" loading="lazy" decoding="async" />
+                <span class="media__fb">CIPFP Ciudad del Aprendiz</span>
+              </a>
+              <span class="formacion__grado">CFGS</span>
+              <h3><span data-i18n="f.form.item2.titulo">Diseño y Producción Editorial</span></h3>
+              <p><span data-i18n="f.form.item2.texto">Color, preimpresión y maquetación. El origen de mi ojo para el encuadre, el tono y el detalle bien acabado.</span></p>
+              <p class="formacion__centro"><span data-i18n="f.form.item2.centro">CIPFP Ciudad del Aprendiz</span></p>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="seccion" aria-labelledby="t-tools">
-        <div class="contenedor">
-          <div class="seccion__head"><span class="seccion__num">04</span><h2 class="seccion__titulo" id="t-tools">Herramientas</h2></div>
-          <div class="stack reveal"><span class="chip">Photoshop</span><span class="chip">Lightroom</span><span class="chip">Camera Raw</span><span class="chip">Capture One</span><span class="chip">Illustrator</span><span class="chip">Escáner</span><span class="chip">Cámara réflex</span><span class="chip">Trípode</span><span class="chip">Flash de estudio</span></div>
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">04</span><h2 class="seccion__titulo" id="t-tools"><span data-i18n="f.tools.titulo">Herramientas</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="f.tools.sub">Software que manejo a diario, con la suite Adobe como columna vertebral del flujo de imagen.</span></p>
+          <div class="tools">
+            <div class="tool-card tool--ps">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Adobe_Photoshop_CC_icon.svg" alt="Adobe Photoshop" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Ps</span></span>
+                <span class="tool-card__name">Photoshop</span>
+                <span class="tool-card__lvl"><span data-i18n="f.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card tool--lr">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://upload.wikimedia.org/wikipedia/commons/7/ed/Adobe_Photoshop_Lightroom_CC_logo.svg" alt="Adobe Lightroom" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Lr</span></span>
+                <span class="tool-card__name">Lightroom</span>
+                <span class="tool-card__lvl"><span data-i18n="f.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card tool--cr">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Adobe_Camera_Raw_Icon.svg" alt="Adobe Camera Raw" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Cr</span></span>
+                <span class="tool-card__name">Camera Raw</span>
+                <span class="tool-card__lvl"><span data-i18n="f.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card tool--br">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Adobe_Bridge_CC_icon.svg" alt="Adobe Bridge" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Br</span></span>
+                <span class="tool-card__name">Bridge</span>
+                <span class="tool-card__lvl"><span data-i18n="f.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="seccion" aria-labelledby="t-exp">
-        <div class="contenedor">
-          <div class="seccion__head"><span class="seccion__num">05</span><h2 class="seccion__titulo" id="t-exp">Experiencia</h2></div>
-          <ul class="exp-lista reveal"><li>Sesiones de retrato y producto para marca personal.</li><li>Cobertura fotográfica de eventos culturales.</li><li>Revelado y retoque de catálogos editoriales.</li><li>Archivo y etiquetado de fotografía de autor.</li></ul>
-          <p class="exp-nota">Contenido provisional: enlazaremos los trabajos reales con sus imágenes.</p>
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">05</span><h2 class="seccion__titulo" id="t-exp"><span data-i18n="f.exp.titulo">Experiencia</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="f.exp.sub"><strong>Tres ámbitos, un mismo criterio.</strong> Documentación fotográfica de instalaciones para la <strong>ETSID · UPV</strong> (exterior e interior), catálogo de producto industrial para <strong>Weidner Ibérica y Weidner México</strong> (bodegón técnico con control de reflejos sobre metal y plástico), y <strong>reportaje social</strong> de bodas, bautizos y comuniones. En cada encargo: plan de tomas, control de luz, revelado coherente serie a serie y entrega ordenada lista para publicar o imprimir.</span></p>
+
+          <div class="upv-card">
+            <span class="media upv-card__logo" data-wiki="Universitat Politècnica de València">
+              <img src="" alt="Logo de la Universitat Politècnica de València" width="120" height="120" loading="lazy" decoding="async" />
+              <span class="media__fb">UPV</span>
+            </span>
+            <div class="upv-card__txt">
+              <h3><span data-i18n="f.exp.upv.titulo">Escola Tècnica Superior d'Enginyeria</span></h3>
+              <p><span data-i18n="f.exp.upv.texto">Encargo de imagen para la <strong>ETSID</strong>, centro de la <strong>Universitat Politècnica de València</strong>.</span></p>
+              <a href="https://www.upv.es" target="_blank" rel="noopener">upv.es →</a>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-etsid">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="f.exp.etsid.titulo">Instalaciones ETSID</span></h3>
+                <button class="subview" type="button" data-subview aria-pressed="false" aria-label="Cambiar vista de esta sección"><span class="subview__ico subview__ico--grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="subview__ico subview__ico--slide"><svg viewBox="0 0 24 24"><path d="M3 7l7-3v16l-7-3z"/><path d="M10 4h4l7 3v10l-7 3h-4"/></svg></span></button>
+              </div>
+            </div>
+            <div class="slider-pair slider-pair--igual">
+              <div class="slider-col"><span class="slider-col__etq"><span data-i18n="f.exp.etsid.int">Interior</span></span><div class="serie" data-slider="etsid-interior" data-orient="h"></div></div>
+              <div class="slider-col"><span class="slider-col__etq"><span data-i18n="f.exp.etsid.ext">Exterior</span></span><div class="serie" data-slider="etsid-exterior" data-orient="h"></div></div>
+            </div>
+          </div>
+
+          <ul class="exp-lista" style="margin-top:1.6rem">
+            <li><span data-i18n="f.exp.lista1">Trato directo con el centro: escucho el uso que se dará a cada imagen y encuadro en consecuencia.</span></li>
+            <li><span data-i18n="f.exp.lista2">Coherencia de serie: mismo lenguaje de color y exposición en todo el encargo.</span></li>
+            <li><span data-i18n="f.exp.lista3">Entrega lista para publicar: nombrado, recorte y peso optimizado.</span></li>
+          </ul>
+
+          <div class="casos" id="sub-casos">
+            <h3 class="serie__titulo"><span data-i18n="f.exp.casos.titulo">Casos de proyecto · problema → solución → resultado</span></h3>
+            <p class="serie__desc"><span data-i18n="f.exp.casos.desc">Tres encargos reales, contados por lo que resolvieron. Las cifras son métricas propias de cada entrega.</span></p>
+            <div class="casos__grid">
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="f.exp.caso1.tag">ETSID · UPV</span></span>
+                <h3><span data-i18n="f.exp.caso1.titulo">Documentación de instalaciones</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="f.exp.casos.problema">Problema</b><p><span data-i18n="f.exp.caso1.problema">El centro necesitaba un banco de imágenes actualizado para web e informes, sin coherencia visual entre espacios.</span></p></div>
+                  <div><b data-i18n="f.exp.casos.solucion">Solución</b><p><span data-i18n="f.exp.caso1.solucion">Plan de tomas interior/exterior, control de luz ambiente y revelado uniforme serie a serie.</span></p></div>
+                  <div><b data-i18n="f.exp.casos.resultado">Resultado</b><p><span data-i18n="f.exp.caso1.resultado">Banco institucional listo para publicar, con lenguaje de color homogéneo.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="30" data-suffix="+">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso1.stat1">imágenes finales</span></span></li>
+                  <li><span class="stat__num" data-count="1" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso1.stat2">semana de tiempo</span></span></li>
+                  <li><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso1.stat3">coherencia de serie</span></span></li>
+                </ul>
+              </article>
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="f.exp.caso2.tag">Weidner Ibérica y Weidner México</span></span>
+                <h3><span data-i18n="f.exp.caso2.titulo">Catálogo de producto industrial</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="f.exp.casos.problema">Problema</b><p><span data-i18n="f.exp.caso2.problema">Producto técnico con materiales reflectantes y acabados difíciles, para dos empresas, sin pérdida de detalle.</span></p></div>
+                  <div><b data-i18n="f.exp.casos.solucion">Solución</b><p><span data-i18n="f.exp.caso2.solucion">Estudio con control de reflejos, iluminación dirigida y montaje coherente para impresión.</span></p></div>
+                  <div><b data-i18n="f.exp.casos.resultado">Resultado</b><p><span data-i18n="f.exp.caso2.resultado">Catálogo listo para maquetar, con la misma norma de color para ambas.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="60" data-suffix="+">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso2.stat1">referencias de producto</span></span></li>
+                  <li><span class="stat__num" data-count="2" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso2.stat2">empresas</span></span></li>
+                  <li><span class="stat__num" data-count="10" data-suffix="+">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso2.stat3">catálogos entregados</span></span></li>
+                </ul>
+              </article>
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="f.exp.caso3.tag">Reportaje social</span></span>
+                <h3><span data-i18n="f.exp.caso3.titulo">Bodas, bautizos y comuniones</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="f.exp.casos.problema">Problema</b><p><span data-i18n="f.exp.caso3.problema">Cubrir un día entero sin dirigir y sin perder el gesto verdadero entre protocolo y tiempos cerrados.</span></p></div>
+                  <div><b data-i18n="f.exp.casos.solucion">Solución</b><p><span data-i18n="f.exp.caso3.solucion">Cobertura continua, revelado coherente y selección cuidada en forma de serie narrativa.</span></p></div>
+                  <div><b data-i18n="f.exp.casos.resultado">Resultado</b><p><span data-i18n="f.exp.caso3.resultado">Book cerrado con ritmo propio, listo para imprimir o publicar.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="12" data-suffix="h">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso3.stat1">cobertura continua</span></span></li>
+                  <li><span class="stat__num" data-count="400" data-suffix="+">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso3.stat2">imágenes entregadas</span></span></li>
+                  <li><span class="stat__num" data-count="10" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="f.exp.caso3.stat3">books de boda</span></span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="exp-weidner" id="sub-weidner">
+            <h3 class="serie__titulo"><span data-i18n="f.exp.weidner.head.titulo">Weidner Ibérica · Weidner México</span></h3>
+            <p class="serie__desc"><span data-i18n="f.exp.weidner.head.desc">Fotografía de producto industrial para Weidner Ibérica y Weidner México: estudio y on-site, control de reflejos sobre metal y plástico e iluminación dirigida, para entregar una serie coherente lista para maquetación editorial.</span></p>
+            <div class="upv-card" style="margin-top:1.4rem">
+              <span class="media upv-card__logo" data-wiki="Weidner Ibérica">
+                <img src="https://www.weidneriberica.com/wp-content/uploads/2014/06/weidner-logo-copy.png" alt="Weidner Ibérica" width="120" height="120" loading="lazy" decoding="async" style="object-fit:contain" />
+                <span class="media__fb">WI</span>
+              </span>
+              <div class="upv-card__txt">
+                <h3><span data-i18n="f.exp.wiberica.titulo">Weidner Ibérica</span></h3>
+                <p><span data-i18n="f.exp.wiberica.texto">Fabricante español de productos plásticos para la industria logística y de automoción, con central en Carlet (Valencia). Encargo de fotografía de producto industrial.</span></p>
+                <a href="https://www.weidneriberica.com" target="_blank" rel="noopener">weidneriberica.com →</a>
+              </div>
+            </div>
+            <div class="upv-card">
+              <span class="media upv-card__logo" data-wiki="Weidner México">
+                <img src="https://weidner.mx/wp-content/uploads/2018/01/Logo_Weidner.png" alt="Weidner México" width="120" height="120" loading="lazy" decoding="async" style="object-fit:contain" />
+                <span class="media__fb">WM</span>
+              </span>
+              <div class="upv-card__txt">
+                <h3><span data-i18n="f.exp.wmexico.titulo">Weidner México</span></h3>
+                <p><span data-i18n="f.exp.wmexico.texto">Filial mexicana del Grupo Weidner. Fotografía de producto industrial y catálogo técnico para su línea de componentes.</span></p>
+                <a href="https://weidner.mx" target="_blank" rel="noopener">weidner.mx →</a>
+              </div>
+            </div>
+            <div class="pdf-card">
+              <span class="pdf-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
+              </span>
+              <div class="pdf-card__txt">
+                <h3><span data-i18n="f.exp.weidner.titulo">Catálogo de producto · Weidner Ibérica y Weidner México</span></h3>
+                <p><span data-i18n="f.exp.weidner.texto"><strong>Fotografía de producto industrial.</strong> Catálogo técnico para <strong>Weidner Ibérica</strong> y <strong>Weidner México</strong>: fotografía de producto en entorno de estudio y on-site, con control de reflejos sobre metal y plástico, iluminación dirigida para resaltar materiales y acabados, y montaje coherente de la serie listo para maquetación editorial. Un encargo que une la precisión del <strong>bodegón publicitario</strong> con la <strong>documentación técnica de producto</strong>: habilidad y experiencia demostrable en foto de producto en el ámbito industrial.</span></p>
+                <a class="boton boton--verde" href="Imagenes/foto/producto/Presentaci%C3%B3n%20Productos%20Weidner%20-%20Columnas%20(Espa%C3%B1ol)_sinpablo.pdf#page=3&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit" target="_blank" rel="noopener"><span data-i18n="f.exp.weidner.btn">Ver catálogo (PDF)</span> <span class="flecha">→</span></a>
+              </div>
+            </div>
+
+            <div class="pdf-shell">
+              <iframe
+                class="pdf-view"
+                src="Imagenes/foto/producto/Presentaci%C3%B3n%20Productos%20Weidner%20-%20Columnas%20(Espa%C3%B1ol)_sinpablo.pdf#page=3&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit"
+                title="Catálogo de producto Weidner"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="bodas" id="sub-bodas">
+            <h3 class="serie__titulo"><span data-i18n="f.exp.bodas.titulo">Bodas, bautizos y comuniones</span></h3>
+            <p class="serie__desc"><span data-i18n="f.exp.bodas.desc">Reportaje social de encargo, tratado como una serie narrativa de principio a fin. <strong>Antes</strong>: reunión con la familia, plan de tomas y calendario (protocolo, tiempos, rincones y detalles). <strong>Durante</strong>: cobertura continua sin dirigir —la preparación, la ceremonia, el saludo, el convite y el baile—, atento al gesto verdadero y a los objetos que sostienen la historia. <strong>Después</strong>: revelado coherente, selección cuidada, maquetación del álbum y entrega lista para imprimir o publicar. Un book cerrado, con su propio ritmo.</span></p>
+            <div class="bodas-grid">
+              <figure class="boda"><span class="media"><img class="ok" src="Imagenes/reportaje-001.webp" alt="Reportaje 01" width="600" height="400" loading="lazy" decoding="async" onerror="this.remove()" /></span></figure>
+              <figure class="boda"><span class="media"><img class="ok" src="Imagenes/reportaje-002.webp" alt="Reportaje 02" width="600" height="400" loading="lazy" decoding="async" onerror="this.remove()" /></span></figure>
+              <figure class="boda"><span class="media"><img class="ok" src="Imagenes/reportaje-003.webp" alt="Reportaje 03" width="600" height="400" loading="lazy" decoding="async" onerror="this.remove()" /></span></figure>
+              <figure class="boda"><span class="media"><img class="ok" src="Imagenes/reportaje-004.webp" alt="Reportaje 04" width="600" height="400" loading="lazy" decoding="async" onerror="this.remove()" /></span></figure>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="seccion" aria-labelledby="t-comp">
-        <div class="contenedor">
-          <div class="seccion__head"><span class="seccion__num">06</span><h2 class="seccion__titulo" id="t-comp">Competencias</h2></div>
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">06</span><h2 class="seccion__titulo" id="t-comp"><span data-i18n="f.comp.titulo">Competencias</span></h2></div>
           <div class="bloques">
-            <article class="bloque reveal"><h3>Exposición</h3><p>Medir la luz y decidir qué se pierde para ganar la imagen.</p></article>
-            <article class="bloque reveal"><h3>Composición</h3><p>Retícula, líneas y vacío al servicio del sujeto.</p></article>
-            <article class="bloque reveal"><h3>Revelado</h3><p>RAW coherente, tono y textura sin deformar la realidad.</p></article>
-            <article class="bloque reveal"><h3>Narrativa</h3><p>Series que cuentan, no capturas sueltas.</p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span><h3><span data-i18n="f.comp.b1.titulo">Fotografía de interior</span></h3><p><span data-i18n="f.comp.b1.texto">Luz ambiente controlada, verticales corregidas y espacios que se ven como son.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5"/></svg></span><h3><span data-i18n="f.comp.b2.titulo">Fotografía de arquitectura</span></h3><p><span data-i18n="f.comp.b2.texto">Volúmenes, líneas y escala: leer el edificio antes de encuadrarlo.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M4 20h16M7 20c0-6 3-9 5-9s5 3 5 9M12 11V7"/><circle cx="12" cy="5" r="1.6"/></svg></span><h3><span data-i18n="f.comp.b3.titulo">Bodegón publicitario</span></h3><p><span data-i18n="f.comp.b3.texto">Composición, textura y luz dirigida para dar peso al objeto.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2L8 5h8l1.5 2h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.5"/></svg></span><h3><span data-i18n="f.comp.b4.titulo">Reportaje social</span></h3><p><span data-i18n="f.comp.b4.texto">Cobertura de eventos: el instante real, contado con criterio y sin ruido.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M12 6a2 2 0 1 1 1.6 3.5c-.6.4-1.1.6-1.6 1.5m0 0-7 5a1.4 1.4 0 0 0 .7 2.6h12.6a1.4 1.4 0 0 0 .7-2.6L12 11z"/></svg></span><h3><span data-i18n="f.comp.b5.titulo">Moda</span></h3><p><span data-i18n="f.comp.b5.texto">Dirección de imagen, gesto y luz de estudio al servicio de la prenda.</span></p></article>
           </div>
         </div>
       </section>
 
       <section class="seccion" aria-labelledby="t-ref">
-        <div class="contenedor">
-          <div class="seccion__head"><span class="seccion__num">07</span><h2 class="seccion__titulo" id="t-ref">Referentes</h2></div>
-          <p class="seccion__sub reveal">Fotógrafos que enseñan a mirar. Textos provisionales.</p>
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">07</span><h2 class="seccion__titulo" id="t-ref"><span data-i18n="f.ref.titulo">Referentes</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="f.ref.sub">Tres maestros que enseñan a mirar. De ellos heredo el criterio, no la copia.</span></p>
           <div class="referentes">
-            <article class="ref reveal"><div class="ph ph--1-1"><span class="ph__etq">Foto</span></div><h3>Ansel Adams</h3><p>Zona system y el blanco y negro como partitura.</p></article>
-            <article class="ref reveal"><div class="ph ph--1-1"><span class="ph__etq">Foto</span></div><h3>Vivian Maier</h3><p>La calle contada en un instante.</p></article>
-            <article class="ref reveal"><div class="ph ph--1-1"><span class="ph__etq">Foto</span></div><h3>Fan Ho</h3><p>Luz dura, geometría y sombra.</p></article>
-            <article class="ref reveal"><div class="ph ph--1-1"><span class="ph__etq">Foto</span></div><h3>Steve McCurry</h3><p>Color y retrato con contexto.</p></article>
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/Ansel_Adams" target="_blank" rel="noopener">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw0Q0hNDF0iV8H1fN5oFHbfkPz_OY24VaroJSZkgP-KA&s=10" alt="Ansel Adams" class="ok" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Ansel Adams</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Ansel_Adams" target="_blank" rel="noopener">Ansel Adams<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="f.ref.r1.texto">El blanco y negro como partitura: luz medida, textura y silencio.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/Henri_Cartier-Bresson" target="_blank" rel="noopener">
+                <img src="https://www.singulart.com/blog/wp-content/uploads/2024/04/The-Decisive-Moment.jpeg" alt="Henri Cartier-Bresson" class="ok" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Cartier-Bresson</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Henri_Cartier-Bresson" target="_blank" rel="noopener">Henri Cartier-Bresson<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="f.ref.r2.texto">El instante decisivo: esperar, encuadrar y no disparar de más.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/Richard_Avedon" target="_blank" rel="noopener">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx-yHiCWyZP39yaQ3otaZ8AwBQj1KujgUxaLVC5tkBSg&s=10" alt="Richard Avedon" class="ok" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Richard Avedon</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Richard_Avedon" target="_blank" rel="noopener">Richard Avedon<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="f.ref.r3.texto">Retrato, fondo limpio y tensión elegante: la mirada, no el artificio.</span></p>
+            </article>
           </div>
         </div>
       </section>
@@ -150,12 +504,60 @@
 
     <footer class="pie">
       <div class="contenedor">
-        <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
-        <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
-        <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
+        <div class="pie__grid">
+          <div class="pie__col">
+            <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
+            <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+            <button class="pie__contacto js-contacto reveal" type="button">
+              <span data-i18n="m.contacto">Contacto</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            </button>
+            <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
+            <div class="clima reveal" data-clima>
+              <span class="clima__ico" aria-hidden="true"></span>
+              <div class="clima__cuerpo">
+                <span class="clima__lugar">Xàtiva · Valencia</span>
+                <div class="clima__fila"><span class="clima__temp">–</span><span class="clima__desc">Cargando…</span></div>
+                <span class="clima__meta"></span>
+              </div>
+              <label class="clima__selector">
+                <span class="clima__selector-txt"><span data-i18n="clima.ubicacion">Ubicación</span></span>
+                <select class="clima__select" aria-label="Elegir ubicación">
+                  <option value="xativa">Xàtiva</option>
+                  <option value="valencia">València</option>
+                  <option value="jaraguas">Jaraguas</option>
+                  <option value="lapobla">La Pobla Llarga</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="pie__loc reveal">
+            <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
+            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+            <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
+          </div>
+        </div>
+
         <p class="copyright"><a class="nav__volver" href="index.html">← Volver al inicio</a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
       </div>
     </footer>
+
+    <div class="fab">
+      <button class="fab__btn fab__top" id="toTop" type="button" aria-label="Subir arriba">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+      <button class="fab__btn fab__toc" id="tocBtn" type="button" aria-label="Índice de secciones" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      </button>
+    </div>
+    <div class="toc__scrim" id="tocScrim"></div>
+    <aside class="toc" id="toc" aria-hidden="true" aria-label="Índice de secciones">
+      <header class="toc__head">
+        <h3>Secciones</h3>
+        <button class="toc__cerrar" id="tocClose" aria-label="Cerrar índice">✕</button>
+      </header>
+      <nav class="toc__list" id="tocList"></nav>
+    </aside>
 
     <div class="modal" id="modal" aria-hidden="true">
       <div class="modal__fondo" data-cerrar></div>
@@ -168,8 +570,24 @@
           <label class="form__campo"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email" placeholder="tu@correo.com" /></label>
           <label class="form__campo"><span data-i18n="form.mensaje">Mensaje</span><textarea name="mensaje" rows="4" required placeholder="¿En qué puedo ayudarte?"></textarea></label>
           <button type="submit" class="boton boton--verde"><span data-i18n="form.enviar">Enviar mensaje</span> <span class="flecha">→</span></button>
-          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado correctamente.</span></p>
+          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.</span></p>
         </form>
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+      <div class="lightbox__fondo" data-lb-fondo></div>
+      <button class="lightbox__cerrar" data-lb-cerrar aria-label="Cerrar">✕</button>
+      <button class="lightbox__nav lightbox__nav--prev" data-lb-prev aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="lightbox__nav lightbox__nav--next" data-lb-next aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      <figure class="lightbox__fig"><img src="" alt="" /></figure>
+    </div>
+
+    <div class="gridmodal" id="gridmodal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Todas las fotos de la serie">
+      <div class="gridmodal__fondo" data-gm-fondo></div>
+      <div class="gridmodal__caja">
+        <header class="gridmodal__head"><h3 id="gm-title">Serie</h3><button class="gridmodal__cerrar" data-gm-cerrar aria-label="Cerrar">✕</button></header>
+        <div class="gridmodal__grid" id="gm-grid"></div>
       </div>
     </div>
   </body>
