@@ -1,4 +1,4 @@
-﻿/* script.js · hub + subwebs · hover, desplegable, anclas, vista global + por subsección, FAB/TOC, stats, modal, lightbox, Wikipedia, clima */
+/* script.js · hub + subwebs · hover, desplegable, anclas, vista global + por subsección, FAB/TOC, stats, modal, lightbox, Wikipedia, clima */
 
 document.addEventListener("DOMContentLoaded", () => {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -738,23 +738,252 @@ document.addEventListener("DOMContentLoaded", () => {
     cargar();
   })();
 
-  /* ░░ Pantonera (índice): hover en lámina → la web adopta su paleta ░░ */
+  /* ░░ Slider índice (estilo blacknegative): arrastre, cámara y mosaico ░░ */
   (() => {
-    const pantone = document.querySelector(".pantone");
-    if (!pantone) return;
-    const html = document.documentElement;
-    const laminas = Array.from(pantone.querySelectorAll(".pantone-lamina"));
-    const volver = () => { if (html.getAttribute("data-tema") !== "index") html.setAttribute("data-tema", "index"); };
-    laminas.forEach((l) => {
-      const t = l.dataset.tema;
-      if (!t) return;
-      const poner = () => html.setAttribute("data-tema", t);
-      l.addEventListener("mouseenter", poner);
-      l.addEventListener("focus", poner);
-      l.addEventListener("mouseleave", volver);
-      l.addEventListener("blur", volver);
+    const bn = document.querySelector("[data-bn]");
+    if (!bn) return;
+    const track = bn.querySelector("[data-bn-track]");
+    const slides = Array.from(bn.querySelectorAll("[data-bn-slide]"));
+    const pags = Array.from(bn.querySelectorAll("[data-bn-to]"));
+    const conteo = bn.querySelector("[data-bn-cur]");
+    const N = slides.length;
+    let i = 0, W = 0, visible = true;
+
+    const setX = (px) => { track.style.transform = "translate3d(" + px + "px,0,0)"; };
+    const medir = () => { W = bn.clientWidth; setX(-i * W); };
+
+    let activo = false, sx = 0, sy = 0, axis = "", arrastrando = false;
+    let ultimoX = 0, ultimoT = 0, vel = 0, suppress = 0;
+
+    const cam = bn.querySelector("[data-bn-cam]");
+    const mos = bn.querySelector("[data-bn-mos]");
+    const final = bn.querySelector("[data-bn-final]");
+    let camReset = null, mosHecho = false, mosDone = false;
+
+    if (cam) {
+      const flou = cam.querySelector("[data-cam-flou]");
+      const fondo = cam.querySelector("[data-cam-fondo]");
+      const hud = cam.querySelector("[data-cam-hud]");
+      const camTop = cam.querySelector(".bn__cam-top");
+      const centro = cam.querySelector("[data-cam-centro]");
+      const poner = (x, y) => {
+        const k = Math.min(1, ((Math.abs(x) + Math.abs(y)) / 2) * 1.6);
+        const tr = "translate(" + (x * 30).toFixed(1) + "px," + (y * 20).toFixed(1) + "px)";
+        if (flou) { flou.style.opacity = (1 - Math.pow(1 - k, 13)).toFixed(3); flou.style.transform = tr; }
+        if (centro) centro.style.opacity = Math.pow(1 - k, 13).toFixed(3);
+        if (fondo) fondo.style.transform = tr;
+        if (hud) hud.style.transform = "translate(" + (x * 44).toFixed(1) + "px," + (y * 28).toFixed(1) + "px)";
+        if (camTop) camTop.style.transform = "translate(" + (x * 44).toFixed(1) + "px," + (y * 28).toFixed(1) + "px)";
+      };
+      const esTactil = !(window.matchMedia && window.matchMedia("(hover:hover)").matches);
+      camReset = () => { poner(0, 0); if (esTactil && centro) centro.style.opacity = "0.85"; };
+      if (esTactil) {
+        poner(0, 0);
+        if (centro) centro.style.opacity = "0.85";
+      } else {
+        poner(0, 0);
+        cam.addEventListener("mousemove", (e) => {
+          const r = cam.getBoundingClientRect();
+          poner(((e.clientX - r.left) / r.width - 0.5) * 2, ((e.clientY - r.top) / r.height - 0.5) * 2);
+        });
+        cam.addEventListener("mouseleave", () => poner(0.6, 0.6));
+      }
+    }
+
+    const enlazarTema = (sel, tema) => {
+      const el = bn.querySelector(sel); if (!el) return;
+      const on = () => html.setAttribute("data-tema", tema);
+      const off = () => html.setAttribute("data-tema", "index");
+      el.addEventListener("mouseenter", on); el.addEventListener("mouseleave", off);
+      el.addEventListener("focus", on); el.addEventListener("blur", off);
+    };
+    enlazarTema(".bn__rec", "foto");
+    enlazarTema(".bn__cta", "diseno");
+
+    const FILAS = [["D","I","S","E","Ñ","A"], ["I","M","A","G","I","N","A"], ["C","R","E","A"]];
+    const GRISES = ["#7d818c", "#555a66"];
+
+    const construirMos = () => {
+      if (!mos) return;
+      const Wm = mos.clientWidth, Hm = mos.clientHeight;
+      if (!Wm || !Hm) return;
+      const obj = Wm < 560 ? 56 : Wm < 900 ? 72 : 88;
+      const cols = Math.max(8, Math.round(Wm / obj));
+      const cel = Wm / cols;
+      const filas = Math.max(6, Math.round(Hm / cel));
+      mos.style.gridTemplateColumns = "repeat(" + cols + ",1fr)";
+      mos.style.gridTemplateRows = "repeat(" + filas + ",1fr)";
+      mos.style.setProperty("--cel", cel + "px");
+      mos.innerHTML = "";
+      const cx = Math.floor(cols / 2), cy = Math.floor(filas / 2);
+      const mapa = {};
+      FILAS.forEach((fila, fi) => {
+        fila.forEach((ch, k) => {
+          mapa[(cx + k - Math.floor(fila.length / 2)) + "," + (cy + fi - 1)] = { txt: ch };
+        });
+      });
+      const frag = document.createDocumentFragment();
+      for (let r = 0; r < filas; r++) {
+        for (let c = 0; c < cols; c++) {
+          const d = document.createElement("div");
+          d.className = "bn__celda";
+          const m = mapa[c + "," + r];
+          if (m && m.txt) { d.classList.add("bn__celda--let"); d.textContent = m.txt; }
+          else d.style.backgroundColor = GRISES[(Math.random() * GRISES.length) | 0];
+          d.style.animationDelay = (Math.random() * 0.5).toFixed(2) + "s";
+          frag.appendChild(d);
+        }
+      }
+      mos.appendChild(frag);
+      mos.classList.remove("is-out");
+      if (final) final.classList.remove("is-on");
+      mosDone = false;
+      mosHecho = true;
+      const celdas = mos.children;
+      for (let k = 0; k < celdas.length; k++) {
+        const cel = celdas[k];
+        let t = 0;
+        cel.addEventListener("mouseenter", () => {
+          if (mosDone) return;
+          clearTimeout(t);
+          cel.style.opacity = "0";
+        });
+        cel.addEventListener("mouseleave", () => {
+          if (mosDone) return;
+          clearTimeout(t);
+          t = setTimeout(() => { cel.style.opacity = ""; }, 600);
+        });
+      }
+      mos.classList.remove("is-in");
+      void mos.offsetWidth;
+      mos.classList.add("is-in");
+    };
+
+    const revelar = () => {
+      if (!mos || mosDone) return;
+      mosDone = true;
+      const celdas = Array.from(mos.children);
+      const orden = celdas.map((_, k) => k);
+      for (let k = orden.length - 1; k > 0; k--) {
+        const j = Math.floor(Math.random() * (k + 1));
+        const tmp = orden[k]; orden[k] = orden[j]; orden[j] = tmp;
+      }
+      const paso = Math.max(6, Math.round(1300 / Math.max(1, orden.length)));
+      orden.forEach((idx, k) => {
+        setTimeout(() => {
+          const c = celdas[idx];
+          c.style.opacity = "0";
+          c.style.backgroundImage = "none";
+          c.style.backgroundColor = "transparent";
+          c.textContent = "";
+        }, paso * k);
+      });
+      setTimeout(() => {
+        mos.classList.add("is-out");
+        if (final) final.classList.add("is-on");
+      }, paso * orden.length + 350);
+    };
+    if (mos) mos.addEventListener("click", revelar);
+
+    const activar = () => {
+      html.setAttribute("data-tema", "index");
+      slides.forEach((s, k) => {
+        const on = k === i;
+        s.classList.toggle("is-on", on);
+        if (on) s.removeAttribute("inert"); else s.setAttribute("inert", "");
+        s.setAttribute("aria-hidden", on ? "false" : "true");
+      });
+      pags.forEach((p, k) => p.classList.toggle("is-on", k === i));
+      if (conteo) conteo.textContent = String(i + 1).padStart(2, "0");
+      if (camReset) camReset();
+      if (slides[i].classList.contains("bn__slide--diseno")) construirMos();
+    };
+
+    const ir = (n) => {
+      n = Math.max(0, Math.min(N - 1, n));
+      if (n === i && track.style.transform) return;
+      i = n;
+      track.style.transition = "transform .65s cubic-bezier(.16,1,.3,1)";
+      setX(-i * W);
+      activar();
+    };
+
+    const finDrag = (dx) => {
+      track.style.transition = "transform .65s cubic-bezier(.16,1,.3,1)";
+      let n = i;
+      if (dx < -W * 0.22 || (dx < -24 && vel > 0.45)) n = i + 1;
+      else if (dx > W * 0.22 || (dx > 24 && vel < -0.45)) n = i - 1;
+      if (n !== i) { suppress = Date.now(); ir(n); } else setX(-i * W);
+    };
+
+    bn.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      activo = true; sx = e.clientX; sy = e.clientY; axis = ""; arrastrando = false;
+      ultimoX = e.clientX; ultimoT = e.timeStamp; vel = 0;
     });
-    pantone.addEventListener("mouseleave", volver);
+    bn.addEventListener("pointermove", (e) => {
+      if (!activo) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (!axis) {
+        if (Math.abs(dx) > 8 || Math.abs(dy) > 8) axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+        else return;
+      }
+      if (axis === "y") return;
+      if (!arrastrando) {
+        arrastrando = true;
+        bn.classList.add("is-drag");
+        track.style.transition = "none";
+        try { bn.setPointerCapture(e.pointerId); } catch (_) {}
+      }
+      const dt = e.timeStamp - ultimoT;
+      if (dt > 0) vel = (e.clientX - ultimoX) / dt;
+      ultimoX = e.clientX; ultimoT = e.timeStamp;
+      let d = dx;
+      if ((i === 0 && d > 0) || (i === N - 1 && d < 0)) d *= 0.32;
+      setX(-i * W + d);
+    });
+    const soltar = (e) => {
+      if (!activo) return;
+      activo = false;
+      bn.classList.remove("is-drag");
+      if (arrastrando) finDrag(e.clientX - sx);
+      try { bn.releasePointerCapture(e.pointerId); } catch (_) {}
+      axis = ""; arrastrando = false;
+    };
+    bn.addEventListener("pointerup", soltar);
+    bn.addEventListener("pointercancel", soltar);
+    bn.addEventListener("click", (e) => {
+      if (Date.now() - suppress < 350) { e.stopPropagation(); e.preventDefault(); }
+    }, true);
+
+    pags.forEach((p) => p.addEventListener("click", () => ir(Number(p.dataset.bnTo) || 0)));
+
+    document.addEventListener("keydown", (e) => {
+      if (!visible || e.altKey || e.ctrlKey || e.metaKey) return;
+      const t = e.target;
+      if (t && t.closest && t.closest("input,textarea,select,[contenteditable]")) return;
+      if (e.key === "ArrowLeft") { e.preventDefault(); ir(i - 1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); ir(i + 1); }
+    });
+
+    let rt = 0;
+    window.addEventListener("resize", () => {
+      medir();
+      clearTimeout(rt);
+      rt = setTimeout(() => {
+        if (slides[i].classList.contains("bn__slide--diseno")) construirMos();
+        else mosHecho = false;
+      }, 180);
+    });
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((es) => {
+        visible = es[0].isIntersecting;
+      }, { threshold: 0.05 }).observe(bn);
+    }
+
+    medir();
+    activar();
   })();
 
   /* ░░ Chatbot del índice: preguntas frecuentes → secciones y subwebs ░░ */
