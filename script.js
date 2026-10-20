@@ -1847,12 +1847,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.removeEventListener("keydown", gestoIntro);
     };
 
-    let interno = false;
-    try { interno = sessionStorage.getItem("miweb-nav") === "1"; sessionStorage.removeItem("miweb-nav"); } catch (_) {}
-    let reentrada = false;
-    try { const n = performance.getEntriesByType("navigation")[0]; reentrada = !!n && n.type !== "navigate"; } catch (_) {}
-
-    if (interno || reentrada) {
+    const animar = html.getAttribute("data-carga") === "1";
+    if (!animar) {
       carga.remove();
       playIntro();
       document.addEventListener("pointerdown", gestoIntro);
@@ -1886,7 +1882,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!fill) return;
       if (!(p >= 0)) p = 0;
       fill.style.width = (p * 100).toFixed(1) + "%";
-      const b = BAR[Math.min(3, Math.max(0, Math.floor(p * 4)))] || BAR[0];
+      const b = p >= 1 ? COL.index : (BAR[Math.min(3, Math.max(0, Math.floor(p * 4)))] || BAR[0]);
       fill.style.background = "linear-gradient(90deg," + b[0] + "," + b[1] + ")";
     };
 
@@ -1898,7 +1894,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => carga.remove(), reduced ? 0 : 520);
     };
 
-    html.setAttribute("data-carga", "1");
     setLogo("index");
     playIntro();
     document.addEventListener("pointerdown", gestoIntro);
@@ -1906,6 +1901,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (reduced) {
       setBar(1);
+      carga.classList.add("is-fin");
       if (cta) { cta.classList.add("is-on"); cta.focus(); }
     } else {
       const start = performance.now();
@@ -1914,20 +1910,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const p = Math.max(0, Math.min(1, (now - start) / total));
         setBar(p);
         if (p < 1) { requestAnimationFrame(tick); return; }
+        carga.classList.add("is-fin");
         const seq = ["foto", "diseno", "video", "fab"];
         seq.forEach((k, j) => setTimeout(() => {
           if (done) return;
           if (temas[j]) temas[j].classList.add("is-on");
-          setLogo(k);
         }, j * flash));
         const finSeq = seq.length * flash;
-        const rapido = ["foto", "diseno", "video", "fab", "foto", "diseno", "video", "fab"];
-        rapido.forEach((k, j) => setTimeout(() => { if (!done) setLogo(k); }, finSeq + j * 130));
         setTimeout(() => {
           if (done) return;
-          setLogo("index");
           if (cta) { cta.classList.add("is-on"); cta.focus(); }
-        }, finSeq + rapido.length * 130 + 120);
+        }, finSeq + 240);
       };
       requestAnimationFrame(tick);
     }
