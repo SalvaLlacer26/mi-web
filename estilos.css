@@ -631,8 +631,8 @@ html[data-tema="index"] .fondo__velo::after{opacity:.22}
 .bn__track{display:flex;height:100%;will-change:transform}
 .bn__slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden;padding:clamp(1.4rem,4vh,3rem) clamp(3.6rem,7vw,5rem) clamp(3.6rem,7vh,4.6rem);color:#e9eaee}
 
-.bn__slide--intro{display:grid;place-items:center;text-align:center}
-.bn__slide--intro::before{content:"";position:absolute;inset:0;background:url("Imagenes/foto/paisaje/horizontal/paisaje-horizontal-001.webp") center/cover no-repeat}
+.bn__slide--intro{display:grid;place-items:center;text-align:center;background:#0a0a0b}
+.bn__slide--intro::before{content:"";position:absolute;inset:0;background:url("Imagenes/foto/paisaje/horizontal/paisaje-horizontal-001.webp") center/cover no-repeat;background-color:#0a0a0b}
 .bn__slide--intro::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,9,.78) 0%,rgba(10,10,13,.46) 45%,rgba(6,6,8,.86) 100%)}
 .bn__intro{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.7rem}
 .bn__kicker{font-family:var(--titulo);font-size:.72rem;letter-spacing:.55em;text-transform:uppercase;color:#e6e8ed;padding-left:.55em;text-shadow:0 1px 8px rgba(0,0,0,.7)}
@@ -928,7 +928,8 @@ html[data-mode="dark"][data-tema="video"] .mapa iframe{filter:invert(.88) hue-ro
 .nav__menu a[href^="video.html"]:hover,.nav__menu a[href^="video.html"]:focus-visible{color:var(--t2)}
 
 /* pantalla de carga de entrada (solo índice) */
-.carga{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;background:#08080c;color:#e8ebf3;text-align:center;padding:1.4rem}
+.carga{position:fixed;inset:0;z-index:9999;display:none;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;background:#08080c;color:#e8ebf3;text-align:center;padding:1.4rem}
+html[data-carga="1"] .carga{display:flex}
 .carga__logo{width:160px;height:160px;-webkit-mask:var(--logo-mark-alt) center/contain no-repeat;mask:var(--logo-mark-alt) center/contain no-repeat;background:linear-gradient(135deg,#e8ebf3,#8088a4);animation:cargaPulso 1.5s ease-in-out infinite;transition:background .45s ease}
 .carga__txt{font-family:var(--titulo);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:1.02rem;margin:0;opacity:.95}
 .carga__barra{width:min(320px,74vw);height:4px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden}

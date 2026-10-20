@@ -1838,14 +1838,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (seen) {
       carga.remove();
-      const gesto = () => { playIntro(); document.removeEventListener("pointerdown", gesto); document.removeEventListener("keydown", gesto); };
-      document.addEventListener("pointerdown", gesto);
-      document.addEventListener("keydown", gesto);
+      const gestoIntro = () => { playIntro(); document.removeEventListener("pointerdown", gestoIntro); document.removeEventListener("keydown", gestoIntro); };
+      document.addEventListener("pointerdown", gestoIntro);
+      document.addEventListener("keydown", gestoIntro);
       return;
     }
 
-    const total = reduced ? 0 : 2600;
-    const flash = reduced ? 0 : 1520;
+    const total = reduced ? 0 : 1600;
+    const flash = reduced ? 0 : 520;
     let done = false;
 
     const COL = {
@@ -1877,13 +1877,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (done) return; done = true;
       try { sessionStorage.setItem(KEY, "1"); } catch (_) {}
       playIntro();
+      html.removeAttribute("data-carga");
       carga.classList.add("is-ocultando");
-      setTimeout(() => { carga.remove(); html.removeAttribute("data-carga"); }, reduced ? 0 : 520);
+      setTimeout(() => carga.remove(), reduced ? 0 : 520);
     };
 
     html.setAttribute("data-carga", "1");
     setLogo("index");
     playIntro();
+    const gestoIntro = () => { playIntro(); document.removeEventListener("pointerdown", gestoIntro); document.removeEventListener("keydown", gestoIntro); };
+    document.addEventListener("pointerdown", gestoIntro);
+    document.addEventListener("keydown", gestoIntro);
 
     if (reduced) {
       setBar(1);
@@ -1891,18 +1895,21 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       const start = performance.now();
       const tick = (now) => {
+        if (done) return;
         const p = Math.min(1, (now - start) / total);
         setBar(p);
         if (p < 1) { requestAnimationFrame(tick); return; }
         const seq = ["foto", "diseno", "video", "fab"];
         seq.forEach((k, j) => setTimeout(() => {
+          if (done) return;
           if (temas[j]) temas[j].classList.add("is-on");
           setLogo(k);
         }, j * flash));
         const finSeq = seq.length * flash;
         const rapido = ["foto", "diseno", "video", "fab", "foto", "diseno", "video", "fab"];
-        rapido.forEach((k, j) => setTimeout(() => setLogo(k), finSeq + j * 130));
+        rapido.forEach((k, j) => setTimeout(() => { if (!done) setLogo(k); }, finSeq + j * 130));
         setTimeout(() => {
+          if (done) return;
           setLogo("index");
           if (cta) { cta.classList.add("is-on"); cta.focus(); }
         }, finSeq + rapido.length * 130 + 120);
@@ -1910,7 +1917,7 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(tick);
     }
 
-    if (cta) cta.addEventListener("click", finish);
+    carga.addEventListener("click", finish);
     document.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { if (!done) { e.preventDefault(); finish(); } } });
   })();
 });
