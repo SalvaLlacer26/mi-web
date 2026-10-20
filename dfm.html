@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es" data-mode="dark" data-tema="fab" data-view="std">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Salvador Llácer Ivars — Fabricación mecánica. Diseño de torres de apilamiento para automoción con CATIA V5, planimetría y ERP. Modelos 3D, planos y documentación técnica." />
+    <meta name="theme-color" content="#0a0a0b" />
+    <title>Fabricación mecánica — Salvador Llácer Ivars</title>
+    <link rel="icon" type="image/svg+xml" href="logo3.svg" />
+
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-text" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Bebas+Neue&family=Archivo:wght@400;700&family=DM+Serif+Display&family=Oswald:wght@400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+    <link rel="preload" as="image" href="Imagenes/Fabmec_sobremi.webp" fetchpriority="high" />
+
+    <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var low=m||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="script.js" defer></script>
+    <script src="dfm.js" defer></script>
+    <noscript><style>.reveal{opacity:1}</style></noscript>
+  </head>
+
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div class="fondo" aria-hidden="true">
+      <span class="fondo__degradado"></span>
+      <span class="fondo__velo"></span>
+      <span class="fondo__patron"></span>
+      <span class="fondo__objetos">
+        <svg class="obj obj--1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+        <svg class="obj obj--2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg>
+        <svg class="obj obj--3" viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v10M9 9v6M13 9v10M17 9v6M21 5v4"/></svg>
+        <svg class="obj obj--4" viewBox="0 0 24 24"><path d="M12 3l2 4h-4zM8 7h8l-1 5H9zM9 12h6v3H9zM10 15h4v6h-4z"/></svg>
+        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 6h16v4H4zM4 14h16v4H4zM8 6v12M16 6v12"/></svg>
+        <svg class="obj obj--6" viewBox="0 0 24 24"><path d="M4 8h10a4 4 0 0 1 0 8H4zM4 8v8M14 8l4-3M14 16l4 3"/><circle cx="9" cy="12" r="1.4"/></svg>
+        <svg class="obj obj--7" viewBox="0 0 24 24"><path d="M6 4l4 4-4 4-4-4zM14 4l4 4-4 4-4-4zM10 12v8M8 20h4"/></svg>
+        <svg class="obj obj--8" viewBox="0 0 24 24"><path d="M14 4a4 4 0 0 0-4 6L4 16l4 4 6-6a4 4 0 0 0 6-4l-3 3-3-1-1-3z"/></svg>
+        <svg class="obj obj--9" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 3v18M4 7.5l16 9M20 7.5l-16 9"/></svg>
+        <svg class="obj obj--10" viewBox="0 0 24 24"><path d="M7 3l3 3-4 4-3-3zM10 6l7 7-5 5-7-7zM15 16l2 2-1 3-3-1z"/></svg>
+        <svg class="obj obj--11" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16.5l9 5 9-5"/></svg>
+        <svg class="obj obj--12" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/><path d="M4 3l8 5 8-5"/></svg>
+        <svg class="obj obj--13" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M8 11v5a3 3 0 0 0 3 3h2M16 13V8a3 3 0 0 0-3-3h-2"/></svg>
+        <svg class="obj obj--14" viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+      </span>
+    </div>
+
+    <header class="nav" aria-label="Principal">
+      <a class="logo" href="index.html" aria-label="Volver al inicio">
+        <span class="logo__marcas" aria-hidden="true"></span>
+        <span class="logo__svg" aria-hidden="true"></span>
+        <span class="logo__nombre">Salvador <span>Llácer</span></span>
+      </a>
+      <nav class="nav__menu" aria-label="Secciones">
+        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+          <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.foto">Foto</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="fotografia.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="fotografia.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="fotografia.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="fotografia.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="fotografia.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="diseno.html" data-tema="diseno" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.diseno">Diseño</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="diseno.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="diseno.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="diseno.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="diseno.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="diseno.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="video.html" data-tema="video" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.video">Vídeo y música</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="video.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="video.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="video.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="video.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="video.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="dfm.html" data-tema="fab" class="nav__toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            <span data-i18n="m.mec">Mecánica</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="#sub-cabrestante"><span data-i18n="fab.obra.cab.titulo">Cabrestante</span></a>
+                <a href="#sub-matriz"><span data-i18n="fab.obra.matriz.titulo">Utillaje de chapa</span></a>
+                <a href="#sub-chapa"><span data-i18n="fab.obra.chapa.titulo">Aprovechamiento de chapa</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="#sub-stp"><span data-i18n="fab.exp.stp.titulo">Ensamblajes 3D</span></a>
+                <a href="#sub-cadenas"><span data-i18n="fab.exp.cadenas.titulo">Columna con cadenas</span></a>
+                <a href="#sub-listas"><span data-i18n="fab.exp.listas.titulo">Presentación</span></a>
+                <a href="#sub-casos"><span data-i18n="fab.exp.casos.titulo">Casos de proyecto</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="#t-api"><span data-i18n="fab.api.nav">Normas y materiales</span></a>
+            <a class="nav__grp" href="#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
+      </nav>
+      <div class="nav__derecha">
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="Español">ES</button>
+          <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
+        </div>
+        <button class="nav__cta js-contacto" type="button">
+          <span data-i18n="m.contacto">Contacto</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </button>
+        <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+      <section class="seccion seccion--hero" aria-labelledby="t-sobre">
+        <div class="contenedor reveal">
+          <div class="seccion__head"><span class="seccion__num">01</span><h2 class="seccion__titulo" id="t-sobre"><span data-i18n="fab.sobre.titulo">Sobre mí</span></h2></div>
+          <figure class="escena">
+            <img class="escena__foto" src="Imagenes/Fabmec_sobremi.webp" alt="Fabricación mecánica de Salvador Llácer Ivars" width="1500" height="1000" fetchpriority="high" decoding="async" />
+            <figcaption class="escena__texto">
+              <h3 class="escena__titulo"><span data-i18n="fab.escena.titulo">Fabricación mecánica: del boceto a la máquina</span></h3>
+              <p><span data-i18n="fab.escena.texto">Diseño mecánico industrial con más de cinco años de experiencia en <strong>Weidner Ibérica</strong>, en Carlet (Valencia). Me especialicé en el diseño de <strong>torres de apilamiento</strong> (<em>stacking columns</em>) para el sector de la automoción: columnas autoblocantes, cabrestantes y sistemas de retención que se fabrican, se montan y se entregan a los grandes montadores europeos. Trabajo a diario con <strong>CATIA V5</strong>, planimetría y el ERP <strong>Geinprod</strong>, del boceto paramétrico a la lista de piezas y al plano de fabricación sellado. Me formé en el <strong>CP San Jaime Apóstol</strong> de Moncada, en el CFGS de Diseño en Fabricación Mecánica, y cruzo ese oficio con el ojo gráfico del diseñador: se lee un plano, se entiende una secuencia de montaje y se piensa en el operario que lo va a apretar.</span></p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-obra">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">02</span><h2 class="seccion__titulo" id="t-obra"><span data-i18n="fab.obra.titulo">Obra</span></h2></div>
+          <div class="fab-obra-intro">
+            <div class="fab-obra-intro__col fab-obra-intro__col--main">
+              <p><span data-i18n="fab.obra.sub">Del diseño asistido por ordenador a la pieza fabricada: <strong>cabrestante</strong>, <strong>matriz de chapa</strong> y <strong>aprovechamiento de chapa</strong>. Tres formas de resolver un problema mecánico —el conjunto completo, la herramienta que lo estampa y el desarrollo de la chapa—, cada una en su sitio y con su plano.</span></p>
+            </div>
+            <div class="fab-obra-intro__col">
+              <h4><span data-i18n="fab.obra.cab.titulo">Cabrestante · conjunto completo</span></h4>
+              <p><span data-i18n="fab.obra.cab.desc">Diseño y documentación de un cabrestante manual de tambor: conjunto general, explosionado y lista de piezas, subconjunto soldado, perfiles, chapas laterales, base, mango, tres ejes, cuatro engranajes, tambor, subconjunto de manivela, manivela, maneta y trinquete. Veinte planos que cuentan la pieza entera, del ensamble general al detalle de cada componente.</span></p>
+            </div>
+            <div class="fab-obra-intro__col">
+              <h4><span data-i18n="fab.obra.cab.video.titulo">Vídeo de ensamble</span></h4>
+              <p><span data-i18n="fab.obra.cab.video.desc">Recorrido de la secuencia de montaje y desmontaje del cabrestante, tomado del modelo 3D. El tambor gira, los engranajes se engranan y el trinquete bloquea: la animación comprueba lo que el plano dibuja.</span></p>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-cabrestante">
+            <div class="vidfab" data-vidfab>
+              <video preload="metadata" playsinline muted src="dfm/explosionado-cabrestante.mp4"></video>
+              <div class="vidfab__bar">
+                <button class="vidfab__btn" data-v-play type="button" aria-label="Reproducir"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+                <div class="vidfab__prog" data-v-prog><i></i></div>
+                <span class="vidfab__t" data-v-t>0:00 / 0:00</span>
+              </div>
+            </div>
+
+            <div class="pdf-card" style="margin-top:1.6rem">
+              <span class="pdf-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
+              </span>
+              <div class="pdf-card__txt">
+                <h3><span data-i18n="fab.obra.cab.pdf.titulo">Planos del cabrestante</span></h3>
+                <p><span data-i18n="fab.obra.cab.pdf.desc">Veinte planos en PDF con navegación previa/siguiente. Cada plano abre en su página, con su nomenclatura y sus vistas.</span></p>
+              </div>
+            </div>
+            <div class="pager-wrap" data-pdf-files='["dfm/planos cabrestante/01%20conjunto%20cabrestante.pdf","dfm/planos cabrestante/02%20plano%20explosionado%20y%20lista%20de%20piezas.pdf","dfm/planos cabrestante/03%20Subconjunto%20soldado.pdf","dfm/planos cabrestante/04%20IPL%20subconjuto%20soldado%201.pdf","dfm/planos cabrestante/05%20perfiles%20subconjunto%20soldado.pdf","dfm/planos cabrestante/06%20chapas%20laterales.pdf","dfm/planos cabrestante/07%20base.pdf","dfm/planos cabrestante/08%20mango.pdf","dfm/planos cabrestante/09%20eje%201.pdf","dfm/planos cabrestante/10%20eje%202.pdf","dfm/planos cabrestante/11%20eje%203.pdf","dfm/planos cabrestante/12%20engranaje%201.pdf","dfm/planos cabrestante/13%20Engranaje%202%2C%203.pdf","dfm/planos cabrestante/14%20tambor%20engranaje%204.pdf","dfm/planos cabrestante/15%20engranaje%204.pdf","dfm/planos cabrestante/16%20tambor.pdf","dfm/planos cabrestante/17%20subconjunto%20manivela.pdf","dfm/planos cabrestante/18%20manivela.pdf","dfm/planos cabrestante/19%20maneta.pdf","dfm/planos cabrestante/20%20trinquete.pdf"]' data-pager-start='1'>
+              <div class="vpager">
+                <button class="vpager__btn" data-pager-prev type="button"><span data-i18n="fab.planos.anterior">Anterior</span></button>
+                <span class="vpager__info" data-pager-info><b>1</b> / 20</span>
+                <button class="vpager__btn" data-pager-next type="button"><span data-i18n="fab.planos.siguiente">Siguiente</span></button>
+                <select class="vpager__sel" data-pager-sel aria-label="Elegir plano"></select>
+              </div>
+              <div class="pdf-shell">
+                <iframe class="pdf-view" src="dfm/planos cabrestante/01%20conjunto%20cabrestante.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit" title="Planos del cabrestante" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-matriz">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="fab.obra.matriz.titulo">Utillaje de chapa · Proyecto 1 · Matriz</span></h3>
+              <p class="serie__desc"><span data-i18n="fab.obra.matriz.desc">Proyecto de utillaje de chapa: diseño de la matriz de corte y grabado para una pieza estampada. Desarrollo del troquel, análisis de la secuencia de operación, holguras de ajuste, guías y ejectores. El archivo fuente es un ensamble de <strong>Autodesk Inventor</strong> (.ipt/.iam), sin visor web nativo; aquí se documenta el trabajo con sus datos.</span></p>
+            </div>
+            <div class="pdf-card">
+              <span class="pdf-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16M4 9h16"/></svg>
+              </span>
+              <div class="pdf-card__txt">
+                <h3><span data-i18n="fab.obra.matriz.files.titulo">Archivos del proyecto</span></h3>
+                <p><span data-i18n="fab.obra.matriz.files.desc">Ensambles y piezas del proyecto, en formato nativo de Inventor.</span></p>
+              </div>
+            </div>
+            <div class="ph">
+              <span class="ph__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v12l-8 4-8-4V6z"/><path d="M12 22V12M4 6l8 4 8-4"/></svg></span>
+              <div>
+                <h3>Autodesk Inventor · Proyecto 1 Matriz</h3>
+                <p>Ensamble (.iam) y piezas (.ipt) de la matriz de estampación. Formato propietario sin visor web; se muestra la ficha del proyecto.</p>
+                <ul class="ph__files">
+                  <li>Proyecto 1 Matriz.iam</li>
+                  <li>*.ipt (piezas del troquel)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-chapa">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="fab.obra.chapa.titulo">Aprovechamiento de chapa</span></h3>
+              <p class="serie__desc"><span data-i18n="fab.obra.chapa.desc">Estudio de aprovechamiento de chapa para el corte de piezas planas: disposición de los trozos sobre el rollo, minimización del sobrante y control del sentido de fibra. Trabajo realizado en <strong>AutoCAD</strong> sobre archivos .dwg.</span></p>
+            </div>
+            <div class="pdf-card">
+              <span class="pdf-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 7h18v10H3z"/><path d="M7 7v10M12 7v10M17 7v10"/></svg>
+              </span>
+              <div class="pdf-card__txt">
+                <h3><span data-i18n="fab.obra.chapa.files.titulo">Planos .dwg</span></h3>
+                <p><span data-i18n="fab.obra.chapa.files.desc">Delineado de desarrollo y nesting en AutoCAD.</span></p>
+              </div>
+            </div>
+            <div class="ph">
+              <span class="ph__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></span>
+              <div>
+                <h3>AutoCAD · Desarrollo de chapa</h3>
+                <p>Archivos .dwg del nesting y desarrollo plano. Sin conversor nativo en el navegador; se documenta el estudio de aprovechamiento.</p>
+                <ul class="ph__files">
+                  <li>Desarrollo chapa.dwg</li>
+                  <li>Nesting.dwg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-form">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">03</span><h2 class="seccion__titulo" id="t-form"><span data-i18n="fab.form.titulo">Formación</span></h2></div>
+          <div class="formacion">
+            <article class="formacion__item">
+              <a class="media" href="https://colegio.sanjaimemoncada.es/" target="_blank" rel="noopener" data-wiki="Colegio Parroquial San Jaime Apóstol Moncada">
+                <img src="Imagenes/SJA.jpg" alt="CP San Jaime Apóstol · Moncada" width="640" height="960" loading="lazy" decoding="async" style="object-fit:cover;background:#0b0d12" />
+                <span class="media__fb">SJ</span>
+              </a>
+              <span class="formacion__grado">CFGS</span>
+              <h3><span data-i18n="fab.form.item1.titulo">Diseño en Fabricación Mecánica</span></h3>
+              <p><span data-i18n="fab.form.item1.texto">El ciclo que me hizo pensador de piezas: dibujo técnico, cálculo de elementos de máquina, tolerancias, geometría y representación, CAD/CAM y organización de la fabricación. La base de todo lo que hay en esta página.</span></p>
+              <p class="formacion__centro"><span data-i18n="fab.form.item1.centro">CP San Jaime Apóstol · Moncada (Valencia)</span></p>
+            </article>
+            <article class="formacion__item">
+              <span class="media" data-wiki="Weidner Ibérica">
+                <img src="Imagenes/weidner-fachada.jpg" alt="Fachada de Weidner Ibérica en Carlet" width="640" height="960" loading="lazy" decoding="async" />
+                <span class="media__fb">WI</span>
+              </span>
+              <span class="formacion__grado" data-i18n="fab.tools.experto">Experto</span>
+              <h3><span data-i18n="fab.exp.wiberica.titulo">Weidner Ibérica</span></h3>
+              <p><span data-i18n="fab.exp.wiberica.texto">Fabricante español de productos plásticos y sistemas de apilamiento para la industria logística y de automoción, con central en Carlet (Valencia). Diseño de torres de apilamiento y documentación técnica de producto.</span></p>
+              <p class="formacion__centro"><span data-i18n="fab.exp.wiberica.texto">Carlet · Valencia</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-tools">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">04</span><h2 class="seccion__titulo" id="t-tools"><span data-i18n="fab.tools.titulo">Herramientas</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="fab.tools.sub">El software de diseño y gestión que manejo a diario en la planta, de la pieza paramétrica al plano de taller y al control de materiales.</span></p>
+          <div class="tools">
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><span class="tool__fb">C5</span></span>
+                <span class="tool-card__name">CATIA V5</span>
+                <span class="tool-card__lvl"><span data-i18n="fab.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><span class="tool__fb">CX</span></span>
+                <span class="tool-card__name">CATIA XPERIENCE</span>
+                <span class="tool-card__lvl"><span data-i18n="fab.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><span class="tool__fb">In</span></span>
+                <span class="tool-card__name">Autodesk Inventor</span>
+                <span class="tool-card__lvl"><span data-i18n="fab.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><span class="tool__fb">Ge</span></span>
+                <span class="tool-card__name">Geinprod (ERP)</span>
+                <span class="tool-card__lvl"><span data-i18n="fab.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><span class="tool__fb">Ac</span></span>
+                <span class="tool-card__name">AutoCAD</span>
+                <span class="tool-card__lvl"><span data-i18n="fab.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-exp">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">05</span><h2 class="seccion__titulo" id="t-exp"><span data-i18n="fab.exp.titulo">Experiencia</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="fab.exp.sub"><strong>Más de cinco años en la planta de Weidner Ibérica</strong>, en Carlet (Valencia), como delineante industrial y diseñador mecánico. Del modelo paramétrico en <strong>CATIA V5</strong> al plano de fabricación sellado, con el ERP <strong>Geinprod</strong> para la gestión de materiales y la lista de piezas. Un oficio de precisión, tolerancias y plazos.</span></p>
+
+          <div class="upv-card">
+            <span class="media upv-card__logo" data-wiki="Weidner Ibérica">
+              <img src="Imagenes/weidner-fachada.jpg" alt="Weidner Ibérica" width="120" height="120" loading="lazy" decoding="async" />
+              <span class="media__fb">WI</span>
+            </span>
+            <div class="upv-card__txt">
+              <h3><span data-i18n="fab.exp.weidner.card.titulo">Weidner Ibérica</span></h3>
+              <p><span data-i18n="fab.exp.weidner.card.texto">Fabricante español de sistemas de apilamiento para la industria logística y de automoción, con central en Carlet (Valencia).</span></p>
+              <a href="https://www.weidneriberica.com" target="_blank" rel="noopener">weidneriberica.com →</a>
+            </div>
+          </div>
+          <div class="upv-card">
+            <span class="media upv-card__logo" data-wiki="Weidner México">
+              <img src="https://weidner.mx/wp-content/uploads/2018/01/Logo_Weidner.png" alt="Weidner México" width="120" height="120" loading="lazy" decoding="async" style="object-fit:contain" />
+              <span class="media__fb">WM</span>
+            </span>
+            <div class="upv-card__txt">
+              <h3><span data-i18n="fab.exp.wmexico.card.titulo">Weidner México</span></h3>
+              <p><span data-i18n="fab.exp.wmexico.card.texto">Filial mexicana del Grupo Weidner, con sede en Querétaro.</span></p>
+              <a href="https://weidner.mx" target="_blank" rel="noopener">weidner.mx →</a>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-stp">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="fab.exp.stp.titulo">Ensamblajes 3D</span></h3>
+              <p class="serie__desc"><span data-i18n="fab.exp.stp.desc">Cuatro montajes de columna de apilamiento exportados a STEP, con visor interactivo en el navegador.</span></p>
+            </div>
+            <div class="v3d-grid">
+<div class="v3d" data-mv="agr_pos1" data-mv-orbit="20deg 74deg 74%">
+<span class="v3d__marca">AGR_POS1</span>
+                <span class="v3d__cargando">Cargando modelo 3D…</span>
+                <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
+              </div>
+<div class="v3d" data-mv="agr_v1" data-mv-orbit="20deg 74deg 74%">
+<span class="v3d__marca">AGR_V1_POS1</span>
+                <span class="v3d__cargando">Cargando modelo 3D…</span>
+                <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
+              </div>
+<div class="v3d" data-mv="agr_v3" data-mv-orbit="20deg 74deg 74%">
+<span class="v3d__marca">AGR_V3_POS1</span>
+                <span class="v3d__cargando">Cargando modelo 3D…</span>
+                <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-cadenas">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="fab.exp.cadenas.titulo">Columna con cadenas</span></h3>
+              <p class="serie__desc"><span data-i18n="fab.exp.cadenas.desc">Columna de apilamiento con sistema de cadenas y palancas ergonómicas, para que el operario libere la carga sin agacharse. Visor 3D completo del ensamblaje.</span></p>
+            </div>
+<div class="v3d v3d--ancho" data-mv="cadenas" data-mv-orbit="20deg 74deg 86%">
+<span class="v3d__marca">CADENAS_WEIDNER_V2</span>
+              <span class="v3d__cargando">Cargando modelo 3D…</span>
+              <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
+            </div>
+          </div>
+
+          <div class="casos" id="sub-casos">
+            <h3 class="serie__titulo"><span data-i18n="fab.exp.casos.titulo">Casos de proyecto · problema → solución → resultado</span></h3>
+            <p class="serie__desc"><span data-i18n="fab.exp.casos.desc">Tres problemas reales de ingeniería, contados por lo que resolvieron.</span></p>
+            <div class="casos__grid">
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="fab.exp.caso1.tag">Weidner Ibérica · Automoción</span></span>
+                <h3><span data-i18n="fab.exp.caso1.titulo">Columna de apilamiento sin desbloqueo manual</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="fab.exp.casos.problema">Problema</b><p><span data-i18n="fab.exp.caso1.problema">Las columnas de apilamiento de la competencia exigían que el operario retirase a mano la pieza del rack para liberar el desbloqueo en cada ciclo: riesgo de atrapamiento de dedos, posturas forzadas y segundos perdidos que se acumulaban turno tras turno en la línea de automoción.</span></p></div>
+                  <div><b data-i18n="fab.exp.casos.solucion">Solución</b><p><span data-i18n="fab.exp.caso1.solucion">Diseño de un mecanismo con palanca de desbloqueo accionada por el propio peso de la pieza al retirarla del rack: al descargarla, el retén se libera solo y la columna queda lista para el siguiente apilamiento sin que el operario toque el mecanismo.</span></p></div>
+                  <div><b data-i18n="fab.exp.casos.resultado">Resultado</b><p><span data-i18n="fab.exp.caso1.resultado">Ciclo más rápido y seguro: cero acciones manuales de desbloqueo, menos riesgo de atrapamiento y una cadencia de montaje más regular para el operario.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="0" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso1.stat1">desbloqueo manual eliminado</span></span></li>
+                  <li><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso1.stat2">piezas de mecanismo</span></span></li>
+                  <li><span class="stat__num" data-count="1" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso1.stat3">automoción</span></span></li>
+                  <li><span class="stat__num" data-count="30" data-suffix="%">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso1.stat4">ciclo más rápido</span></span></li>
+                </ul>
+              </article>
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="fab.exp.caso2.tag">Weidner Ibérica · Ergonomía</span></span>
+                <h3><span data-i18n="fab.exp.caso2.titulo">Columna de cadenas con palancas ergonómicas</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="fab.exp.casos.problema">Problema</b><p><span data-i18n="fab.exp.caso2.problema">Para tensar o liberar las cadenas de retención de la columna, el operario tenía que agacharse hasta el suelo en cada ajuste: una postura forzada y repetitiva que cargaba la espalda y acumulaba fatiga a lo largo del turno.</span></p></div>
+                  <div><b data-i18n="fab.exp.casos.solucion">Solución</b><p><span data-i18n="fab.exp.caso2.solucion">Diseño de unas palancas de mando elevadas, integradas en el bastidor y de recorrido corto, que permiten tensar y liberar las cadenas de pie y con una sola mano, sin necesidad de bajar a la altura del suelo.</span></p></div>
+                  <div><b data-i18n="fab.exp.casos.resultado">Resultado</b><p><span data-i18n="fab.exp.caso2.resultado">Trabajo ergonómico: desaparece la postura forzada de agacharse, se reduce la fatiga acumulada y el ajuste de cadenas pasa a ser una operación cómoda dentro del ciclo de montaje.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="2" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso2.stat1">palancas ergonómicas</span></span></li>
+                  <li><span class="stat__num" data-count="0" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso2.stat2">postura forzada reducida</span></span></li>
+                  <li><span class="stat__num" data-count="1" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso2.stat3">línea de montaje</span></span></li>
+                  <li><span class="stat__num" data-count="15" data-suffix="%">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso2.stat4">menos fatiga por turno</span></span></li>
+                </ul>
+              </article>
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="fab.exp.caso3.tag">Ingeniería de producto</span></span>
+                <h3><span data-i18n="fab.exp.caso3.titulo">Documentación y despiece para fabricación</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="fab.exp.casos.problema">Problema</b><p><span data-i18n="fab.exp.caso3.problema">Un producto nuevo tenía que pasar del modelo 3D al taller con planos limpios, listas de piezas coherentes, nomenclatura única y tolerancias claras: sin ese paquete cerrado, el taller paraba a preguntar y el montaje se retrasaba.</span></p></div>
+                  <div><b data-i18n="fab.exp.casos.solucion">Solución</b><p><span data-i18n="fab.exp.caso3.solucion">Modelado paramétrico en CATIA V5, exportación a STEP para el intercambio, plano de conjunto, explosionado con lista de piezas y planos de despiece con tolerancias y tratamientos definidos, todo con una codificación única de referencias.</span></p></div>
+                  <div><b data-i18n="fab.exp.casos.resultado">Resultado</b><p><span data-i18n="fab.exp.caso3.resultado">Paquete de fabricación cerrado: el taller recibe plano, despiece y lista de piezas sin preguntas y puede arrancar la mecanización sin idas y venidas con ingeniería.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="20" data-suffix="+">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso3.stat1">planos por conjunto</span></span></li>
+                  <li><span class="stat__num" data-count="1" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso3.stat2">formato STEP</span></span></li>
+                  <li><span class="stat__num" data-count="1" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso3.stat3">lista de piezas</span></span></li>
+                  <li><span class="stat__num" data-count="5" data-suffix="+">0</span><span class="caso__stat-l"><span data-i18n="fab.exp.caso3.stat4">años en CATIA V5</span></span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="exp-weidner" id="sub-listas">
+            <h3 class="serie__titulo"><span data-i18n="fab.exp.weidner.titulo">Weidner Ibérica · Diseño y documentación</span></h3>
+            <p class="serie__desc"><span data-i18n="fab.exp.weidner.desc">Diseño de torres de apilamiento (<em>stacking columns</em>) para el sector de la automoción: columnas autoblocantes, cabrestantes y sistemas de retención. Del modelo paramétrico en CATIA V5 al plano de fabricación sellado, con el ERP Geinprod para la gestión de materiales. Aquí tienes el resultado: modelos 3D navegables y el plano del cabrestante.</span></p>
+
+            <div class="pdf-card" style="margin-top:1.4rem">
+              <span class="pdf-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
+              </span>
+              <div class="pdf-card__txt">
+                <h3><span data-i18n="fab.exp.listas.titulo">Presentación de producto</span></h3>
+                <p><span data-i18n="fab.exp.listas.desc">Presentación de las columnas de apilamiento de Weidner, abierta en la página de producto. Maquetación técnica con secuencia de montaje, códigos de color y fichas de producto.</span></p>
+                <a class="boton boton--verde" href="dfm/Presentaci%C3%B3n%20Productos%20Weidner%20-%20Columnas%20(Espa%C3%B1ol).pdf#page=4&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&zoom=page-fit" target="_blank" rel="noopener"><span data-i18n="fab.exp.listas.btn">Ver presentación (PDF)</span> <span class="flecha">→</span></a>
+              </div>
+            </div>
+            <div class="pdf-shell">
+              <iframe
+                class="pdf-view"
+                src="dfm/Presentaci%C3%B3n%20Productos%20Weidner%20-%20Columnas%20(Espa%C3%B1ol).pdf#page=4&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit"
+                title="Presentación Productos Weidner - Columnas"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-comp">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">06</span><h2 class="seccion__titulo" id="t-comp"><span data-i18n="fab.comp.titulo">Competencias</span></h2></div>
+          <div class="bloques">
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v12l-8 4-8-4V6z"/><path d="M12 22V12M4 6l8 4 8-4"/></svg></span><h3><span data-i18n="fab.comp.b1.titulo">Diseño 3D paramétrico</span></h3><p><span data-i18n="fab.comp.b1.texto">Del sólido al ensamble en CATIA V5: piezas, restricciones y actualización coherente.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span><h3><span data-i18n="fab.comp.b2.titulo">Dibujo técnico y tolerancias</span></h3><p><span data-i18n="fab.comp.b2.texto">Planos de taller claros: vistas, secciones, acotación y tolerancias que se pueden fabricar.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M3 7h18v10H3z"/><path d="M7 7v10M12 7v10M17 7v10"/></svg></span><h3><span data-i18n="fab.comp.b3.titulo">Fabricación de chapa</span></h3><p><span data-i18n="fab.comp.b3.texto">Troquelado, corte, plegado y estampado: pensar la pieza para que salga bien de la máquina.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></span><h3><span data-i18n="fab.comp.b4.titulo">ERP y gestión de materiales</span></h3><p><span data-i18n="fab.comp.b4.texto">Geinprod: listas de piezas, materiales y control de aprovisionamiento.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16.5l9 5 9-5"/></svg></span><h3><span data-i18n="fab.comp.b5.titulo">Documentación de producto</span></h3><p><span data-i18n="fab.comp.b5.texto">Explosiones, despieces y nomenclatura coherente del modelo a la entrega.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><h3><span data-i18n="fab.comp.b6.titulo">Ergonomía y mejora continua</span></h3><p><span data-i18n="fab.comp.b6.texto">Diseñar para el operario: posturas seguras, ciclos cortos y menos esfuerzo.</span></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-ref">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">07</span><h2 class="seccion__titulo" id="t-ref"><span data-i18n="fab.ref.titulo">Referentes</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="fab.ref.sub">Los maestros del oficio industrial: de ellos heredo el método, no la copia.</span></p>
+          <div class="referentes">
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/Sakichi_Toyoda" target="_blank" rel="noopener" data-wiki="Sakichi Toyoda">
+                <img src="" alt="Sakichi Toyoda" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Sakichi Toyoda</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Sakichi_Toyoda" target="_blank" rel="noopener">Sakichi Toyoda<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="fab.ref.r1.texto">El fundador de Toyota: del telar automático a la pieza intercambiable y al método que cambió la fabricación.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://en.wikipedia.org/wiki/Taiichi_Ohno" target="_blank" rel="noopener" data-wiki="Taiichi Ohno">
+                <img src="" alt="Taiichi Ohno" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Taiichi Ohno</span>
+              </a>
+              <h3><a class="ref__link" href="https://en.wikipedia.org/wiki/Taiichi_Ohno" target="_blank" rel="noopener">Taiichi Ohno<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="fab.ref.r2.texto">El TPS de Taiichi Ohno: producir solo lo necesario, cuando se necesita, sin sobreproducción.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://en.wikipedia.org/wiki/Frederick_Winslow_Taylor" target="_blank" rel="noopener" data-wiki="Frederick Winslow Taylor">
+                <img src="" alt="Frederick Winslow Taylor" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">F. W. Taylor</span>
+              </a>
+              <h3><a class="ref__link" href="https://en.wikipedia.org/wiki/Frederick_Winslow_Taylor" target="_blank" rel="noopener">Frederick W. Taylor<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="fab.ref.r3.texto">La gestión científica: medir, estandarizar y simplificar cada operación para fabricar mejor.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/Dieter_Rams" target="_blank" rel="noopener" data-wiki="Dieter Rams">
+                <img src="" alt="Dieter Rams" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Dieter Rams</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Dieter_Rams" target="_blank" rel="noopener">Dieter Rams<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="fab.ref.r4.texto">La estética de la función pura: que la forma siga al uso y nada sobre.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://en.wikipedia.org/wiki/Henry_Ford" target="_blank" rel="noopener" data-wiki="Henry Ford">
+                <img src="" alt="Henry Ford" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Henry Ford</span>
+              </a>
+              <h3><a class="ref__link" href="https://en.wikipedia.org/wiki/Henry_Ford" target="_blank" rel="noopener">Henry Ford<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="fab.ref.r5.texto">La cadena de montaje y la pieza intercambiable: el origen de la fabricación en serie.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://en.wikipedia.org/wiki/Henry_Maudslay" target="_blank" rel="noopener" data-wiki="Henry Maudslay">
+                <img src="" alt="Henry Maudslay" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">Henry Maudslay</span>
+              </a>
+              <h3><a class="ref__link" href="https://en.wikipedia.org/wiki/Henry_Maudslay" target="_blank" rel="noopener">Henry Maudslay<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="fab.ref.r6.texto">La máquina-herramienta moderna: la precisión como base de toda la industria.</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-api">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-api"><span data-i18n="fab.api.titulo">Normas y materiales</span></h2></div>
+          <p class="seccion__sub"><span class="apichip">ISO 286-1 · sin conexión</span><span data-i18n="fab.api.sub">Dos herramientas de taller calculadas en el navegador: ajustes y tolerancias ISO 286 y una base de datos de materiales de ingeniería. Sin claves, sin servidores.</span></p>
+          <div class="api-par">
+            <form class="api" data-tol-form>
+              <h3 class="api__h"><span data-i18n="fab.tol.titulo">Tolerancias ISO 286</span></h3>
+              <p class="api__nota"><span data-i18n="fab.tol.nota">Tablas oficiales ISO 286-2:2010. Base agujero H. Desviaciones en µm, límites en mm. Ø 3–400 mm.</span></p>
+              <label class="form__campo">
+                <span data-i18n="fab.tol.diam">Ø nominal (mm)</span>
+                <input class="api__input" type="number" data-tol-d min="3" max="400" step="0.1" value="25" inputmode="decimal" />
+              </label>
+              <div class="api__fila api__fila--par">
+                <label class="form__campo">
+                  <span data-i18n="fab.tol.hueco">Agujero</span>
+                  <select class="api__input" data-tol-h></select>
+                </label>
+                <label class="form__campo">
+                  <span data-i18n="fab.tol.eje">Eje</span>
+                  <select class="api__input" data-tol-s></select>
+                </label>
+              </div>
+              <button class="boton boton--verde api__btn" data-tol-btn type="submit"><span data-i18n="fab.tol.btn">Calcular ajuste</span> <span class="flecha">→</span></button>
+              <p class="api__estado" data-tol-estado></p>
+              <div class="api__res" data-tol-res></div>
+            </form>
+            <form class="api" data-mat-form>
+              <h3 class="api__h"><span data-i18n="fab.mat.titulo">Materiales de ingeniería</span></h3>
+              <p class="api__nota"><span data-i18n="fab.mat.nota">Propiedades típicas a 20 °C. Valores orientativos: confirma con el certificado del proveedor.</span></p>
+              <label class="form__campo">
+                <span data-i18n="fab.mat.sel">Material</span>
+                <select class="api__input" data-mat-sel></select>
+              </label>
+              <input class="api__input" type="search" data-mat-q placeholder="Filtrar: acero, aluminio, titanio…" autocomplete="off" spellcheck="false" />
+              <p class="api__estado" data-mat-estado></p>
+              <div class="api__res" data-mat-res></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <div class="pie__grid">
+          <div class="pie__col">
+            <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
+            <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+            <button class="pie__contacto js-contacto reveal" type="button">
+              <span data-i18n="m.contacto">Contacto</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            </button>
+            <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
+            <div class="clima reveal" data-clima>
+              <span class="clima__ico" aria-hidden="true"></span>
+              <div class="clima__cuerpo">
+                <span class="clima__lugar">Xàtiva · Valencia</span>
+                <div class="clima__fila"><span class="clima__temp">–</span><span class="clima__desc">Cargando…</span></div>
+                <span class="clima__meta"></span>
+              </div>
+              <label class="clima__selector">
+                <span class="clima__selector-txt"><span data-i18n="clima.ubicacion">Ubicación</span></span>
+                <select class="clima__select" aria-label="Elegir ubicación">
+                  <option value="xativa">Xàtiva</option>
+                  <option value="valencia">València</option>
+                  <option value="jaraguas">Jaraguas</option>
+                  <option value="lapobla">La Pobla Llarga</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="pie__loc reveal">
+            <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
+            <div class="mapa"><iframe title="Ubicación de Weidner Ibérica en Carlet" src="https://www.google.com/maps?q=Weidner+Ib%C3%A9rica+Carlet&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+            <address class="pie__dir">Weidner Ibérica · Carlet (Valencia)</address>
+          </div>
+        </div>
+
+        <p class="copyright"><a class="nav__volver" href="index.html">← Volver al inicio</a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
+      </div>
+    </footer>
+
+    <div class="fab">
+      <button class="fab__btn fab__top" id="toTop" type="button" aria-label="Subir arriba">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+      <button class="fab__btn fab__toc" id="tocBtn" type="button" aria-label="Índice de secciones" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      </button>
+      <button class="fab__btn fab__chat is-on" data-bot-toggle type="button" aria-label="Abrir asistente" aria-expanded="false" aria-controls="botPanel">
+        <span class="fab__ico-logo" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <section class="bot bot--fab" id="botPanel" data-bot aria-label="Asistente del portfolio">
+      <header class="bot__head" data-bot-close>
+        <span class="bot__avatar bot__avatar-logo" aria-hidden="true"></span>
+        <span class="bot__tit"><strong data-i18n="bot.titulo">Asistente PORTFOLIO</strong><small data-i18n="bot.sub">Pregúntame por mis habilidades o por dónde verlas</small></span>
+      </header>
+      <div class="bot__log" data-bot-log role="log" aria-live="polite"></div>
+      <div class="bot__sug">
+        <button type="button" data-q="¿Maneja Photoshop?" data-q-en="Do you use Photoshop?" data-i18n="bot.q1">¿Maneja Photoshop?</button>
+        <button type="button" data-q="Ver fotografía" data-q-en="See photography" data-i18n="bot.q2">Ver fotografía</button>
+        <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
+        <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
+        <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+      </div>
+      <form class="bot__form" data-bot-form autocomplete="off">
+        <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta." />
+        <button type="submit" data-i18n="bot.enviar">Enviar</button>
+      </form>
+    </section>
+    <div class="toc__scrim" id="tocScrim"></div>
+    <aside class="toc" id="toc" aria-hidden="true" aria-label="Índice de secciones">
+      <header class="toc__head">
+        <h3>Secciones</h3>
+        <button class="toc__cerrar" id="tocClose" aria-label="Cerrar índice">✕</button>
+      </header>
+      <nav class="toc__list" id="tocList"></nav>
+    </aside>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__fondo" data-cerrar></div>
+      <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button class="modal__cerrar" data-cerrar aria-label="Cerrar">✕</button>
+        <p class="modal__eyebrow"><span data-i18n="modal.eyebrow">Hablemos</span></p>
+        <h2 class="modal__titulo" id="modal-titulo"><span data-i18n="modal.titulo">Cuéntame tu proyecto</span></h2>
+        <form class="form" id="form" novalidate>
+          <label class="form__campo"><span data-i18n="form.nombre">Nombre</span><input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre" /></label>
+          <label class="form__campo"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email" placeholder="tu@correo.com" /></label>
+          <label class="form__campo"><span data-i18n="form.mensaje">Mensaje</span><textarea name="mensaje" rows="4" required placeholder="¿En qué puedo ayudarte?"></textarea></label>
+          <button type="submit" class="boton boton--verde"><span data-i18n="form.enviar">Enviar mensaje</span> <span class="flecha">→</span></button>
+          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.</span></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

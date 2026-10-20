@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="es" data-mode="dark" data-view="std" data-tema="video">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Salvador Llácer Ivars — Vídeo y música: edición, montaje, postproducción y composición sonora. Obra, experiencia y referentes." />
+    <meta name="theme-color" content="#0e0a1a" />
+    <title>Vídeo y música — Salvador Llácer Ivars</title>
+    <link rel="icon" type="image/svg+xml" href="logo3.svg" />
+
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-text" rel="stylesheet" />
+
+    <link rel="preload" as="image" href="Imagenes/Video_sobremi.webp" fetchpriority="high" />
+
+    <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var low=m||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="script.js" defer></script>
+    <noscript><style>.reveal{opacity:1}</style></noscript>
+  </head>
+
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div class="fondo" aria-hidden="true">
+      <span class="fondo__degradado"></span>
+      <span class="fondo__velo"></span>
+      <span class="fondo__patron"></span>
+      <span class="fondo__objetos">
+        <svg class="obj obj--1" viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2L8 5h8l1.5 2h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.5"/></svg>
+        <svg class="obj obj--2" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M8 7l-2 4M13 7l-2 4M18 7l-2 4"/></svg>
+        <svg class="obj obj--3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3"/></svg>
+        <svg class="obj obj--4" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 9h16v10H4z"/><path d="M4 9l2-4h4l-2 4M12 9l2-4h4l-2 4"/></svg>
+        <svg class="obj obj--6" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13V9M9.5 3h5M12 3v2"/></svg>
+        <svg class="obj obj--7" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5v14M16 5v14M4 9h4M4 15h4M16 9h4M16 15h4"/></svg>
+        <svg class="obj obj--8" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.6"/><circle cx="16.5" cy="16" r="2.6"/></svg>
+        <svg class="obj obj--9" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h3v6H5.5A1.5 1.5 0 0 1 4 18.5zM20 14h-3v6h1.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg>
+        <svg class="obj obj--10" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 12a6.5 6.5 0 0 0 13 0M12 18.5V21M9 21h6"/></svg>
+        <svg class="obj obj--11" viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 11v2M21 12h.5"/></svg>
+        <svg class="obj obj--12" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 9.5a3.5 3.5 0 0 1 0 5M19 7a7 7 0 0 1 0 10"/></svg>
+        <svg class="obj obj--13" viewBox="0 0 24 24"><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/><path d="M8.5 15.5 19 4M15.5 15.5 5 4"/></svg>
+        <svg class="obj obj--14" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+      </span>
+    </div>
+
+    <header class="nav" aria-label="Principal">
+      <a class="logo" href="index.html" aria-label="Volver al inicio">
+        <span class="logo__marcas" aria-hidden="true"></span>
+        <span class="logo__svg" aria-hidden="true"></span>
+        <span class="logo__nombre">Salvador <span>Llácer</span></span>
+      </a>
+      <nav class="nav__menu" aria-label="Secciones">
+        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+          <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.foto">Foto</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="fotografia.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-paisaje"><span data-i18n="sub.paisaje">Paisaje</span></a>
+                <a href="fotografia.html#sub-robados"><span data-i18n="sub.robados">Robados</span></a>
+                <a href="fotografia.html#sub-personal"><span data-i18n="sub.personal">Visión personal</span></a>
+                <a href="fotografia.html#sub-bodegon"><span data-i18n="sub.bodegon">Bodegón publicitario</span></a>
+                <a href="fotografia.html#sub-moda"><span data-i18n="sub.moda">Moda</span></a>
+                <a href="fotografia.html#sub-retrato"><span data-i18n="sub.retrato">Retrato</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="fotografia.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="fotografia.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-etsid"><span data-i18n="sub.etsid">ETSID · UPV</span></a>
+                <a href="fotografia.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+                <a href="fotografia.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="fotografia.html#sub-bodas"><span data-i18n="sub.bodas">Bodas y eventos</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="fotografia.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="fotografia.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="diseno.html" data-tema="diseno" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.diseno">Diseño</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="diseno.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-posters"><span data-i18n="sub.posters">Pósters</span></a>
+                <a href="diseno.html#sub-folletos"><span data-i18n="sub.folletos">Folletos</span></a>
+                <a href="diseno.html#sub-flyers"><span data-i18n="sub.flyers">Flyers</span></a>
+                <a href="diseno.html#sub-identidad"><span data-i18n="sub.identidad">Identidad</span></a>
+                <a href="diseno.html#sub-otros"><span data-i18n="sub.otros">Otros productos</span></a>
+                <a href="diseno.html#sub-portfolio"><span data-i18n="sub.portfolio">Portfolio</span></a>
+                <a href="diseno.html#sub-encantado"><span data-i18n="sub.encantado">Universo encantado</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="diseno.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="diseno.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-sef"><span data-i18n="sub.sef">SEF · Deporte UV</span></a>
+                <a href="diseno.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="diseno.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="diseno.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="diseno.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="video.html" data-tema="video" class="nav__toggle" aria-current="page" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.video">Vídeo y música</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="video.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-video"><span data-i18n="sub.video">Vídeo</span></a>
+                <a href="video.html#sub-musica"><span data-i18n="sub.musica">Música</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="video.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="video.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-interpreta"><span data-i18n="sub.interpreta">Interpreta Natura</span></a>
+                <a href="video.html#sub-missr"><span data-i18n="sub.missr">MissR · 3R</span></a>
+                <a href="video.html#sub-eco"><span data-i18n="sub.eco">ECO</span></a>
+                <a href="video.html#sub-arte"><span data-i18n="sub.arte">ARTE</span></a>
+                <a href="video.html#sub-ods"><span data-i18n="sub.ods">ODS</span></a>
+                <a href="video.html#sub-reviu"><span data-i18n="sub.reviu">Reviu lo Rural</span></a>
+                <a href="video.html#sub-otros"><span data-i18n="sub.otrosvideos">Otros proyectos</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="video.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="video.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+            <a class="nav__grp" href="video.html#t-lastfm"><span data-i18n="sec.lastfm">Lo que escucho</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="dfm.html" data-tema="fab" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.mec">Mecánica</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="dfm.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="dfm.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="dfm.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="dfm.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="dfm.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="dfm.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="dfm.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
+      </nav>
+      <div class="nav__derecha">
+        <span class="nav__sep" aria-hidden="true"></span>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="Español">ES</button>
+          <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
+        </div>
+        <button class="nav__cta js-contacto" type="button">
+          <span data-i18n="m.contacto">Contacto</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </button>
+        <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+      <section class="seccion seccion--hero" aria-labelledby="t-sobre">
+        <div class="contenedor reveal">
+          <div class="seccion__head"><span class="seccion__num">01</span><h2 class="seccion__titulo" id="t-sobre"><span data-i18n="v.sobre.titulo">Sobre mí</span></h2></div>
+          <figure class="escena">
+            <img class="escena__foto" src="Imagenes/Video_sobremi.webp" alt="Vídeo y música de Salvador Llácer Ivars" width="1500" height="1000" fetchpriority="high" decoding="async" />
+            <figcaption class="escena__texto">
+              <h3 class="escena__titulo"><span data-i18n="v.escena.titulo">Vídeo y música: ritmo, sonido y color</span></h3>
+              <p><span data-i18n="v.escena.texto">De pequeño tocaba la bandurria en una rondalla y allí aprendí el placer de crear algo entre varios. En el CEIP Cavite —Isla de Hierro— curse mi primera formación optativa en medios audiovisuales, donde aprendí tipos de planos, lenguaje visual y encuadre. Desde entonces cine y música van juntos: colaboré con la productora La Canya Produccions —ganadora en dos ediciones de Cinema Jove— y, como socio y colaborador de Interpreta Natura, edito reels, cortometrajes y vídeos, compongo la música de esos trabajos y locuto algunos de ellos.</span></p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-obra">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">02</span><h2 class="seccion__titulo" id="t-obra"><span data-i18n="v.obra.titulo">Obra</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="v.obra.sub">Dos oficios que se cruzan en el mismo montaje: <strong>Vídeo</strong> —guion, grabación, edición y postproducción— y <strong>Música</strong> —composición propia con GarageBand—. Una misma idea en dos formatos: ritmo, sonido y color.</span></p>
+
+          <div class="subserie" id="sub-video">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.obra.video.titulo">Vídeo</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.obra.video.desc">Montaje y postproducción para Interpreta Natura: reels, cortometrajes y vídeos promocionales. Edito, doy color y cuido el sonido; la música de muchas de esas piezas también es mía.</span></p>
+            </div>
+
+            <div class="yt yt--dest" data-yt="Xy1YzVNv-iA">
+              <img class="yt__poster" src="https://i.ytimg.com/vi/Xy1YzVNv-iA/maxresdefault.jpg" alt="Ruta teatralitzada &quot;Que el temps no esborre la memòria&quot;" width="1280" height="720" loading="lazy" decoding="async" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/Xy1YzVNv-iA/hqdefault.jpg'}" />
+              <button class="yt__play" type="button" aria-label="Reproducir vídeo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+            </div>
+            <p class="serie__desc serie__desc--destacada"><span data-i18n="v.obra.video.dest"><strong>Ruta teatralitzada «Que el temps no esborre la memòria».</strong> Pieza promocional de una ruta escénica sobre la memoria de la guerra: grabación, edición y música propios, con la asociación Interpreta Natura.</span></p>
+
+            <div class="subserie__head" style="margin-top:2.2rem">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.obra.rrr.titulo">Las tres erres</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.obra.rrr.desc">Siete piezas verticales sobre los tres erres: <strong>Reducir</strong>, <strong>Reparar</strong> y <strong>Reutilizar</strong>. Guion, grabación y edición propias, con música compuesta para cada pieza.</span></p>
+            </div>
+            <div class="ytg ytg--fill">
+              <a class="ytc" data-yt="_h3t9NJR_Qo" href="https://www.youtube.com/watch?v=_h3t9NJR_Qo" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/_h3t9NJR_Qo/hqdefault.jpg" alt="Redueix plàstic" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Redueix plàstic</span>
+              </a>
+              <a class="ytc" data-yt="Hb_unPLHqNA" href="https://www.youtube.com/watch?v=Hb_unPLHqNA" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/Hb_unPLHqNA/hqdefault.jpg" alt="Recicla cartó" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Recicla cartó</span>
+              </a>
+              <a class="ytc" data-yt="W3ttubYWdJI" href="https://www.youtube.com/watch?v=W3ttubYWdJI" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/W3ttubYWdJI/hqdefault.jpg" alt="Repara Electrodomèstics" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Repara Electrodomèstics</span>
+              </a>
+              <a class="ytc" data-yt="OEQupPI6sco" href="https://www.youtube.com/watch?v=OEQupPI6sco" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/OEQupPI6sco/hqdefault.jpg" alt="Reutilitza Vidre" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reutilitza Vidre</span>
+              </a>
+              <a class="ytc" data-yt="sBXjGZ79n8E" href="https://www.youtube.com/watch?v=sBXjGZ79n8E" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/sBXjGZ79n8E/hqdefault.jpg" alt="Reutilitza Roba" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reutilitza Roba</span>
+              </a>
+              <a class="ytc" data-yt="guFjPi9MDDE" href="https://www.youtube.com/watch?v=guFjPi9MDDE" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/guFjPi9MDDE/hqdefault.jpg" alt="Reutilitza Oli" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reutilitza Oli</span>
+              </a>
+              <a class="ytc" data-yt="n_T0mVzEFbI" href="https://www.youtube.com/watch?v=n_T0mVzEFbI" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/n_T0mVzEFbI/hqdefault.jpg" alt="Reutilitzar mobles" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reutilitzar mobles</span>
+              </a>
+            </div>
+
+            <div class="yt yt--dest" data-yt="MrPvIkv7TxY" style="margin-top:1.6rem">
+              <img class="yt__poster" src="https://i.ytimg.com/vi/MrPvIkv7TxY/maxresdefault.jpg" alt="MissR i els 4 magnífics" width="1280" height="720" loading="lazy" decoding="async" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/MrPvIkv7TxY/hqdefault.jpg'}" />
+              <button class="yt__play" type="button" aria-label="Reproducir vídeo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+            </div>
+            <p class="serie__desc serie__desc--destacada"><span data-i18n="v.obra.rrr4.desc"><strong>MissR i els 4 magnífics.</strong> Pieza de la campaña en la que <strong>compuse la música</strong> y colaboré en la <strong>grabación y la edición</strong> del vídeo.</span></p>
+          </div>
+
+          <div class="subserie" id="sub-musica">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.obra.musica.titulo">Música</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.obra.musica.desc">Mis piezas personales, compuestas y producidas en <strong>GarageBand</strong>: piezas para imaginar, trabajar y respirar. Púsalas mientras sigues mirando la web.</span></p>
+            </div>
+            <div class="repro" data-repro data-playlist="personal">
+              <div class="repro__head">
+                <button class="repro__btn" type="button" data-repro-play aria-label="Reproducir / pausar">
+                  <svg class="repro__ico repro__ico--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                  <svg class="repro__ico repro__ico--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg>
+                </button>
+                <div class="repro__meta">
+                  <span class="repro__tit" data-repro-tit>—</span>
+                  <span class="repro__sub" data-i18n="repro.lista">Música propia</span>
+                </div>
+                <div class="repro__ctrl">
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-prev aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6v12l-9-6zM7 6h2v12H7z"/></svg></button>
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-next aria-label="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6v12l9-6zM15 6h2v12h-2z"/></svg></button>
+                  <span class="repro__time"><span data-repro-cur>0:00</span> / <span data-repro-dur>0:00</span></span>
+                </div>
+              </div>
+              <div class="repro__bar" data-repro-bar role="slider" tabindex="0" aria-label="Posición de la pista" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="repro__fill" data-repro-fill></span></div>
+              <ol class="repro__lista" data-repro-lista></ol>
+              <audio data-repro-audio preload="none"></audio>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-form">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">03</span><h2 class="seccion__titulo" id="t-form"><span data-i18n="v.form.titulo">Formación</span></h2></div>
+          <div class="formacion">
+            <article class="formacion__item">
+              <a class="media" href="https://portal.edu.gva.es/ceipcaviteisladehierro/" target="_blank" rel="noopener">
+                <img src="cavite.jpg" alt="CEIP Cavite - Isla de Hierro" width="641" height="477" loading="lazy" decoding="async" style="object-fit:cover" />
+                <span class="media__fb">CEIP Cavite</span>
+              </a>
+              <span class="formacion__grado"><span data-i18n="v.form.item1.grado">Optativa</span></span>
+              <h3><span data-i18n="v.form.item1.titulo">Medios audiovisuales</span></h3>
+              <p><span data-i18n="v.form.item1.texto">Mi primera formación en el lenguaje del cine: tipos de planos, encuadre, narrativa y estructura guionizada. Allí mismo tocaba la bandurria en la rondalla del centro, donde aprendí a cooperar para conseguir algo común.</span></p>
+              <p class="formacion__centro"><span data-i18n="v.form.item1.centro">CEIP Cavite · Isla de Hierro</span></p>
+            </article>
+            <article class="formacion__item">
+              <a class="media" href="https://www.easdvalencia.com/" target="_blank" rel="noopener" data-wiki="Escola d'Art i Superior de Disseny de València">
+                <img src="https://www.uv.es/rutaseda/Novedades/easd2" alt="Fachada de la EASD València" width="1200" height="675" loading="lazy" decoding="async" />
+                <span class="media__fb">EASD València</span>
+              </a>
+              <span class="formacion__grado">CFGS</span>
+              <h3><span data-i18n="v.form.item2.titulo">Fotografía Artística</span></h3>
+              <p><span data-i18n="v.form.item2.texto">El módulo de medios audiovisuales reforzó lo aprendido en secundaria: encuadre, ritmo y montaje aplicados a un reportaje real. La base técnica para que una imagen se sostenga y un corte tenga sentido.</span></p>
+              <p class="formacion__centro"><span data-i18n="v.form.item2.centro">EASD València · Escola d'Art i Superior de Disseny</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-tools">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">04</span><h2 class="seccion__titulo" id="t-tools"><span data-i18n="v.tools.titulo">Herramientas</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="v.tools.sub">Mi cadena de montaje: corte y color en Premiere, acabados en After Effects, sonido y mezcla en Audition, y las apps de Apple cuando el flujo es rápido y directo.</span></p>
+          <div class="tools">
+            <div class="tool-card tool--pr">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Adobe_Premiere_Pro_CC_icon.svg" alt="Adobe Premiere Pro" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Pr</span></span>
+                <span class="tool-card__name">Premiere Pro</span>
+                <span class="tool-card__lvl"><span data-i18n="v.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card tool--au">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Adobe_Audition_CC_icon.svg" alt="Adobe Audition" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Au</span></span>
+                <span class="tool-card__name">Audition</span>
+                <span class="tool-card__lvl"><span data-i18n="v.tools.experto">Experto</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 5 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            </div>
+            <div class="tool-card tool--ae">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Adobe_After_Effects_CC_icon.svg" alt="Adobe After Effects" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Ae</span></span>
+                <span class="tool-card__name">After Effects</span>
+                <span class="tool-card__lvl"><span data-i18n="v.tools.avanzado">Avanzado</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 4 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span>
+            </div>
+            <div class="tool-card tool--im">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/IMovie%20library%20icon%20bkgd%3Dnone.png" alt="iMovie" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">iM</span></span>
+                <span class="tool-card__name">iMovie</span>
+                <span class="tool-card__lvl"><span data-i18n="v.tools.avanzado">Avanzado</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 4 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span>
+            </div>
+            <div class="tool-card tool--fi">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Filmora-logo-icon.svg" alt="Wondershare Filmora" loading="lazy" decoding="async" onerror="this.remove()"><span class="tool__fb">Fi</span></span>
+                <span class="tool-card__name">Filmora</span>
+                <span class="tool-card__lvl"><span data-i18n="v.tools.intermedio">Intermedio</span></span>
+              </div>
+              <span class="tool-card__bar"><span class="tool-card__fill"></span></span>
+              <span class="tool-card__nivel" role="img" aria-label="Nivel 3 de 5"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-exp">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">05</span><h2 class="seccion__titulo" id="t-exp"><span data-i18n="v.exp.titulo">Experiencia</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="v.exp.sub"><strong>Un solo ámbito, varios proyectos.</strong> Colaboro con el departamento audiovisual de <strong>Interpreta Natura</strong>: grabación, edición y sonido de reels, cortometrajes y podcasts, música compuesta para cada pieza y locución de algunas de ellas. Aquí están los proyectos en los que me impliqué de principio a fin.</span></p>
+
+          <div class="upv-card" id="sub-interpreta">
+            <span class="media upv-card__logo">
+              <img src="Imagenes/interpreta-natura.png" alt="Interpreta Natura" width="120" height="120" loading="lazy" decoding="async" style="object-fit:contain;background:#fff" />
+              <span class="media__fb">IN</span>
+            </span>
+            <div class="upv-card__txt">
+              <h3><span data-i18n="v.exp.in.titulo">Interpreta Natura</span></h3>
+              <p><span data-i18n="v.exp.in.texto">Asociación sin ánimo de lucro dedicada a la interpretación del medio natural y cultural de la Comunitat Valenciana. Con ella colaboro en <strong>grabación y edición de vídeo</strong>, reels y podcast, <strong>música original</strong> para sus piezas, locuciones y diseño gráfico.</span></p>
+              <a href="https://interpretayeduca.com/es" target="_blank" rel="noopener">interpretayeduca.com →</a>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-missr">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.exp.missr.titulo">MissR · reduce, repara, reutiliza</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.exp.missr.desc">Campaña audiovisual sobre los tres erres. Edité las piezas para redes, participé en la grabación y compuse la banda sonora de cada una. La banda sonora, en formato de audio, está debajo.</span></p>
+            </div>
+            <div class="ytg" style="--n:6">
+              <a class="ytc" data-yt="_h3t9NJR_Qo" href="https://www.youtube.com/watch?v=_h3t9NJR_Qo" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/_h3t9NJR_Qo/hqdefault.jpg" alt="Redueix plàstic" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Redueix plàstic</span>
+              </a>
+              <a class="ytc" data-yt="Hb_unPLHqNA" href="https://www.youtube.com/watch?v=Hb_unPLHqNA" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/Hb_unPLHqNA/hqdefault.jpg" alt="Recicla cartó" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Recicla cartó</span>
+              </a>
+              <a class="ytc" data-yt="W3ttubYWdJI" href="https://www.youtube.com/watch?v=W3ttubYWdJI" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/W3ttubYWdJI/hqdefault.jpg" alt="Repara Electrodomèstics" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Repara Electrodomèstics</span>
+              </a>
+              <a class="ytc" data-yt="sBXjGZ79n8E" href="https://www.youtube.com/watch?v=sBXjGZ79n8E" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/sBXjGZ79n8E/hqdefault.jpg" alt="Reutilitza Roba" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reutilitza Roba</span>
+              </a>
+              <a class="ytc" data-yt="guFjPi9MDDE" href="https://www.youtube.com/watch?v=guFjPi9MDDE" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/guFjPi9MDDE/hqdefault.jpg" alt="Reutilitza Oli" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reutilitza Oli</span>
+              </a>
+              <a class="ytc" data-yt="n_T0mVzEFbI" href="https://www.youtube.com/watch?v=n_T0mVzEFbI" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/n_T0mVzEFbI/hqdefault.jpg" alt="Reutilitzar mobles" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reutilitzar mobles</span>
+              </a>
+            </div>
+            <div class="repro" data-repro data-playlist="rrr">
+              <div class="repro__head">
+                <button class="repro__btn" type="button" data-repro-play aria-label="Reproducir / pausar">
+                  <svg class="repro__ico repro__ico--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                  <svg class="repro__ico repro__ico--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg>
+                </button>
+                <div class="repro__meta">
+                  <span class="repro__tit" data-repro-tit>—</span>
+                  <span class="repro__sub" data-i18n="repro.rrr">Banda sonora MissR</span>
+                </div>
+                <div class="repro__ctrl">
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-prev aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6v12l-9-6zM7 6h2v12H7z"/></svg></button>
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-next aria-label="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6v12l9-6zM15 6h2v12h-2z"/></svg></button>
+                  <span class="repro__time"><span data-repro-cur>0:00</span> / <span data-repro-dur>0:00</span></span>
+                </div>
+              </div>
+              <div class="repro__bar" data-repro-bar role="slider" tabindex="0" aria-label="Posición de la pista" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="repro__fill" data-repro-fill></span></div>
+              <ol class="repro__lista" data-repro-lista></ol>
+              <audio data-repro-audio preload="none"></audio>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-eco">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.exp.eco.titulo">ECO · La història d'ECO</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.exp.eco.desc">Serie documental en valenciano: prólogo y ocho capítulos sobre el territorio, la gente y la tierra. Montaje de las nueve entregas y música propia para la serie.</span></p>
+            </div>
+            <div class="ytg" style="--n:5">
+              <a class="ytc" data-yt="11PxWIxMWn0" href="https://www.youtube.com/watch?v=11PxWIxMWn0" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/11PxWIxMWn0/hqdefault.jpg" alt="Pròleg: La història d'ECO" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Pròleg: La història d'ECO</span>
+              </a>
+              <a class="ytc" data-yt="9qjq04tAmw8" href="https://www.youtube.com/watch?v=9qjq04tAmw8" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/9qjq04tAmw8/hqdefault.jpg" alt="Capítol 1. El sabor de la terra" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 1. El sabor de la terra</span>
+              </a>
+              <a class="ytc" data-yt="i7jaMsNd0cg" href="https://www.youtube.com/watch?v=i7jaMsNd0cg" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/i7jaMsNd0cg/hqdefault.jpg" alt="Capítol 2. La pastora" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 2. La pastora</span>
+              </a>
+              <a class="ytc" data-yt="eOuyLBjGpvI" href="https://www.youtube.com/watch?v=eOuyLBjGpvI" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/eOuyLBjGpvI/hqdefault.jpg" alt="Capítol 3. El vestit verd" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 3. El vestit verd</span>
+              </a>
+              <a class="ytc" data-yt="OT9prWNJxt0" href="https://www.youtube.com/watch?v=OT9prWNJxt0" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/OT9prWNJxt0/hqdefault.jpg" alt="Capítol 4. Eco i les paraules" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 4. Eco i les paraules</span>
+              </a>
+              <a class="ytc" data-yt="AGkPAau_9HI" href="https://www.youtube.com/watch?v=AGkPAau_9HI" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/AGkPAau_9HI/hqdefault.jpg" alt="Capítol 5. Una tendeta xicoteta" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 5. Una tendeta xicoteta</span>
+              </a>
+              <a class="ytc" data-yt="uTPlc81D8fE" href="https://www.youtube.com/watch?v=uTPlc81D8fE" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/uTPlc81D8fE/hqdefault.jpg" alt="Capítol 6. L'amor d'Eco" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 6. L'amor d'Eco</span>
+              </a>
+              <a class="ytc" data-yt="cfKlbP5Hu98" href="https://www.youtube.com/watch?v=cfKlbP5Hu98" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/cfKlbP5Hu98/hqdefault.jpg" alt="Capítol 7. Ella és terra" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 7. Ella és terra</span>
+              </a>
+              <a class="ytc" data-yt="OmZpnZyPf0o" href="https://www.youtube.com/watch?v=OmZpnZyPf0o" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/OmZpnZyPf0o/hqdefault.jpg" alt="Capítol 8. Terra de tots" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Capítol 8. Terra de tots</span>
+              </a>
+            </div>
+            <div class="repro" data-repro data-playlist="eco" data-autoplay="Eco ramaderia">
+              <div class="repro__head">
+                <button class="repro__btn" type="button" data-repro-play aria-label="Reproducir / pausar">
+                  <svg class="repro__ico repro__ico--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                  <svg class="repro__ico repro__ico--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg>
+                </button>
+                <div class="repro__meta">
+                  <span class="repro__tit" data-repro-tit>—</span>
+                  <span class="repro__sub" data-i18n="repro.eco">Banda sonora ECO</span>
+                </div>
+                <div class="repro__ctrl">
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-prev aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6v12l-9-6zM7 6h2v12H7z"/></svg></button>
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-next aria-label="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6v12l9-6zM15 6h2v12h-2z"/></svg></button>
+                  <span class="repro__time"><span data-repro-cur>0:00</span> / <span data-repro-dur>0:00</span></span>
+                </div>
+              </div>
+              <div class="repro__bar" data-repro-bar role="slider" tabindex="0" aria-label="Posición de la pista" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="repro__fill" data-repro-fill></span></div>
+              <ol class="repro__lista" data-repro-lista></ol>
+              <audio data-repro-audio preload="none"></audio>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-arte">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.exp.arte.titulo">ARTE</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.exp.arte.desc">Nueve episodios del proyecto ARTE. La <strong>música es mía</strong>; la <strong>narración y las ilustraciones</strong> son de Esther Torres.</span></p>
+            </div>
+            <div class="ytg" style="--n:5">
+              <a class="ytc" data-yt="eg-KEd-a73I" href="https://www.youtube.com/watch?v=eg-KEd-a73I" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/eg-KEd-a73I/hqdefault.jpg" alt="01 Un día en la vida de Arte" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">01 Un día en la vida de Arte</span>
+              </a>
+              <a class="ytc" data-yt="plwUp_S4MfM" href="https://www.youtube.com/watch?v=plwUp_S4MfM" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/plwUp_S4MfM/hqdefault.jpg" alt="02 ¿Te unes a la aventura?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">02 ¿Te unes a la aventura?</span>
+              </a>
+              <a class="ytc" data-yt="lUdqvoSoouQ" href="https://www.youtube.com/watch?v=lUdqvoSoouQ" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/lUdqvoSoouQ/hqdefault.jpg" alt="03 Descubrimos la magia?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">03 Descubrimos la magia?</span>
+              </a>
+              <a class="ytc" data-yt="TfonruzQ6uo" href="https://www.youtube.com/watch?v=TfonruzQ6uo" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/TfonruzQ6uo/hqdefault.jpg" alt="04 Compartimos un sueño?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">04 Compartimos un sueño?</span>
+              </a>
+              <a class="ytc" data-yt="Ku5BZhqyNMM" href="https://www.youtube.com/watch?v=Ku5BZhqyNMM" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/Ku5BZhqyNMM/hqdefault.jpg" alt="05 Conservamos la memoria?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">05 Conservamos la memoria?</span>
+              </a>
+              <a class="ytc" data-yt="Jy6bwyFLcXU" href="https://www.youtube.com/watch?v=Jy6bwyFLcXU" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/Jy6bwyFLcXU/hqdefault.jpg" alt="06 Conocemos a las protagonistas?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">06 Conocemos a las protagonistas?</span>
+              </a>
+              <a class="ytc" data-yt="gJouoWcPiGM" href="https://www.youtube.com/watch?v=gJouoWcPiGM" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/gJouoWcPiGM/hqdefault.jpg" alt="07 Combatimos la amenaza?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">07 Combatimos la amenaza?</span>
+              </a>
+              <a class="ytc" data-yt="2tkB6J99LKk" href="https://www.youtube.com/watch?v=2tkB6J99LKk" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/2tkB6J99LKk/hqdefault.jpg" alt="08 Encontramos el tesoro?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">08 Encontramos el tesoro?</span>
+              </a>
+              <a class="ytc" data-yt="7bNNNHWb7Cw" href="https://www.youtube.com/watch?v=7bNNNHWb7Cw" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/7bNNNHWb7Cw/hqdefault.jpg" alt="09 Desciframos el misterio?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">09 Desciframos el misterio?</span>
+              </a>
+            </div>
+            <div class="repro" data-repro data-playlist="arte">
+              <div class="repro__head">
+                <button class="repro__btn" type="button" data-repro-play aria-label="Reproducir / pausar">
+                  <svg class="repro__ico repro__ico--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                  <svg class="repro__ico repro__ico--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg>
+                </button>
+                <div class="repro__meta">
+                  <span class="repro__tit" data-repro-tit>—</span>
+                  <span class="repro__sub" data-i18n="repro.arte">Música ARTE</span>
+                </div>
+                <div class="repro__ctrl">
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-prev aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6v12l-9-6zM7 6h2v12H7z"/></svg></button>
+                  <button class="repro__btn repro__btn--sm" type="button" data-repro-next aria-label="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6v12l9-6zM15 6h2v12h-2z"/></svg></button>
+                  <span class="repro__time"><span data-repro-cur>0:00</span> / <span data-repro-dur>0:00</span></span>
+                </div>
+              </div>
+              <div class="repro__bar" data-repro-bar role="slider" tabindex="0" aria-label="Posición de la pista" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="repro__fill" data-repro-fill></span></div>
+              <ol class="repro__lista" data-repro-lista></ol>
+              <audio data-repro-audio preload="none"></audio>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-ods">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.exp.ods.titulo">ODS · Objetivos de Desarrollo Sostenible</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.exp.ods.desc">Serie de shorts en valenciano sobre los Objetivos de Desarrollo Sostenible. Edición de las piezas y música original para cada una.</span></p>
+            </div>
+            <div class="ytg ytg--shorts" style="--n:7">
+              <a class="ytc" data-yt="yZguKnjSXY0" href="https://www.youtube.com/watch?v=yZguKnjSXY0" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/yZguKnjSXY0/hqdefault.jpg" alt="1. Cuidem el sòl?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">1. Cuidem el sòl?</span>
+              </a>
+              <a class="ytc" data-yt="8CG3Qhf-p2Y" href="https://www.youtube.com/watch?v=8CG3Qhf-p2Y" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/8CG3Qhf-p2Y/hqdefault.jpg" alt="2. T'agrada i gaudeixes el teu poble?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">2. T'agrada i gaudeixes el teu poble?</span>
+              </a>
+              <a class="ytc" data-yt="Uc6jHu3EN2w" href="https://www.youtube.com/watch?v=Uc6jHu3EN2w" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/Uc6jHu3EN2w/hqdefault.jpg" alt="4. Coneixes les erres de la sostenibilitat?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">4. Coneixes les erres de la sostenibilitat?</span>
+              </a>
+              <a class="ytc" data-yt="dUhkKXB80E4" href="https://www.youtube.com/watch?v=dUhkKXB80E4" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/dUhkKXB80E4/hqdefault.jpg" alt="5. I tu, camines o contamines?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">5. I tu, camines o contamines?</span>
+              </a>
+              <a class="ytc" data-yt="rk55W3HKeiM" href="https://www.youtube.com/watch?v=rk55W3HKeiM" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/rk55W3HKeiM/hqdefault.jpg" alt="6. Som inclusius?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">6. Som inclusius?</span>
+              </a>
+              <a class="ytc" data-yt="OKYYfpmVW94" href="https://www.youtube.com/watch?v=OKYYfpmVW94" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/OKYYfpmVW94/hqdefault.jpg" alt="8. Juguem a la meua casa?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">8. Juguem a la meua casa?</span>
+              </a>
+              <a class="ytc" data-yt="YN8FkfBm1dI" href="https://www.youtube.com/watch?v=YN8FkfBm1dI" target="_blank" rel="noopener">
+                <span class="ytc__thumb ytc__thumb--v"><img src="https://i.ytimg.com/vi/YN8FkfBm1dI/hqdefault.jpg" alt="10. Participem en la presa de decisions?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">10. Participem en la presa de decisions?</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-reviu">
+            <div class="subserie__head">
+              <div class="subserie__top">
+                <h3 class="serie__titulo"><span data-i18n="v.exp.reviu.titulo">Reviu lo Rural</span></h3>
+              </div>
+              <p class="serie__desc"><span data-i18n="v.exp.reviu.desc">Proyecto audiovisual para revivir el mundo rural: cinco piezas sobre el territorio, la gente y la casa. Edición y música propias.</span></p>
+            </div>
+            <div class="ytg" style="--n:5">
+              <a class="ytc" data-yt="kKkimUcehLM" href="https://www.youtube.com/watch?v=kKkimUcehLM" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/kKkimUcehLM/hqdefault.jpg" alt="Reviu lo Rural ERA" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Reviu lo Rural ERA</span>
+              </a>
+              <a class="ytc" data-yt="hGuAfQIN5h8" href="https://www.youtube.com/watch?v=hGuAfQIN5h8" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/hGuAfQIN5h8/hqdefault.jpg" alt="2. El Poble" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">2. El Poble</span>
+              </a>
+              <a class="ytc" data-yt="UBSuREj0QCE" href="https://www.youtube.com/watch?v=UBSuREj0QCE" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/UBSuREj0QCE/hqdefault.jpg" alt="3. La dona al món rural" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">3. La dona al món rural</span>
+              </a>
+              <a class="ytc" data-yt="MK5_5QzVl-I" href="https://www.youtube.com/watch?v=MK5_5QzVl-I" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/MK5_5QzVl-I/hqdefault.jpg" alt="4. La Casa" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">4. La Casa</span>
+              </a>
+              <a class="ytc" data-yt="vbdHKKUdR1k" href="https://www.youtube.com/watch?v=vbdHKKUdR1k" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/vbdHKKUdR1k/hqdefault.jpg" alt="5. Ruralitat" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">5. Ruralitat</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="casos" id="sub-casos">
+            <h3 class="serie__titulo"><span data-i18n="v.exp.casos.titulo">Casos de proyecto · problema → solución → resultado</span></h3>
+            <p class="serie__desc"><span data-i18n="v.exp.casos.desc">Tres encargos reales, contados por lo que resolvieron. Las cifras son métricas propias de cada entrega.</span></p>
+            <div class="casos__grid">
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="v.exp.caso1.tag">Interpreta Natura</span></span>
+                <h3><span data-i18n="v.exp.caso1.titulo">Ruta teatralitzada «Que el temps no esborre la memòria»</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="v.exp.casos.problema">Problema</b><p><span data-i18n="v.exp.caso1.problema">La asociación necesitaba una pieza promocional para una ruta escénica sobre la memoria de la guerra, sin equipo audiovisual propio.</span></p></div>
+                  <div><b data-i18n="v.exp.casos.solucion">Solución</b><p><span data-i18n="v.exp.caso1.solucion">Grabación, edición y banda sonora original; locución y montaje con material de archivo y sonido directo.</span></p></div>
+                  <div><b data-i18n="v.exp.casos.resultado">Resultado</b><p><span data-i18n="v.exp.caso1.resultado">Pieza promocional lista para redes que dio visibilidad a la ruta.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="1" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso1.stat1">pieza entregada</span></span></li>
+                  <li><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso1.stat2">música propia</span></span></li>
+                  <li><span class="stat__num" data-count="3" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso1.stat3">días de grabación</span></span></li>
+                </ul>
+              </article>
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="v.exp.caso2.tag">Campaña audiovisual</span></span>
+                <h3><span data-i18n="v.exp.caso2.titulo">MissR · reduce, repara, reutiliza</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="v.exp.casos.problema">Problema</b><p><span data-i18n="v.exp.caso2.problema">Sensibilizar sobre las tres erres con piezas cortas para redes sociales, partiendo de cero y sin identidad sonora.</span></p></div>
+                  <div><b data-i18n="v.exp.casos.solucion">Solución</b><p><span data-i18n="v.exp.caso2.solucion">Guion, grabación y edición de seis reels, con banda sonora original compuesta para cada pieza.</span></p></div>
+                  <div><b data-i18n="v.exp.casos.resultado">Resultado</b><p><span data-i18n="v.exp.caso2.resultado">Campaña completa lista para publicar, con identidad sonora propia.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="6" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso2.stat1">reels entregados</span></span></li>
+                  <li><span class="stat__num" data-count="6" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso2.stat2">bandas sonoras</span></span></li>
+                  <li><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso2.stat3">música propia</span></span></li>
+                </ul>
+              </article>
+              <article class="caso">
+                <span class="caso__tag"><span data-i18n="v.exp.caso3.tag">Serie documental</span></span>
+                <h3><span data-i18n="v.exp.caso3.titulo">ECO · La història d'ECO</span></h3>
+                <div class="caso__pasos">
+                  <div><b data-i18n="v.exp.casos.problema">Problema</b><p><span data-i18n="v.exp.caso3.problema">Serie audiovisual en valenciano que necesitaba estructura narrativa y unidad sonora para prólogo y ocho capítulos.</span></p></div>
+                  <div><b data-i18n="v.exp.casos.solucion">Solución</b><p><span data-i18n="v.exp.caso3.solucion">Montaje de prólogo y ocho episodios, con música compuesta para acompañar el ritmo de cada capítulo.</span></p></div>
+                  <div><b data-i18n="v.exp.casos.resultado">Resultado</b><p><span data-i18n="v.exp.caso3.resultado">Serie documental completa, coherente en ritmo, color y sonido.</span></p></div>
+                </div>
+                <ul class="caso__stats">
+                  <li><span class="stat__num" data-count="9" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso3.stat1">episodios</span></span></li>
+                  <li><span class="stat__num" data-count="1" data-suffix="">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso3.stat2">serie completa</span></span></li>
+                  <li><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="caso__stat-l"><span data-i18n="v.exp.caso3.stat3">música propia</span></span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="casos" id="sub-otros">
+            <h3 class="serie__titulo"><span data-i18n="v.exp.otros.titulo">Otros proyectos con Interpreta Natura</span></h3>
+            <p class="serie__desc"><span data-i18n="v.exp.otros.desc">Música propia para los proyectos de Interpreta Natura.</span></p>
+            <div class="ytg" style="--n:4">
+              <a class="ytc" data-yt="dyctttZ1sm4" href="https://www.youtube.com/watch?v=dyctttZ1sm4" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/dyctttZ1sm4/hqdefault.jpg" alt="Nuestra llamada salvaje VERKAMI" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Nuestra llamada salvaje VERKAMI — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+              <a class="ytc" data-yt="sE10GrYR9_o" href="https://www.youtube.com/watch?v=sE10GrYR9_o" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/sE10GrYR9_o/hqdefault.jpg" alt="Amalur en... Què es Alterea? - 01 Trencant Barreres" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Amalur en… Què es Alterea? — 01 Trencant Barreres — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+              <a class="ytc" data-yt="c326FZ9aM_0" href="https://www.youtube.com/watch?v=c326FZ9aM_0" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/c326FZ9aM_0/hqdefault.jpg" alt="Súper Mandarina en... I què menjarem?" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Súper Mandarina en… I què menjarem? — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+              <a class="ytc" data-yt="jDgLSDd_uW8" href="https://www.youtube.com/watch?v=jDgLSDd_uW8" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/jDgLSDd_uW8/hqdefault.jpg" alt="Programa d'eficiència energètica a les escoles 50/50" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Programa d'eficiència energètica «50/50» — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+              <a class="ytc" data-yt="K4_SyvsGzZc" href="https://www.youtube.com/watch?v=K4_SyvsGzZc" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/K4_SyvsGzZc/hqdefault.jpg" alt="Núcleos de dispersión y reclamo - Restauración forestal" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Núcleos de dispersión y reclamo — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+              <a class="ytc" data-yt="axgE9jFyaDo" href="https://www.youtube.com/watch?v=axgE9jFyaDo" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/axgE9jFyaDo/hqdefault.jpg" alt="Mosaico agroforestal" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Mosaico agroforestal — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+              <a class="ytc" data-yt="h1a9hdeAQdc" href="https://www.youtube.com/watch?v=h1a9hdeAQdc" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/h1a9hdeAQdc/hqdefault.jpg" alt="Olivares de miel" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">Olivares de miel — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+              <a class="ytc" data-yt="ofGVbKhz0Z0" href="https://www.youtube.com/watch?v=ofGVbKhz0Z0" target="_blank" rel="noopener">
+                <span class="ytc__thumb"><img src="https://i.ytimg.com/vi/ofGVbKhz0Z0/hqdefault.jpg" alt="La función de las abejas - Proyecto Olivares de miel" width="480" height="360" loading="lazy" decoding="async" /></span>
+                <span class="ytc__t">La función de las abejas — <em data-i18n="v.exp.otros.musica">música propia</em></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-comp">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">06</span><h2 class="seccion__titulo" id="t-comp"><span data-i18n="v.comp.titulo">Competencias</span></h2></div>
+          <div class="bloques">
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10.5l5-2.5v8l-5-2.5z"/></svg></span><h3><span data-i18n="v.comp.b1.titulo">Edición y montaje</span></h3><p><span data-i18n="v.comp.b1.texto">Ritmo, corte y estructura: que una pieza tenga principio, medio y final sin perder al espectador.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M6 6l12 12M18 6 6 18"/></svg></span><h3><span data-i18n="v.comp.b2.titulo">Color y postproducción</span></h3><p><span data-i18n="v.comp.b2.texto">Corrección de color, limpieza de imagen y acabados que unifican material de origen distinto.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M4 12h2M8 8v8M12 5v14M16 9v6M20 11v2"/></svg></span><h3><span data-i18n="v.comp.b3.titulo">Sonido y mezcla</span></h3><p><span data-i18n="v.comp.b3.texto">Voz, ambiente y música en su sitio: diálogo limpio y mezcla equilibrada para cualquier pantalla.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.6"/><circle cx="16.5" cy="16" r="2.6"/></svg></span><h3><span data-i18n="v.comp.b4.titulo">Composición musical</span></h3><p><span data-i18n="v.comp.b4.texto">Banda sonora propia con GarageBand: piezas compuestas para encajar con la imagen, no para competir con ella.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M9 21h6"/></svg></span><h3><span data-i18n="v.comp.b5.titulo">Locución y guion</span></h3><p><span data-i18n="v.comp.b5.texto">Escribir qué se cuenta y decirlo bien: guion, locución y narración de las piezas en las que participo.</span></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-ref">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">07</span><h2 class="seccion__titulo" id="t-ref"><span data-i18n="v.ref.titulo">Referentes</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="v.ref.sub">Ocho nombres que explican de dónde viene mi manera de montar y de componer. De ellos heredo el criterio, no la copia.</span></p>
+
+          <div class="refs-grupo">
+            <h3 class="refs-grupo__t"><span data-i18n="v.ref.cine">Referentes cinematográficos</span></h3>
+            <div class="referentes">
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Alfred_Hitchcock" target="_blank" rel="noopener" data-wiki="Alfred Hitchcock">
+                  <img src="" alt="Alfred Hitchcock" width="800" height="600" loading="lazy" decoding="async" />
+                  <span class="media__fb">Alfred Hitchcock</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Alfred_Hitchcock" target="_blank" rel="noopener">Alfred Hitchcock<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r1.texto">El suspense como montaje: saber qué va a pasar y hacerlo esperar.</span></p>
+              </article>
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Steven_Spielberg" target="_blank" rel="noopener" data-wiki="Steven Spielberg">
+                  <img src="" alt="Steven Spielberg" width="800" height="600" loading="lazy" decoding="async" />
+                  <span class="media__fb">Steven Spielberg</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Steven_Spielberg" target="_blank" rel="noopener">Steven Spielberg<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r2.texto">Claridad narrativa: la historia por delante del efecto.</span></p>
+              </article>
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Sam_Raimi" target="_blank" rel="noopener" data-wiki="Sam Raimi">
+                  <img src="" alt="Sam Raimi" width="800" height="600" loading="lazy" decoding="async" />
+                  <span class="media__fb">Sam Raimi</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Sam_Raimi" target="_blank" rel="noopener">Sam Raimi<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r3.texto">Cámara en mano y energía: el plano como golpe de ritmo.</span></p>
+              </article>
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Martin_Scorsese" target="_blank" rel="noopener" data-wiki="Martin Scorsese">
+                  <img src="" alt="Martin Scorsese" width="800" height="600" loading="lazy" decoding="async" />
+                  <span class="media__fb">Martin Scorsese</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Martin_Scorsese" target="_blank" rel="noopener">Martin Scorsese<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r4.texto">Montaje al servicio de la música: cortar siguiendo el compás.</span></p>
+              </article>
+            </div>
+          </div>
+
+          <div class="refs-grupo">
+            <h3 class="refs-grupo__t"><span data-i18n="v.ref.music">Referentes musicales</span></h3>
+            <div class="referentes">
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Wim_Mertens" target="_blank" rel="noopener">
+                  <img src="Imagenes/wim-mertens.jpg" alt="Wim Mertens" width="703" height="1024" loading="lazy" decoding="async" />
+                  <span class="media__fb">Wim Mertens</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Wim_Mertens" target="_blank" rel="noopener">Wim Mertens<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r5.texto">Minimalismo melódico: repetir hasta que la idea respire.</span></p>
+              </article>
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Philip_Glass" target="_blank" rel="noopener" data-wiki="Philip Glass">
+                  <img src="" alt="Philip Glass" width="800" height="600" loading="lazy" decoding="async" />
+                  <span class="media__fb">Philip Glass</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Philip_Glass" target="_blank" rel="noopener">Philip Glass<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r6.texto">Arquitectura sonora: el patrón como estructura de la pieza.</span></p>
+              </article>
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Ludovico_Einaudi" target="_blank" rel="noopener" data-wiki="Ludovico Einaudi">
+                  <img src="" alt="Ludovico Einaudi" width="800" height="600" loading="lazy" decoding="async" />
+                  <span class="media__fb">Ludovico Einaudi</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Ludovico_Einaudi" target="_blank" rel="noopener">Ludovico Einaudi<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r7.texto">Piano que acompaña imagen: emoción sin gritar.</span></p>
+              </article>
+              <article class="ref">
+                <a class="media ref__media" href="https://es.wikipedia.org/wiki/Yann_Tiersen" target="_blank" rel="noopener" data-wiki="Yann Tiersen">
+                  <img src="" alt="Yann Tiersen" width="800" height="600" loading="lazy" decoding="async" />
+                  <span class="media__fb">Yann Tiersen</span>
+                </a>
+                <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Yann_Tiersen" target="_blank" rel="noopener">Yann Tiersen<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="v.ref.r8.texto">Motivo que vuelve: la melodía como hilo de la narración.</span></p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-lastfm">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-lastfm"><span data-i18n="v.lastfm.titulo">Lo que escucho</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="v.lastfm.sub">Mi música se escucha en la sección de música; aquí, lo que está sonando en mis cascos gracias a la API de Last.fm.</span></p>
+          <div class="lastfm" data-lastfm>
+            <div class="lastfm__head">
+              <span class="lastfm__ico" aria-hidden="true">♪</span>
+              <div class="lastfm__txt">
+                <h3><span data-i18n="v.lastfm.tit">Artistas que más escucho</span></h3>
+                <p><span data-i18n="v.lastfm.nota">Datos en vivo de mi perfil de Last.fm.</span></p>
+              </div>
+              <a class="boton boton--verde" href="#sub-musica"><span data-i18n="v.lastfm.btn">Escuchar mi música</span> <span class="flecha">→</span></a>
+            </div>
+            <ul class="lastfm__grid" data-lastfm-grid aria-live="polite">
+              <li class="lastfm__estado" data-lastfm-estado data-i18n="v.lastfm.carga">Cargando artistas…</li>
+            </ul>
+            <p class="lastfm__credito"><span data-i18n="v.lastfm.fuente">Datos de la API pública de</span> <a href="https://www.last.fm" target="_blank" rel="noopener">Last.fm</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <div class="pie__grid">
+          <div class="pie__col">
+            <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
+            <a href="mailto:salllaiva@alu.edu.gva.es" class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+            <button class="pie__contacto js-contacto reveal" type="button">
+              <span data-i18n="m.contacto">Contacto</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            </button>
+            <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
+            <div class="clima reveal" data-clima>
+              <span class="clima__ico" aria-hidden="true"></span>
+              <div class="clima__cuerpo">
+                <span class="clima__lugar">Xàtiva · Valencia</span>
+                <div class="clima__fila"><span class="clima__temp">–</span><span class="clima__desc">Cargando…</span></div>
+                <span class="clima__meta"></span>
+              </div>
+              <label class="clima__selector">
+                <span class="clima__selector-txt"><span data-i18n="clima.ubicacion">Ubicación</span></span>
+                <select class="clima__select" aria-label="Elegir ubicación">
+                  <option value="xativa">Xàtiva</option>
+                  <option value="valencia">València</option>
+                  <option value="jaraguas">Jaraguas</option>
+                  <option value="lapobla">La Pobla Llarga</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="pie__loc reveal">
+            <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
+            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+            <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
+          </div>
+        </div>
+
+        <p class="copyright"><a class="nav__volver" href="index.html"><span data-i18n="pie.volver">← Volver al inicio</span></a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
+      </div>
+    </footer>
+
+    <div class="fab">
+      <button class="fab__btn fab__top" id="toTop" type="button" aria-label="Subir arriba">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+      <button class="fab__btn fab__toc" id="tocBtn" type="button" aria-label="Índice de secciones" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      </button>
+      <button class="fab__btn fab__chat is-on" data-bot-toggle type="button" aria-label="Abrir asistente" aria-expanded="false" aria-controls="botPanel">
+        <span class="fab__ico-logo" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <section class="bot bot--fab" id="botPanel" data-bot aria-label="Asistente del portfolio">
+      <header class="bot__head" data-bot-close>
+        <span class="bot__avatar bot__avatar-logo" aria-hidden="true"></span>
+        <span class="bot__tit"><strong data-i18n="bot.titulo">Asistente PORTFOLIO</strong><small data-i18n="bot.sub">Pregúntame por mis habilidades o por dónde verlas</small></span>
+      </header>
+      <div class="bot__log" data-bot-log role="log" aria-live="polite"></div>
+      <div class="bot__sug">
+        <button type="button" data-q="¿Maneja Photoshop?" data-q-en="Do you use Photoshop?" data-i18n="bot.q1">¿Maneja Photoshop?</button>
+        <button type="button" data-q="Ver fotografía" data-q-en="See photography" data-i18n="bot.q2">Ver fotografía</button>
+        <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
+        <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
+        <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+      </div>
+      <form class="bot__form" data-bot-form autocomplete="off">
+        <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta." />
+        <button type="submit" data-i18n="bot.enviar">Enviar</button>
+      </form>
+    </section>
+
+    <div class="toc__scrim" id="tocScrim"></div>
+    <aside class="toc" id="toc" aria-hidden="true" aria-label="Índice de secciones">
+      <header class="toc__head">
+        <h3>Secciones</h3>
+        <button class="toc__cerrar" id="tocClose" aria-label="Cerrar índice">✕</button>
+      </header>
+      <nav class="toc__list" id="tocList"></nav>
+    </aside>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__fondo" data-cerrar></div>
+      <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button class="modal__cerrar" data-cerrar aria-label="Cerrar">✕</button>
+        <p class="modal__eyebrow"><span data-i18n="modal.eyebrow">Hablemos</span></p>
+        <h2 class="modal__titulo" id="modal-titulo"><span data-i18n="modal.titulo">Cuéntame tu proyecto</span></h2>
+        <form class="form" id="form" novalidate>
+          <label class="form__campo"><span data-i18n="form.nombre">Nombre</span><input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre" /></label>
+          <label class="form__campo"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email" placeholder="tu@correo.com" /></label>
+          <label class="form__campo"><span data-i18n="form.mensaje">Mensaje</span><textarea name="mensaje" rows="4" required placeholder="¿En qué puedo ayudarte?"></textarea></label>
+          <button type="submit" class="boton boton--verde"><span data-i18n="form.enviar">Enviar mensaje</span> <span class="flecha">→</span></button>
+          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.</span></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+      <div class="lightbox__fondo" data-lb-fondo></div>
+      <button class="lightbox__cerrar" data-lb-cerrar aria-label="Cerrar">✕</button>
+      <button class="lightbox__nav lightbox__nav--prev" data-lb-prev aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="lightbox__nav lightbox__nav--next" data-lb-next aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      <figure class="lightbox__fig"><img src="" alt="" /></figure>
+    </div>
+
+    <div class="gridmodal" id="gridmodal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Todas las fotos de la serie">
+      <div class="gridmodal__fondo" data-gm-fondo></div>
+      <div class="gridmodal__caja">
+        <header class="gridmodal__head"><h3 id="gm-title">Serie</h3><button class="gridmodal__cerrar" data-gm-cerrar aria-label="Cerrar">✕</button></header>
+        <div class="gridmodal__grid" id="gm-grid"></div>
+      </div>
+    </div>
+  </body>
+</html>
