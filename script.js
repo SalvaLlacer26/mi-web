@@ -98,8 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.desarrolla":"Desarrolla","bn.desarrolla.pop":"Del boceto al navegador con HTML, CSS y JavaScript puro: rápido, accesible y sin frameworks de por medio.",
       "bn.instr":"Haz clic y arrastra hacia la izquierda","bn.instr.sub":"o navega con las flechas ← →",
       "bn.ver":"VER PORTFOLIO","bn.rec":"REC · 01 — FOTOGRAFÍA",
+      "carga.titulo":"PORTFOLIO","carga.bienvenida":"Bienvenido","carga.entrar":"ENTRAR","carga.tema.foto":"Fotograf&iacute;a","carga.tema.diseno":"Dise&ntilde;o","carga.tema.video":"V&iacute;deo y m&uacute;sica","carga.tema.fab":"Fabricaci&oacute;n mec&aacute;nica",
       "bn.diseno.etq":"02 — DISEÑO GRÁFICO","bn.diseno.tit":"Ideas que se ven","bn.diseno.desc":"Flyers, marca, editorial e iconografía. Haz clic en el mosaico para descubrir el portfolio.",
-      "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER FABRICACIÓN","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble",
+      "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER PORTFOLIO","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble",
       "bot.titulo":"Asistente PORTFOLIO","bot.sub":"Pregúntame por mis habilidades o por dónde verlas","bot.ph":"Escribe tu pregunta…","bot.enviar":"Enviar",
       "bot.q1":"¿Maneja Photoshop?","bot.q2":"Ver fotografía","bot.q3":"Ver diseño","bot.q4":"¿Quién es Salvador?","bot.q5":"¿Cómo contacto?",
       "consejo.titulo":"Un consejo al día","consejo.otro":"Otro consejo","consejo.carga":"Cargando consejo…","consejo.fuente":"Advice Slip API","consejo.error":"No se pudo cargar el consejo. Inténtalo de nuevo.",
@@ -178,8 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.exp.sub":"<strong>Más de cinco años en la planta de Weidner Ibérica</strong>, en Carlet (Valencia), como delineante industrial y diseñador mecánico. Del modelo paramétrico en <strong>CATIA V5</strong> al plano de fabricación sellado, con el ERP <strong>Geinprod</strong> para la gestión de materiales y la lista de piezas. Un oficio de precisión, tolerancias y plazos.",
       "fab.exp.wiberica.titulo":"Weidner Ibérica","fab.exp.wiberica.texto":"Fabricante español de productos plásticos y sistemas de apilamiento para la industria logística y de automoción, con central en Carlet (Valencia). Diseño de torres de apilamiento y documentación técnica de producto.",
       "fab.exp.wmexico.titulo":"Weidner México","fab.exp.wmexico.texto":"Filial mexicana del Grupo Weidner. Trabajo conjunto en la definición de producto y la documentación técnica para el mercado americano.",
-      "fab.exp.stp.titulo":"Ensamblajes 3D","fab.exp.stp.desc":"Cuatro montajes de columna de apilamiento exportados a STEP, con visor interactivo en el navegador.",
-      "fab.exp.cadenas.titulo":"Columna con cadenas","fab.exp.cadenas.desc":"Columna de apilamiento con sistema de cadenas y palancas ergonómicas, para que el operario libere la carga sin agacharse. Visor 3D completo del ensamblaje.",
+      "fab.exp.stp.titulo":"Torre de apilamiento: sistema de levas inteligentes","fab.exp.stp.desc":"Torre de apilamiento para automoción con sistema de levas inteligente. La diseñé íntegramente yo tras un largo proceso de análisis de tensiones, materiales y funcionalidad; construí varios prototipos y las versiones definitivas son los modelos 3D de abajo. Este producto se ha fabricado y vendido comercialmente en la planta de Weidner Ibérica, en Carlet (Valencia).",
+      "fab.exp.cadenas.titulo":"Columna de apilamiento con cadenas","fab.exp.cadenas.desc":"Proyecto de I+D propio para la compañía, en la línea de la columna SLA/SLI: columna de apilamiento con sistema de cadenas y palancas ergonómicas integradas en el cuerpo, para que el operario tense o libere la carga sin agacharse. Todo el ensamblaje está modelado y documentado en CATIA V5, con visor 3D completo.",
       "fab.exp.casos.titulo":"Casos de proyecto · problema → solución → resultado","fab.exp.casos.desc":"Tres problemas reales de ingeniería, contados por lo que resolvieron.","fab.exp.casos.problema":"Problema","fab.exp.casos.solucion":"Solución","fab.exp.casos.resultado":"Resultado",
       "fab.exp.caso1.problema":"Las columnas de apilamiento de la competencia exigían que el operario retirase a mano la pieza del rack para liberar el desbloqueo en cada ciclo: riesgo de atrapamiento de dedos, posturas forzadas y segundos perdidos que se acumulaban turno tras turno en la línea de automoción.","fab.exp.caso1.solucion":"Diseño de un mecanismo con palanca de desbloqueo accionada por el propio peso de la pieza al retirarla del rack: al descargarla, el retén se libera solo y la columna queda lista para el siguiente apilamiento sin que el operario toque el mecanismo.","fab.exp.caso1.resultado":"Ciclo más rápido y seguro: cero acciones manuales de desbloqueo, menos riesgo de atrapamiento y una cadencia de montaje más regular para el operario.","fab.exp.caso1.stat4":"ciclo más rápido",
       "fab.exp.caso2.problema":"Para tensar o liberar las cadenas de retención de la columna, el operario tenía que agacharse hasta el suelo en cada ajuste: una postura forzada y repetitiva que cargaba la espalda y acumulaba fatiga a lo largo del turno.","fab.exp.caso2.solucion":"Diseño de unas palancas de mando elevadas, integradas en el bastidor y de recorrido corto, que permiten tensar y liberar las cadenas de pie y con una sola mano, sin necesidad de bajar a la altura del suelo.","fab.exp.caso2.resultado":"Trabajo ergonómico: desaparece la postura forzada de agacharse, se reduce la fatiga acumulada y el ajuste de cadenas pasa a ser una operación cómoda dentro del ciclo de montaje.","fab.exp.caso2.stat4":"menos fatiga por turno",
@@ -303,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "d.ref.r5.texto":"Una idea, una imagen: el poder de la síntesis gráfica.",
       "d.ref.r6.texto":"El cartel como arma y arte: fotomontaje, compromiso y oficio valenciano.",
       "pie.secciones":"Secciones",
-      "bn.video.etq":"03 — VÍDEO Y MÚSICA","bn.video.tit":"Ritmo, sonido y color","bn.video.desc":"Edición, montaje y música propia: de los reels de MissR a la serie documental ECO. Entra y escucha.","bn.video.cta":"Entrar en vídeo y música","bn.video.son":"Sonido",
+      "bn.video.etq":"03 — VÍDEO Y MÚSICA","bn.video.tit":"Ritmo, sonido y color","bn.video.desc":"Edición, montaje y música propia: de los reels de MissR a la serie documental ECO. Entra y escucha.","bn.video.cta":"VER PORTFOLIO","bn.video.son":"Sonido",
       "repro.lista":"Música propia","repro.rrr":"Banda sonora MissR","repro.eco":"Banda sonora ECO","repro.arte":"Música ARTE",
       "v.sobre.titulo":"Sobre mí",
       "v.escena.titulo":"Vídeo y música: ritmo, sonido y color",
@@ -351,8 +352,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.desarrolla":"Build","bn.desarrolla.pop":"From sketch to browser with pure HTML, CSS and JavaScript: fast, accessible and with no frameworks in between.",
       "bn.instr":"Click and drag to the left","bn.instr.sub":"or navigate with the arrows ← →",
       "bn.ver":"VIEW PORTFOLIO","bn.rec":"REC · 01 — PHOTOGRAPHY",
+      "carga.titulo":"PORTFOLIO","carga.bienvenida":"Welcome","carga.entrar":"ENTER","carga.tema.foto":"Photography","carga.tema.diseno":"Design","carga.tema.video":"Video &amp; music","carga.tema.fab":"Mechanical manufacturing",
       "bn.diseno.etq":"02 — GRAPHIC DESIGN","bn.diseno.tit":"Ideas you can see","bn.diseno.desc":"Flyers, branding, editorial and iconography. Click the mosaic to discover the portfolio.",
-      "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in CATIA V5, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW MANUFACTURING","bn.fab.hint":"Mouse wheel: scroll up to reveal",
+      "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in CATIA V5, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW PORTFOLIO","bn.fab.hint":"Mouse wheel: scroll up to reveal",
       "bot.titulo":"PORTFOLIO Assistant","bot.sub":"Ask me about my skills or where to see them","bot.ph":"Type your question…","bot.enviar":"Send",
       "bot.q1":"Do you use Photoshop?","bot.q2":"See photography","bot.q3":"See design","bot.q4":"Who is Salvador?","bot.q5":"How can I contact you?",
       "consejo.titulo":"A daily piece of advice","consejo.otro":"Another one","consejo.carga":"Loading advice…","consejo.fuente":"Advice Slip API","consejo.error":"Could not load the advice. Try again.",
@@ -511,8 +513,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.exp.sub":"<strong>Over five years at the Weidner Ibérica plant</strong> in Carlet (Valencia), as industrial draughtsman and mechanical designer. From the parametric model in <strong>CATIA V5</strong> to the sealed fabrication drawing, with the <strong>Geinprod</strong> ERP for materials management and the bill of materials. A craft of precision, tolerances and deadlines.",
       "fab.exp.wiberica.titulo":"Weidner Ibérica","fab.exp.wiberica.texto":"Spanish manufacturer of plastic products and stacking systems for the logistics and automotive industry, based in Carlet (Valencia). Design of stacking columns and product technical documentation.",
       "fab.exp.wmexico.titulo":"Weidner México","fab.exp.wmexico.texto":"Mexican subsidiary of the Weidner Group. Joint work on product definition and technical documentation for the American market.",
-      "fab.exp.stp.titulo":"3D assemblies","fab.exp.stp.desc":"Four stacking-column assemblies exported to STEP, with an interactive viewer in the browser.",
-      "fab.exp.cadenas.titulo":"Column with chains","fab.exp.cadenas.desc":"Stacking column with chain system and ergonomic levers, so the operator releases the load without bending down. Full 3D viewer of the assembly.",
+      "fab.exp.stp.titulo":"3D assemblies","fab.exp.stp.desc":"Stacking tower for the automotive industry with an intelligent cam system. I designed it entirely myself after a long process of analysing stresses, materials and functionality; I built several prototypes and the final versions are the 3D models below. The product was manufactured and sold commercially at the Weidner Ibérica plant in Carlet (Valencia).",
+      "fab.exp.cadenas.titulo":"Column with chains","fab.exp.cadenas.desc":"My own R&D project for the company, in the spirit of the SLI column: a stacking column with a chain system and ergonomic levers integrated into the body, so the operator tensions or releases the load without bending down. The whole assembly is modelled and documented in CATIA V5, with a full 3D viewer.",
       "fab.exp.casos.titulo":"Project cases · problem → solution → result","fab.exp.casos.desc":"Three real engineering problems, told by what they solved.","fab.exp.casos.problema":"Problem","fab.exp.casos.solucion":"Solution","fab.exp.casos.resultado":"Result",
       "fab.exp.caso1.tag":"Weidner Ibérica · Automotive","fab.exp.caso1.titulo":"Stacking column with no manual unlocking","fab.exp.caso1.problema":"Competitor stacking columns required the operator to remove the part from the rack by hand to release the lock on every cycle: finger-entrapment risk, forced postures and lost seconds that piled up shift after shift on the automotive line.","fab.exp.caso1.solucion":"Design of a locking mechanism whose lever is triggered by the part's own weight as it is lifted off the rack: unloading it releases the catch by itself, leaving the column ready for the next stacking without the operator touching the mechanism.","fab.exp.caso1.resultado":"A faster, safer cycle: zero manual unlocking actions, less entrapment risk and a steadier assembly pace for the operator.","fab.exp.caso1.stat4":"faster cycle",
       "fab.exp.caso2.tag":"Weidner Ibérica · Ergonomics","fab.exp.caso2.titulo":"Chain column with ergonomic levers","fab.exp.caso2.problema":"To tension or release the column's retention chains, the operator had to bend down to the floor on every adjustment: a forced, repetitive posture that strained the back and built up fatigue over the shift.","fab.exp.caso2.solucion":"Design of raised, short-stroke control levers integrated into the frame that let the chains be tensioned and released standing up and with one hand, with no need to bend down to floor level.","fab.exp.caso2.resultado":"Ergonomic work: the forced bending posture disappears, accumulated fatigue drops and chain adjustment becomes a comfortable step in the assembly cycle.","fab.exp.caso2.stat4":"less fatigue per shift",
@@ -556,7 +558,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.planos.siguiente":"Next",
       "fab.planos.pagina":"Drawing",
       "pie.secciones":"Sections",
-      "bn.video.etq":"03 — VIDEO & MUSIC","bn.video.tit":"Rhythm, sound and colour","bn.video.desc":"Editing, assembly and my own music: from the MissR reels to the ECO documentary series. Come in and listen.","bn.video.cta":"Enter video & music","bn.video.son":"Sound",
+      "bn.video.etq":"03 — VIDEO & MUSIC","bn.video.tit":"Rhythm, sound and colour","bn.video.desc":"Editing, assembly and my own music: from the MissR reels to the ECO documentary series. Come in and listen.","bn.video.cta":"VIEW PORTFOLIO","bn.video.son":"Sound",
       "repro.lista":"My own music","repro.rrr":"MissR soundtrack","repro.eco":"ECO soundtrack","repro.arte":"ARTE music",
       "v.sobre.titulo":"About me",
       "v.escena.titulo":"Video & music: rhythm, sound and colour",
@@ -1537,6 +1539,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pintar();
   })();
 
+  window.__pausaMusica = null;
   /* ░░ Reproductor de playlists (vídeo y música) ░░ */
   (() => {
     const LISTAS = {
@@ -1587,6 +1590,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     const fmt = (s) => { if (!isFinite(s) || s < 0) return "0:00"; const m = Math.floor(s / 60), x = Math.floor(s % 60); return m + ":" + String(x).padStart(2, "0"); };
     let sonando = null;
+  window.__pausaMusica = () => { if (sonando && sonando.audio && !sonando.audio.paused) { sonando.audio.pause(); sonando.rep.classList.remove("is-playing"); } };
     document.querySelectorAll(".repro[data-repro]").forEach((rep) => {
       const tracks = LISTAS[rep.dataset.playlist] || [];
       const audio = rep.querySelector("[data-repro-audio]");
@@ -1767,7 +1771,7 @@ document.addEventListener("DOMContentLoaded", () => {
         new YT.Player(div, {
           videoId: id,
           playerVars: { playsinline: 1, rel: 0 },
-          events: { onReady: (e) => { e.target.playVideo(); if (titulo) e.target.getIframe().title = titulo; } }
+          events: { onReady: (e) => { if (window.__pausaMusica) window.__pausaMusica(); e.target.playVideo(); if (titulo) e.target.getIframe().title = titulo; } }
         });
       });
     };
@@ -1797,5 +1801,40 @@ document.addEventListener("DOMContentLoaded", () => {
         reproducir(thumb, id, t);
       });
     });
+  })();
+
+  /* Pantalla de carga de entrada (solo index) */
+  (() => {
+    const carga = document.getElementById("carga");
+    if (!carga) return;
+    const fill = document.getElementById("carga-fill");
+    const cta = document.getElementById("carga-cta");
+    const temas = [...document.querySelectorAll(".carga__tema")];
+    const reduced = reduce;
+    const total = reduced ? 0 : 2600;
+    const flash = reduced ? 0 : 520;
+    let done = false;
+    const finish = () => {
+      if (done) return; done = true;
+      carga.classList.add("is-ocultando");
+      setTimeout(() => { carga.remove(); html.removeAttribute("data-carga"); }, reduced ? 0 : 520);
+    };
+    html.setAttribute("data-carga", "1");
+    if (reduced) { if (fill) fill.style.width = "100%"; if (cta) cta.classList.add("is-on"); cta && cta.focus(); }
+    else {
+      const start = performance.now();
+      const tick = (now) => {
+        const p = Math.min(1, (now - start) / total);
+        if (fill) fill.style.width = (p * 100).toFixed(1) + "%";
+        if (p < 1) requestAnimationFrame(tick);
+        else temas.forEach((el, k) => setTimeout(() => el.classList.add("is-on"), k * flash));
+      };
+      requestAnimationFrame(tick);
+    }
+    if (cta) {
+      cta.addEventListener("click", finish);
+      cta.focus();
+    }
+    document.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { if (!done) { e.preventDefault(); finish(); } } });
   })();
 });
