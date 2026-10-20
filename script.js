@@ -31,6 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault(); cerrarMenu(); goToId(hash);
   });
 
+  /* ░░ Navegación interna hacia el índice: marca para que la animación de entrada no se repita ░░ */
+  document.addEventListener("click", (e) => {
+    if (!e.target || !e.target.closest || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target.closest("a[href]"); if (!a) return;
+    const destino = (a.getAttribute("href") || "").split("#")[0].split("?")[0].replace(/^\.\//, "");
+    if (destino !== "index.html") return;
+    try { sessionStorage.setItem("miweb-nav", "1"); } catch (_) {}
+  });
+
   /* Gama por hover (hub) */
   if (!html.hasAttribute("data-tema")) {
     const activar = (t) => html.setAttribute("data-tema", t), neutro = () => html.removeAttribute("data-tema");
@@ -1818,7 +1827,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new MutationObserver(apply).observe(html, { attributes: true, attributeFilter: ["data-tema"] });
   })();
 
-  /* Pantalla de carga de entrada (solo index, solo primera visita) */
+  /* Pantalla de carga de entrada (index: solo al entrar desde fuera del sitio) */
   (() => {
     const carga = document.getElementById("carga");
     if (!carga) return;
@@ -1827,18 +1836,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const logo = carga.querySelector(".carga__logo");
     const temas = [...carga.querySelectorAll(".carga__tema")];
     const reduced = reduce;
-    const KEY = "miweb-carga-ok";
-    let seen = false;
-    try { seen = sessionStorage.getItem(KEY) === "1"; } catch (_) {}
 
     const introAud = document.querySelector(".bn__slide--intro audio[data-bn-audio]");
     const playIntro = () => {
       if (introAud && introAud.paused && introAud.dataset.mute !== "1") introAud.play().catch(() => {});
     };
+    const gestoIntro = () => {
+      playIntro();
+      document.removeEventListener("pointerdown", gestoIntro);
+      document.removeEventListener("keydown", gestoIntro);
+    };
 
-    if (seen) {
+    let interno = false;
+    try { interno = sessionStorage.getItem("miweb-nav") === "1"; sessionStorage.removeItem("miweb-nav"); } catch (_) {}
+    let reentrada = false;
+    try { const n = performance.getEntriesByType("navigation")[0]; reentrada = !!n && n.type !== "navigate"; } catch (_) {}
+
+    if (interno || reentrada) {
       carga.remove();
-      const gestoIntro = () => { playIntro(); document.removeEventListener("pointerdown", gestoIntro); document.removeEventListener("keydown", gestoIntro); };
+      playIntro();
       document.addEventListener("pointerdown", gestoIntro);
       document.addEventListener("keydown", gestoIntro);
       return;
@@ -1868,14 +1884,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     const setBar = (p) => {
       if (!fill) return;
+      if (!(p >= 0)) p = 0;
       fill.style.width = (p * 100).toFixed(1) + "%";
-      const b = BAR[Math.min(3, Math.floor(p * 4))];
+      const b = BAR[Math.min(3, Math.max(0, Math.floor(p * 4)))] || BAR[0];
       fill.style.background = "linear-gradient(90deg," + b[0] + "," + b[1] + ")";
     };
 
     const finish = () => {
       if (done) return; done = true;
-      try { sessionStorage.setItem(KEY, "1"); } catch (_) {}
       playIntro();
       html.removeAttribute("data-carga");
       carga.classList.add("is-ocultando");
@@ -1885,7 +1901,6 @@ document.addEventListener("DOMContentLoaded", () => {
     html.setAttribute("data-carga", "1");
     setLogo("index");
     playIntro();
-    const gestoIntro = () => { playIntro(); document.removeEventListener("pointerdown", gestoIntro); document.removeEventListener("keydown", gestoIntro); };
     document.addEventListener("pointerdown", gestoIntro);
     document.addEventListener("keydown", gestoIntro);
 
@@ -1896,7 +1911,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const start = performance.now();
       const tick = (now) => {
         if (done) return;
-        const p = Math.min(1, (now - start) / total);
+        const p = Math.max(0, Math.min(1, (now - start) / total));
         setBar(p);
         if (p < 1) { requestAnimationFrame(tick); return; }
         const seq = ["foto", "diseno", "video", "fab"];
@@ -1917,7 +1932,7 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(tick);
     }
 
-    carga.addEventListener("click", finish);
+    if (cta) cta.addEventListener("click", (e) => { e.stopPropagation(); finish(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { if (!done) { e.preventDefault(); finish(); } } });
   })();
 });
