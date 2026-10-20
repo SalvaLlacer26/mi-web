@@ -41,24 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* Favicon dinámico según data-tema */
-  const FAV = {
-    index: document.querySelector('link[rel="icon"]')?.href || "",
-    foto: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%23161210%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%23a06f3a%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%23a06f3a%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%23a06f3a%22%2F%3E%3C%2Fsvg%3E",
-    diseno: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%230a0a0b%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%2319b6d6%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%2319b6d6%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%2319b6d6%22%2F%3E%3C%2Fsvg%3E",
-    video: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%230e0a1a%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%23b026ff%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%23b026ff%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%23b026ff%22%2F%3E%3C%2Fsvg%3E",
-    fab: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%231e293b%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%23f97316%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%23f97316%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%23f97316%22%2F%3E%3C%2Fsvg%3E"
-  };
-  const iconLink = document.querySelector('link[rel="icon"]');
-  if (iconLink) {
-    const setFav = () => {
-      const t = html.getAttribute("data-tema") || "index";
-      if (FAV[t]) iconLink.href = FAV[t];
-    };
-    new MutationObserver(setFav).observe(html, { attributes: true, attributeFilter: ["data-tema"] });
-    setFav();
-  }
-
   /* Accesibilidad desplegable */
   document.querySelectorAll(".nav__item").forEach((item) => {
     const tgl = item.querySelector(".nav__toggle"); if (!tgl) return;
@@ -1803,38 +1785,132 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  /* Pantalla de carga de entrada (solo index) */
+  /* Favicon dinámico según tema (logo3 relleno + fondo por sección) */
+  (() => {
+    const link = document.querySelector('link[rel="icon"]');
+    if (!link) return;
+    const paths = [
+      "M192.39,151.33V12.33l13.82,1.18c2.98,7.65,3.27,21.19,6.43,28.07.7,1.53.99,1.79,2.5,2.5,6.54,3.05,17.45,4.07,24.55,7.1l22.17-21.83,28.33,16.17c1.65,2.79-7.81,26.36-8.47,31.33l17.62,19.01,28.81-8.38c1.31-.44,1.81.05,2.72.85,2.13,1.89,15.55,26.39,15.5,28.53l-22.78,23.11c3.05,5.98,3.38,18.47,6,23.67,2.19,4.34,27.03,5.65,30.33,8.67,2.99,2.73,1.39,29.44.39,34.94l-30.91,7.84-5.86,24.55,22.83,22.17c-1.52,4-3.22,8.04-5.17,11.85-1.48,2.9-8.51,15.1-10.33,16.68-1.53,1.33-1.93.99-3.7.8-5.17-.54-24.71-8.97-27.33-8.57l-17.34,18.44c-1.55,4.59,7.02,23.02,7.72,29.08.16,1.36.06,1.71-.76,2.79-1.52,2.01-25.32,16.33-27.68,16.46-1.46.08-1.86-.31-2.96-.96-4.97-2.94-16.44-20.02-20.15-20.91l-25.6,6.82-7.15,30.08-13.55,1.95v-215ZM295.39,169.33c-7.22-43.42-41.3-81.59-85-90v47.5c18.37,8.02,33.31,22.93,39,42.5h46ZM295.39,209.33h-45.5c-7.2,17.92-20.29,35.2-39.5,41v49c43.76-8.92,77.91-46.15,85-90Z",
+      "M174.17,355.16c-29.6-2.2-57.81-11.04-82.5-27.6C32.58,287.92,6.64,215.16,24.68,146.12,42.37,78.38,104.02,27.74,174.17,24.44v-12.1C64.61,18.79-11.24,120.56,11.06,228.17c15.75,76.01,84.95,136.58,163.11,138.02v-11.03Z",
+      "M174.17,314.19c-84.03-4.85-137.94-89.57-108.54-169.12,16.56-44.82,60.77-77.3,108.54-79.61V31.37C72.01,37.81,3.78,137.28,32.45,235.78c18.44,63.35,75.84,108.68,141.72,111.99v-33.58Z",
+      "M174.17,290.2c-69.14-4.04-112.31-76.64-85.24-140.83,14.12-33.48,48.65-58.39,85.24-59.95v-13.93c-51.2,3.39-94.96,40.89-104.51,91.62-13,69.11,34.74,132.42,104.51,137.09v-14Z",
+      "M174.17,274.71c-27.44-1.53-54.39-19.49-67.3-43.35-29.6-54.69,5.94-121.61,67.3-125.88v-8.88c-19.33,2.32-37.66,8.69-52.79,21.23-64.18,53.19-29.45,159.63,52.79,165.4v-8.52Z"
+    ];
+    const COL = {
+      "": ["#e8ebf3", "#0a0a0c"],
+      "index": ["#e8ebf3", "#0a0a0c"],
+      "foto": ["#a06f3a", "#161411"],
+      "diseno": ["#19b6d6", "#e0118a"],
+      "video": ["#2ee6ff", "#b026ff"],
+      "fab": ["#f97316", "#1e293b"]
+    };
+    const uri = (fg, bg) => {
+      const body = paths.map((d) => '<path fill="' + fg + '" d="' + d + '"/>').join("");
+      const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368 378.59"><rect width="368" height="378.59" fill="' + bg + '"/>' + body + "</svg>";
+      return "data:image/svg+xml," + encodeURIComponent(svg);
+    };
+    const apply = () => {
+      const t = html.getAttribute("data-tema") || "";
+      const c = COL[t] || COL[""];
+      link.href = uri(c[0], c[1]);
+    };
+    apply();
+    new MutationObserver(apply).observe(html, { attributes: true, attributeFilter: ["data-tema"] });
+  })();
+
+  /* Pantalla de carga de entrada (solo index, solo primera visita) */
   (() => {
     const carga = document.getElementById("carga");
     if (!carga) return;
     const fill = document.getElementById("carga-fill");
     const cta = document.getElementById("carga-cta");
-    const temas = [...document.querySelectorAll(".carga__tema")];
+    const logo = carga.querySelector(".carga__logo");
+    const temas = [...carga.querySelectorAll(".carga__tema")];
     const reduced = reduce;
+    const KEY = "miweb-carga-ok";
+    let seen = false;
+    try { seen = sessionStorage.getItem(KEY) === "1"; } catch (_) {}
+
+    const introAud = document.querySelector(".bn__slide--intro audio[data-bn-audio]");
+    const playIntro = () => {
+      if (introAud && introAud.paused && introAud.dataset.mute !== "1") introAud.play().catch(() => {});
+    };
+
+    if (seen) {
+      carga.remove();
+      const gesto = () => { playIntro(); document.removeEventListener("pointerdown", gesto); document.removeEventListener("keydown", gesto); };
+      document.addEventListener("pointerdown", gesto);
+      document.addEventListener("keydown", gesto);
+      return;
+    }
+
     const total = reduced ? 0 : 2600;
-    const flash = reduced ? 0 : 520;
+    const flash = reduced ? 0 : 1520;
     let done = false;
+
+    const COL = {
+      index: ["#e8ebf3", "#8088a4"],
+      foto: ["#a06f3a", "#d4a574"],
+      diseno: ["#19b6d6", "#e0118a"],
+      video: ["#2ee6ff", "#b026ff"],
+      fab: ["#f97316", "#fb923c"]
+    };
+    const BAR = [
+      ["#a06f3a", "#d4a574"],
+      ["#19b6d6", "#e0118a"],
+      ["#2ee6ff", "#b026ff"],
+      ["#f97316", "#fb923c"]
+    ];
+    const setLogo = (k) => {
+      if (!logo) return;
+      const c = COL[k] || COL.index;
+      logo.style.background = "linear-gradient(135deg," + c[0] + "," + c[1] + ")";
+    };
+    const setBar = (p) => {
+      if (!fill) return;
+      fill.style.width = (p * 100).toFixed(1) + "%";
+      const b = BAR[Math.min(3, Math.floor(p * 4))];
+      fill.style.background = "linear-gradient(90deg," + b[0] + "," + b[1] + ")";
+    };
+
     const finish = () => {
       if (done) return; done = true;
+      try { sessionStorage.setItem(KEY, "1"); } catch (_) {}
+      playIntro();
       carga.classList.add("is-ocultando");
       setTimeout(() => { carga.remove(); html.removeAttribute("data-carga"); }, reduced ? 0 : 520);
     };
+
     html.setAttribute("data-carga", "1");
-    if (reduced) { if (fill) fill.style.width = "100%"; if (cta) cta.classList.add("is-on"); cta && cta.focus(); }
-    else {
+    setLogo("index");
+    playIntro();
+
+    if (reduced) {
+      setBar(1);
+      if (cta) { cta.classList.add("is-on"); cta.focus(); }
+    } else {
       const start = performance.now();
       const tick = (now) => {
         const p = Math.min(1, (now - start) / total);
-        if (fill) fill.style.width = (p * 100).toFixed(1) + "%";
-        if (p < 1) requestAnimationFrame(tick);
-        else temas.forEach((el, k) => setTimeout(() => el.classList.add("is-on"), k * flash));
+        setBar(p);
+        if (p < 1) { requestAnimationFrame(tick); return; }
+        const seq = ["foto", "diseno", "video", "fab"];
+        seq.forEach((k, j) => setTimeout(() => {
+          if (temas[j]) temas[j].classList.add("is-on");
+          setLogo(k);
+        }, j * flash));
+        const finSeq = seq.length * flash;
+        const rapido = ["foto", "diseno", "video", "fab", "foto", "diseno", "video", "fab"];
+        rapido.forEach((k, j) => setTimeout(() => setLogo(k), finSeq + j * 130));
+        setTimeout(() => {
+          setLogo("index");
+          if (cta) { cta.classList.add("is-on"); cta.focus(); }
+        }, finSeq + rapido.length * 130 + 120);
       };
       requestAnimationFrame(tick);
     }
-    if (cta) {
-      cta.addEventListener("click", finish);
-      cta.focus();
-    }
+
+    if (cta) cta.addEventListener("click", finish);
     document.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { if (!done) { e.preventDefault(); finish(); } } });
   })();
 });
