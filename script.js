@@ -41,6 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* Favicon dinámico según data-tema */
+  const FAV = {
+    index: document.querySelector('link[rel="icon"]')?.href || "",
+    foto: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%23161210%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%23a06f3a%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%23a06f3a%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%23a06f3a%22%2F%3E%3C%2Fsvg%3E",
+    diseno: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%230a0a0b%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%2319b6d6%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%2319b6d6%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%2319b6d6%22%2F%3E%3C%2Fsvg%3E",
+    video: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%230e0a1a%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%23b026ff%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%23b026ff%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%23b026ff%22%2F%3E%3C%2Fsvg%3E",
+    fab: "data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20201.32%20169.3%22%3E%3Crect%20width%3D%22201.32%22%20height%3D%22169.3%22%20rx%3D%2228%22%20fill%3D%22%231e293b%22%2F%3E%3Cpath%20d%3D%22M120.84%2C0h-41.95c-4.33%2C0-7.84%2C3.51-7.84%2C7.84v44.15s57.63%2C57.63%2C57.63%2C57.63V7.84C128.68%2C3.51%2C125.17%2C0%2C120.84%2C0Z%22%20fill%3D%22%23f97316%22%2F%3E%3Cpath%20d%3D%22M158.28%2C34.91l-22.53%2C22.53v59.24s5.58%2C5.58%2C5.58%2C5.58c2.2%2C2.2%2C3.2%2C5.14%2C3.05%2C8.04l54.65-54.65c3.06-3.06%2C3.06-8.03%2C0-11.09l-29.66-29.66c-3.06-3.06-8.03-3.06-11.09%2C0Z%22%20fill%3D%22%23f97316%22%2F%3E%3Cpath%20d%3D%22M31.9%2C33.37L2.24%2C63.03c-3.06%2C3.06-2.97%2C8.12.2%2C11.29l92.54%2C92.54c3.17%2C3.17%2C8.23%2C3.26%2C11.29.2l29.66-29.66c3.06-3.06%2C2.97-8.12-.2-11.29L43.19%2C33.57c-3.17-3.17-8.23-3.26-11.29-.2ZM112.97%2C144.1c-3.18%2C3.18-8.43%2C3.09-11.73-.21-3.3-3.3-3.39-8.55-.21-11.73s8.43-3.09%2C11.73.21%2C3.39%2C8.55.21%2C11.73Z%22%20fill%3D%22%23f97316%22%2F%3E%3C%2Fsvg%3E"
+  };
+  const iconLink = document.querySelector('link[rel="icon"]');
+  if (iconLink) {
+    const setFav = () => {
+      const t = html.getAttribute("data-tema") || "index";
+      if (FAV[t]) iconLink.href = FAV[t];
+    };
+    new MutationObserver(setFav).observe(html, { attributes: true, attributeFilter: ["data-tema"] });
+    setFav();
+  }
+
   /* Accesibilidad desplegable */
   document.querySelectorAll(".nav__item").forEach((item) => {
     const tgl = item.querySelector(".nav__toggle"); if (!tgl) return;
@@ -67,10 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ░░ Idioma ░░ */
   const I18N = {
-    es:{ "m.inicio":"Inicio","m.foto":"Foto","m.diseno":"Diseño","m.video":"Vídeo","m.musica":"Música","m.dam":"DAM","m.mec":"Mecánica","m.contacto":"Contacto",
-      "sec.sobre":"Sobre mí","sec.obra":"Obra","sec.form":"Formación","sec.tools":"Herramientas","sec.exp":"Experiencia","sec.comp":"Competencias","sec.ref":"Referentes",
+    es:{ "m.inicio":"Inicio","m.foto":"Foto","m.diseno":"Diseño","m.video":"Vídeo y música","m.musica":"Música","m.dam":"DAM","m.mec":"Mecánica","m.contacto":"Contacto",
+      "sec.sobre":"Sobre mí","sec.obra":"Obra","sec.form":"Formación","sec.tools":"Herramientas","sec.exp":"Experiencia","sec.comp":"Competencias","sec.ref":"Referentes","sec.lastfm":"Lo que escucho","sec.inspo":"Inspiración viva","sec.lab":"Tipografía &amp; motion",
       "sub.paisaje":"Paisaje","sub.robados":"Robados","sub.personal":"Visión personal","sub.bodegon":"Bodegón publicitario","sub.moda":"Moda","sub.retrato":"Retrato","sub.etsid":"ETSID · UPV","sub.casos":"Casos de proyecto","sub.bodas":"Bodas y eventos",
       "sub.posters":"Pósters","sub.folletos":"Folletos","sub.flyers":"Flyers","sub.identidad":"Identidad","sub.otros":"Otros productos","sub.portfolio":"Portfolio","sub.encantado":"Universo encantado","sub.sef":"SEF · Deporte UV","sub.weidner":"Weidner",
+      "sub.video":"Vídeo","sub.musica":"Música","sub.interpreta":"Interpreta Natura","sub.missr":"MissR · 3R","sub.eco":"ECO","sub.arte":"ARTE","sub.ods":"ODS","sub.reviu":"Reviu lo Rural","sub.otrosvideos":"Otros proyectos",
       "view.toGrid":"Mosaico","view.toStd":"Carrusel",
       "eyebrow":"Diseño + Desarrollo · Perfil técnico-creativo","hub.nombre":"Salvador Llácer Ivars","hub.frase":"Seis disciplinas, una sola forma de trabajar: pensar como diseñador y ejecutar como desarrollador. Elige por dónde entrar.",
       "hub.lema":"Diseño · Imagen · Desarrollo",
@@ -80,10 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.instr":"Haz clic y arrastra hacia la izquierda","bn.instr.sub":"o navega con las flechas ← →",
       "bn.ver":"VER PORTFOLIO","bn.rec":"REC · 01 — FOTOGRAFÍA",
       "bn.diseno.etq":"02 — DISEÑO GRÁFICO","bn.diseno.tit":"Ideas que se ven","bn.diseno.desc":"Flyers, marca, editorial e iconografía. Haz clic en el mosaico para descubrir el portfolio.",
+      "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER FABRICACIÓN","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble",
       "bot.titulo":"Asistente PORTFOLIO","bot.sub":"Pregúntame por mis habilidades o por dónde verlas","bot.ph":"Escribe tu pregunta…","bot.enviar":"Enviar",
       "bot.q1":"¿Maneja Photoshop?","bot.q2":"Ver fotografía","bot.q3":"Ver diseño","bot.q4":"¿Quién es Salvador?","bot.q5":"¿Cómo contacto?",
       "consejo.titulo":"Un consejo al día","consejo.otro":"Otro consejo","consejo.carga":"Cargando consejo…","consejo.fuente":"Advice Slip API","consejo.error":"No se pudo cargar el consejo. Inténtalo de nuevo.",
-      "f.inspo.titulo":"Inspiración viva","f.inspo.sub":"Una ventana aleatoria a Unsplash: paisaje, retrato y bodegón para seguir mirando.","f.inspo.c1":"Paisaje","f.inspo.c2":"Retrato","f.inspo.c3":"Bodegón","f.inspo.c4":"Arquitectura","f.inspo.c5":"Blanco y negro","f.inspo.carga":"Cargando imágenes…","f.inspo.error":"No se pudieron cargar las imágenes. Inténtalo de nuevo.","f.inspo.credito":"Fotografías de la comunidad de","f.inspo.otra":"Otra tanda",
+      "f.inspo.titulo":"Inspiración viva","f.inspo.sub":"Una ventana aleatoria a Unsplash vía Picsum: paisaje, retrato y bodegón para seguir mirando.","f.inspo.c1":"Paisaje","f.inspo.c2":"Retrato","f.inspo.c3":"Bodegón","f.inspo.c4":"Arquitectura","f.inspo.c5":"Blanco y negro","f.inspo.carga":"Cargando imágenes…","f.inspo.error":"No se pudieron cargar las imágenes. Inténtalo de nuevo.","f.inspo.credito":"Fotografías de la comunidad de","f.inspo.otra":"Otra tanda",
       "d.lab.titulo":"Tipografía &amp; motion","d.lab.sub":"Muestras en vivo de Google Fonts e iconografía animada con Lordicon: dos librerías gratuitas que uso en prototipos.","d.lab.fuentes":"Tipografías","d.lab.texto":"Texto de muestra","d.lab.fuente":"Fuentes servidas por la API pública de","d.lab.iconos":"Iconos animados","d.lab.iconos.nota":"Animaciones Lottie de","d.lab.iconos.plan":"(plan gratuito)","cargando":"Cargando…",
       "sobre.p1":"Soy <strong>Salvador Llácer Ivars</strong>, nacido en Valencia. Técnico superior en Imagen y Artes Gráficas, en Diseño y Producción Editorial, en Diseño en Fabricación Mecánica y, actualmente, en Desarrollo de Aplicaciones Multiplataforma. Desde pequeño me apasionan el dibujo, la música y la idea de crear historias propias; esa curiosidad me ha llevado a estudiar siempre algo nuevo y a cruzar disciplinas que normalmente van por separado.",
       "sobre.p2":"Mi trayectoria une la imagen y el diseño: fotografía artística formada en la <strong>EASD de València</strong> (paisaje, arquitectura, reportaje, moda, bodegón y retrato), encargos de fotografía de interior para la <strong>ETSID de la UPV</strong> y fotografía de bodas; diseño gráfico y editorial aprendido en el <strong>CIPFP Ciudad del Aprendizaje</strong> y aplicado en <strong>Weidner Ibérica</strong>, donde me encargué de la imagen de la empresa: catálogos —también interactivos—, displays y tótems para ferias de automoción, identidad y firmas de correo.",
@@ -130,6 +150,78 @@ document.addEventListener("DOMContentLoaded", () => {
       "f.comp.b5.titulo":"Moda","f.comp.b5.texto":"Dirección de imagen, gesto y luz de estudio al servicio de la prenda.",
       "f.ref.titulo":"Referentes","f.ref.sub":"Tres maestros que enseñan a mirar. De ellos heredo el criterio, no la copia.",
       "f.ref.r1.texto":"El blanco y negro como partitura: luz medida, textura y silencio.","f.ref.r2.texto":"El instante decisivo: esperar, encuadrar y no disparar de más.","f.ref.r3.texto":"Retrato, fondo limpio y tensión elegante: la mirada, no el artificio.",
+      "fab.sobre.titulo":"Sobre mí",
+      "fab.escena.titulo":"Fabricación mecánica: del boceto a la máquina",
+      "fab.escena.texto":"Diseño mecánico industrial con más de cinco años de experiencia en <strong>Weidner Ibérica</strong>, en Carlet (Valencia). Me especialicé en el diseño de <strong>torres de apilamiento</strong> (<em>stacking columns</em>) para el sector de la automoción: columnas autoblocantes, cabrestantes y sistemas de retención que se fabrican, se montan y se entregan a los grandes montadores europeos. Trabajo a diario con <strong>CATIA V5</strong>, planimetría y el ERP <strong>Geinprod</strong>, del boceto paramétrico a la lista de piezas y al plano de fabricación sellado. Me formé en el <strong>CP San Jaime Apóstol</strong> de Moncada, en el CFGS de Diseño en Fabricación Mecánica, y cruzo ese oficio con el ojo gráfico del diseñador: se lee un plano, se entiende una secuencia de montaje y se piensa en el operario que lo va a apretar.",
+      "fab.obra.titulo":"Obra",
+      "fab.obra.sub":"Del diseño asistido por ordenador a la pieza fabricada: <strong>cabrestante</strong>, <strong>matriz de chapa</strong> y <strong>aprovechamiento de chapa</strong>. Tres formas de resolver un problema mecánico —el conjunto completo, la herramienta que lo estampa y el desarrollo de la chapa—, cada una en su sitio y con su plano.",
+      "fab.obra.cab.titulo":"Cabrestante · conjunto completo",
+      "fab.obra.cab.desc":"Diseño y documentación de un cabrestante manual de tambor: conjunto general, explosionado y lista de piezas, subconjunto soldado, perfiles, chapas laterales, base, mango, tres ejes, cuatro engranajes, tambor, subconjunto de manivela, manivela, maneta y trinquete. Veinte planos que cuentan la pieza entera, del ensamble general al detalle de cada componente.",
+      "fab.obra.cab.video.titulo":"Vídeo de ensamble",
+      "fab.obra.cab.video.desc":"Recorrido de la secuencia de montaje y desmontaje del cabrestante, tomado del modelo 3D. El tambor gira, los engranajes se engranan y el trinquete bloquea: la animación comprueba lo que el plano dibuja.",
+      "fab.obra.cab.stp.titulo":"Modelos 3D interactivos",
+      "fab.obra.cab.stp.desc":"Cuatro ensamblajes exportados a STEP. Gíralos, acércalos y léelos en tres dimensiones antes de abrir el plano: el visor carga en el navegador, sin instalar nada.",
+      "fab.obra.cab.pdf.titulo":"Planos del cabrestante",
+      "fab.obra.cab.pdf.desc":"Veinte planos en PDF con navegación previa/siguiente. Cada plano abre en su página, con su nomenclatura y sus vistas.",
+      "fab.obra.matriz.titulo":"Utillaje de chapa · Proyecto 1 · Matriz",
+      "fab.obra.matriz.desc":"Proyecto de utillaje de chapa: diseño de la matriz de corte y grabado para una pieza estampada. Desarrollo del troquel, análisis de la secuencia de operación, holguras de ajuste, guías y ejectores. El archivo fuente es un ensamble de <strong>Autodesk Inventor</strong> (.ipt/.iam), sin visor web nativo; aquí se documenta el trabajo con sus datos.",
+      "fab.obra.matriz.files.titulo":"Archivos del proyecto",
+      "fab.obra.matriz.files.desc":"Ensambles y piezas del proyecto, en formato nativo de Inventor.",
+      "fab.obra.chapa.titulo":"Aprovechamiento de chapa",
+      "fab.obra.chapa.desc":"Estudio de aprovechamiento de chapa para el corte de piezas planas: disposición de los trozos sobre el rollo, minimización del sobrante y control del sentido de fibra. Trabajo realizado en <strong>AutoCAD</strong> sobre archivos .dwg.",
+      "fab.obra.chapa.files.titulo":"Planos .dwg",
+      "fab.obra.chapa.files.desc":"Delineado de desarrollo y nesting en AutoCAD.",
+      "fab.form.titulo":"Formación",
+      "fab.form.item1.titulo":"Diseño en Fabricación Mecánica","fab.form.item1.texto":"El ciclo que me hizo pensador de piezas: dibujo técnico, cálculo de elementos de máquina, tolerancias, geometría y representación, CAD/CAM y organización de la fabricación. La base de todo lo que hay en esta página.","fab.form.item1.centro":"CP San Jaime Apóstol · Moncada (Valencia)",
+      "fab.tools.titulo":"Herramientas","fab.tools.sub":"El software de diseño y gestión que manejo a diario en la planta, de la pieza paramétrica al plano de taller y al control de materiales.","fab.tools.experto":"Experto",
+      "fab.exp.titulo":"Experiencia",
+      "fab.exp.sub":"<strong>Más de cinco años en la planta de Weidner Ibérica</strong>, en Carlet (Valencia), como delineante industrial y diseñador mecánico. Del modelo paramétrico en <strong>CATIA V5</strong> al plano de fabricación sellado, con el ERP <strong>Geinprod</strong> para la gestión de materiales y la lista de piezas. Un oficio de precisión, tolerancias y plazos.",
+      "fab.exp.wiberica.titulo":"Weidner Ibérica","fab.exp.wiberica.texto":"Fabricante español de productos plásticos y sistemas de apilamiento para la industria logística y de automoción, con central en Carlet (Valencia). Diseño de torres de apilamiento y documentación técnica de producto.",
+      "fab.exp.wmexico.titulo":"Weidner México","fab.exp.wmexico.texto":"Filial mexicana del Grupo Weidner. Trabajo conjunto en la definición de producto y la documentación técnica para el mercado americano.",
+      "fab.exp.stp.titulo":"Ensamblajes 3D","fab.exp.stp.desc":"Cuatro montajes de columna de apilamiento exportados a STEP, con visor interactivo en el navegador.",
+      "fab.exp.cadenas.titulo":"Columna con cadenas","fab.exp.cadenas.desc":"Columna de apilamiento con sistema de cadenas y palancas ergonómicas, para que el operario libere la carga sin agacharse. Visor 3D completo del ensamblaje.",
+      "fab.exp.casos.titulo":"Casos de proyecto · problema → solución → resultado","fab.exp.casos.desc":"Tres problemas reales de ingeniería, contados por lo que resolvieron.","fab.exp.casos.problema":"Problema","fab.exp.casos.solucion":"Solución","fab.exp.casos.resultado":"Resultado",
+      "fab.exp.caso1.problema":"Las columnas de apilamiento de la competencia exigían que el operario retirase a mano la pieza del rack para liberar el desbloqueo en cada ciclo: riesgo de atrapamiento de dedos, posturas forzadas y segundos perdidos que se acumulaban turno tras turno en la línea de automoción.","fab.exp.caso1.solucion":"Diseño de un mecanismo con palanca de desbloqueo accionada por el propio peso de la pieza al retirarla del rack: al descargarla, el retén se libera solo y la columna queda lista para el siguiente apilamiento sin que el operario toque el mecanismo.","fab.exp.caso1.resultado":"Ciclo más rápido y seguro: cero acciones manuales de desbloqueo, menos riesgo de atrapamiento y una cadencia de montaje más regular para el operario.","fab.exp.caso1.stat4":"ciclo más rápido",
+      "fab.exp.caso2.problema":"Para tensar o liberar las cadenas de retención de la columna, el operario tenía que agacharse hasta el suelo en cada ajuste: una postura forzada y repetitiva que cargaba la espalda y acumulaba fatiga a lo largo del turno.","fab.exp.caso2.solucion":"Diseño de unas palancas de mando elevadas, integradas en el bastidor y de recorrido corto, que permiten tensar y liberar las cadenas de pie y con una sola mano, sin necesidad de bajar a la altura del suelo.","fab.exp.caso2.resultado":"Trabajo ergonómico: desaparece la postura forzada de agacharse, se reduce la fatiga acumulada y el ajuste de cadenas pasa a ser una operación cómoda dentro del ciclo de montaje.","fab.exp.caso2.stat4":"menos fatiga por turno",
+      "fab.exp.caso3.problema":"Un producto nuevo tenía que pasar del modelo 3D al taller con planos limpios, listas de piezas coherentes, nomenclatura única y tolerancias claras: sin ese paquete cerrado, el taller paraba a preguntar y el montaje se retrasaba.","fab.exp.caso3.solucion":"Modelado paramétrico en CATIA V5, exportación a STEP para el intercambio, plano de conjunto, explosionado con lista de piezas y planos de despiece con tolerancias y tratamientos definidos, todo con una codificación única de referencias.","fab.exp.caso3.resultado":"Paquete de fabricación cerrado: el taller recibe plano, despiece y lista de piezas sin preguntas y puede arrancar la mecanización sin idas y venidas con ingeniería.","fab.exp.caso3.stat4":"años en CATIA V5",
+      "fab.exp.weidner.titulo":"Weidner Ibérica · Diseño y documentación",
+      "fab.exp.weidner.desc":"Diseño de torres de apilamiento (<em>stacking columns</em>) para el sector de la automoción: columnas autoblocantes, cabrestantes y sistemas de retención. Del modelo paramétrico en CATIA V5 al plano de fabricación sellado, con el ERP Geinprod para la gestión de materiales. Aquí tienes el resultado: modelos 3D navegables y el plano del cabrestante.",
+      "fab.exp.listas.titulo":"Presentación de producto",
+      "fab.exp.listas.desc":"Presentación de las columnas de apilamiento de Weidner, abierta en la página de producto. Maquetación técnica con secuencia de montaje, códigos de color y fichas de producto.",
+      "fab.exp.listas.btn":"Ver presentación (PDF)",
+      "fab.exp.flips.titulo":"Catálogo de producto","fab.exp.flips.desc":"Catálogo de producto de Weidner en formato flipbook (Flipsnack), abierto en las páginas de las columnas. Maquetación editorial con fichas técnicas y familias de producto.","fab.exp.flips.btn":"Abrir catálogo",
+      "fab.exp.weidner.card.titulo":"Weidner Ibérica",
+      "fab.exp.weidner.card.texto":"Fabricante español de sistemas de apilamiento para la industria logística y de automoción, con central en Carlet (Valencia).",
+      "fab.exp.wmexico.card.titulo":"Weidner México","fab.exp.wmexico.card.texto":"Filial mexicana del Grupo Weidner, con sede en Querétaro.",
+      "fab.api.titulo":"Normas y materiales",
+      "fab.api.nav":"Normas y materiales",
+      "fab.api.sub":"Dos herramientas de taller calculadas en el navegador: ajustes y tolerancias ISO 286 y una base de datos de materiales de ingeniería. Sin claves, sin servidores.",
+      "fab.tol.titulo":"Tolerancias ISO 286",
+      "fab.tol.nota":"Tablas oficiales ISO 286-2:2010. Base agujero H. Desviaciones en µm, límites en mm. Ø 3–400 mm.",
+      "fab.tol.diam":"Ø nominal (mm)",
+      "fab.tol.hueco":"Agujero",
+      "fab.tol.eje":"Eje",
+      "fab.tol.btn":"Calcular ajuste",
+      "fab.mat.titulo":"Materiales de ingeniería",
+      "fab.mat.nota":"Propiedades típicas a 20 °C. Valores orientativos: confirma siempre con el certificado del proveedor.",
+      "fab.mat.sel":"Material",
+      "fab.comp.titulo":"Competencias",
+      "fab.comp.b1.titulo":"Diseño 3D paramétrico","fab.comp.b1.texto":"Del sólido al ensamble en CATIA V5: piezas, restricciones y actualización coherente.",
+      "fab.comp.b2.titulo":"Dibujo técnico y tolerancias","fab.comp.b2.texto":"Planos de taller claros: vistas, secciones, acotación y tolerancias que se pueden fabricar.",
+      "fab.comp.b3.titulo":"Fabricación de chapa","fab.comp.b3.texto":"Troquelado, corte, plegado y estampado: pensar la pieza para que salga bien de la máquina.",
+      "fab.comp.b4.titulo":"ERP y gestión de materiales","fab.comp.b4.texto":"Geinprod: listas de piezas, materiales y control de aprovisionamiento.",
+      "fab.comp.b5.titulo":"Documentación de producto","fab.comp.b5.texto":"Explosiones, despieces y nomenclatura coherente del modelo a la entrega.",
+      "fab.comp.b6.titulo":"Ergonomía y mejora continua","fab.comp.b6.texto":"Diseñar para el operario: posturas seguras, ciclos cortos y menos esfuerzo.",
+      "fab.ref.titulo":"Referentes","fab.ref.sub":"Los maestros del oficio industrial: de ellos heredo el método, no la copia.",
+      "fab.ref.r1.texto":"El fundador de Toyota: del telar automático a la pieza intercambiable y al método que cambió la fabricación.",
+      "fab.ref.r2.texto":"El TPS de Taiichi Ohno: producir solo lo necesario, cuando se necesita, sin sobreproducción.",
+      "fab.ref.r3.texto":"La gestión científica: medir, estandarizar y simplificar cada operación para fabricar mejor.",
+      "fab.ref.r4.texto":"La estética de la función pura: que la forma siga al uso y nada sobre.",
+      "fab.ref.r5.texto":"La cadena de montaje y la pieza intercambiable: el origen de la fabricación en serie.",
+      "fab.ref.r6.texto":"La máquina-herramienta moderna: la precisión como base de toda la industria.",
+      "fab.planos.anterior":"Anterior",
+      "fab.planos.siguiente":"Siguiente",
+      "fab.planos.pagina":"Plano",
       "d.sobre.titulo":"Sobre mí",
       "d.escena.titulo":"Diseño gráfico: retícula, color y oficio",
       "d.escena.texto":"Siempre he querido crear: contar historias con imágenes, tipografía y orden. Me formé en Diseño y Producción Editorial (CIPFP Ciudad del Aprendiz) y en Fotografía Artística (EASD), aprendiendo composición y luz. Trabajo con retículas claras, pesos equilibrados y paletas complementarias, buscando un diseño sencillo, elegante y con intención, pensado para que cada pieza se lea y dure.",
@@ -209,12 +301,48 @@ document.addEventListener("DOMContentLoaded", () => {
       "d.ref.r3.texto":"Dibujar de memoria, sin boceto: perspectiva y confianza en el trazo.",
       "d.ref.r4.texto":"La tipografía como sistema: claridad, disciplina y coherencia total.",
       "d.ref.r5.texto":"Una idea, una imagen: el poder de la síntesis gráfica.",
-      "d.ref.r6.texto":"El cartel como arma y arte: fotomontaje, compromiso y oficio valenciano."
+      "d.ref.r6.texto":"El cartel como arma y arte: fotomontaje, compromiso y oficio valenciano.",
+      "pie.secciones":"Secciones",
+      "bn.video.etq":"03 — VÍDEO Y MÚSICA","bn.video.tit":"Ritmo, sonido y color","bn.video.desc":"Edición, montaje y música propia: de los reels de MissR a la serie documental ECO. Entra y escucha.","bn.video.cta":"Entrar en vídeo y música","bn.video.son":"Sonido",
+      "repro.lista":"Música propia","repro.rrr":"Banda sonora MissR","repro.eco":"Banda sonora ECO","repro.arte":"Música ARTE",
+      "v.sobre.titulo":"Sobre mí",
+      "v.escena.titulo":"Vídeo y música: ritmo, sonido y color",
+      "v.escena.texto":"De pequeño tocaba la bandurria en una rondalla y allí aprendí el placer de crear algo entre varios. En el CEIP Cavite —Isla de Hierro— curse mi primera formación optativa en medios audiovisuales, donde aprendí tipos de planos, lenguaje visual y encuadre. Desde entonces cine y música van juntos: colaboré con la productora La Canya Produccions —ganadora en dos ediciones de Cinema Jove— y, como socio y colaborador de Interpreta Natura, edito reels, cortometrajes y vídeos, compongo la música de esos trabajos y locuto algunos de ellos.",
+      "v.obra.titulo":"Obra","v.obra.sub":"Dos oficios que se cruzan en el mismo montaje: <strong>Vídeo</strong> —guion, grabación, edición y postproducción— y <strong>Música</strong> —composición propia con GarageBand—. Una misma idea en dos formatos: ritmo, sonido y color.",
+      "v.obra.video.titulo":"Vídeo","v.obra.video.desc":"Montaje y postproducción para Interpreta Natura: reels, cortometrajes y vídeos promocionales. Edito, doy color y cuido el sonido; la música de muchas de esas piezas también es mía.","v.obra.video.dest":"<strong>Ruta teatralitzada «Que el temps no esborre la memòria».</strong> Pieza promocional de una ruta escénica sobre la memoria de la guerra: grabación, edición y música propios, con la asociación Interpreta Natura.",
+      "v.obra.rrr.titulo":"Las tres erres","v.obra.rrr.desc":"Siete piezas verticales sobre los tres erres: <strong>Reducir</strong>, <strong>Reparar</strong> y <strong>Reutilizar</strong>. Guion, grabación y edición propias, con música compuesta para cada pieza.","v.obra.rrr4.desc":"<strong>MissR i els 4 magnífics.</strong> Pieza de la campaña en la que <strong>compuse la música</strong> y colaboré en la <strong>grabación y la edición</strong> del vídeo.",
+      "v.obra.musica.titulo":"Música","v.obra.musica.desc":"Mis piezas personales, compuestas y producidas en <strong>GarageBand</strong>: piezas para imaginar, trabajar y respirar. Púsalas mientras sigues mirando la web.",
+      "v.form.titulo":"Formación","v.form.item1.grado":"Optativa","v.form.item1.titulo":"Medios audiovisuales","v.form.item1.texto":"Mi primera formación en el lenguaje del cine: tipos de planos, encuadre, narrativa y estructura guionizada. Allí mismo tocaba la bandurria en la rondalla del centro, donde aprendí a cooperar para conseguir algo común.","v.form.item1.centro":"CEIP Cavite · Isla de Hierro",
+      "v.form.item2.titulo":"Fotografía Artística","v.form.item2.texto":"El módulo de medios audiovisuales reforzó lo aprendido en secundaria: encuadre, ritmo y montaje aplicados a un reportaje real. La base técnica para que una imagen se sostenga y un corte tenga sentido.","v.form.item2.centro":"EASD València · Escola d'Art i Superior de Disseny",
+      "v.tools.titulo":"Herramientas","v.tools.sub":"Mi cadena de montaje: corte y color en Premiere, acabados en After Effects, sonido y mezcla en Audition, y las apps de Apple cuando el flujo es rápido y directo.","v.tools.experto":"Experto","v.tools.avanzado":"Avanzado","v.tools.intermedio":"Intermedio",
+      "v.exp.titulo":"Experiencia","v.exp.sub":"<strong>Un solo ámbito, varios proyectos.</strong> Colaboro con el departamento audiovisual de <strong>Interpreta Natura</strong>: grabación, edición y sonido de reels, cortometrajes y podcasts, música compuesta para cada pieza y locución de algunas de ellas. Aquí están los proyectos en los que me impliqué de principio a fin.",
+      "v.exp.in.titulo":"Interpreta Natura","v.exp.in.texto":"Asociación sin ánimo de lucro dedicada a la interpretación del medio natural y cultural de la Comunitat Valenciana. Con ella colaboro en <strong>grabación y edición de vídeo</strong>, reels y podcast, <strong>música original</strong> para sus piezas, locuciones y diseño gráfico.",
+      "v.exp.missr.titulo":"MissR · reduce, repara, reutiliza","v.exp.missr.desc":"Campaña audiovisual sobre los tres erres. Edité las piezas para redes, participé en la grabación y compuse la banda sonora de cada una. La banda sonora, en formato de audio, está debajo.",
+      "v.exp.eco.titulo":"ECO · La història d'ECO","v.exp.eco.desc":"Serie documental en valenciano: prólogo y ocho capítulos sobre el territorio, la gente y la tierra. Montaje de las nueve entregas y música propia para la serie.",
+      "v.exp.arte.titulo":"ARTE","v.exp.arte.desc":"Nueve episodios del proyecto ARTE. La <strong>música es mía</strong>; la <strong>narración y las ilustraciones</strong> son de Esther Torres.",
+      "v.exp.ods.titulo":"ODS · Objetivos de Desarrollo Sostenible","v.exp.ods.desc":"Serie de shorts en valenciano sobre los Objetivos de Desarrollo Sostenible. Edición de las piezas y música original para cada una.",
+      "v.exp.reviu.titulo":"Reviu lo Rural","v.exp.reviu.desc":"Proyecto audiovisual para revivir el mundo rural: cinco piezas sobre el territorio, la gente y la casa. Edición y música propias.",
+      "v.exp.otros.titulo":"Otros proyectos con Interpreta Natura","v.exp.otros.desc":"Música propia para los proyectos de Interpreta Natura.","v.exp.otros.musica":"música propia",
+      "v.exp.casos.titulo":"Casos de proyecto · problema → solución → resultado","v.exp.casos.desc":"Tres encargos reales, contados por lo que resolvieron. Las cifras son métricas propias de cada entrega.","v.exp.casos.problema":"Problema","v.exp.casos.solucion":"Solución","v.exp.casos.resultado":"Resultado",
+      "v.exp.caso1.tag":"Interpreta Natura","v.exp.caso1.titulo":"Ruta teatralitzada «Que el temps no esborre la memòria»","v.exp.caso1.problema":"La asociación necesitaba una pieza promocional para una ruta escénica sobre la memoria de la guerra, sin equipo audiovisual propio.","v.exp.caso1.solucion":"Grabación, edición y banda sonora original; locución y montaje con material de archivo y sonido directo.","v.exp.caso1.resultado":"Pieza promocional lista para redes que dio visibilidad a la ruta.","v.exp.caso1.stat1":"pieza entregada","v.exp.caso1.stat2":"música propia","v.exp.caso1.stat3":"días de grabación",
+      "v.exp.caso2.tag":"Campaña audiovisual","v.exp.caso2.titulo":"MissR · reduce, repara, reutiliza","v.exp.caso2.problema":"Sensibilizar sobre las tres erres con piezas cortas para redes sociales, partiendo de cero y sin identidad sonora.","v.exp.caso2.solucion":"Guion, grabación y edición de seis reels, con banda sonora original compuesta para cada pieza.","v.exp.caso2.resultado":"Campaña completa lista para publicar, con identidad sonora propia.","v.exp.caso2.stat1":"reels entregados","v.exp.caso2.stat2":"bandas sonoras","v.exp.caso2.stat3":"música propia",
+      "v.exp.caso3.tag":"Serie documental","v.exp.caso3.titulo":"ECO · La història d'ECO","v.exp.caso3.problema":"Serie audiovisual en valenciano que necesitaba estructura narrativa y unidad sonora para prólogo y ocho capítulos.","v.exp.caso3.solucion":"Montaje de prólogo y ocho episodios, con música compuesta para acompañar el ritmo de cada capítulo.","v.exp.caso3.resultado":"Serie documental completa, coherente en ritmo, color y sonido.","v.exp.caso3.stat1":"episodios","v.exp.caso3.stat2":"serie completa","v.exp.caso3.stat3":"música propia",
+      "v.comp.titulo":"Competencias",
+      "v.comp.b1.titulo":"Edición y montaje","v.comp.b1.texto":"Ritmo, corte y estructura: que una pieza tenga principio, medio y final sin perder al espectador.",
+      "v.comp.b2.titulo":"Color y postproducción","v.comp.b2.texto":"Corrección de color, limpieza de imagen y acabados que unifican material de origen distinto.",
+      "v.comp.b3.titulo":"Sonido y mezcla","v.comp.b3.texto":"Voz, ambiente y música en su sitio: diálogo limpio y mezcla equilibrada para cualquier pantalla.",
+      "v.comp.b4.titulo":"Composición musical","v.comp.b4.texto":"Banda sonora propia con GarageBand: piezas compuestas para encajar con la imagen, no para competir con ella.",
+      "v.comp.b5.titulo":"Locución y guion","v.comp.b5.texto":"Escribir qué se cuenta y decirlo bien: guion, locución y narración de las piezas en las que participo.",
+      "v.ref.titulo":"Referentes","v.ref.sub":"Ocho nombres que explican de dónde viene mi manera de montar y de componer. De ellos heredo el criterio, no la copia.","v.ref.cine":"Referentes cinematográficos","v.ref.music":"Referentes musicales",
+      "v.ref.r1.texto":"El suspense como montaje: saber qué va a pasar y hacerlo esperar.","v.ref.r2.texto":"Claridad narrativa: la historia por delante del efecto.","v.ref.r3.texto":"Cámara en mano y energía: el plano como golpe de ritmo.","v.ref.r4.texto":"Montaje al servicio de la música: cortar siguiendo el compás.",
+      "v.ref.r5.texto":"Minimalismo melódico: repetir hasta que la idea respire.","v.ref.r6.texto":"Arquitectura sonora: el patrón como estructura de la pieza.","v.ref.r7.texto":"Piano que acompaña imagen: emoción sin gritar.","v.ref.r8.texto":"Motivo que vuelve: la melodía como hilo de la narración.",
+      "v.lastfm.titulo":"Lo que escucho","v.lastfm.sub":"Mi música se escucha en la sección de música; aquí, lo que está sonando en mis cascos gracias a la API de Last.fm.","v.lastfm.tit":"Artistas que más escucho","v.lastfm.nota":"Datos en vivo de mi perfil de Last.fm.","v.lastfm.btn":"Escuchar mi música","v.lastfm.carga":"Cargando artistas…","v.lastfm.fuente":"Datos de la API pública de","v.lastfm.vacio":"Configura LASTFM_KEY y LASTFM_USER en script.js para ver mis artistas de Last.fm.","v.lastfm.sin_datos":"Mi perfil de Last.fm aún no tiene artistas registrados. ¡Escucha música y vuelve!"
     },
-    en:{ "m.inicio":"Home","m.foto":"Photo","m.diseno":"Design","m.video":"Video","m.musica":"Music","m.dam":"DAM","m.mec":"Machining","m.contacto":"Contact",
-      "sec.sobre":"About me","sec.obra":"Work","sec.form":"Education","sec.tools":"Tools","sec.exp":"Experience","sec.comp":"Skills","sec.ref":"References",
+    en:{ "m.inicio":"Home","m.foto":"Photo","m.diseno":"Design","m.video":"Video & music","m.musica":"Music","m.dam":"DAM","m.mec":"Machining","m.contacto":"Contact",
+      "sec.sobre":"About me","sec.obra":"Work","sec.form":"Education","sec.tools":"Tools","sec.exp":"Experience","sec.comp":"Skills","sec.ref":"References","sec.lastfm":"What I listen to","sec.inspo":"Living inspiration","sec.lab":"Typography &amp; motion",
       "sub.paisaje":"Landscape","sub.robados":"Candid","sub.personal":"Personal vision","sub.bodegon":"Still life","sub.moda":"Fashion","sub.retrato":"Portrait","sub.etsid":"ETSID · UPV","sub.casos":"Project cases","sub.bodas":"Weddings & events",
       "sub.posters":"Posters","sub.folletos":"Brochures","sub.flyers":"Flyers","sub.identidad":"Identity","sub.otros":"Other products","sub.portfolio":"Portfolio","sub.encantado":"Enchanted universe","sub.sef":"SEF · UV Sport","sub.weidner":"Weidner",
+      "sub.video":"Video","sub.musica":"Music","sub.interpreta":"Interpreta Natura","sub.missr":"MissR · 3R","sub.eco":"ECO","sub.arte":"ARTE","sub.ods":"SDGs","sub.reviu":"Reviu lo Rural","sub.otrosvideos":"Other projects",
       "view.toGrid":"Mosaic","view.toStd":"Carousel",
       "eyebrow":"Design + Development · Technical-creative profile","hub.nombre":"Salvador Llácer Ivars","hub.frase":"Six disciplines, one way of working: think like a designer, build like a developer. Choose where to enter.",
       "hub.lema":"Design · Image · Development",
@@ -224,10 +352,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.instr":"Click and drag to the left","bn.instr.sub":"or navigate with the arrows ← →",
       "bn.ver":"VIEW PORTFOLIO","bn.rec":"REC · 01 — PHOTOGRAPHY",
       "bn.diseno.etq":"02 — GRAPHIC DESIGN","bn.diseno.tit":"Ideas you can see","bn.diseno.desc":"Flyers, branding, editorial and iconography. Click the mosaic to discover the portfolio.",
+      "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in CATIA V5, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW MANUFACTURING","bn.fab.hint":"Mouse wheel: scroll up to reveal",
       "bot.titulo":"PORTFOLIO Assistant","bot.sub":"Ask me about my skills or where to see them","bot.ph":"Type your question…","bot.enviar":"Send",
       "bot.q1":"Do you use Photoshop?","bot.q2":"See photography","bot.q3":"See design","bot.q4":"Who is Salvador?","bot.q5":"How can I contact you?",
       "consejo.titulo":"A daily piece of advice","consejo.otro":"Another one","consejo.carga":"Loading advice…","consejo.fuente":"Advice Slip API","consejo.error":"Could not load the advice. Try again.",
-      "f.inspo.titulo":"Live inspiration","f.inspo.sub":"A random window into Unsplash: landscape, portrait and still life to keep looking.","f.inspo.c1":"Landscape","f.inspo.c2":"Portrait","f.inspo.c3":"Still life","f.inspo.c4":"Architecture","f.inspo.c5":"Black and white","f.inspo.carga":"Loading images…","f.inspo.error":"Could not load the images. Try again.","f.inspo.credito":"Photos from the","f.inspo.otra":"Another batch",
+      "f.inspo.titulo":"Live inspiration","f.inspo.sub":"A random window into Unsplash via Picsum: landscape, portrait and still life to keep looking.","f.inspo.c1":"Landscape","f.inspo.c2":"Portrait","f.inspo.c3":"Still life","f.inspo.c4":"Architecture","f.inspo.c5":"Black and white","f.inspo.carga":"Loading images…","f.inspo.error":"Could not load the images. Try again.","f.inspo.credito":"Photos from the","f.inspo.otra":"Another batch",
       "d.lab.titulo":"Typography &amp; motion","d.lab.sub":"Live specimens from Google Fonts and animated iconography with Lordicon: two free libraries I use in prototypes.","d.lab.fuentes":"Typefaces","d.lab.texto":"Sample text","d.lab.fuente":"Fonts served by the public API of","d.lab.iconos":"Animated icons","d.lab.iconos.nota":"Lottie animations by","d.lab.iconos.plan":"(free plan)","cargando":"Loading…",
       "sobre.p1":"I am <strong>Salvador Llácer Ivars</strong>, born in Valencia. Higher Technician in Image and Graphic Arts, in Editorial Design and Production, in Mechanical Manufacturing Design and, currently, in Multiplatform Application Development. Drawing, music and the idea of creating my own stories have driven me since I was a child; that curiosity has led me to always study something new and to cross disciplines that usually stay apart.",
       "sobre.p2":"My path unites image and design: artistic photography trained at the <strong>EASD de València</strong> (landscape, architecture, reportage, fashion, still life and portrait), interior photography commissions for the <strong>ETSID at the UPV</strong> and wedding photography; graphic and editorial design learned at the <strong>CIPFP Ciudad del Aprendizaje</strong> and applied at <strong>Weidner Ibérica</strong>, where I ran the company's image: catalogues —also interactive—, displays and totems for automotive fairs, identity and email signatures.",
@@ -353,7 +482,114 @@ document.addEventListener("DOMContentLoaded", () => {
       "d.ref.r3.texto":"Drawing from memory, without a sketch: perspective and confidence in the stroke.",
       "d.ref.r4.texto":"Typography as a system: clarity, discipline and total coherence.",
       "d.ref.r5.texto":"One idea, one image: the power of graphic synthesis.",
-      "d.ref.r6.texto":"The poster as weapon and art: photomontage, commitment and Valencian craft."
+      "d.ref.r6.texto":"The poster as weapon and art: photomontage, commitment and Valencian craft.",
+      "fab.sobre.titulo":"About me",
+      "fab.escena.titulo":"Mechanical manufacturing: from sketch to machine",
+      "fab.escena.texto":"Industrial mechanical design with over five years of experience at <strong>Weidner Ibérica</strong> in Carlet (Valencia). I specialised in designing <strong>stacking columns</strong> for the automotive sector: self-locking columns, winches and retention systems that are built, assembled and delivered to the big European carmakers. I work daily with <strong>CATIA V5</strong>, drafting and the <strong>Geinprod</strong> ERP, from the parametric model to the bill of materials and the sealed fabrication drawing. I trained at <strong>CP San Jaime Apóstol</strong> in Moncada on the Higher Degree in Mechanical Manufacturing Design, and I cross that craft with a designer's eye: you read a drawing, understand an assembly sequence and think about the operator who will tighten it.",
+      "fab.obra.titulo":"Work",
+      "fab.obra.sub":"From computer-aided design to the fabricated part: <strong>winch</strong>, <strong>sheet-metal die</strong> and <strong>sheet-metal nesting</strong>. Three ways of solving a mechanical problem —the full assembly, the die that stamps it and the flat-pattern development—, each in its place with its drawing.",
+      "fab.obra.cab.titulo":"Winch · full assembly",
+      "fab.obra.cab.desc":"Design and documentation of a manual drum winch: general assembly, exploded view and bill of materials, welded sub-assembly, profiles, side plates, base, handle, three shafts, four gears, drum, crank sub-assembly, crank, lever and pawl. Twenty drawings that tell the whole part, from the general assembly to every component detail.",
+      "fab.obra.cab.video.titulo":"Assembly video",
+      "fab.obra.cab.video.desc":"Walkthrough of the winch assembly and disassembly sequence, taken from the 3D model. The drum turns, the gears mesh and the pawl locks: the animation checks what the drawing depicts.",
+      "fab.obra.cab.stp.titulo":"Interactive 3D models",
+      "fab.obra.cab.stp.desc":"Four assemblies exported to STEP. Rotate them, zoom in and read them in three dimensions before opening the drawing: the viewer loads in the browser, nothing to install.",
+      "fab.obra.cab.pdf.titulo":"Winch drawings",
+      "fab.obra.cab.pdf.desc":"Twenty PDF drawings with previous/next navigation. Each drawing opens on its page, with its nomenclature and its views.",
+      "fab.obra.matriz.titulo":"Sheet-metal tooling · Project 1 · Die",
+      "fab.obra.matriz.desc":"Sheet-metal tooling project: design of the cutting and drawing die for a stamped part. Development of the die, operation-sequence analysis, fit clearances, guides and ejectors. The source file is an <strong>Autodesk Inventor</strong> assembly (.ipt/.iam) with no native web viewer; the work is documented here with its data.",
+      "fab.obra.matriz.files.titulo":"Project files",
+      "fab.obra.matriz.files.desc":"Project assemblies and parts, in Inventor's native format.",
+      "fab.obra.chapa.titulo":"Sheet-metal nesting",
+      "fab.obra.chapa.desc":"Sheet-metal nesting study for flat-part cutting: layout of the blanks over the coil, scrap minimisation and grain-direction control. Carried out in <strong>AutoCAD</strong> on .dwg files.",
+      "fab.obra.chapa.files.titulo":".dwg drawings",
+      "fab.obra.chapa.files.desc":"Development and nesting drafting in AutoCAD.",
+      "fab.form.titulo":"Education",
+      "fab.form.item1.titulo":"Mechanical Manufacturing Design","fab.form.item1.texto":"The degree that turned me into a part thinker: technical drawing, machine-element calculation, tolerances, geometry and representation, CAD/CAM and manufacturing organisation. The foundation of everything on this page.","fab.form.item1.centro":"CP San Jaime Apóstol · Moncada (Valencia)",
+      "fab.tools.titulo":"Tools","fab.tools.sub":"The design and management software I use daily on the shop floor, from the parametric part to the shop-floor drawing and materials control.","fab.tools.experto":"Expert",
+      "fab.exp.titulo":"Experience",
+      "fab.exp.sub":"<strong>Over five years at the Weidner Ibérica plant</strong> in Carlet (Valencia), as industrial draughtsman and mechanical designer. From the parametric model in <strong>CATIA V5</strong> to the sealed fabrication drawing, with the <strong>Geinprod</strong> ERP for materials management and the bill of materials. A craft of precision, tolerances and deadlines.",
+      "fab.exp.wiberica.titulo":"Weidner Ibérica","fab.exp.wiberica.texto":"Spanish manufacturer of plastic products and stacking systems for the logistics and automotive industry, based in Carlet (Valencia). Design of stacking columns and product technical documentation.",
+      "fab.exp.wmexico.titulo":"Weidner México","fab.exp.wmexico.texto":"Mexican subsidiary of the Weidner Group. Joint work on product definition and technical documentation for the American market.",
+      "fab.exp.stp.titulo":"3D assemblies","fab.exp.stp.desc":"Four stacking-column assemblies exported to STEP, with an interactive viewer in the browser.",
+      "fab.exp.cadenas.titulo":"Column with chains","fab.exp.cadenas.desc":"Stacking column with chain system and ergonomic levers, so the operator releases the load without bending down. Full 3D viewer of the assembly.",
+      "fab.exp.casos.titulo":"Project cases · problem → solution → result","fab.exp.casos.desc":"Three real engineering problems, told by what they solved.","fab.exp.casos.problema":"Problem","fab.exp.casos.solucion":"Solution","fab.exp.casos.resultado":"Result",
+      "fab.exp.caso1.tag":"Weidner Ibérica · Automotive","fab.exp.caso1.titulo":"Stacking column with no manual unlocking","fab.exp.caso1.problema":"Competitor stacking columns required the operator to remove the part from the rack by hand to release the lock on every cycle: finger-entrapment risk, forced postures and lost seconds that piled up shift after shift on the automotive line.","fab.exp.caso1.solucion":"Design of a locking mechanism whose lever is triggered by the part's own weight as it is lifted off the rack: unloading it releases the catch by itself, leaving the column ready for the next stacking without the operator touching the mechanism.","fab.exp.caso1.resultado":"A faster, safer cycle: zero manual unlocking actions, less entrapment risk and a steadier assembly pace for the operator.","fab.exp.caso1.stat4":"faster cycle",
+      "fab.exp.caso2.tag":"Weidner Ibérica · Ergonomics","fab.exp.caso2.titulo":"Chain column with ergonomic levers","fab.exp.caso2.problema":"To tension or release the column's retention chains, the operator had to bend down to the floor on every adjustment: a forced, repetitive posture that strained the back and built up fatigue over the shift.","fab.exp.caso2.solucion":"Design of raised, short-stroke control levers integrated into the frame that let the chains be tensioned and released standing up and with one hand, with no need to bend down to floor level.","fab.exp.caso2.resultado":"Ergonomic work: the forced bending posture disappears, accumulated fatigue drops and chain adjustment becomes a comfortable step in the assembly cycle.","fab.exp.caso2.stat4":"less fatigue per shift",
+      "fab.exp.caso3.tag":"Product engineering","fab.exp.caso3.titulo":"Fabrication documentation and bill of materials","fab.exp.caso3.problema":"A new product had to go from the 3D model to the shop floor with clean drawings, a coherent bill of materials, a single nomenclature and clear tolerances: without that closed package, the shop stopped to ask and assembly slipped.","fab.exp.caso3.solucion":"Parametric modelling in CATIA V5, STEP export for exchange, a general-assembly drawing, an exploded view with bill of materials and detail drawings with tolerances and treatments defined, all under a single reference coding.","fab.exp.caso3.resultado":"A closed fabrication package: the shop receives drawing, detail and bill of materials with no questions and can start machining without back-and-forth with engineering.","fab.exp.caso3.stat4":"years in CATIA V5",
+      "fab.exp.weidner.titulo":"Weidner Ibérica · Design and documentation",
+      "fab.exp.weidner.desc":"Design of <em>stacking columns</em> for the automotive sector: self-locking columns, winches and retention systems. From the parametric model in CATIA V5 to the sealed fabrication drawing, with the Geinprod ERP for materials management. Here is the result: navigable 3D models and the winch drawing.",
+      "fab.exp.listas.titulo":"Product presentation",
+      "fab.exp.listas.desc":"Presentation of Weidner's stacking columns, opened on the product page. Technical layout with assembly sequence, colour codes and product data sheets.",
+      "fab.exp.listas.btn":"View presentation (PDF)",
+      "fab.exp.flips.titulo":"Product catalogue","fab.exp.flips.desc":"Weidner product catalogue in flipbook format (Flipsnack), opened on the columns pages. Editorial layout with technical sheets and product families.","fab.exp.flips.btn":"Open catalogue",
+      "fab.exp.weidner.card.titulo":"Weidner Ibérica",
+      "fab.exp.weidner.card.texto":"Spanish manufacturer of stacking systems for the logistics and automotive industry, based in Carlet (Valencia).",
+      "fab.exp.wmexico.card.titulo":"Weidner México","fab.exp.wmexico.card.texto":"Mexican subsidiary of the Weidner Group, based in Querétaro.",
+      "fab.api.titulo":"Standards and materials",
+      "fab.api.nav":"Standards and materials",
+      "fab.api.sub":"Two shop-floor tools computed in the browser: ISO 286 fits and tolerances, and an engineering materials database. No keys, no servers.",
+      "fab.tol.titulo":"ISO 286 tolerances",
+      "fab.tol.nota":"Official ISO 286-2:2010 tables. Hole basis H. Deviations in µm, limits in mm. Ø 3–400 mm.",
+      "fab.tol.diam":"Nominal Ø (mm)",
+      "fab.tol.hueco":"Hole",
+      "fab.tol.eje":"Shaft",
+      "fab.tol.btn":"Calculate fit",
+      "fab.mat.titulo":"Engineering materials",
+      "fab.mat.nota":"Typical properties at 20 °C. Indicative values: always confirm against the supplier's certificate.",
+      "fab.mat.sel":"Material",
+      "fab.comp.titulo":"Skills",
+      "fab.comp.b1.titulo":"Parametric 3D design","fab.comp.b1.texto":"From solid to assembly in CATIA V5: parts, constraints and coherent updates.",
+      "fab.comp.b2.titulo":"Technical drawing and tolerances","fab.comp.b2.texto":"Clear shop-floor drawings: views, sections, dimensioning and tolerances you can actually make.",
+      "fab.comp.b3.titulo":"Sheet-metal manufacturing","fab.comp.b3.texto":"Punching, cutting, bending and stamping: think the part so it comes out right off the machine.",
+      "fab.comp.b4.titulo":"ERP and materials management","fab.comp.b4.texto":"Geinprod: bills of materials, materials and procurement control.",
+      "fab.comp.b5.titulo":"Product documentation","fab.comp.b5.texto":"Exploded views, detail drawings and coherent nomenclature from model to delivery.",
+      "fab.comp.b6.titulo":"Ergonomics and continuous improvement","fab.comp.b6.texto":"Design for the operator: safe postures, short cycles and less effort.",
+      "fab.ref.titulo":"References","fab.ref.sub":"The masters of industrial craft: from them I inherit the method, not the copy.",
+      "fab.ref.r1.texto":"The founder of Toyota: from the automatic loom to the interchangeable part and the method that changed manufacturing.",
+      "fab.ref.r2.texto":"Taiichi Ohno's TPS: make only what is needed, when it is needed, with no overproduction.",
+      "fab.ref.r3.texto":"Scientific management: measure, standardise and simplify every operation to manufacture better.",
+      "fab.ref.r4.texto":"The aesthetics of pure function: form following use, with nothing left over.",
+      "fab.ref.r5.texto":"The assembly line and the interchangeable part: the origin of mass production.",
+      "fab.ref.r6.texto":"The machine tool: precision as the basis of all industry.",
+      "fab.planos.anterior":"Previous",
+      "fab.planos.siguiente":"Next",
+      "fab.planos.pagina":"Drawing",
+      "pie.secciones":"Sections",
+      "bn.video.etq":"03 — VIDEO & MUSIC","bn.video.tit":"Rhythm, sound and colour","bn.video.desc":"Editing, assembly and my own music: from the MissR reels to the ECO documentary series. Come in and listen.","bn.video.cta":"Enter video & music","bn.video.son":"Sound",
+      "repro.lista":"My own music","repro.rrr":"MissR soundtrack","repro.eco":"ECO soundtrack","repro.arte":"ARTE music",
+      "v.sobre.titulo":"About me",
+      "v.escena.titulo":"Video & music: rhythm, sound and colour",
+      "v.escena.texto":"As a child I played the bandurria in a rondalla, where I learned the pleasure of creating something together. At CEIP Cavite —La Isla de Hierro— I took my first optional course in audiovisual media, learning shot types, visual language and framing. Since then, cinema and music have gone hand in hand: I collaborated with La Canya Produccions —winner in two editions of Cinema Jove— and, as a member and collaborator of Interpreta Natura, I edit reels, short films and videos, compose the music for those works and voice some of them.",
+      "v.obra.titulo":"Work","v.obra.sub":"Two crafts that cross in the same edit: <strong>Video</strong> —script, shooting, editing and post-production— and <strong>Music</strong> —my own compositions made with GarageBand—. One idea in two formats: rhythm, sound and colour.",
+      "v.obra.video.titulo":"Video","v.obra.video.desc":"Editing and post-production for Interpreta Natura: reels, short films and promotional videos. I edit, grade and take care of the sound; the music of many of those pieces is also mine.","v.obra.video.dest":"<strong>Ruta teatralitzada «Que el temps no esborre la memòria».</strong> Promotional piece for a scenic route about war memory: my own shooting, editing and music, with the Interpreta Natura association.",
+      "v.obra.rrr.titulo":"The three Rs","v.obra.rrr.desc":"Seven vertical pieces on the three Rs: <strong>Reduce</strong>, <strong>Repair</strong> and <strong>Reuse</strong>. My own script, shooting and editing, with music composed for each piece.","v.obra.rrr4.desc":"<strong>MissR and the 4 magnificents.</strong> Piece from the MissR campaign in which <strong>I composed the music</strong> and collaborated on the <strong>shooting and editing</strong> of the video.",
+      "v.obra.musica.titulo":"Music","v.obra.musica.desc":"My personal pieces, composed and produced in <strong>GarageBand</strong>: music to imagine, work and breathe. Play them while you keep browsing the site.",
+      "v.form.titulo":"Education","v.form.item1.grado":"Elective","v.form.item1.titulo":"Audiovisual media","v.form.item1.texto":"My first training in the language of cinema: shot types, framing, narrative and screenwriting structure. I also played the bandurria in the school rondalla, where I learned to cooperate for a common result.","v.form.item1.centro":"CEIP Cavite · La Isla de Hierro",
+      "v.form.item2.titulo":"Artistic Photography","v.form.item2.texto":"The audiovisual module reinforced what I had learned in secondary school: framing, rhythm and editing applied to a real reportage. The technical foundation for an image to hold up and a cut to make sense.","v.form.item2.centro":"EASD València · Escola d'Art i Superior de Disseny",
+      "v.tools.titulo":"Tools","v.tools.sub":"My editing chain: cutting and colour in Premiere, finishing in After Effects, sound and mixing in Audition, and Apple apps when the workflow is quick and direct.","v.tools.experto":"Expert","v.tools.avanzado":"Advanced","v.tools.intermedio":"Intermediate",
+      "v.exp.titulo":"Experience","v.exp.sub":"<strong>One field, several projects.</strong> I collaborate with the audiovisual department of <strong>Interpreta Natura</strong>: shooting, editing and sound for reels, short films and podcasts, music composed for each piece and voice-over for some of them. Here are the projects I was involved in from start to finish.",
+      "v.exp.in.titulo":"Interpreta Natura","v.exp.in.texto":"Non-profit association dedicated to the interpretation of the natural and cultural environment of the Comunitat Valenciana. With them I collaborate on <strong>video shooting and editing</strong>, reels and podcasts, <strong>original music</strong> for their pieces, voice-overs and graphic design.",
+      "v.exp.missr.titulo":"MissR · reduce, repair, reuse","v.exp.missr.desc":"Audiovisual campaign about the three Rs. I edited the social pieces, took part in the shooting and composed the soundtrack for each one. The soundtrack, in audio format, is just below.",
+      "v.exp.eco.titulo":"ECO · La història d'ECO","v.exp.eco.desc":"Documentary series in Valencian: a prologue and eight chapters about the land, its people and the soil. Editing of all nine instalments and my own music for the series.",
+      "v.exp.arte.titulo":"ARTE","v.exp.arte.desc":"Nine episodes of the ARTE project. The <strong>music is mine</strong>; the <strong>narration and illustrations</strong> are by Esther Torres.",
+      "v.exp.ods.titulo":"SDGs · Sustainable Development Goals","v.exp.ods.desc":"Series of shorts in Valencian about the Sustainable Development Goals. Editing of the pieces and original music for each one.",
+      "v.exp.reviu.titulo":"Reviu lo Rural","v.exp.reviu.desc":"Audiovisual project to revive rural life: five pieces about the land, its people and the home. My own editing and music.",
+      "v.exp.otros.titulo":"Other projects with Interpreta Natura","v.exp.otros.desc":"Own music for Interpreta Natura projects.","v.exp.otros.musica":"own music",
+      "v.exp.casos.titulo":"Project cases · problem → solution → result","v.exp.casos.desc":"Three real commissions, told by what they solved. The figures are each delivery's own metrics.","v.exp.casos.problema":"Problem","v.exp.casos.solucion":"Solution","v.exp.casos.resultado":"Result",
+      "v.exp.caso1.tag":"Interpreta Natura","v.exp.caso1.titulo":"Staged route «Que el temps no esborre la memòria»","v.exp.caso1.problema":"The association needed a promotional piece for a scenic route about war memory, with no in-house audiovisual team.","v.exp.caso1.solucion":"Shooting, editing and original soundtrack; voice-over and assembly with archive material and location sound.","v.exp.caso1.resultado":"Promotional piece ready for social media that gave visibility to the route.","v.exp.caso1.stat1":"piece delivered","v.exp.caso1.stat2":"own music","v.exp.caso1.stat3":"shooting days",
+      "v.exp.caso2.tag":"Audiovisual campaign","v.exp.caso2.titulo":"MissR · reduce, repair, reuse","v.exp.caso2.problema":"Raise awareness about the three Rs with short social-media pieces, starting from scratch with no sonic identity.","v.exp.caso2.solucion":"Script, shooting and editing of six reels, with an original soundtrack composed for each piece.","v.exp.caso2.resultado":"Complete campaign ready to publish, with its own sonic identity.","v.exp.caso2.stat1":"reels delivered","v.exp.caso2.stat2":"soundtracks","v.exp.caso2.stat3":"own music",
+      "v.exp.caso3.tag":"Documentary series","v.exp.caso3.titulo":"ECO · The story of ECO","v.exp.caso3.problema":"An audiovisual series in Valencian that needed narrative structure and sonic unity for a prologue and eight chapters.","v.exp.caso3.solucion":"Editing of the prologue and eight episodes, with music composed to match the pace of each chapter.","v.exp.caso3.resultado":"Complete documentary series, coherent in rhythm, colour and sound.","v.exp.caso3.stat1":"episodes","v.exp.caso3.stat2":"complete series","v.exp.caso3.stat3":"own music",
+      "v.comp.titulo":"Skills",
+      "v.comp.b1.titulo":"Editing and assembly","v.comp.b1.texto":"Rhythm, cut and structure: giving a piece a beginning, middle and end without losing the viewer.",
+      "v.comp.b2.titulo":"Colour and post-production","v.comp.b2.texto":"Colour correction, image clean-up and finishing that unify material from different sources.",
+      "v.comp.b3.titulo":"Sound and mixing","v.comp.b3.texto":"Voice, ambience and music in their place: clean dialogue and a balanced mix for any screen.",
+      "v.comp.b4.titulo":"Music composition","v.comp.b4.texto":"My own soundtrack with GarageBand: pieces composed to fit the image, not to compete with it.",
+      "v.comp.b5.titulo":"Voice-over and script","v.comp.b5.texto":"Writing what is told and saying it well: script, voice-over and narration of the pieces I take part in.",
+      "v.ref.titulo":"References","v.ref.sub":"Eight names that explain where my way of editing and composing comes from. From them I inherit the criterion, not the copy.","v.ref.cine":"Film references","v.ref.music":"Music references",
+      "v.ref.r1.texto":"Suspense as editing: knowing what will happen and making the audience wait.","v.ref.r2.texto":"Narrative clarity: story ahead of the effect.","v.ref.r3.texto":"Handheld energy: the shot as a rhythmic beat.","v.ref.r4.texto":"Editing at the service of music: cutting on the beat.",
+      "v.ref.r5.texto":"Melodic minimalism: repeating until the idea breathes.","v.ref.r6.texto":"Sound architecture: the pattern as the structure of the piece.","v.ref.r7.texto":"Piano that accompanies the image: emotion without shouting.","v.ref.r8.texto":"A motif that returns: melody as the thread of the narrative.",
+      "v.lastfm.titulo":"What I listen to","v.lastfm.sub":"My music can be heard in the music section; here, what is playing on my headphones thanks to the Last.fm API.","v.lastfm.tit":"Artists I listen to the most","v.lastfm.nota":"Live data from my Last.fm profile.","v.lastfm.btn":"Listen to my music","v.lastfm.carga":"Loading artists…","v.lastfm.fuente":"Data from the public API of","v.lastfm.vacio":"Set LASTFM_KEY and LASTFM_USER in script.js to see my Last.fm artists.","v.lastfm.sin_datos":"My Last.fm profile has no artists registered yet. Listen to some music and come back!"
     }
   };
   const i18nEls = [...document.querySelectorAll("[data-i18n]")];
@@ -415,13 +651,17 @@ document.addEventListener("DOMContentLoaded", () => {
   async function wikiSearch(q){
     try{const r=await fetch(API(`action=query&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=1&prop=pageimages&piprop=original`));const j=await r.json();return firstPage(j)?.original?.source||null;}catch{return null;}
   }
+  document.querySelectorAll(".media img").forEach((img)=>{
+    if(img.complete&&img.naturalWidth) img.classList.add("ok");
+    else img.onload=()=>img.classList.add("ok");
+  });
   document.querySelectorAll(".media[data-wiki]").forEach(async (m)=>{
     const t=m.getAttribute("data-wiki");
     const img=m.querySelector("img");
     const tryWiki=async()=>{ let s=await wikiOriginal(t); if(!s) s=await wikiSearch(m.getAttribute("data-wiki-search")||t); if(s&&img){ img.onload=()=>img.classList.add("ok"); img.src=s; } };
     const own=img&&img.getAttribute("src");
     if(own&&/^https?:/i.test(own)){ if(img.complete&&img.naturalWidth) img.classList.add("ok"); else img.onload=()=>img.classList.add("ok"); img.onerror=()=>{ tryWiki(); }; }
-    else tryWiki();
+    else if(!own) tryWiki();
   });
 
   /* ░░ OBRA / EXPERIENCIA: slider + mosaico (grid) ░░ */
@@ -581,7 +821,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function closeGrid(){ gm.classList.remove("is-open"); gm.setAttribute("aria-hidden","true"); if(gmSlider) gmSlider.schedule(); }
     if(gm){ gm.querySelector("[data-gm-cerrar]").addEventListener("click",closeGrid); gm.querySelector("[data-gm-fondo]").addEventListener("click",closeGrid); }
 
-    const lb=document.getElementById("lightbox"); const lbImg=lb.querySelector("img");
+    const lb=document.getElementById("lightbox"); const lbImg=lb&&lb.querySelector("img");
     let lbItems=[],lbIdx=0,lbLast=null;
     function lbShow(n){ if(!lbItems.length) return; lbIdx=(n+lbItems.length)%lbItems.length; lbImg.src=lbItems[lbIdx].src; lbImg.alt=lbItems[lbIdx].label; }
     function openLightbox(items,i,ret){ lbItems=items; lbLast=ret||document.activeElement; if(gmSlider) clearTimeout(gmSlider.timer); lbImg.style.background=(ret&&ret.dataset&&ret.dataset.bg)||"transparent";
@@ -833,6 +1073,31 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     enlazarTema(".bn__rec", "foto");
     enlazarTema(".bn__cta", "diseno");
+    enlazarTema(".bn__cta--video", "video");
+    enlazarTema("[data-bn-cta-fab]", "fab");
+
+    const vidSlide = bn.querySelector(".bn__slide--video");
+    if (vidSlide) {
+      const sonBtn = vidSlide.querySelector("[data-bn-son]");
+      const aud = vidSlide.querySelector("audio[data-bn-audio]");
+      if (sonBtn && aud) {
+        if (reduce) { aud.dataset.mute = "1"; sonBtn.classList.add("is-mute"); sonBtn.setAttribute("aria-pressed", "false"); }
+        sonBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (aud.dataset.mute === "1" || aud.paused) {
+            aud.dataset.mute = "";
+            sonBtn.classList.remove("is-mute");
+            sonBtn.setAttribute("aria-pressed", "true");
+            if (vidSlide.classList.contains("is-on")) aud.play().catch(() => {});
+          } else {
+            aud.pause();
+            aud.dataset.mute = "1";
+            sonBtn.classList.add("is-mute");
+            sonBtn.setAttribute("aria-pressed", "false");
+          }
+        });
+      }
+    }
 
     const FILAS = [["D","I","S","E","Ñ","A"], ["I","M","A","G","I","N","A"], ["C","R","E","A"]];
     const GRISES = ["#7d818c", "#555a66"];
@@ -926,6 +1191,10 @@ document.addEventListener("DOMContentLoaded", () => {
         s.classList.toggle("is-on", on);
         if (on) s.removeAttribute("inert"); else s.setAttribute("inert", "");
         s.setAttribute("aria-hidden", on ? "false" : "true");
+        const v = s.querySelector("video[data-bn-video]");
+        if (v) { if (on) { v.play().catch(() => {}); } else v.pause(); }
+        const a = s.querySelector("audio[data-bn-audio]");
+        if (a) { if (on && a.dataset.mute !== "1") { a.play().catch(() => {}); } else a.pause(); }
       });
       pags.forEach((p, k) => p.classList.toggle("is-on", k === i));
       if (conteo) conteo.textContent = String(i + 1).padStart(2, "0");
@@ -1053,14 +1322,14 @@ document.addEventListener("DOMContentLoaded", () => {
         t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La sección DAM de la web está en preparación; mientras tanto, el resumen está en Sobre mí.",
         tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The DAM section of the site is under construction; meanwhile, the summary is in About me.",
         b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
-      { k:["video","montaje","edicion","postproduccion"],
-        t:"Edición de vídeo con Premiere y audio con Audition (montajes y podcasts para Interpreta Natura). La subweb de vídeo está en preparación; puedes ver el contexto en Sobre mí.",
-        tEn:"Video editing with Premiere and audio with Audition (edits and podcasts for Interpreta Natura). The video sub-site is under preparation; you can see the context in About me.",
-        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
+      { k:["video","montaje","edicion","postproduccion","cortometraje","reel"],
+        t:"Edición de vídeo con Premiere y audio con Audition (reels, cortometrajes y podcasts para Interpreta Natura). Toda la obra —MissR, ECO, ARTE y más— está en la subweb de vídeo y música.",
+        tEn:"Video editing with Premiere and audio with Audition (reels, short films and podcasts for Interpreta Natura). All the work —MissR, ECO, ARTE and more— is in the video & music sub-site.",
+        b:[["video.html","Ver vídeo y música","See video & music"],["video.html#sub-video","Ver obra","See work"]] },
       { k:["musica","audio","garageband","banda sonora","podcast","cancion","music"],
-        t:"Creo música con GarageBand y he compuesto bandas sonoras y podcasts para Interpreta Natura. La subweb de música está en preparación; el detalle está en Sobre mí.",
-        tEn:"I create music with GarageBand and have composed soundtracks and podcasts for Interpreta Natura. The music sub-site is under preparation; the details are in About me.",
-        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
+        t:"Creo música con GarageBand: bandas sonoras para Mis piezas, MissR, ECO y ARTE, además de podcasts para Interpreta Natura. Puedes escucharlas en la subweb de vídeo y música.",
+        tEn:"I create music with GarageBand: soundtracks for my own pieces, MissR, ECO and ARTE, plus podcasts for Interpreta Natura. You can listen to them in the video & music sub-site.",
+        b:[["video.html#sub-musica","Escuchar música","Listen to music"],["video.html","Ver vídeo y música","See video & music"]] },
       { k:["quien","salvador","sobre mi","perfil","cv","experiencia","formacion","resumen","who"],
         t:"Salvador Llácer Ivars, técnico superior multidisciplinar de Valencia: fotografía, diseño gráfico/editorial, fabricación mecánica (CATIA) y DAM en curso, con experiencia en Weidner Ibérica e Interpreta Natura. Tienes el resumen completo en Sobre mí.",
         tEn:"Salvador Llácer Ivars, multidisciplinary higher technician from Valencia: photography, graphic/editorial design, mechanical manufacturing (CATIA) and DAM in progress, with experience at Weidner Ibérica and Interpreta Natura. The full summary is in About me.",
@@ -1142,6 +1411,21 @@ document.addEventListener("DOMContentLoaded", () => {
     pedir();
   })();
 
+  /* ░░ Toggle del panel flotante del asistente (chatbot en subwebs + índice) ░░ */
+  (() => {
+    const panel = document.querySelector("[data-bot]");
+    if (!panel || !panel.classList.contains("bot--fab")) return;
+    const toggles = document.querySelectorAll("[data-bot-toggle]");
+    const closeBtn = panel.querySelector("[data-bot-close]");
+    const setOpen = (open) => {
+      panel.classList.toggle("is-open", open);
+      toggles.forEach((t) => { t.setAttribute("aria-expanded", open ? "true" : "false"); t.setAttribute("aria-label", open ? "Cerrar asistente" : "Abrir asistente"); });
+    };
+    toggles.forEach((t) => t.addEventListener("click", () => setOpen(!panel.classList.contains("is-open"))));
+    if (closeBtn) closeBtn.addEventListener("click", () => setOpen(false));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && panel.classList.contains("is-open")) setOpen(false); });
+  })();
+
   /* ░░ Widget inspiración (fotografía): Unsplash API ░░ */
   (() => {
     const root = document.querySelector("[data-inspo]");
@@ -1149,7 +1433,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = root.querySelector("[data-inspo-grid]");
     const btn = root.querySelector("[data-inspo-btn]");
     const chips = [...root.querySelectorAll("[data-inspo-q]")];
-    const ACCESS = "";
     const dic = () => I18N[langActual()] || I18N.es;
     let q = "landscape", cargando = false;
     const pintar = (fotos) => {
@@ -1158,16 +1441,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const fig = document.createElement("figure");
         fig.className = "inspo__fig";
         const img = document.createElement("img");
-        img.src = f.urls.small;
-        img.alt = f.alt_description || "Unsplash";
+        img.src = f.url;
+        img.alt = f.alt;
         img.loading = "lazy";
         img.decoding = "async";
         img.width = 400; img.height = 533;
         const cap = document.createElement("figcaption");
         const nombre = document.createElement("span");
-        nombre.textContent = f.user && f.user.name ? f.user.name : "Unsplash";
+        nombre.textContent = "Picsum";
         const enlace = document.createElement("a");
-        enlace.href = f.links.html + "?utm_source=mi-web&utm_medium=referral";
+        enlace.href = f.page;
         enlace.target = "_blank"; enlace.rel = "noopener";
         enlace.textContent = "Unsplash";
         cap.appendChild(nombre); cap.appendChild(enlace);
@@ -1184,19 +1467,17 @@ document.addEventListener("DOMContentLoaded", () => {
       e.setAttribute("data-inspo-estado", "");
       e.textContent = dic()["f.inspo.carga"];
       grid.appendChild(e);
-      if (!ACCESS) {
-        e.textContent = dic()["f.inspo.error"];
-        e.style.opacity = ".55";
-        cargando = false;
-        return;
-      }
       try {
-        const url = "https://api.unsplash.com/search/photos?query=" + encodeURIComponent(q) + "&per_page=6&orientation=portrait&content_filter=high";
-        const r = await fetch(url, { headers: { Authorization: "Client-ID " + ACCESS } });
+        const r = await fetch("https://picsum.photos/v2/list?page=1&limit=30", { cache: "no-store" });
         if (!r.ok) throw 0;
         const d = await r.json();
-        if (!d.results || !d.results.length) throw 0;
-        pintar(d.results);
+        if (!Array.isArray(d) || !d.length) throw 0;
+        const mezcla = d.slice().sort(() => Math.random() - 0.5).slice(0, 6);
+        pintar(mezcla.map((f) => ({
+          url: "https://picsum.photos/id/" + f.id + "/400/533",
+          alt: q,
+          page: f.download_url || "https://picsum.photos"
+        })));
       } catch (err) {
         grid.textContent = "";
         const e2 = document.createElement("p");
@@ -1248,5 +1529,267 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(pintar);
     else pintar();
     pintar();
+  })();
+
+  /* ░░ Reproductor de playlists (vídeo y música) ░░ */
+  (() => {
+    const LISTAS = {
+      personal: [
+        ["musica/Personal/Bokeh.m4a", "Bokeh"],
+        ["musica/Personal/Esperanza .m4a", "Esperanza"],
+        ["musica/Personal/Fortuna.m4a", "Fortuna"],
+        ["musica/Personal/Impasse.m4a", "Impasse"],
+        ["musica/Personal/Jardín.m4a", "Jardín"],
+        ["musica/Personal/Lar.m4a", "Lar"],
+        ["musica/Personal/Lluvia en otoño.m4a", "Lluvia en otoño"],
+        ["musica/Personal/Musgarium.m4a", "Musgarium"]
+      ],
+      rrr: [
+        ["musica/rrr/Alimento 2.m4a", "Alimento 2"],
+        ["musica/rrr/Banqueta.m4a", "Banqueta"],
+        ["musica/rrr/Camiseta 3.m4a", "Camiseta 3"],
+        ["musica/rrr/Jabón 2.m4a", "Jabón 2"],
+        ["musica/rrr/Lego.m4a", "Lego"],
+        ["musica/rrr/Luca mas tempo.m4a", "Luca mas tempo"],
+        ["musica/rrr/Palet  final 2.m4a", "Palet final 2"],
+        ["musica/rrr/Spacetroid mod.m4a", "Spacetroid mod"]
+      ],
+      eco: [
+        ["musica/eco/Eco agricultura.m4a", "Eco agricultura"],
+        ["musica/eco/Eco etiqueta.m4a", "Eco etiqueta"],
+        ["musica/eco/Eco experiencia.m4a", "Eco experiencia"],
+        ["musica/eco/Eco final.m4a", "Eco final"],
+        ["musica/eco/Eco i la dona.m4a", "Eco i la dona"],
+        ["musica/eco/Eco i paraules.m4a", "Eco i paraules"],
+        ["musica/eco/Eco inicio (1).m4a", "Eco inicio (1)"],
+        ["musica/eco/Eco inicio.m4a", "Eco inicio"],
+        ["musica/eco/Eco ramaderia.m4a", "Eco ramaderia"],
+        ["musica/eco/Eco tenda.m4a", "Eco tenda"]
+      ],
+      arte: [
+        ["musica/arte/Arte 1n.m4a", "Arte 1n"],
+        ["musica/arte/Arte 2n.m4a", "Arte 2n"],
+        ["musica/arte/Arte 3n.m4a", "Arte 3n"],
+        ["musica/arte/Arte 4n.m4a", "Arte 4n"],
+        ["musica/arte/Arte 5n.m4a", "Arte 5n"],
+        ["musica/arte/Arte 6n.m4a", "Arte 6n"],
+        ["musica/arte/Arte 7n.m4a", "Arte 7n"],
+        ["musica/arte/Arte 8n.m4a", "Arte 8n"],
+        ["musica/arte/Arte 9n.m4a", "Arte 9n"],
+        ["musica/arte/Arte 10n.m4a", "Arte 10n"]
+      ]
+    };
+    const fmt = (s) => { if (!isFinite(s) || s < 0) return "0:00"; const m = Math.floor(s / 60), x = Math.floor(s % 60); return m + ":" + String(x).padStart(2, "0"); };
+    let sonando = null;
+    document.querySelectorAll(".repro[data-repro]").forEach((rep) => {
+      const tracks = LISTAS[rep.dataset.playlist] || [];
+      const audio = rep.querySelector("[data-repro-audio]");
+      const btnPlay = rep.querySelector("[data-repro-play]");
+      const btnPrev = rep.querySelector("[data-repro-prev]");
+      const btnNext = rep.querySelector("[data-repro-next]");
+      const tit = rep.querySelector("[data-repro-tit]");
+      const cur = rep.querySelector("[data-repro-cur]");
+      const dur = rep.querySelector("[data-repro-dur]");
+      const bar = rep.querySelector("[data-repro-bar]");
+      const fill = rep.querySelector("[data-repro-fill]");
+      const lista = rep.querySelector("[data-repro-lista]");
+      if (!audio || !btnPlay || !tracks.length) return;
+      let idx = -1;
+      const marcar = () => { if (lista) lista.querySelectorAll("button").forEach((b, k) => b.classList.toggle("is-on", k === idx)); };
+      const arrancar = () => {
+        if (sonando && sonando.audio !== audio) { sonando.audio.pause(); sonando.rep.classList.remove("is-playing"); }
+        sonando = { audio, rep };
+        return audio.play().then(() => true, () => { rep.classList.remove("is-playing"); return false; });
+      };
+      const cargar = (k, darPlay) => {
+        idx = ((k % tracks.length) + tracks.length) % tracks.length;
+        audio.src = tracks[idx][0];
+        if (tit) tit.textContent = tracks[idx][1];
+        marcar();
+        if (darPlay) arrancar();
+      };
+      if (lista) {
+        tracks.forEach((tr, k) => {
+          const li = document.createElement("li");
+          const b = document.createElement("button");
+          b.type = "button";
+          const n = document.createElement("span"); n.className = "repro__lista-n"; n.textContent = String(k + 1).padStart(2, "0");
+          const t = document.createElement("span"); t.textContent = tr[1];
+          b.appendChild(n); b.appendChild(t);
+          b.addEventListener("click", () => cargar(k, true));
+          li.appendChild(b);
+          lista.appendChild(li);
+        });
+      }
+      btnPlay.addEventListener("click", () => {
+        if (!audio.src) { cargar(0, true); return; }
+        if (audio.paused) arrancar(); else audio.pause();
+      });
+      if (btnPrev) btnPrev.addEventListener("click", () => cargar(idx - 1, true));
+      if (btnNext) btnNext.addEventListener("click", () => cargar(idx + 1, true));
+      audio.addEventListener("play", () => rep.classList.add("is-playing"));
+      audio.addEventListener("pause", () => rep.classList.remove("is-playing"));
+      audio.addEventListener("timeupdate", () => {
+        const p = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+        if (fill) fill.style.width = p.toFixed(2) + "%";
+        if (bar) bar.setAttribute("aria-valuenow", String(Math.round(p)));
+        if (cur) cur.textContent = fmt(audio.currentTime);
+      });
+      audio.addEventListener("loadedmetadata", () => { if (dur) dur.textContent = fmt(audio.duration); });
+      audio.addEventListener("ended", () => cargar(idx + 1, true));
+      if (bar) {
+        bar.addEventListener("click", (e) => {
+          if (!audio.duration) return;
+          const r = bar.getBoundingClientRect();
+          const p = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+          audio.currentTime = p * audio.duration;
+        });
+        bar.addEventListener("keydown", (e) => {
+          if (!audio.duration) return;
+          if (e.key === "ArrowRight") { e.preventDefault(); audio.currentTime = Math.min(audio.duration, audio.currentTime + 5); }
+          else if (e.key === "ArrowLeft") { e.preventDefault(); audio.currentTime = Math.max(0, audio.currentTime - 5); }
+        });
+      }
+      cargar(0, false);
+      if (rep.dataset.autoplay) {
+        const k = tracks.findIndex((t) => t[1] === rep.dataset.autoplay);
+        cargar(k >= 0 ? k : 0, false);
+        arrancar().then((ok) => {
+          if (ok) return;
+          const soltar = () => {
+            document.removeEventListener("pointerdown", gesto);
+            document.removeEventListener("keydown", gesto);
+            audio.removeEventListener("play", soltar);
+          };
+          const gesto = (e) => {
+            if (e && e.type === "pointerdown" && rep.contains(e.target)) return;
+            soltar();
+            arrancar();
+          };
+          document.addEventListener("pointerdown", gesto);
+          document.addEventListener("keydown", gesto);
+          audio.addEventListener("play", soltar);
+        });
+      }
+    });
+  })();
+
+  /* ░░ Widget Last.fm (vídeo y música) ░░ */
+  (() => {
+    const root = document.querySelector("[data-lastfm]");
+    if (!root) return;
+    const grid = root.querySelector("[data-lastfm-grid]");
+    const dic = () => I18N[langActual()] || I18N.es;
+    const LASTFM_KEY = "98b1049b6143764f87f00e6457d05710";
+    const LASTFM_USER = "Feristan24";
+    const estado = (txt) => {
+      grid.textContent = "";
+      const e = document.createElement("li");
+      e.className = "lastfm__estado";
+      e.textContent = txt;
+      grid.appendChild(e);
+    };
+    const pintar = (artistas) => {
+      grid.textContent = "";
+      const esEn = langActual() === "en";
+      artistas.forEach((a) => {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.className = "lastfm__item";
+        link.href = a.url || "https://www.last.fm";
+        link.target = "_blank"; link.rel = "noopener";
+        const imgs = (a.image || []).filter((x) => x && x["#text"]);
+        if (imgs.length) {
+          const img = document.createElement("img");
+          img.className = "lastfm__img";
+          img.src = imgs[imgs.length - 1]["#text"];
+          img.alt = a.name || "Last.fm";
+          img.loading = "lazy"; img.decoding = "async";
+          img.width = 200; img.height = 200;
+          link.appendChild(img);
+        }
+        const info = document.createElement("span");
+        info.className = "lastfm__info";
+        const name = document.createElement("span");
+        name.className = "lastfm__name";
+        name.textContent = a.name || "";
+        const plays = document.createElement("span");
+        plays.className = "lastfm__plays";
+        const n = Number(a.playcount || 0);
+        plays.textContent = n.toLocaleString(esEn ? "en-US" : "es-ES") + " " + (esEn ? "plays" : "reproducciones");
+        info.appendChild(name); info.appendChild(plays);
+        link.appendChild(info);
+        li.appendChild(link);
+        grid.appendChild(li);
+      });
+    };
+    const pedir = async () => {
+      if (!LASTFM_KEY || !LASTFM_USER) { estado(dic()["v.lastfm.vacio"]); return; }
+      estado(dic()["v.lastfm.carga"]);
+      try {
+        const url = "https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=" + encodeURIComponent(LASTFM_USER) + "&api_key=" + encodeURIComponent(LASTFM_KEY) + "&limit=8&format=json";
+        const r = await fetch(url, { cache: "no-store" });
+        if (!r.ok) throw 0;
+        const d = await r.json();
+        const lista = d.topartists && d.topartists.artist;
+        if (!lista || !lista.length) { estado(dic()["v.lastfm.sin_datos"]); return; }
+        pintar(lista);
+      } catch (e) {
+        estado(dic()["v.lastfm.vacio"]);
+      }
+    };
+    pedir();
+  })();
+
+  /* ░░ Vídeos YouTube: IFrame Player API (click-to-play) ░░ */
+  (() => {
+    const esFile = location.protocol === "file:";
+    let apiOk = false;
+    const cola = [];
+    window.onYouTubeIframeAPIReady = () => { apiOk = true; cola.forEach((f) => f()); cola.length = 0; };
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+    const cuandoApi = (f) => { if (apiOk) f(); else cola.push(f); };
+    const reproducir = (caja, id, titulo) => {
+      if (esFile) { window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener"); return; }
+      cuandoApi(() => {
+        const div = document.createElement("div");
+        div.style.cssText = "position:absolute;inset:0;width:100%;height:100%";
+        caja.textContent = "";
+        caja.appendChild(div);
+        new YT.Player(div, {
+          videoId: id,
+          playerVars: { playsinline: 1, rel: 0 },
+          events: { onReady: (e) => { e.target.playVideo(); if (titulo) e.target.getIframe().title = titulo; } }
+        });
+      });
+    };
+    document.querySelectorAll(".yt--dest[data-yt]").forEach((caja) => {
+      const btn = caja.querySelector(".yt__play");
+      if (!btn) return;
+      btn.addEventListener("click", () => {
+        const id = caja.dataset.yt;
+        const t = (caja.querySelector(".yt__poster") || {}).alt || "YouTube";
+        reproducir(caja, id, t);
+      }, { once: true });
+    });
+    const ico = document.createElement("span");
+    ico.className = "ytc__play";
+    ico.setAttribute("aria-hidden", "true");
+    ico.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>';
+    document.querySelectorAll("a.ytc[data-yt]").forEach((a) => {
+      const thumb = a.querySelector(".ytc__thumb");
+      if (thumb) thumb.appendChild(ico.cloneNode(true));
+      a.addEventListener("click", (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        const id = a.dataset.yt;
+        const t = (a.querySelector(".ytc__t") || {}).textContent || "YouTube";
+        if (!thumb || thumb.dataset.on) return;
+        thumb.dataset.on = "1";
+        reproducir(thumb, id, t);
+      });
+    });
   })();
 });

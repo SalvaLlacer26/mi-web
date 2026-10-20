@@ -6,7 +6,7 @@
     <meta name="description" content="Salvador Llácer Ivars — Perfil técnico-creativo: fotografía, diseño, vídeo, música, DAM y fabricación mecánica." />
     <meta name="theme-color" content="#ffffff" />
     <title>Salvador Llácer Ivars — Diseño + Desarrollo</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffffff' stroke='%235a8f6b' stroke-width='2'/%3E%3Cpolygon points='16,6 25,11 25,21 16,26 7,21 7,11' fill='none' stroke='%235a8f6b' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%235a8f6b'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="logo3.svg" />
 
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
@@ -15,6 +15,7 @@
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var low=m||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
+    <script src="dfm.js" defer></script>
     <noscript><style>.reveal{opacity:1}</style></noscript>
   </head>
 
@@ -24,11 +25,22 @@
       <span class="fondo__degradado"></span>
       <span class="fondo__velo"></span>
       <span class="fondo__patron"></span>
+      <span class="fondo__objetos">
+        <span class="obj obj--logo sz-l obj--15"></span>
+        <span class="obj obj--logo sz-m obj--16"></span>
+        <span class="obj obj--logo sz-s obj--17"></span>
+        <span class="obj obj--logo sz-l obj--19"></span>
+        <span class="obj obj--logo sz-s obj--22"></span>
+        <span class="obj obj--logo sz-m obj--23"></span>
+        <span class="obj obj--logo sz-l obj--26"></span>
+        <span class="obj obj--logo sz-s obj--27"></span>
+      </span>
     </div>
 
     <header class="nav" aria-label="Principal">
       <a class="logo" href="index.html" aria-label="Volver al inicio">
         <span class="logo__marcas" aria-hidden="true"></span>
+        <span class="logo__svg" aria-hidden="true"></span>
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
       <nav class="nav__menu" aria-label="Secciones">
@@ -98,10 +110,55 @@
             <a class="nav__grp" href="diseno.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
         </div>
-        <a href="#" data-soon data-tema="video"><span data-i18n="m.video">Vídeo</span></a>
-        <a href="#" data-soon data-tema="musica"><span data-i18n="m.musica">Música</span></a>
+        <div class="nav__item">
+          <a href="video.html" data-tema="video" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.video">Vídeo y música</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="video.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-video"><span data-i18n="sub.video">Vídeo</span></a>
+                <a href="video.html#sub-musica"><span data-i18n="sub.musica">Música</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="video.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="video.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-interpreta"><span data-i18n="sub.interpreta">Interpreta Natura</span></a>
+                <a href="video.html#sub-missr"><span data-i18n="sub.missr">MissR · 3R</span></a>
+                <a href="video.html#sub-eco"><span data-i18n="sub.eco">ECO</span></a>
+                <a href="video.html#sub-arte"><span data-i18n="sub.arte">ARTE</span></a>
+                <a href="video.html#sub-ods"><span data-i18n="sub.ods">ODS</span></a>
+                <a href="video.html#sub-reviu"><span data-i18n="sub.reviu">Reviu lo Rural</span></a>
+                <a href="video.html#sub-otros"><span data-i18n="sub.otrosvideos">Otros proyectos</span></a>
+              </div>
+            </div>
+            <a class="nav__grp" href="video.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="video.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+            <a class="nav__grp" href="video.html#t-lastfm"><span data-i18n="sec.lastfm">Lo que escucho</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="dfm.html" data-tema="fab" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.mec">Mecánica</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="dfm.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="dfm.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="dfm.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="dfm.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="dfm.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="dfm.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="dfm.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
         <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
-        <a href="#" data-soon data-tema="fab"><span data-i18n="m.mec">Mecánica</span></a>
       </nav>
       <div class="nav__derecha">
         <span class="nav__sep" aria-hidden="true"></span>
@@ -119,7 +176,7 @@
 
     <main id="contenido" tabindex="-1">
       <section class="seccion seccion--hero" aria-label="Inicio">
-        <div class="bn" data-bn role="region" aria-roledescription="carrusel" tabindex="0" aria-label="Láminas interactivas: fotografía y diseño">
+        <div class="bn" data-bn role="region" aria-roledescription="carrusel" tabindex="0" aria-label="Láminas interactivas: fotografía, diseño y vídeo">
           <div class="bn__track" data-bn-track>
             <div class="bn__slide bn__slide--intro is-on" data-bn-slide>
               <div class="bn__intro">
@@ -175,13 +232,54 @@
                 <a class="bn__cta" href="diseno.html" data-i18n="bn.ver">VER PORTFOLIO</a>
               </div>
             </div>
+            <div class="bn__slide bn__slide--video" data-bn-slide inert>
+              <video data-bn-video muted loop playsinline preload="metadata" poster="Imagenes/Video_sobremi.webp" aria-hidden="true">
+                <source src="musica/fondo.mp4" type="video/mp4" />
+              </video>
+              <div class="bn__vid-col">
+                <span class="bn__etq" data-i18n="bn.video.etq">03 — VÍDEO Y MÚSICA</span>
+                <h3 class="bn__tit" data-i18n="bn.video.tit">Ritmo, sonido y color</h3>
+                <p class="bn__desc" data-i18n="bn.video.desc">Edición, montaje y música propia: de los reels de MissR a la serie documental ECO. Entra y escucha.</p>
+                <a class="bn__cta bn__cta--video" href="video.html" data-i18n="bn.video.cta">Entrar en vídeo y música</a>
+                <button class="bn__son" type="button" data-bn-son aria-pressed="true">
+                  <svg class="bn__son-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 9.5a3.5 3.5 0 0 1 0 5M19 7a7 7 0 0 1 0 10"/></svg>
+                  <svg class="bn__son-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9l6 6M22 9l-6 6"/></svg>
+                  <span data-i18n="bn.video.son">Sonido</span>
+                </button>
+              </div>
+              <audio data-bn-audio preload="none" loop>
+                <source src="musica/Personal/Lar.m4a" type="audio/mp4" />
+              </audio>
+            </div>
+            <div class="bn__slide bn__slide--fab" data-bn-slide inert>
+              <div class="dragvid" data-dragvid style="--rev:0">
+                <div class="dragvid__media" aria-hidden="true">
+                  <video class="dragvid__video" src="dfm/explosionado-cabrestante.mp4" muted loop playsinline preload="metadata"></video>
+                  <span class="dragvid__oscuro"></span>
+                  <span class="dragvid__rejilla"></span>
+                </div>
+                <span class="dragvid__persiana" data-dragvid-persiana aria-hidden="true"></span>
+                <div class="dragvid__contenido">
+                  <span class="bn__etq" data-i18n="bn.fab.etq">04 — FABRICACIÓN MECÁNICA</span>
+                  <h3 class="dragvid__tit" data-i18n="bn.fab.tit"><span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span></h3>
+                  <p class="bn__desc" data-i18n="bn.fab.desc">Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.</p>
+                  <a class="bn__cta" href="dfm.html" data-bn-cta-fab data-i18n="bn.fab.cta">VER FABRICACIÓN</a>
+                </div>
+                <div class="dragvid__handle" data-dragvid-handle>
+                  <span class="dragvid__hint" data-i18n="bn.fab.hint">Gira la rueda del ratón arriba para descubrir el ensamble</span>
+                  <span class="dragvid__flecha" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="bn__pag" aria-label="Láminas">
             <button class="bn__pag-i is-on" type="button" data-bn-to="0"><span>00</span></button>
             <button class="bn__pag-i" type="button" data-bn-to="1"><span>01</span></button>
             <button class="bn__pag-i" type="button" data-bn-to="2"><span>02</span></button>
+            <button class="bn__pag-i" type="button" data-bn-to="3"><span>03</span></button>
+            <button class="bn__pag-i" type="button" data-bn-to="4"><span>04</span></button>
           </div>
-          <div class="bn__conteo" aria-hidden="true"><b data-bn-cur>01</b><i>/</i>03</div>
+          <div class="bn__conteo" aria-hidden="true"><b data-bn-cur>01</b><i>/</i>05</div>
         </div>
       </section>
 
@@ -189,7 +287,7 @@
       <section class="seccion seccion--bot" aria-label="Asistente del portfolio">
           <div class="bot reveal" data-bot>
             <header class="bot__head">
-              <span class="bot__avatar" aria-hidden="true">✦</span>
+              <span class="bot__avatar bot__avatar-logo" aria-hidden="true"></span>
               <span class="bot__tit"><strong data-i18n="bot.titulo">Asistente PORTFOLIO</strong><small data-i18n="bot.sub">Pregúntame por mis habilidades o por dónde verlas</small></span>
             </header>
             <div class="bot__log" data-bot-log role="log" aria-live="polite"></div>
@@ -219,20 +317,7 @@
 
       <section class="seccion seccion--sobre" aria-labelledby="t-sobre">
         <div class="caja sobre reveal">
-          <span class="sobre__fondo" aria-hidden="true">
-            <span class="sobre__circ" style="--d:13s;--x:-16px;left:3%;top:10%;width:120px;height:120px"></span>
-            <span class="sobre__circ sobre__circ--glass" style="--d:17s;--x:14px;left:22%;top:58%;width:64px;height:64px;animation-delay:-4s"></span>
-            <span class="sobre__circ" style="--d:15s;--x:18px;left:47%;top:8%;width:46px;height:46px;animation-delay:-7s"></span>
-            <span class="sobre__circ sobre__circ--glass" style="--d:19s;--x:-12px;left:74%;top:16%;width:92px;height:92px;animation-delay:-2s"></span>
-            <span class="sobre__circ" style="--d:14s;--x:15px;left:88%;top:52%;width:58px;height:58px;animation-delay:-9s"></span>
-            <span class="sobre__circ sobre__circ--glass" style="--d:16s;--x:17px;left:8%;top:74%;width:140px;height:140px;animation-delay:-5s"></span>
-            <span class="sobre__circ" style="--d:18s;--x:-14px;left:36%;top:78%;width:34px;height:34px;animation-delay:-11s"></span>
-            <span class="sobre__circ sobre__circ--glass" style="--d:15s;--x:-17px;left:60%;top:64%;width:52px;height:52px;animation-delay:-6s"></span>
-            <span class="sobre__circ" style="--d:20s;--x:12px;left:80%;top:82%;width:76px;height:76px;animation-delay:-3s"></span>
-            <span class="sobre__circ" style="--d:16s;--x:-15px;left:54%;top:34%;width:28px;height:28px;animation-delay:-8s"></span>
-            <span class="sobre__circ sobre__circ--glass" style="--d:14s;--x:13px;left:16%;top:36%;width:40px;height:40px;animation-delay:-10s"></span>
-            <span class="sobre__circ" style="--d:17s;--x:-13px;left:66%;top:4%;width:36px;height:36px;animation-delay:-1s"></span>
-          </span>
+          
           <div class="sobre__cuerpo">
             <div class="seccion__head"><span class="seccion__num">01</span><h2 class="seccion__titulo" id="t-sobre" data-i18n="sec.sobre">Sobre mí</h2></div>
             <div class="sobre__texto">
@@ -295,7 +380,30 @@
       <button class="fab__btn fab__toc" id="tocBtn" type="button" aria-label="Índice de secciones" aria-expanded="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
       </button>
+      <button class="fab__btn fab__chat is-on" data-bot-toggle type="button" aria-label="Abrir asistente" aria-expanded="false" aria-controls="botPanel">
+        <span class="fab__ico-logo" aria-hidden="true"></span>
+      </button>
     </div>
+
+    <section class="bot bot--fab" id="botPanel" data-bot aria-label="Asistente del portfolio">
+      <header class="bot__head" data-bot-close>
+        <span class="bot__avatar bot__avatar-logo" aria-hidden="true"></span>
+        <span class="bot__tit"><strong data-i18n="bot.titulo">Asistente PORTFOLIO</strong><small data-i18n="bot.sub">Pregúntame por mis habilidades o por dónde verlas</small></span>
+      </header>
+      <div class="bot__log" data-bot-log role="log" aria-live="polite"></div>
+      <div class="bot__sug">
+        <button type="button" data-q="¿Maneja Photoshop?" data-q-en="Do you use Photoshop?" data-i18n="bot.q1">¿Maneja Photoshop?</button>
+        <button type="button" data-q="Ver fotografía" data-q-en="See photography" data-i18n="bot.q2">Ver fotografía</button>
+        <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
+        <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
+        <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+      </div>
+      <form class="bot__form" data-bot-form autocomplete="off">
+        <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta." />
+        <button type="submit" data-i18n="bot.enviar">Enviar</button>
+      </form>
+    </section>
+
     <div class="toc__scrim" id="tocScrim"></div>
     <aside class="toc" id="toc" aria-hidden="true" aria-label="Índice de secciones">
       <header class="toc__head">
