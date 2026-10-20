@@ -538,6 +538,7 @@ html[data-view="std"] .toc,html[data-view="std"] .toc__scrim{display:none}
 .mini.is-active{outline:2px solid var(--t1);outline-offset:-2px}
 
 .skip{position:absolute;left:1rem;top:1rem;z-index:1000;background:var(--t1);color:#fff;padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;transform:translateY(-160%);transition:transform .2s}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .skip:focus{transform:none}
 a:focus-visible,button:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--t1);outline-offset:3px}
 #contenido:focus{outline:none}

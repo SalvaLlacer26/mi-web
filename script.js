@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ░░ Idioma ░░ */
   const I18N = {
     es:{ "m.inicio":"Inicio","m.foto":"Foto","m.diseno":"Diseño","m.video":"Vídeo y música","m.musica":"Música","m.dam":"DAM","m.mec":"Mecánica","m.contacto":"Contacto",
-      "sec.sobre":"Sobre mí","sec.obra":"Obra","sec.form":"Formación","sec.tools":"Herramientas","sec.exp":"Experiencia","sec.comp":"Competencias","sec.ref":"Referentes","sec.lastfm":"Lo que escucho","sec.inspo":"Inspiración viva","sec.lab":"Tipografía &amp; motion",
+      "sec.sobre":"Sobre mí","sec.obra":"Obra","sec.form":"Formación","sec.tools":"Herramientas","sec.exp":"Experiencia","h1.foto":"Fotografía — Salvador Llácer Ivars","h1.diseno":"Diseño gráfico — Salvador Llácer Ivars","h1.video":"Vídeo y música — Salvador Llácer Ivars","h1.fab":"Fabricación mecánica — Salvador Llácer Ivars","sec.comp":"Competencias","sec.ref":"Referentes","sec.lastfm":"Lo que escucho","sec.inspo":"Inspiración viva","sec.lab":"Tipografía &amp; motion",
       "sub.paisaje":"Paisaje","sub.robados":"Robados","sub.personal":"Visión personal","sub.bodegon":"Bodegón publicitario","sub.moda":"Moda","sub.retrato":"Retrato","sub.etsid":"ETSID · UPV","sub.casos":"Casos de proyecto","sub.bodas":"Bodas y eventos",
       "sub.posters":"Pósters","sub.folletos":"Folletos","sub.flyers":"Flyers","sub.identidad":"Identidad","sub.otros":"Otros productos","sub.portfolio":"Portfolio","sub.encantado":"Universo encantado","sub.sef":"SEF · Deporte UV","sub.weidner":"Weidner",
       "sub.video":"Vídeo","sub.musica":"Música","sub.interpreta":"Interpreta Natura","sub.missr":"MissR · 3R","sub.eco":"ECO","sub.arte":"ARTE","sub.ods":"ODS","sub.reviu":"Reviu lo Rural","sub.otrosvideos":"Otros proyectos",
@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "v.lastfm.titulo":"Lo que escucho","v.lastfm.sub":"Mi música se escucha en la sección de música; aquí, lo que está sonando en mis cascos gracias a la API de Last.fm.","v.lastfm.tit":"Artistas que más escucho","v.lastfm.nota":"Datos en vivo de mi perfil de Last.fm.","v.lastfm.btn":"Escuchar mi música","v.lastfm.carga":"Cargando artistas…","v.lastfm.fuente":"Datos de la API pública de","v.lastfm.vacio":"Configura LASTFM_KEY y LASTFM_USER en script.js para ver mis artistas de Last.fm.","v.lastfm.sin_datos":"Mi perfil de Last.fm aún no tiene artistas registrados. ¡Escucha música y vuelve!"
     },
     en:{ "m.inicio":"Home","m.foto":"Photo","m.diseno":"Design","m.video":"Video & music","m.musica":"Music","m.dam":"DAM","m.mec":"Machining","m.contacto":"Contact",
-      "sec.sobre":"About me","sec.obra":"Work","sec.form":"Education","sec.tools":"Tools","sec.exp":"Experience","sec.comp":"Skills","sec.ref":"References","sec.lastfm":"What I listen to","sec.inspo":"Living inspiration","sec.lab":"Typography &amp; motion",
+      "sec.sobre":"About me","sec.obra":"Work","sec.form":"Education","sec.tools":"Tools","sec.exp":"Experience","h1.foto":"Photography — Salvador Llácer Ivars","h1.diseno":"Graphic design — Salvador Llácer Ivars","h1.video":"Video & music — Salvador Llácer Ivars","h1.fab":"Mechanical manufacturing — Salvador Llácer Ivars","sec.comp":"Skills","sec.ref":"References","sec.lastfm":"What I listen to","sec.inspo":"Living inspiration","sec.lab":"Typography &amp; motion",
       "sub.paisaje":"Landscape","sub.robados":"Candid","sub.personal":"Personal vision","sub.bodegon":"Still life","sub.moda":"Fashion","sub.retrato":"Portrait","sub.etsid":"ETSID · UPV","sub.casos":"Project cases","sub.bodas":"Weddings & events",
       "sub.posters":"Posters","sub.folletos":"Brochures","sub.flyers":"Flyers","sub.identidad":"Identity","sub.otros":"Other products","sub.portfolio":"Portfolio","sub.encantado":"Enchanted universe","sub.sef":"SEF · UV Sport","sub.weidner":"Weidner",
       "sub.video":"Video","sub.musica":"Music","sub.interpreta":"Interpreta Natura","sub.missr":"MissR · 3R","sub.eco":"ECO","sub.arte":"ARTE","sub.ods":"SDGs","sub.reviu":"Reviu lo Rural","sub.otrosvideos":"Other projects",
@@ -619,7 +619,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown",(e)=>{ if(!modal.classList.contains("is-open")||lbAbierto()||gmAbierto()) return;
       if(e.key==="Escape"){cerrarModal();cerrarMenu();return;}
       if(e.key==="Tab"){const f=focusables(); if(!f.length) return; const first=f[0],last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();} else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}} }); }
-  if(form) form.addEventListener("submit",(e)=>{e.preventDefault(); if(!form.checkValidity()){form.reportValidity();return;} if(btnEnviar) btnEnviar.style.display="none"; if(campos) campos.forEach(c=>c.style.display="none"); if(exito) exito.hidden=false; timer=setTimeout(cerrarModal,2000);});
+  if(form) form.addEventListener("submit",(e)=>{e.preventDefault(); if(!form.checkValidity()){form.reportValidity();return;}
+    const fd=new FormData(form);
+    const nom=String(fd.get("nombre")||"").trim(), em=String(fd.get("email")||"").trim(), ms=String(fd.get("mensaje")||"").trim();
+    const asunto=encodeURIComponent("Mensaje desde el portfolio — "+nom);
+    const cuerpo=encodeURIComponent(ms+"\n\n— "+nom+" ("+em+")");
+    window.location.href="mailto:salllaiva@alu.edu.gva.es?subject="+asunto+"&body="+cuerpo;
+    if(btnEnviar) btnEnviar.style.display="none"; if(campos) campos.forEach(c=>c.style.display="none"); if(exito) exito.hidden=false; timer=setTimeout(cerrarModal,3500);});
 
   /* ░░ Revelado ░░ */
   const rev=document.querySelectorAll(".reveal");
