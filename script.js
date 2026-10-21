@@ -101,10 +101,16 @@ document.addEventListener("DOMContentLoaded", () => {
       "sobre.p2":"Mi trayectoria une la imagen y el diseño: fotografía artística formada en la <strong>EASD de València</strong> (paisaje, arquitectura, reportaje, moda, bodegón y retrato), encargos de fotografía de interior para la <strong>ETSID de la UPV</strong> y fotografía de bodas; diseño gráfico y editorial aprendido en el <strong>CIPFP Ciudad del Aprendizaje</strong> y aplicado en <strong>Weidner Ibérica</strong>, donde me encargué de la imagen de la empresa: catálogos —también interactivos—, displays y tótems para ferias de automoción, identidad y firmas de correo.",
       "sobre.p3":"En el lado técnico llevé más de cinco años en Weidner Ibérica diseñando torres de apilamiento (<em>stacking columns</em>) para el sector de la automoción con <strong>CATIA V5</strong> y planimetría, además de tareas administrativas con el ERP <strong>Geinprod</strong>. Hoy curso el CFGS de <strong>DAM</strong>, donde programo, trabajo con bases de datos, Figma e inteligencia artificial. Completo el cuadro la creación musical con <strong>GarageBand</strong> —bandas sonoras y podcasts para Interpreta Natura—, la ilustración y el dibujo.",
       "sobre.p4":"Me va el minimalista con corrección geométrica y pesos visuales equilibrados: paletas complementarias, orden minucioso y resultados sencillos pero profesionales. Busco estabilidad laboral sin renunciar a la ambición de mejorar, y llevar todas mis habilidades a cada proyecto para que se aprecie un perfil completo y <strong>multidisciplinar</strong>.",
+      "sec.gustos":"Mis gustos",
+      "gustos.cine.tit":"Cine","gustos.cine.desc":"Películas que me marcaron: narrativa visual, fotografía y la capacidad de emocionar sin decir demasiado.",
+      "gustos.musica.tit":"Música","gustos.musica.desc":"Minimalismo y bandas sonoras. Pulsa las imágenes para escuchar.",
+      "gustos.libros.tit":"Libros","gustos.libros.desc":"Ciencia ficción y fantasía: mundos bien construidos y personajes con los que empatizar.",
+      "gustos.juegos.tit":"Videojuegos","gustos.juegos.desc":"Historias inmersivas, mundos abiertos y la satisfacción de explorar.",
+      "pn.cv.tit":"Currículum","pn.cv.sub":"Próximamente disponible",
       "pie.volver":"← Volver al inicio",
       "sel.foto":"Fotografía","sel.foto.sub":"Luz, encuadre y narrativa","sel.diseno":"Diseño gráfico e ilustración","sel.diseno.sub":"Retícula, tinta y trazo","sel.video":"Edición de vídeo","sel.video.sub":"Ritmo, sonido y color","sel.musica":"Música","sel.musica.sub":"Composición y montaje sonoro","sel.dam":"DAM y videojuegos","sel.dam.sub":"Código, apps y Simon Says","sel.fab":"Fabricación mecánica","sel.fab.sub":"CATIA, planos y ERP",
       "pie.eyebrow":"¿Tienes un proyecto?","pie.nota":"Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.","pie.loc":"Localización","clima.ubicacion":"Ubicación",
-      "modal.eyebrow":"Hablemos","modal.titulo":"Cuéntame tu proyecto","form.nombre":"Nombre","form.email":"Email","form.mensaje":"Mensaje","form.enviar":"Enviar mensaje","form.exito":"✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.","toast.soon":"Subweb en construcción",
+      "pie.copy.ok":"Email copiado","modal.eyebrow":"Hablemos","modal.titulo":"Cuéntame tu proyecto","form.nombre":"Nombre","form.email":"Email","form.mensaje":"Mensaje","form.enviar":"Enviar mensaje","form.exito":"✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.","toast.soon":"Subweb en construcción",
       "f.sobre.titulo":"Sobre mí",
       "f.escena.titulo":"Fotografía: mirada, luz y oficio",
       "f.escena.texto":"Nací en Valencia y aprendí a mirar antes que a escribir. En la EASD de València cursé Fotografía Artística —paisaje, arquitectura, interiorismo, reportaje social, moda y bodegón publicitario— y aprendí a moldear la luz en lugar de sufrirla. Mi criterio bebe de Ansel Adams, Henri Cartier-Bresson y Richard Avedon: medida, instante y gesto. He firmado encargos de imagen para la ETSID de la UPV y reportajes de bodas; en cada serie busco una fotografía honesta, coherente y bien revelada, sin artificio.",
@@ -355,10 +361,16 @@ document.addEventListener("DOMContentLoaded", () => {
       "sobre.p2":"My path unites image and design: artistic photography trained at the <strong>EASD de València</strong> (landscape, architecture, reportage, fashion, still life and portrait), interior photography commissions for the <strong>ETSID at the UPV</strong> and wedding photography; graphic and editorial design learned at the <strong>CIPFP Ciudad del Aprendizaje</strong> and applied at <strong>Weidner Ibérica</strong>, where I ran the company's image: catalogues —also interactive—, displays and totems for automotive fairs, identity and email signatures.",
       "sobre.p3":"On the technical side I spent over five years at Weidner Ibérica designing <em>stacking columns</em> for the automotive sector with <strong>CATIA V5</strong> and drafting, plus administrative tasks with the <strong>Geinprod</strong> ERP. Today I study the <strong>DAM</strong> higher degree, where I program, work with databases, Figma and artificial intelligence. Music production with <strong>GarageBand</strong> —soundtracks and podcasts for Interpreta Natura—, illustration and drawing complete the picture.",
       "sobre.p4":"I go for minimalism with geometric correctness and balanced visual weights: complementary palettes, meticulous order and simple yet professional results. I am looking for job stability without giving up the ambition to improve, and to bring all my skills to every project so a complete, <strong>multidisciplinary</strong> profile is evident.",
+      "sec.gustos":"My tastes",
+      "gustos.cine.tit":"Film","gustos.cine.desc":"Movies that marked me: visual storytelling, cinematography and the ability to move without saying too much.",
+      "gustos.musica.tit":"Music","gustos.musica.desc":"Minimalism and soundtracks. Click the images to listen.",
+      "gustos.libros.tit":"Books","gustos.libros.desc":"Science fiction and fantasy: well-built worlds and characters you can empathise with.",
+      "gustos.juegos.tit":"Video games","gustos.juegos.desc":"Immersive stories, open worlds and the satisfaction of exploring.",
+      "pn.cv.tit":"CV","pn.cv.sub":"Coming soon",
       "pie.volver":"← Back to home",
       "sel.foto":"Photography","sel.foto.sub":"Light, framing and narrative","sel.diseno":"Graphic design & illustration","sel.diseno.sub":"Grid, ink and line","sel.video":"Video editing","sel.video.sub":"Rhythm, sound and colour","sel.musica":"Music","sel.musica.sub":"Composition and sound editing","sel.dam":"DAM & video games","sel.dam.sub":"Code, apps and Simon Says","sel.fab":"Mechanical manufacturing","sel.fab.sub":"CATIA, blueprints and ERP",
       "pie.eyebrow":"Have a project?","pie.nota":"Open to new opportunities. Design, development and administration in one person.","pie.loc":"Location","clima.ubicacion":"Location",
-      "modal.eyebrow":"Let's talk","modal.titulo":"Tell me about your project","form.nombre":"Name","form.email":"Email","form.mensaje":"Message","form.enviar":"Send message","form.exito":"✓ Message sent. Thank you for reaching out; I'll get back to you very soon.","toast.soon":"Sub-web under construction",
+      "pie.copy.ok":"Email copied","modal.eyebrow":"Let's talk","modal.titulo":"Tell me about your project","form.nombre":"Name","form.email":"Email","form.mensaje":"Message","form.enviar":"Send message","form.exito":"✓ Message sent. Thank you for reaching out; I'll get back to you very soon.","toast.soon":"Sub-web under construction",
       "f.sobre.titulo":"About me",
       "f.escena.titulo":"Photography: gaze, light and craft",
       "f.escena.texto":"I was born in Valencia and learned to look before I learned to write. At the EASD in València I studied Artistic Photography —landscape, architecture, interior design, social reportage, fashion and advertising still life— and learned to shape light rather than suffer it. My judgement draws on Ansel Adams, Henri Cartier-Bresson and Richard Avedon: measure, instant and gesture. I have signed image commissions for the ETSID at the UPV and wedding reportages; in every series I look for an honest, coherent and well-developed photograph, without artifice.",
@@ -612,13 +624,22 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown",(e)=>{ if(!modal.classList.contains("is-open")||lbAbierto()||gmAbierto()) return;
       if(e.key==="Escape"){cerrarModal();cerrarMenu();return;}
       if(e.key==="Tab"){const f=focusables(); if(!f.length) return; const first=f[0],last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();} else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}} }); }
-  if(form) form.addEventListener("submit",(e)=>{e.preventDefault(); if(!form.checkValidity()){form.reportValidity();return;}
-    const fd=new FormData(form);
-    const nom=String(fd.get("nombre")||"").trim(), em=String(fd.get("email")||"").trim(), ms=String(fd.get("mensaje")||"").trim();
-    const asunto=encodeURIComponent("Mensaje desde el portfolio — "+nom);
-    const cuerpo=encodeURIComponent(ms+"\n\n— "+nom+" ("+em+")");
-    window.location.href="mailto:salllaiva@alu.edu.gva.es?subject="+asunto+"&body="+cuerpo;
-    if(btnEnviar) btnEnviar.style.display="none"; if(campos) campos.forEach(c=>c.style.display="none"); if(exito) exito.hidden=false; timer=setTimeout(cerrarModal,3500);});
+  if(form) form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    try{
+      const r=await fetch("https://formspree.io/f/REEMPLAZA_CON_TU_ID",{method:"POST",body:new FormData(form),headers:{"Accept":"application/json"}});
+      if(!r.ok) throw 0;
+      if(btnEnviar) btnEnviar.style.display="none"; if(campos) campos.forEach(c=>c.style.display="none"); if(exito) exito.hidden=false; timer=setTimeout(cerrarModal,3500);
+    }catch(err){
+      const fd=new FormData(form);
+      const nom=String(fd.get("nombre")||"").trim(), em=String(fd.get("email")||"").trim(), ms=String(fd.get("mensaje")||"").trim();
+      const asunto=encodeURIComponent("Mensaje desde el portfolio — "+nom);
+      const cuerpo=encodeURIComponent(ms+"\n\n— "+nom+" ("+em+")");
+      window.location.href="mailto:salllaiva@alu.edu.gva.es?subject="+asunto+"&body="+cuerpo;
+      if(btnEnviar) btnEnviar.style.display="none"; if(campos) campos.forEach(c=>c.style.display="none"); if(exito) exito.hidden=false; timer=setTimeout(cerrarModal,3500);
+    }
+  });
 
   /* ░░ Revelado ░░ */
   const rev=document.querySelectorAll(".reveal");
@@ -881,6 +902,18 @@ document.addEventListener("DOMContentLoaded", () => {
       secs.forEach((s)=>spy.observe(s));
     }
   })();
+
+  /* Copy email un clic */
+  document.querySelectorAll("a[data-copy-email]").forEach((a)=>{
+    a.addEventListener("click", async (e)=>{
+      e.preventDefault();
+      const mail=(a.getAttribute("href")||"").replace(/^mailto:/,"");
+      try{
+        await navigator.clipboard.writeText(mail);
+        toast((I18N[langActual()]||I18N.es)["pie.copy.ok"]);
+      }catch(err){ window.location.href=a.getAttribute("href"); }
+    });
+  });
 
   /* ░░ CLIMA reutilizable (hub + footer) ░░ */
   (function clima(){
@@ -1873,10 +1906,19 @@ document.addEventListener("DOMContentLoaded", () => {
       ["#2ee6ff", "#b026ff"],
       ["#f97316", "#fb923c"]
     ];
+    let logoCapa = 0;
     const setLogo = (k) => {
       if (!logo) return;
       const c = COL[k] || COL.index;
-      logo.style.background = "linear-gradient(135deg," + c[0] + "," + c[1] + ")";
+      const grad = "linear-gradient(135deg," + c[0] + "," + c[1] + ")";
+      const capas = logo.querySelectorAll("i");
+      if (!capas.length) { logo.style.background = grad; return; }
+      const visible = capas[logoCapa];
+      const oculta = capas[1 - logoCapa];
+      oculta.style.background = grad;
+      oculta.style.opacity = "1";
+      visible.style.opacity = "0";
+      logoCapa = 1 - logoCapa;
     };
     const setBar = (p) => {
       if (!fill) return;
@@ -1915,12 +1957,17 @@ document.addEventListener("DOMContentLoaded", () => {
         seq.forEach((k, j) => setTimeout(() => {
           if (done) return;
           if (temas[j]) temas[j].classList.add("is-on");
+          setLogo(k);
         }, j * flash));
         const finSeq = seq.length * flash;
         setTimeout(() => {
           if (done) return;
+          setLogo("index");
+        }, finSeq + 120);
+        setTimeout(() => {
+          if (done) return;
           if (cta) { cta.classList.add("is-on"); cta.focus(); }
-        }, finSeq + 240);
+        }, finSeq + 560);
       };
       requestAnimationFrame(tick);
     }
