@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ░░ Idioma ░░ */
   const I18N = {
-    es:{ "m.inicio":"Inicio","m.foto":"Foto","m.diseno":"Diseño","m.video":"Vídeo y música","m.musica":"Música","m.dam":"DAM","m.mec":"Mecánica","m.contacto":"Contacto",
-      "sec.sobre":"Sobre mí","sec.obra":"Obra","sec.form":"Formación","sec.tools":"Herramientas","sec.exp":"Experiencia","h1.foto":"Fotografía — Salvador Llácer Ivars","h1.diseno":"Diseño gráfico — Salvador Llácer Ivars","h1.video":"Vídeo y música — Salvador Llácer Ivars","h1.fab":"Fabricación mecánica — Salvador Llácer Ivars","sec.comp":"Competencias","sec.ref":"Referentes","sec.lastfm":"Lo que escucho","sec.inspo":"Inspiración viva","sec.lab":"Tipografía &amp; motion",
+    es:{ "m.inicio":"Inicio","m.foto":"Foto","m.diseno":"Diseño","m.video":"Vídeo y música","m.musica":"Música","m.dam":"Programación","m.mec":"Mecánica","m.contacto":"Contacto",
+      "sec.sobre":"Sobre mí","sec.obra":"Obra","sec.form":"Formación","sec.tools":"Herramientas","sec.exp":"Experiencia","h1.foto":"Fotografía — Salvador Llácer Ivars","h1.diseno":"Diseño gráfico — Salvador Llácer Ivars","h1.video":"Vídeo y música — Salvador Llácer Ivars","h1.fab":"Fabricación mecánica — Salvador Llácer Ivars","h1.dam":"Programación — Salvador Llácer Ivars","sec.comp":"Competencias","sec.ref":"Referentes","sec.lastfm":"Lo que escucho","sec.inspo":"Inspiración viva","sec.lab":"Tipografía &amp; motion",
       "sub.paisaje":"Paisaje","sub.robados":"Robados","sub.personal":"Visión personal","sub.bodegon":"Bodegón publicitario","sub.moda":"Moda","sub.retrato":"Retrato","sub.etsid":"ETSID · UPV","sub.casos":"Casos de proyecto","sub.bodas":"Bodas y eventos",
       "sub.posters":"Pósters","sub.folletos":"Folletos","sub.flyers":"Flyers","sub.identidad":"Identidad","sub.otros":"Otros productos","sub.portfolio":"Portfolio","sub.encantado":"Universo encantado","sub.sef":"SEF · Deporte UV","sub.weidner":"Weidner",
       "sub.video":"Vídeo","sub.musica":"Música","sub.interpreta":"Interpreta Natura","sub.missr":"MissR · 3R","sub.eco":"ECO","sub.arte":"ARTE","sub.ods":"ODS","sub.reviu":"Reviu lo Rural","sub.otrosvideos":"Otros proyectos",
@@ -89,14 +89,15 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.desarrolla":"Desarrolla","bn.desarrolla.pop":"Del boceto al navegador con HTML, CSS y JavaScript puro: rápido, accesible y sin frameworks de por medio.",
       "bn.instr":"Haz clic y arrastra hacia la izquierda","bn.instr.sub":"o navega con las flechas ← →",
       "bn.ver":"VER PORTFOLIO","bn.rec":"REC · 01 — FOTOGRAFÍA",
-      "carga.titulo":"PORTFOLIO","carga.bienvenida":"Bienvenido","carga.entrar":"ENTRAR","carga.tema.foto":"Fotograf&iacute;a","carga.tema.diseno":"Dise&ntilde;o","carga.tema.video":"V&iacute;deo y m&uacute;sica","carga.tema.fab":"Fabricaci&oacute;n mec&aacute;nica",
+      "carga.titulo":"PORTFOLIO","carga.bienvenida":"Bienvenido","carga.entrar":"ENTRAR","carga.tema.foto":"Fotograf&iacute;a","carga.tema.diseno":"Dise&ntilde;o","carga.tema.video":"V&iacute;deo y m&uacute;sica","carga.tema.fab":"Fabricaci&oacute;n mec&aacute;nica","carga.tema.dam":"Programaci&oacute;n",
       "bn.diseno.etq":"02 — DISEÑO GRÁFICO","bn.diseno.tit":"Ideas que se ven","bn.diseno.desc":"Flyers, marca, editorial e iconografía. Haz clic en el mosaico para descubrir el portfolio.",
-      "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER PORTFOLIO","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble",
+      "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER PORTFOLIO","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble","bn.dam.etq":"05 — PROGRAMACIÓN","bn.dam.tit":"Código que se puede tocar","bn.dam.desc":"HTML, CSS y JavaScript a mano, APIs en vivo y una interfaz verde de terminal. Entra y sigue el rastro del código.",
+      "bn.dam.etq":"05 — PROGRAMACIÓN","bn.dam.tit":"Código que se puede tocar","bn.dam.desc":"Simon en Processing y en Arduino, una app de smartwatch en Figma y esta misma web hecha con IA: APIs en vivo, chatbot y verificación sin navegador.",
       "bot.titulo":"Asistente PORTFOLIO","bot.sub":"Pregúntame por mis habilidades o por dónde verlas","bot.ph":"Escribe tu pregunta…","bot.enviar":"Enviar",
-      "bot.q1":"¿Maneja Photoshop?","bot.q2":"Ver fotografía","bot.q3":"Ver diseño","bot.q4":"¿Quién es Salvador?","bot.q5":"¿Cómo contacto?",
+      "bot.q1":"¿Maneja Photoshop?","bot.q2":"Ver fotografía","bot.q3":"Ver diseño","bot.q4":"¿Quién es Salvador?","bot.q5":"¿Cómo contacto?","bot.q6":"Ver programación",
       "consejo.titulo":"Un consejo al día","consejo.otro":"Otro consejo","consejo.carga":"Cargando consejo…","consejo.fuente":"Advice Slip API","consejo.error":"No se pudo cargar el consejo. Inténtalo de nuevo.",
       "f.inspo.titulo":"Inspiración viva","f.inspo.sub":"Una ventana aleatoria a Unsplash vía Picsum: paisaje, retrato y bodegón para seguir mirando.","f.inspo.c1":"Paisaje","f.inspo.c2":"Retrato","f.inspo.c3":"Bodegón","f.inspo.c4":"Arquitectura","f.inspo.c5":"Blanco y negro","f.inspo.carga":"Cargando imágenes…","f.inspo.error":"No se pudieron cargar las imágenes. Inténtalo de nuevo.","f.inspo.credito":"Fotografías de la comunidad de","f.inspo.otra":"Otra tanda",
-      "d.lab.titulo":"Tipografía &amp; motion","d.lab.sub":"Muestras en vivo de Google Fonts e iconografía animada con Lordicon: dos librerías gratuitas que uso en prototipos.","d.lab.fuentes":"Tipografías","d.lab.texto":"Texto de muestra","d.lab.fuente":"Fuentes servidas por la API pública de","d.lab.iconos":"Iconos animados","d.lab.iconos.nota":"Animaciones Lottie de","d.lab.iconos.plan":"(plan gratuito)","cargando":"Cargando…",
+      "d.lab.titulo":"Tipografía &amp; motion","d.lab.sub":"Muestras en vivo de Google Fonts: la API pública con la que pruebo tipografías antes de fijarlas en un diseño.","d.lab.fuentes":"Tipografías","d.lab.texto":"Texto de muestra","d.lab.fuente":"Fuentes servidas por la API pública de","cargando":"Cargando…",
       "sobre.p1":"Soy <strong>Salvador Llácer Ivars</strong>, nacido en Valencia. Técnico superior en Imagen y Artes Gráficas, en Diseño y Producción Editorial, en Diseño en Fabricación Mecánica y, actualmente, en Desarrollo de Aplicaciones Multiplataforma. Desde pequeño me apasionan el dibujo, la música y la idea de crear historias propias; esa curiosidad me ha llevado a estudiar siempre algo nuevo y a cruzar disciplinas que normalmente van por separado.",
       "sobre.p2":"Mi trayectoria une la imagen y el diseño: fotografía artística formada en la <strong>EASD de València</strong> (paisaje, arquitectura, reportaje, moda, bodegón y retrato), encargos de fotografía de interior para la <strong>ETSID de la UPV</strong> y fotografía de bodas; diseño gráfico y editorial aprendido en el <strong>CIPFP Ciudad del Aprendizaje</strong> y aplicado en <strong>Weidner Ibérica</strong>, donde me encargué de la imagen de la empresa: catálogos —también interactivos—, displays y tótems para ferias de automoción, identidad y firmas de correo.",
       "sobre.p3":"En el lado técnico llevé más de cinco años en Weidner Ibérica diseñando torres de apilamiento (<em>stacking columns</em>) para el sector de la automoción con <strong>CATIA V5</strong> y planimetría, además de tareas administrativas con el ERP <strong>Geinprod</strong>. Hoy curso el CFGS de <strong>DAM</strong>, donde programo, trabajo con bases de datos, Figma e inteligencia artificial. Completo el cuadro la creación musical con <strong>GarageBand</strong> —bandas sonoras y podcasts para Interpreta Natura—, la ilustración y el dibujo.",
@@ -137,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "f.exp.caso1.tag":"ETSID · UPV","f.exp.caso1.titulo":"Documentación de instalaciones","f.exp.caso1.problema":"El centro necesitaba un banco de imágenes actualizado para web e informes, sin coherencia visual entre espacios.","f.exp.caso1.solucion":"Plan de tomas interior/exterior, control de luz ambiente y revelado uniforme serie a serie.","f.exp.caso1.resultado":"Banco institucional listo para publicar, con lenguaje de color homogéneo.","f.exp.caso1.stat1":"imágenes finales","f.exp.caso1.stat2":"semana de tiempo","f.exp.caso1.stat3":"coherencia de serie",
       "f.exp.caso2.tag":"Weidner Ibérica y Weidner México","f.exp.caso2.titulo":"Catálogo de producto industrial","f.exp.caso2.problema":"Producto técnico con materiales reflectantes y acabados difíciles, para dos empresas, sin pérdida de detalle.","f.exp.caso2.solucion":"Estudio con control de reflejos, iluminación dirigida y montaje coherente para impresión.","f.exp.caso2.resultado":"Catálogo listo para maquetar, con la misma norma de color para ambas.","f.exp.caso2.stat1":"referencias de producto","f.exp.caso2.stat2":"empresas","f.exp.caso2.stat3":"catálogos entregados",
       "f.exp.caso3.tag":"Reportaje social","f.exp.caso3.titulo":"Bodas, bautizos y comuniones","f.exp.caso3.problema":"Cubrir un día entero sin dirigir y sin perder el gesto verdadero entre protocolo y tiempos cerrados.","f.exp.caso3.solucion":"Cobertura continua, revelado coherente y selección cuidada en forma de serie narrativa.","f.exp.caso3.resultado":"Book cerrado con ritmo propio, listo para imprimir o publicar.","f.exp.caso3.stat1":"cobertura continua","f.exp.caso3.stat2":"imágenes entregadas","f.exp.caso3.stat3":"books de boda",
-      "f.exp.weidner.titulo":"Catálogo de producto · Weidner Ibérica y Weidner México","f.exp.weidner.texto":"<strong>Fotografía de producto industrial.</strong> Catálogo técnico para <strong>Weidner Ibérica</strong> y <strong>Weidner México</strong>: fotografía de producto en entorno de estudio y on-site, con control de reflejos sobre metal y plástico, iluminación dirigida para resaltar materiales y acabados, y montaje coherente de la serie listo para maquetación editorial. Un encargo que une la precisión del <strong>bodegón publicitario</strong> con la <strong>documentación técnica de producto</strong>: habilidad y experiencia demostrable en foto de producto en el ámbito industrial.","f.exp.weidner.btn":"Ver catálogo (PDF)",
+      "f.exp.weidner.titulo":"Catálogo de maquinaria Weidner 2025 · Weidner Ibérica","f.exp.weidner.texto":"Catálogo de maquinaria en inglés publicado en Flipsnack. El diseño es mío y, sobre todo, las fotografías de las instalaciones de Weidner Ibérica las realicé yo.","f.exp.weidner.btn":"Ver catálogo (Flipsnack)",
       "f.exp.weidner.head.titulo":"Weidner Ibérica · Weidner México","f.exp.weidner.head.desc":"Fotografía de producto industrial para Weidner Ibérica y Weidner México: estudio y on-site, control de reflejos sobre metal y plástico e iluminación dirigida, para entregar una serie coherente lista para maquetación editorial.",
       "f.exp.bodas.titulo":"Bodas, bautizos y comuniones","f.exp.bodas.desc":"Reportaje social de encargo, tratado como una serie narrativa de principio a fin. <strong>Antes</strong>: reunión con la familia, plan de tomas y calendario (protocolo, tiempos, rincones y detalles). <strong>Durante</strong>: cobertura continua sin dirigir —la preparación, la ceremonia, el saludo, el convite y el baile—, atento al gesto verdadero y a los objetos que sostienen la historia. <strong>Después</strong>: revelado coherente, selección cuidada, maquetación del álbum y entrega lista para imprimir o publicar. Un book cerrado, con su propio ritmo.",
       "f.comp.titulo":"Competencias",
@@ -159,16 +160,17 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.obra.cab.video.desc":"Recorrido de la secuencia de montaje y desmontaje del cabrestante, tomado del modelo 3D. El tambor gira, los engranajes se engranan y el trinquete bloquea: la animación comprueba lo que el plano dibuja.",
       "fab.obra.cab.stp.titulo":"Modelos 3D interactivos",
       "fab.obra.cab.stp.desc":"Cuatro ensamblajes exportados a STEP. Gíralos, acércalos y léelos en tres dimensiones antes de abrir el plano: el visor carga en el navegador, sin instalar nada.",
-      "fab.obra.cab.pdf.titulo":"Planos del cabrestante",
-      "fab.obra.cab.pdf.desc":"Veinte planos en PDF con navegación previa/siguiente. Cada plano abre en su página, con su nomenclatura y sus vistas.",
-      "fab.obra.matriz.titulo":"Utillaje de chapa · Proyecto 1 · Matriz",
-      "fab.obra.matriz.desc":"Proyecto de utillaje de chapa: diseño de la matriz de corte y grabado para una pieza estampada. Desarrollo del troquel, análisis de la secuencia de operación, holguras de ajuste, guías y ejectores. El archivo fuente es un ensamble de <strong>Autodesk Inventor</strong> (.ipt/.iam), sin visor web nativo; aquí se documenta el trabajo con sus datos.",
-      "fab.obra.matriz.files.titulo":"Archivos del proyecto",
-      "fab.obra.matriz.files.desc":"Ensambles y piezas del proyecto, en formato nativo de Inventor.",
+      "fab.obra.matriz.titulo":"Proyecto matriz simple",
+      "fab.obra.matriz.desc":"Réplica en 3D de una matriz simple física: la desmonté y medí pieza a pieza, dibujé bocetos a mano alzada de cada componente, la diseñé en 3D y generé sus planos. Desarrollado con <strong>Autodesk Inventor</strong>.",
+      "fab.obra.matriz.paso1":"La matriz original",
+      "fab.obra.matriz.paso2":"Desmontaje y medición",
+      "fab.obra.matriz.paso3":"Bocetos a mano alzada",
+      "fab.obra.matriz.paso4":"Diseño 3D",
+      "fab.obra.matriz.paso5":"Planos",
+      "fab.obra.cab.story.titulo":"Storyboard · mordaza",
+      "fab.obra.cab.story.desc":"Proyecto de diseño 3D de una mordaza, contado en storyboard: las piezas toman forma y el conjunto acaba explotado en el aire.",
       "fab.obra.chapa.titulo":"Aprovechamiento de chapa",
-      "fab.obra.chapa.desc":"Estudio de aprovechamiento de chapa para el corte de piezas planas: disposición de los trozos sobre el rollo, minimización del sobrante y control del sentido de fibra. Trabajo realizado en <strong>AutoCAD</strong> sobre archivos .dwg.",
-      "fab.obra.chapa.files.titulo":"Planos .dwg",
-      "fab.obra.chapa.files.desc":"Delineado de desarrollo y nesting en AutoCAD.",
+      "fab.obra.chapa.desc":"Estudio del aprovechamiento de la chapa para el corte de piezas planas: disposición de los trozos sobre el rollo, minimización del sobrante y control del sentido de fibra. Al final del estudio se crea el diseño 3D de la matriz que produce la pieza.",
       "fab.form.titulo":"Formación",
       "fab.form.item1.titulo":"Diseño en Fabricación Mecánica","fab.form.item1.texto":"El ciclo que me hizo pensador de piezas: dibujo técnico, cálculo de elementos de máquina, tolerancias, geometría y representación, CAD/CAM y organización de la fabricación. La base de todo lo que hay en esta página.","fab.form.item1.centro":"CP San Jaime Apóstol · Moncada (Valencia)",
       "fab.tools.titulo":"Herramientas","fab.tools.sub":"El software de diseño y gestión que manejo a diario en la planta, de la pieza paramétrica al plano de taller y al control de materiales.","fab.tools.experto":"Experto",
@@ -176,12 +178,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.exp.sub":"<strong>Más de cinco años en la planta de Weidner Ibérica</strong>, en Carlet (Valencia), como delineante industrial y diseñador mecánico. Del modelo paramétrico en <strong>CATIA V5</strong> al plano de fabricación sellado, con el ERP <strong>Geinprod</strong> para la gestión de materiales y la lista de piezas. Un oficio de precisión, tolerancias y plazos.",
       "fab.exp.wiberica.titulo":"Weidner Ibérica","fab.exp.wiberica.texto":"Fabricante español de productos plásticos y sistemas de apilamiento para la industria logística y de automoción, con central en Carlet (Valencia). Diseño de torres de apilamiento y documentación técnica de producto.",
       "fab.exp.wmexico.titulo":"Weidner México","fab.exp.wmexico.texto":"Filial mexicana del Grupo Weidner. Trabajo conjunto en la definición de producto y la documentación técnica para el mercado americano.",
-      "fab.exp.stp.titulo":"Torre de apilamiento: sistema de levas inteligentes","fab.exp.stp.desc":"Torre de apilamiento para automoción con sistema de levas inteligente. La diseñé íntegramente yo tras un largo proceso de análisis de tensiones, materiales y funcionalidad; construí varios prototipos y las versiones definitivas son los modelos 3D de abajo. Este producto se ha fabricado y vendido comercialmente en la planta de Weidner Ibérica, en Carlet (Valencia).",
       "fab.exp.cadenas.titulo":"Columna de apilamiento con cadenas","fab.exp.cadenas.desc":"Proyecto de I+D propio para la compañía, en la línea de la columna SLA/SLI: columna de apilamiento con sistema de cadenas y palancas ergonómicas integradas en el cuerpo, para que el operario tense o libere la carga sin agacharse. Todo el ensamblaje está modelado y documentado en CATIA V5, con visor 3D completo.",
       "fab.exp.casos.titulo":"Casos de proyecto · problema → solución → resultado","fab.exp.casos.desc":"Tres problemas reales de ingeniería, contados por lo que resolvieron.","fab.exp.casos.problema":"Problema","fab.exp.casos.solucion":"Solución","fab.exp.casos.resultado":"Resultado",
-      "fab.exp.caso1.problema":"Las columnas de apilamiento de la competencia exigían que el operario retirase a mano la pieza del rack para liberar el desbloqueo en cada ciclo: riesgo de atrapamiento de dedos, posturas forzadas y segundos perdidos que se acumulaban turno tras turno en la línea de automoción.","fab.exp.caso1.solucion":"Diseño de un mecanismo con palanca de desbloqueo accionada por el propio peso de la pieza al retirarla del rack: al descargarla, el retén se libera solo y la columna queda lista para el siguiente apilamiento sin que el operario toque el mecanismo.","fab.exp.caso1.resultado":"Ciclo más rápido y seguro: cero acciones manuales de desbloqueo, menos riesgo de atrapamiento y una cadencia de montaje más regular para el operario.","fab.exp.caso1.stat4":"ciclo más rápido",
-      "fab.exp.caso2.problema":"Para tensar o liberar las cadenas de retención de la columna, el operario tenía que agacharse hasta el suelo en cada ajuste: una postura forzada y repetitiva que cargaba la espalda y acumulaba fatiga a lo largo del turno.","fab.exp.caso2.solucion":"Diseño de unas palancas de mando elevadas, integradas en el bastidor y de recorrido corto, que permiten tensar y liberar las cadenas de pie y con una sola mano, sin necesidad de bajar a la altura del suelo.","fab.exp.caso2.resultado":"Trabajo ergonómico: desaparece la postura forzada de agacharse, se reduce la fatiga acumulada y el ajuste de cadenas pasa a ser una operación cómoda dentro del ciclo de montaje.","fab.exp.caso2.stat4":"menos fatiga por turno",
-      "fab.exp.caso3.problema":"Un producto nuevo tenía que pasar del modelo 3D al taller con planos limpios, listas de piezas coherentes, nomenclatura única y tolerancias claras: sin ese paquete cerrado, el taller paraba a preguntar y el montaje se retrasaba.","fab.exp.caso3.solucion":"Modelado paramétrico en CATIA V5, exportación a STEP para el intercambio, plano de conjunto, explosionado con lista de piezas y planos de despiece con tolerancias y tratamientos definidos, todo con una codificación única de referencias.","fab.exp.caso3.resultado":"Paquete de fabricación cerrado: el taller recibe plano, despiece y lista de piezas sin preguntas y puede arrancar la mecanización sin idas y venidas con ingeniería.","fab.exp.caso3.stat4":"años en CATIA V5",
+      "fab.exp.caso1.problema":"Las columnas de apilamiento de la competencia exigían que el operario retirase a mano la pieza del rack para liberar el desbloqueo en cada ciclo: riesgo de atrapamiento de dedos, posturas forzadas y segundos perdidos que se acumulaban turno tras turno en la línea de automoción.","fab.exp.caso1.solucion":"Diseño de un mecanismo con palanca de desbloqueo accionada por el propio peso de la pieza al retirarla del rack: al descargarla, el retén se libera solo y la columna queda lista para el siguiente apilamiento sin que el operario toque el mecanismo.","fab.exp.caso1.resultado":"Ciclo más rápido y seguro: cero acciones manuales de desbloqueo, menos riesgo de atrapamiento y una cadencia de montaje más regular para el operario.","fab.exp.caso1.tag":"Weidner Ibérica · Automoción","fab.exp.caso1.titulo":"Columna de apilamiento sin desbloqueo manual","fab.exp.caso1.stat1":"desbloqueo manual eliminado","fab.exp.caso1.stat2":"piezas de mecanismo","fab.exp.caso1.stat3":"automoción","fab.exp.caso1.stat4":"ciclo más rápido",
+      "fab.exp.caso2.problema":"Para tensar o liberar las cadenas de retención de la columna, el operario tenía que agacharse hasta el suelo en cada ajuste: una postura forzada y repetitiva que cargaba la espalda y acumulaba fatiga a lo largo del turno.","fab.exp.caso2.solucion":"Diseño de unas palancas de mando elevadas, integradas en el bastidor y de recorrido corto, que permiten tensar y liberar las cadenas de pie y con una sola mano, sin necesidad de bajar a la altura del suelo.","fab.exp.caso2.resultado":"Trabajo ergonómico: desaparece la postura forzada de agacharse, se reduce la fatiga acumulada y el ajuste de cadenas pasa a ser una operación cómoda dentro del ciclo de montaje.","fab.exp.caso2.tag":"Weidner Ibérica · Ergonomía","fab.exp.caso2.titulo":"Columna de cadenas con palancas ergonómicas","fab.exp.caso2.stat1":"palancas ergonómicas","fab.exp.caso2.stat2":"postura forzada reducida","fab.exp.caso2.stat3":"línea de montaje","fab.exp.caso2.stat4":"menos fatiga por turno",
+      "fab.exp.caso3.problema":"Un producto nuevo tenía que pasar del modelo 3D al taller con planos limpios, listas de piezas coherentes, nomenclatura única y tolerancias claras: sin ese paquete cerrado, el taller paraba a preguntar y el montaje se retrasaba.","fab.exp.caso3.solucion":"Modelado paramétrico en CATIA V5, exportación a STEP para el intercambio, plano de conjunto, explosionado con lista de piezas y planos de despiece con tolerancias y tratamientos definidos, todo con una codificación única de referencias.","fab.exp.caso3.resultado":"Paquete de fabricación cerrado: el taller recibe plano, despiece y lista de piezas sin preguntas y puede arrancar la mecanización sin idas y venidas con ingeniería.","fab.exp.caso3.tag":"Ingeniería de producto","fab.exp.caso3.titulo":"Documentación y despiece para fabricación","fab.exp.caso3.stat1":"planos por conjunto","fab.exp.caso3.stat2":"formato STEP","fab.exp.caso3.stat3":"lista de piezas","fab.exp.caso3.stat4":"años en CATIA V5",
       "fab.exp.weidner.titulo":"Weidner Ibérica · Diseño y documentación",
       "fab.exp.weidner.desc":"Diseño de torres de apilamiento (<em>stacking columns</em>) para el sector de la automoción: columnas autoblocantes, cabrestantes y sistemas de retención. Del modelo paramétrico en CATIA V5 al plano de fabricación sellado, con el ERP Geinprod para la gestión de materiales. Aquí tienes el resultado: modelos 3D navegables y el plano del cabrestante.",
       "fab.exp.listas.titulo":"Presentación de producto",
@@ -220,6 +221,77 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.planos.anterior":"Anterior",
       "fab.planos.siguiente":"Siguiente",
       "fab.planos.pagina":"Plano",
+      "dam.sobre.titulo":"Sobre mí",
+      "dam.escena.titulo":"Programación: código con nombre propio",
+      "dam.escena.texto":"Curso el CFGS de <strong>DAM</strong> en el <strong>IES Doctor Luis Simarro</strong> de Xàtiva, donde programo en <strong>Java</strong>, <strong>Python</strong> y <strong>JavaScript</strong>, trabajo con <strong>SQLite</strong> y uso <strong>Git</strong> para no perder nada. Todo lo que ves aquí está escrito a mano, sin frameworks ni librerías: HTML, CSS y JavaScript puro. La misma inquietud de siempre —entender cómo funciona cada pieza— aplicada ahora a la pantalla: interfaces, APIs y bases de datos que responden de verdad.",
+      "dam.obra.titulo":"Obra",
+      "dam.obra.sub":"Tres proyectos que cuentan la misma historia desde tres ángulos: el videojuego <strong>Simon</strong> que programé en Processing como proyecto de automatismos de mi ciclo de Fabricación Mecánica, <strong>ese mismo juego llevado a una placa Arduino</strong> con sus pulsadores y LEDs, y una interfaz de <strong>smartwatch</strong> para la app TuCafé diseñada en Figma.",
+      "dam.obra.simon.titulo":"Simon · videojuego escrito en Processing",
+      "dam.obra.simon.desc":"En la asignatura de Automatismos del CFGS de Diseño en Fabricación Mecánica aprendimos a programar con <strong>Processing</strong>, el lenguaje gráfico sobre Java, y el proyecto fue recrear el Simon de los ochenta: cuatro colores, memoria creciente y dificultad progresiva. Esta es esa misma versión traída al navegador, reconstruida a mano en HTML, CSS y JavaScript con los tonos originales en WAV, hasta 30 rondas y el menú del juego original. Mira, memoriza y repite.",
+      "dam.obra.arduino.titulo":"Arduino · el mismo Simon, sobre la placa",
+      "dam.obra.arduino.desc":"La segunda parte del proyecto: el código del Simon compilado con el <strong>IDE de Arduino</strong> sobre una placa real. La placa lanza la secuencia con los LEDs y el zumbador, el jugador responde con los cuatro pulsadores, y a medida que se acierta la ronda se encadena sin límite hasta que se falla. Del esquema de cableado al C++, es el mismo juego funcionando sin navegador y sin pantalla.",
+      "dam.obra.figma.titulo":"TuCafé · interfaz para smartwatch",
+      "dam.obra.figma.desc":"TuCafé es la app de café para smartwatch que diseñé entera en <strong>Figma</strong>: definí el flujo de las cinco pantallas —bienvenida, menú, pedido, detalle y confirmación— con componentes reutilizables, jerarquía pensada para la muñeca y un modo oscuro que ahorra batería en las pantallas OLED. Abajo tienes el lienzo completo con los controles de zoom del visor.",
+      "dam.teclas.titulo":"Teclas · ritmo y piano",
+      "dam.teclas.desc":"Un videojuego de ritmo hecho a mano: un piano sobre un escenario con focos, un metrónomo que no para nunca y un pentagrama por el que cruzan las notas que hay que tocar a tiempo. En cada ronda sube el número de notas y el tempo; si pulsas una tecla equivocada o se te acaba el tiempo, la partida termina. Dos niveles —fácil y difícil— que deciden cuántas teclas del piano despiertan. HTML, CSS y WebAudio puros.",
+      "dam.teclas.ctl.jugar":"Jugar","dam.teclas.ctl.facil":"Fácil","dam.teclas.ctl.dificil":"Difícil",
+      "dam.teclas.ctl.ronda":"Ronda","dam.teclas.ctl.mira":"Mira la secuencia…","dam.teclas.ctl.toca":"¡Te toca!",
+      "dam.teclas.ctl.win":"¡Bien! Siguiente ronda…","dam.teclas.ctl.ayuda":"Teclado: A S D F G · W E para las negras · o toca las teclas",
+      "dam.inf.titulo":"Del boceto a la web",
+      "dam.inf.sub":"El proyecto que sostiene esta página: crear un portafolio personal con herramientas avanzadas de inteligencia artificial —APIs en vivo, chatbot, visores 3D, traducción automática y verificación sin navegador— sin frameworks ni constructores. Cuatro fases, veinticinco pasos y un bucle de revisión que nunca cierra del todo.",
+      "dam.inf.f1.titulo":"Ideación y diseño","dam.inf.f1.desc":"Antes del editor: la libreta, el mapa de la web y el prototipo que sirve de contrato visual.",
+      "dam.inf.f2.titulo":"Estructura y estilo","dam.inf.f2.desc":"El esqueleto semántico y el sistema visual: HTML con orden, CSS con variables y cinco identidades.",
+      "dam.inf.f3.titulo":"Lógica y datos","dam.inf.f3.desc":"La parte viva: carrusel, temas, i18n, APIs, sonido y juegos con estado propio.",
+      "dam.inf.f4.titulo":"Publicación y mejora","dam.inf.f4.desc":"Git, revisión headless y despliegue; después, volver y pulir cada píxel.",
+      "dam.inf.s1":"Boceto en papel de la portada","dam.inf.s2":"Mapa de la web: cinco subwebs","dam.inf.s3":"Wireframes y prototipo TuCafé en Figma",
+      "dam.inf.s4":"Paleta y variables por tema","dam.inf.s5":"Tipografía y escala responsive","dam.inf.s6":"Historias de usuario del visitante",
+      "dam.inf.s7":"HTML semántico página a página","dam.inf.s8":"CSS a mano con variables y capas","dam.inf.s9":"Menú interactivo con drops por disciplina",
+      "dam.inf.s10":"Identidad de cada lámina: rombo, mosaico y foco","dam.inf.s11":"Adaptativo de 320 px a escritorio","dam.inf.s12":"Accesibilidad: foco, aria y reduced-motion",
+      "dam.inf.s13":"Carrusel del índice: arrastre, rueda y teclado","dam.inf.s14":"Cambio de tema al pasar por cada CTA","dam.inf.s15":"Loader con las cinco caras del proyecto",
+      "dam.inf.s16":"i18n ES/EN persistente en las seis páginas","dam.inf.s17":"APIs en vivo: GitHub y Dev.to","dam.inf.s18":"Simon: port fiel con WAV y tiempos del sketch",
+      "dam.inf.s19":"Teclas: juego de ritmo con WebAudio","dam.inf.s20":"Visor 3D embebido en Fabricación","dam.inf.s21":"FAV, clima, copia de correo y guía de secciones",
+      "dam.inf.s22":"Historial Git con un tema por commit","dam.inf.s23":"Verificación sin navegador: Chrome headless","dam.inf.s24":"Auditoría de peso: webp y lazy loading",
+      "dam.inf.s25":"GitHub Pages y revisión final","dam.inf.loopTit":"Bucle de revisión","dam.inf.loop":"Cada vuelta vuelve al boceto, se corrige y se vuelve a publicar: el proyecto nunca se da por terminado.",
+      "dam.inf.det1.titulo":"El índice es la portada","dam.inf.det1.texto":"La home no es una lista de enlaces: es un carrusel de seis láminas —intro, foto, diseño, vídeo, fabricación y programación— que se mueven con arrastre, rueda de ratón y flechas. Cada lámina tiene su CTA, y al pasar el ratón por encima la web entera cambia de tema: los colores, el favicon y la pantalla de carga se tiñen de la disciplina antes de que hagas clic.",
+      "dam.inf.det2.titulo":"Cinco mundos, un solo CSS","dam.inf.det2.texto":"Un único estilos.css con variables en :root sostiene las cinco subwebs. El atributo data-tema en <html> decide la paleta; Programación añade su rombo con vídeo de fondo y revelado por clic, Foto su blanco y negro de laboratorio y Fabricación sus visores 3D. Nada de frameworks: si el navegador lo entiende, aquí se usa.",
+      "dam.inf.det3.titulo":"La web habla tu idioma","dam.inf.det3.texto":"Todo el texto está en un diccionario ES/EN dentro de script.js: seis páginas, más de doscientas claves, persistidas en localStorage. Los bloques que viven de APIs —repositorios, artículos y juegos— se vuelven a soltar solos cuando cambias de idioma, gracias a un observador sobre el atributo lang.",
+      "dam.inf.det4.titulo":"El sonido es parte del diseño","dam.inf.det4.texto":"El Simon usa los WAV originales del juego y su secuencia de tiempos está medida en frames del sketch original y traducida a milisegundos. El juego Teclas, en cambio, sintetiza sus notas con WebAudio: un metrónomo que no para nunca, un piano con foco de escenario y notas que cruzan el pentagrama al ritmo de los pulsos.",
+      "dam.inf.det5.titulo":"Sin frameworks, sin excusas","dam.inf.det5.texto":"Cero dependencias de npm, cero pasos de compilación: HTML, CSS y JavaScript planos que se abren con doble clic. Las únicas piezas de terceros son locales y embebidas a mano —el visor 3D de Fabricación— para que la web funcione también sin red.",
+      "dam.inf.det6.titulo":"Cómo lo compruebo","dam.inf.det6.texto":"Antes de cada publicación: volcado del DOM con Chrome headless, capturas de cada sección en escritorio y móvil, pruebas de humo de las APIs y del sonido, y una lectura de accesibilidad —foco visible, contrastes y respeto de prefers-reduced-motion. Cuando algo falla, se corrige y se vuelve a desplegar.",
+      "dam.form.titulo":"Formación",
+      "dam.form.item1.titulo":"Desarrollo de Aplicaciones Multiplataforma",
+      "dam.form.item1.texto":"El ciclo que une lógica y oficio: programación en Java y Kotlin, bases de datos relacionales, acceso a datos, interfaces de usuario, procesos y entornos de desarrollo. La base de todo lo que hay en esta página.",
+      "dam.form.item1.centro":"IES Doctor Luis Simarro · Xàtiva (Valencia)",
+      "dam.form.item2.titulo":"Diseño en Fabricación Mecánica",
+      "dam.form.item2.texto":"Antes del código, el oficio de la pieza: dibujo técnico, CAD/CAM y tolerancias. De ahí me traje el método: medir dos veces, dibujar una.",
+      "dam.form.item2.centro":"CP San Jaime Apóstol · Moncada (Valencia)",
+      "dam.tools.titulo":"Herramientas",
+      "dam.tools.sub":"El entorno diario del DAM: del editor de texto al control de versiones, pasando por el servidor local y la herramienta de diseño.",
+      "dam.exp.titulo":"Proyectos en curso",
+      "dam.exp.sub":"Lo que está en la mesa ahora mismo: los repositorios en vivo desde la API de GitHub y el proceso paso a paso que sostiene esta web.",
+      "dam.api.nav":"API en vivo",
+      "dam.api.titulo":"API y datos en vivo",
+      "dam.api.sub":"Artículos de la comunidad de desarrollo en tiempo real, servidos por la API pública y gratuita de Dev.to: sin claves, sin caché y sin intermediarios.",
+      "dam.api.devto.titulo":"Qué está leyendo la comunidad","dam.api.devto.sub":"Una selección de artículos técnicos recién publicados, con su autor y sus reacciones, pedida directamente a la API de Dev.to.","dam.api.devto.btn":"Explorar Dev.to","dam.api.devto.carga":"Cargando artículos…","dam.api.devto.error":"No se pudieron cargar los artículos. Inténtalo de nuevo.","dam.api.devto.vacio":"La API de Dev.to no ha devuelto artículos. Inténtalo de nuevo.",
+      "dam.api.gh.titulo":"GitHub",
+      "dam.api.gh.sub":"Datos en vivo de la API pública de",
+      "dam.api.gh.carga":"Cargando repositorios…",
+      "dam.api.gh.error":"No se pudieron cargar los repositorios. Inténtalo de nuevo.",
+      "dam.api.gh.vacio":"Aún no hay repositorios públicos.",
+      "dam.api.gh.btn":"Ver perfil",
+      "dam.comp.titulo":"Competencias",
+      "dam.comp.b1.titulo":"Programación","dam.comp.b1.texto":"Java, Kotlin y JavaScript: de la lógica del algoritmo a la interfaz que responde.",
+      "dam.comp.b2.titulo":"Desarrollo web","dam.comp.b2.texto":"HTML y CSS a mano, sin frameworks: rápido, accesible y mantenible.",
+      "dam.comp.b3.titulo":"Bases de datos","dam.comp.b3.texto":"SQLite y MySQL: modelado, consultas SQL y acceso a datos desde la app.",
+      "dam.comp.b4.titulo":"Control de versiones","dam.comp.b4.texto":"Git y GitHub: historial limpio, ramas por tema y copias en la nube.",
+      "dam.comp.b5.titulo":"UI/UX","dam.comp.b5.texto":"Figma: prototipos, componentes y guías de estilo antes de escribir código.",
+      "dam.comp.b6.titulo":"IA aplicada","dam.comp.b6.texto":"Prompt engineering y asistentes de IA como parte del flujo de trabajo diario.",
+      "dam.ref.titulo":"Referentes",
+      "dam.ref.sub":"Cuatro nombres que resumen dos formas de entender la tecnología: construirla y explicarla.",
+      "dam.ref.r1.texto":"El motor como oficio: exprimir cada ciclo y publicar el código cuando sirve a todos.",
+      "dam.ref.r2.texto":"Narrativa y sistemas: contar una historia jugable sin renunciar al diseño.",
+      "dam.ref.r3.texto":"Hacerlo a mano: entender cada capa del hardware y construirlo con las propias manos.",
+      "dam.ref.r4.texto":"Divulgar con rigor: explicar la tecnología sin humo y con ejemplos que se pueden tocar.",
       "d.sobre.titulo":"Sobre mí",
       "d.escena.titulo":"Diseño gráfico: retícula, color y oficio",
       "d.escena.texto":"Siempre he querido crear: contar historias con imágenes, tipografía y orden. Me formé en Diseño y Producción Editorial (CIPFP Ciudad del Aprendiz) y en Fotografía Artística (EASD), aprendiendo composición y luz. Trabajo con retículas claras, pesos equilibrados y paletas complementarias, buscando un diseño sencillo, elegante y con intención, pensado para que cada pieza se lea y dure.",
@@ -283,9 +355,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "d.exp.wid.inter.titulo":"Catálogo interactivo · Weidner Ibérica","d.exp.wid.inter.texto":"Catálogo publicado con <strong>Adobe Publish Online</strong>: navegable, con interactividad y enlaces internos. La versión digital del catálogo de producto, pensada para consultarse desde cualquier dispositivo.","d.exp.wid.inter.btn":"Abrir catálogo interactivo",
       "d.exp.wid.prod.titulo":"Catálogo de producto · Weidner México","d.exp.wid.prod.texto":"Catálogo de producto en formato <strong>flipbook</strong> (Flipsnack). Maquetación editorial del catálogo completo: fichas técnicas, familias de producto y una navegación pensada para venta.","d.exp.wid.prod.btn":"Abrir catálogo de producto",
       "d.exp.wid.verdes.titulo":"Las Soluciones Verdes · Weidner Ibérica y Cmplastik","d.exp.wid.verdes.texto":"Presentación de producto sostenible en formato <strong>flipbook</strong> (Flipsnack): economía circular, materiales reciclados y soluciones verdes para el sector. Diseño al servicio de un mensaje medioambiental.","d.exp.wid.verdes.btn":"Abrir presentación",
-      "d.exp.wid.logic.titulo":"Presentación LogicPalet","d.exp.wid.logic.texto":"Presentación de producto del <strong>palé modular LogicPalet</strong>, premiado como mejor invención española. Maquetación técnica bilingüe: características, ventajas logísticas, montaje en tres pasos y fichas de producto.","d.exp.wid.logic.btn":"Ver presentación (PDF)",
-      "d.exp.wid.dulce.titulo":"Presentación Dulce de Leche","d.exp.wid.dulce.texto":"Presentación de <strong>soluciones sostenibles para el sector alimentario</strong> (bandejas, pelotas de pádel y tenis, cepillos). Maquetación editorial que traduce un mensaje de economía circular —reciclar, reutilizar, recuperar— en piezas claras y visuales.","d.exp.wid.dulce.btn":"Ver presentación (PDF)",
-      "d.exp.wid.capr.titulo":"Presentación CAPR · columna autoblocante",      "d.exp.wid.capr.texto":"Presentación del sistema <strong>CAPR</strong> (columna autoblocante de paso reducido): innovación para el sector de automoción. Las <strong>fotografías</strong>, la <strong>maquetación</strong> y el <strong>diseño de la presentación</strong> están realizados por mí. Secuencia de montaje, códigos de color (último gatillo en rojo = carga completa) y fichas de producto.","d.exp.wid.capr.btn":"Ver presentación (PDF)",
       "d.comp.titulo":"Competencias",
       "d.comp.b1.titulo":"Diseño editorial","d.comp.b1.texto":"Retículas, folletos y catálogos: ordenar mucha información sin ruido. Jerarquía, ritmo y aire para que el lector encuentre lo importante sin esfuerzo.",
       "d.comp.b2.titulo":"Identidad corporativa","d.comp.b2.texto":"Marcas y manuales: un sistema que se aplica igual en papel y en pantalla. Del logotipo a la señalética, todo bajo las mismas reglas.",
@@ -334,10 +403,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "v.ref.titulo":"Referentes","v.ref.sub":"Ocho nombres que explican de dónde viene mi manera de montar y de componer. De ellos heredo el criterio, no la copia.","v.ref.cine":"Referentes cinematográficos","v.ref.music":"Referentes musicales",
       "v.ref.r1.texto":"El suspense como montaje: saber qué va a pasar y hacerlo esperar.","v.ref.r2.texto":"Claridad narrativa: la historia por delante del efecto.","v.ref.r3.texto":"Cámara en mano y energía: el plano como golpe de ritmo.","v.ref.r4.texto":"Montaje al servicio de la música: cortar siguiendo el compás.",
       "v.ref.r5.texto":"Minimalismo melódico: repetir hasta que la idea respire.","v.ref.r6.texto":"Arquitectura sonora: el patrón como estructura de la pieza.","v.ref.r7.texto":"Piano que acompaña imagen: emoción sin gritar.","v.ref.r8.texto":"Motivo que vuelve: la melodía como hilo de la narración.",
-      "v.lastfm.titulo":"Lo que escucho","v.lastfm.sub":"Mi música se escucha en la sección de música; aquí, lo que está sonando en mis cascos gracias a la API de Last.fm.","v.lastfm.tit":"Artistas que más escucho","v.lastfm.nota":"Datos en vivo de mi perfil de Last.fm.","v.lastfm.btn":"Escuchar mi música","v.lastfm.carga":"Cargando artistas…","v.lastfm.fuente":"Datos de la API pública de","v.lastfm.vacio":"Configura LASTFM_KEY y LASTFM_USER en script.js para ver mis artistas de Last.fm.","v.lastfm.sin_datos":"Mi perfil de Last.fm aún no tiene artistas registrados. ¡Escucha música y vuelve!"
+      "v.spotify.titulo":"Lo que escucho","v.spotify.sub":"Conecta tu cuenta de Spotify y descubrirás aquí tus artistas más escuchados del último mes, directamente desde la API oficial de Spotify.","v.spotify.tit":"Tus artistas más escuchados","v.spotify.nota":"Datos de tu cuenta de Spotify (últimos 30 días).","v.spotify.btn":"Conectar Spotify","v.spotify.carga":"Conectando con Spotify…","v.spotify.fuente":"Datos de la API oficial de","v.spotify.vacio":"Para ver tus artistas hace falta configurar el Client ID de tu app en script.js y autorizar el acceso (solo lectura).","v.spotify.sin_datos":"Todavía no hay datos suficientes en tu cuenta: escucha algo y vuelve.","v.spotify.salir":"Desconectar","v.spotify.expira":"Tu sesión ha caducado. Conéctate de nuevo.",
     },
-    en:{ "m.inicio":"Home","m.foto":"Photo","m.diseno":"Design","m.video":"Video & music","m.musica":"Music","m.dam":"DAM","m.mec":"Machining","m.contacto":"Contact",
-      "sec.sobre":"About me","sec.obra":"Work","sec.form":"Education","sec.tools":"Tools","sec.exp":"Experience","h1.foto":"Photography — Salvador Llácer Ivars","h1.diseno":"Graphic design — Salvador Llácer Ivars","h1.video":"Video & music — Salvador Llácer Ivars","h1.fab":"Mechanical manufacturing — Salvador Llácer Ivars","sec.comp":"Skills","sec.ref":"References","sec.lastfm":"What I listen to","sec.inspo":"Living inspiration","sec.lab":"Typography &amp; motion",
+    en:{ "m.inicio":"Home","m.foto":"Photo","m.diseno":"Design","m.video":"Video & music","m.musica":"Music","m.dam":"Programming","m.mec":"Machining","m.contacto":"Contact",
+      "sec.sobre":"About me","sec.obra":"Work","sec.form":"Education","sec.tools":"Tools","sec.exp":"Experience","h1.foto":"Photography — Salvador Llácer Ivars","h1.diseno":"Graphic design — Salvador Llácer Ivars","h1.video":"Video & music — Salvador Llácer Ivars","h1.fab":"Mechanical manufacturing — Salvador Llácer Ivars","h1.dam":"Programming — Salvador Llácer Ivars","sec.comp":"Skills","sec.ref":"References","sec.lastfm":"What I listen to","sec.inspo":"Living inspiration","sec.lab":"Typography &amp; motion",
       "sub.paisaje":"Landscape","sub.robados":"Candid","sub.personal":"Personal vision","sub.bodegon":"Still life","sub.moda":"Fashion","sub.retrato":"Portrait","sub.etsid":"ETSID · UPV","sub.casos":"Project cases","sub.bodas":"Weddings & events",
       "sub.posters":"Posters","sub.folletos":"Brochures","sub.flyers":"Flyers","sub.identidad":"Identity","sub.otros":"Other products","sub.portfolio":"Portfolio","sub.encantado":"Enchanted universe","sub.sef":"SEF · UV Sport","sub.weidner":"Weidner",
       "sub.video":"Video","sub.musica":"Music","sub.interpreta":"Interpreta Natura","sub.missr":"MissR · 3R","sub.eco":"ECO","sub.arte":"ARTE","sub.ods":"SDGs","sub.reviu":"Reviu lo Rural","sub.otrosvideos":"Other projects",
@@ -349,14 +418,15 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.desarrolla":"Build","bn.desarrolla.pop":"From sketch to browser with pure HTML, CSS and JavaScript: fast, accessible and with no frameworks in between.",
       "bn.instr":"Click and drag to the left","bn.instr.sub":"or navigate with the arrows ← →",
       "bn.ver":"VIEW PORTFOLIO","bn.rec":"REC · 01 — PHOTOGRAPHY",
-      "carga.titulo":"PORTFOLIO","carga.bienvenida":"Welcome","carga.entrar":"ENTER","carga.tema.foto":"Photography","carga.tema.diseno":"Design","carga.tema.video":"Video &amp; music","carga.tema.fab":"Mechanical manufacturing",
+      "carga.titulo":"PORTFOLIO","carga.bienvenida":"Welcome","carga.entrar":"ENTER","carga.tema.foto":"Photography","carga.tema.diseno":"Design","carga.tema.video":"Video &amp; music","carga.tema.fab":"Mechanical manufacturing","carga.tema.dam":"Programming",
       "bn.diseno.etq":"02 — GRAPHIC DESIGN","bn.diseno.tit":"Ideas you can see","bn.diseno.desc":"Flyers, branding, editorial and iconography. Click the mosaic to discover the portfolio.",
-      "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in CATIA V5, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW PORTFOLIO","bn.fab.hint":"Mouse wheel: scroll up to reveal",
+      "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in CATIA V5, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW PORTFOLIO","bn.fab.hint":"Mouse wheel: scroll up to reveal","bn.dam.etq":"05 — PROGRAMMING","bn.dam.tit":"Code you can touch","bn.dam.desc":"Hand-written HTML, CSS and JavaScript, live APIs and a green terminal interface. Come in and follow the code trail.",
+      "bn.dam.etq":"05 — PROGRAMMING","bn.dam.tit":"Code you can touch","bn.dam.desc":"Simon in Processing and on Arduino, a smartwatch app in Figma and this very site built with AI: live APIs, a chatbot and browser-free verification.",
       "bot.titulo":"PORTFOLIO Assistant","bot.sub":"Ask me about my skills or where to see them","bot.ph":"Type your question…","bot.enviar":"Send",
-      "bot.q1":"Do you use Photoshop?","bot.q2":"See photography","bot.q3":"See design","bot.q4":"Who is Salvador?","bot.q5":"How can I contact you?",
+      "bot.q1":"Do you use Photoshop?","bot.q2":"See photography","bot.q3":"See design","bot.q4":"Who is Salvador?","bot.q5":"How can I contact you?","bot.q6":"See programming",
       "consejo.titulo":"A daily piece of advice","consejo.otro":"Another one","consejo.carga":"Loading advice…","consejo.fuente":"Advice Slip API","consejo.error":"Could not load the advice. Try again.",
       "f.inspo.titulo":"Live inspiration","f.inspo.sub":"A random window into Unsplash via Picsum: landscape, portrait and still life to keep looking.","f.inspo.c1":"Landscape","f.inspo.c2":"Portrait","f.inspo.c3":"Still life","f.inspo.c4":"Architecture","f.inspo.c5":"Black and white","f.inspo.carga":"Loading images…","f.inspo.error":"Could not load the images. Try again.","f.inspo.credito":"Photos from the","f.inspo.otra":"Another batch",
-      "d.lab.titulo":"Typography &amp; motion","d.lab.sub":"Live specimens from Google Fonts and animated iconography with Lordicon: two free libraries I use in prototypes.","d.lab.fuentes":"Typefaces","d.lab.texto":"Sample text","d.lab.fuente":"Fonts served by the public API of","d.lab.iconos":"Animated icons","d.lab.iconos.nota":"Lottie animations by","d.lab.iconos.plan":"(free plan)","cargando":"Loading…",
+      "d.lab.titulo":"Typography &amp; motion","d.lab.sub":"Live specimens from Google Fonts: the public API I use to test typefaces before locking them into a design.","d.lab.fuentes":"Typefaces","d.lab.texto":"Sample text","d.lab.fuente":"Fonts served by the public API of","cargando":"Loading…",
       "sobre.p1":"I am <strong>Salvador Llácer Ivars</strong>, born in Valencia. Higher Technician in Image and Graphic Arts, in Editorial Design and Production, in Mechanical Manufacturing Design and, currently, in Multiplatform Application Development. Drawing, music and the idea of creating my own stories have driven me since I was a child; that curiosity has led me to always study something new and to cross disciplines that usually stay apart.",
       "sobre.p2":"My path unites image and design: artistic photography trained at the <strong>EASD de València</strong> (landscape, architecture, reportage, fashion, still life and portrait), interior photography commissions for the <strong>ETSID at the UPV</strong> and wedding photography; graphic and editorial design learned at the <strong>CIPFP Ciudad del Aprendizaje</strong> and applied at <strong>Weidner Ibérica</strong>, where I ran the company's image: catalogues —also interactive—, displays and totems for automotive fairs, identity and email signatures.",
       "sobre.p3":"On the technical side I spent over five years at Weidner Ibérica designing <em>stacking columns</em> for the automotive sector with <strong>CATIA V5</strong> and drafting, plus administrative tasks with the <strong>Geinprod</strong> ERP. Today I study the <strong>DAM</strong> higher degree, where I program, work with databases, Figma and artificial intelligence. Music production with <strong>GarageBand</strong> —soundtracks and podcasts for Interpreta Natura—, illustration and drawing complete the picture.",
@@ -397,7 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "f.exp.caso1.tag":"ETSID · UPV","f.exp.caso1.titulo":"Facility documentation","f.exp.caso1.problema":"The centre needed an updated image bank for web and reports, with no visual coherence between spaces.","f.exp.caso1.solucion":"Interior/exterior shot plan, ambient light control and uniform development series after series.","f.exp.caso1.resultado":"Institutional bank ready to publish, with a homogeneous colour language.","f.exp.caso1.stat1":"final images","f.exp.caso1.stat2":"week of work","f.exp.caso1.stat3":"series coherence",
       "f.exp.caso2.tag":"Weidner Ibérica and Weidner México","f.exp.caso2.titulo":"Industrial product catalogue","f.exp.caso2.problema":"Technical product with reflective materials and difficult finishes, for two companies, without loss of detail.","f.exp.caso2.solucion":"Studio with reflection control, directed lighting and coherent assembly for print.","f.exp.caso2.resultado":"Catalogue ready to lay out, with the same colour standard for both.","f.exp.caso2.stat1":"product references","f.exp.caso2.stat2":"companies","f.exp.caso2.stat3":"catalogues delivered",
       "f.exp.caso3.tag":"Social reportage","f.exp.caso3.titulo":"Weddings, baptisms and communions","f.exp.caso3.problema":"Covering a whole day without directing and without losing the true gesture amid protocol and tight timings.","f.exp.caso3.solucion":"Continuous coverage, coherent development and careful selection in the form of a narrative series.","f.exp.caso3.resultado":"Closed book with its own rhythm, ready to print or publish.","f.exp.caso3.stat1":"continuous coverage","f.exp.caso3.stat2":"images delivered","f.exp.caso3.stat3":"wedding books",
-      "f.exp.weidner.titulo":"Product catalogue · Weidner Ibérica and Weidner México","f.exp.weidner.texto":"<strong>Industrial product photography.</strong> Technical catalogue for <strong>Weidner Ibérica</strong> and <strong>Weidner México</strong>: product photography in studio and on-site environments, with reflection control on metal and plastic, directed lighting to highlight materials and finishes, and a coherent series assembly ready for editorial layout. A commission that joins the precision of <strong>advertising still life</strong> with <strong>technical product documentation</strong>: demonstrable skill and experience in product photography in the industrial field.","f.exp.weidner.btn":"View catalogue (PDF)",
+      "f.exp.weidner.titulo":"Weidner machinery catalogue 2025 · Weidner Ibérica","f.exp.weidner.texto":"English machinery catalogue published on Flipsnack. The design is mine and, above all, I took the photographs of the Weidner Ibérica facilities myself.","f.exp.weidner.btn":"View catalogue (Flipsnack)",
       "f.exp.weidner.head.titulo":"Weidner Ibérica · Weidner México","f.exp.weidner.head.desc":"Industrial product photography for Weidner Ibérica and Weidner México: studio and on-site, reflection control on metal and plastic and directed lighting, to deliver a coherent series ready for editorial layout.",
       "f.exp.bodas.titulo":"Weddings, baptisms and communions","f.exp.bodas.desc":"Commissioned social reportage, treated as a narrative series from start to finish. <strong>Before</strong>: meeting with the family, shot plan and schedule (protocol, timings, corners and details). <strong>During</strong>: continuous coverage without directing —the preparation, the ceremony, the greeting, the reception and the dance—, attentive to the true gesture and the objects that hold the story. <strong>After</strong>: coherent development, careful selection, album layout and delivery ready to print or publish. A closed book, with its own rhythm.",
       "f.comp.titulo":"Skills",
@@ -408,6 +478,76 @@ document.addEventListener("DOMContentLoaded", () => {
       "f.comp.b5.titulo":"Fashion","f.comp.b5.texto":"Image direction, gesture and studio light at the service of the garment.",
       "f.ref.titulo":"References","f.ref.sub":"Three masters who teach how to look. From them I inherit the criterion, not the copy.",
       "f.ref.r1.texto":"Black and white as a score: measured light, texture and silence.","f.ref.r2.texto":"The decisive moment: wait, frame and don't over-shoot.","f.ref.r3.texto":"Portrait, clean background and elegant tension: the gaze, not the artifice.",
+      "dam.sobre.titulo":"About me",
+      "dam.escena.titulo":"Programming: code with a name",
+      "dam.escena.texto":"I study the <strong>DAM</strong> higher degree at <strong>IES Doctor Luis Simarro</strong> in Xàtiva, where I program in <strong>Java</strong>, <strong>Python</strong> and <strong>JavaScript</strong>, work with <strong>SQLite</strong> and use <strong>Git</strong> so nothing gets lost. Everything here is written by hand, with no frameworks or libraries: plain HTML, CSS and JavaScript. The same curiosity as always —understanding how every piece works— now applied to the screen: interfaces, APIs and databases that actually respond.",
+      "dam.obra.titulo":"Work",
+      "dam.obra.sub":"Three projects telling the same story from three angles: the <strong>Simon</strong> video game I wrote in Processing for the automation module of my Mechanical Manufacturing degree, <strong>that same game ported to an Arduino board</strong> with its buttons and LEDs, and a <strong>smartwatch</strong> interface for the TuCafé app designed in Figma.",
+      "dam.obra.simon.titulo":"Simon · a video game written in Processing",
+      "dam.obra.simon.desc":"In the Automatism course of my Mechanical Manufacturing Design degree we learned to program with <strong>Processing</strong>, the graphics language on top of Java, and the assignment was to recreate the eighties Simon: four colours, growing memory and progressive difficulty. This is that same version brought to the browser, rebuilt by hand in HTML, CSS and JavaScript with the original WAV tones, up to 30 rounds and the game’s original menu. Watch, remember and repeat.",
+      "dam.obra.arduino.titulo":"Arduino · the same Simon, on the board",
+      "dam.obra.arduino.desc":"The second part of the project: the Simon code compiled with the <strong>Arduino IDE</strong> on a real board. The board plays the sequence with its LEDs and buzzer, the player answers with four push buttons, and every correct round chains on without a limit until you miss. From the wiring diagram to C++, the same game running with no browser and no screen.",
+      "dam.obra.figma.titulo":"TuCafé · a smartwatch interface",
+      "dam.obra.figma.desc":"TuCafé is the coffee app for smartwatch that I designed entirely in <strong>Figma</strong>: I defined the flow of the five screens —welcome, menu, order, detail and confirmation— with reusable components, hierarchy tuned for the wrist and a dark mode that saves battery on OLED displays. The full canvas with the viewer’s zoom controls is below.",
+      "dam.teclas.titulo":"Teclas · rhythm and piano",
+      "dam.teclas.desc":"A rhythm game built by hand: a piano on a stage-lit background, a metronome that never stops and a staff where notes cross by that you must hit in time. Every round increases the number of notes and the tempo; press the wrong key or run out of time and the game ends. Two levels —easy and hard— decide how many piano keys wake up. Pure HTML, CSS and WebAudio.",
+      "dam.teclas.ctl.jugar":"Play","dam.teclas.ctl.facil":"Easy","dam.teclas.ctl.dificil":"Hard",
+      "dam.teclas.ctl.ronda":"Round","dam.teclas.ctl.mira":"Watch the sequence…","dam.teclas.ctl.toca":"Your turn!",
+      "dam.teclas.ctl.win":"Nice! Next round…","dam.teclas.ctl.ayuda":"Keyboard: A S D F G · W E for the black keys · or tap the keys",
+      "dam.inf.titulo":"From sketch to the web",
+      "dam.inf.sub":"The project behind this page: building a personal portfolio with advanced artificial intelligence tools —live APIs, a chatbot, 3D viewers, automatic translation and browser-free verification — with no frameworks or build tools. Four phases, twenty-five steps and a review loop that never quite closes.",
+      "dam.inf.f1.titulo":"Ideation and design","dam.inf.f1.desc":"Before the editor: the notebook, the site map and the prototype that acts as a visual contract.",
+      "dam.inf.f2.titulo":"Structure and style","dam.inf.f2.desc":"The semantic skeleton and the visual system: HTML with order, CSS with variables and five identities.",
+      "dam.inf.f3.titulo":"Logic and data","dam.inf.f3.desc":"The living part: carousel, themes, i18n, APIs, sound and games with their own state.",
+      "dam.inf.f4.titulo":"Publish and improve","dam.inf.f4.desc":"Git, headless review and deploying; then, come back and polish every pixel.",
+      "dam.inf.s1":"Paper sketch of the cover","dam.inf.s2":"Site map: five sub-sites","dam.inf.s3":"TuCafé wireframes and prototype in Figma",
+      "dam.inf.s4":"Palette and variables per theme","dam.inf.s5":"Typography and responsive scale","dam.inf.s6":"Visitor user stories",
+      "dam.inf.s7":"Semantic HTML page by page","dam.inf.s8":"Hand-written CSS with variables and layers","dam.inf.s9":"Interactive menu with per-discipline dropdowns",
+      "dam.inf.s10":"Identity per slide: diamond, mosaic and light","dam.inf.s11":"Responsive from 320 px to desktop","dam.inf.s12":"Accessibility: focus, aria and reduced-motion",
+      "dam.inf.s13":"Index carousel: drag, wheel and keyboard","dam.inf.s14":"Theme switch on hovering each CTA","dam.inf.s15":"Loader with the project’s five faces",
+      "dam.inf.s16":"Persistent ES/EN i18n across six pages","dam.inf.s17":"Live APIs: GitHub and Dev.to","dam.inf.s18":"Simon: faithful port with WAV and sketch timing",
+      "dam.inf.s19":"Teclas: rhythm game with WebAudio","dam.inf.s20":"Embedded 3D viewer in Manufacturing","dam.inf.s21":"FAV, weather, copy-email and section guide",
+      "dam.inf.s22":"Git history with one topic per commit","dam.inf.s23":"Testing without a browser: Chrome headless","dam.inf.s24":"Weight audit: webp and lazy loading",
+      "dam.inf.s25":"GitHub Pages and final review","dam.inf.loopTit":"Review loop","dam.inf.loop":"Every lap goes back to the sketch, gets fixed and published again: the project is never finished.",
+      "dam.inf.det1.titulo":"The index is the cover","dam.inf.det1.texto":"The home is not a list of links: it is a carousel of six slides —intro, photo, design, video, manufacturing and programming— moved by drag, mouse wheel and arrows. Every slide has its CTA, and hovering it retints the whole site: colours, favicon and loading screen adopt the discipline before you even click.",
+      "dam.inf.det2.titulo":"Five worlds, one CSS","dam.inf.det2.texto":"A single estilos.css with :root variables holds the five sub-sites. The data-tema attribute on <html> picks the palette; Programming adds its diamond with background video and click reveal, Photo its darkroom black & white and Manufacturing its 3D viewers. No frameworks: if the browser understands it, it is used here.",
+      "dam.inf.det3.titulo":"The site speaks your language","dam.inf.det3.texto":"All copy lives in an ES/EN dictionary inside script.js: six pages, over two hundred keys, persisted in localStorage. Blocks fed by APIs —repositories, articles and games— re-render themselves when you switch language, thanks to an observer on the lang attribute.",
+      "dam.inf.det4.titulo":"Sound is part of the design","dam.inf.det4.texto":"Simon uses the game’s original WAV files and its timing chain is measured in frames of the original sketch and translated to milliseconds. The Teclas game, in turn, synthesises its notes with WebAudio: a metronome that never stops, a stage-lit piano and notes crossing the staff to the beat.",
+      "dam.inf.det5.titulo":"No frameworks, no excuses","dam.inf.det5.texto":"Zero npm dependencies, zero build steps: plain HTML, CSS and JavaScript that open with a double click. The only third-party pieces are local and embedded by hand —the Manufacturing 3D viewer— so the site also works offline.",
+      "dam.inf.det6.titulo":"How I verify it","dam.inf.det6.texto":"Before every publish: DOM dumps with Chrome headless, screenshots of every section on desktop and mobile, smoke tests of the APIs and the sound, and an accessibility pass —visible focus, contrast and prefers-reduced-motion. When something breaks, it gets fixed and redeployed.",
+      "dam.form.item1.titulo":"Multiplatform Application Development",
+      "dam.form.item1.texto":"The course that ties logic and craft together: programming in Java and Kotlin, relational databases, data access, user interfaces, processes and development environments. The base of everything on this page.",
+      "dam.form.item1.centro":"IES Doctor Luis Simarro · Xàtiva (Valencia)",
+      "dam.form.item2.titulo":"Mechanical Manufacturing Design",
+      "dam.form.item2.texto":"Before code, the craft of the part: technical drawing, CAD/CAM and tolerances. I took the method from there: measure twice, draw once.",
+      "dam.form.item2.centro":"CP San Jaime Apóstol · Moncada (Valencia)",
+      "dam.tools.titulo":"Tools",
+      "dam.tools.sub":"The daily DAM environment: from the text editor to version control, through the local server and the design tool.",
+      "dam.exp.titulo":"Projects in progress",
+      "dam.exp.sub":"What is on the desk right now: the live repositories from the GitHub API, the Teclas game and the step-by-step process behind this site.",
+      "dam.api.nav":"Live APIs",
+      "dam.api.titulo":"Live APIs and data",
+      "dam.api.sub":"Development community articles in real time, served by the free and public Dev.to API: no keys, no cache, no middlemen.",
+      "dam.api.devto.titulo":"What the community is reading","dam.api.devto.sub":"A selection of freshly published technical articles with their author and reactions, requested straight from the Dev.to API.","dam.api.devto.btn":"Explore Dev.to","dam.api.devto.carga":"Loading articles…","dam.api.devto.error":"Could not load the articles. Try again.","dam.api.devto.vacio":"The Dev.to API returned no articles. Try again.",
+      "dam.api.gh.titulo":"GitHub",
+      "dam.api.gh.sub":"Live data from the public API of",
+      "dam.api.gh.carga":"Loading repositories…",
+      "dam.api.gh.error":"Could not load the repositories. Try again.",
+      "dam.api.gh.vacio":"There are no public repositories yet.",
+      "dam.api.gh.btn":"View profile",
+      "dam.comp.titulo":"Skills",
+      "dam.comp.b1.titulo":"Programming","dam.comp.b1.texto":"Java, Kotlin and JavaScript: from algorithm logic to the interface that responds.",
+      "dam.comp.b2.titulo":"Web development","dam.comp.b2.texto":"Hand-written HTML and CSS, no frameworks: fast, accessible and maintainable.",
+      "dam.comp.b3.titulo":"Databases","dam.comp.b3.texto":"SQLite and MySQL: modelling, SQL queries and data access from the app.",
+      "dam.comp.b4.titulo":"Version control","dam.comp.b4.texto":"Git and GitHub: clean history, branches per topic and backups in the cloud.",
+      "dam.comp.b5.titulo":"UI/UX","dam.comp.b5.texto":"Figma: prototypes, components and style guides before writing code.",
+      "dam.comp.b6.titulo":"Applied AI","dam.comp.b6.texto":"Prompt engineering and AI assistants as part of the daily workflow.",
+      "dam.ref.titulo":"References",
+      "dam.ref.sub":"Four names that sum up two ways of understanding technology: building it and explaining it.",
+      "dam.ref.r1.texto":"Engines as a craft: squeeze every cycle and publish the code when it helps everyone.",
+      "dam.ref.r2.texto":"Narrative and systems: tell a playable story without giving up design.",
+      "dam.ref.r3.texto":"Hand-built: understand every hardware layer and build it yourself.",
+      "dam.ref.r4.texto":"Rigorous outreach: explain technology without hype and with examples you can touch.",
       "d.sobre.titulo":"About me",
       "d.escena.titulo":"Graphic design: grid, colour and craft",
       "d.escena.texto":"I love telling stories with images, typography and order. Trained in Editorial Design & Production (CIPFP Ciudad del Aprendiz) and Artistic Photography (EASD), I work with clear grids, balanced weights and complementary palettes to create designs that are simple, elegant and purposeful — designed to last.",
@@ -471,9 +611,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "d.exp.wid.inter.titulo":"Interactive catalogue · Weidner Ibérica","d.exp.wid.inter.texto":"Catalogue published with <strong>Adobe Publish Online</strong>: browsable, with interactivity and internal links. The digital version of the product catalogue, designed to be viewed on any device.","d.exp.wid.inter.btn":"Open interactive catalogue",
       "d.exp.wid.prod.titulo":"Product catalogue · Weidner México","d.exp.wid.prod.texto":"Product catalogue in <strong>flipbook</strong> format (Flipsnack). Editorial layout of the full catalogue: technical sheets, product families and a navigation designed for sales.","d.exp.wid.prod.btn":"Open product catalogue",
       "d.exp.wid.verdes.titulo":"Las Soluciones Verdes · Weidner Ibérica and Cmplastik","d.exp.wid.verdes.texto":"Sustainable product presentation in <strong>flipbook</strong> format (Flipsnack): circular economy, recycled materials and green solutions for the sector. Design at the service of an environmental message.","d.exp.wid.verdes.btn":"Open presentation",
-      "d.exp.wid.logic.titulo":"LogicPalet presentation","d.exp.wid.logic.texto":"Product presentation of the <strong>modular LogicPalet pallet</strong>, awarded best Spanish invention. Bilingual technical layout: features, logistics advantages, three-step assembly and product sheets.","d.exp.wid.logic.btn":"View presentation (PDF)",
-      "d.exp.wid.dulce.titulo":"Dulce de Leche presentation","d.exp.wid.dulce.texto":"Presentation of <strong>sustainable solutions for the food sector</strong> (trays, padel and tennis balls, brushes). Editorial layout that translates a circular-economy message —recycle, reuse, recover— into clear, visual pieces.","d.exp.wid.dulce.btn":"View presentation (PDF)",
-      "d.exp.wid.capr.titulo":"CAPR presentation · self-locking column",      "d.exp.wid.capr.texto":"Presentation of the <strong>CAPR</strong> system (self-locking column with reduced pitch): innovation for the automotive sector. <strong>Photography, layout and design of the presentation by me</strong>. Assembly sequence, colour codes (last trigger in red = full load) and product sheets.","d.exp.wid.capr.btn":"View presentation (PDF)",
       "d.comp.titulo":"Skills",
       "d.comp.b1.titulo":"Editorial design","d.comp.b1.texto":"Grids, brochures and catalogues: ordering a lot of information without noise. Hierarchy, rhythm and air so the reader finds what matters effortlessly.",
       "d.comp.b2.titulo":"Corporate identity","d.comp.b2.texto":"Brands and manuals: a system that applies the same on paper and on screen. From the logo to the signage, all under the same rules.",
@@ -499,16 +636,17 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.obra.cab.video.desc":"Walkthrough of the winch assembly and disassembly sequence, taken from the 3D model. The drum turns, the gears mesh and the pawl locks: the animation checks what the drawing depicts.",
       "fab.obra.cab.stp.titulo":"Interactive 3D models",
       "fab.obra.cab.stp.desc":"Four assemblies exported to STEP. Rotate them, zoom in and read them in three dimensions before opening the drawing: the viewer loads in the browser, nothing to install.",
-      "fab.obra.cab.pdf.titulo":"Winch drawings",
-      "fab.obra.cab.pdf.desc":"Twenty PDF drawings with previous/next navigation. Each drawing opens on its page, with its nomenclature and its views.",
-      "fab.obra.matriz.titulo":"Sheet-metal tooling · Project 1 · Die",
-      "fab.obra.matriz.desc":"Sheet-metal tooling project: design of the cutting and drawing die for a stamped part. Development of the die, operation-sequence analysis, fit clearances, guides and ejectors. The source file is an <strong>Autodesk Inventor</strong> assembly (.ipt/.iam) with no native web viewer; the work is documented here with its data.",
-      "fab.obra.matriz.files.titulo":"Project files",
-      "fab.obra.matriz.files.desc":"Project assemblies and parts, in Inventor's native format.",
+      "fab.obra.matriz.titulo":"Simple die project",
+      "fab.obra.matriz.desc":"3D replica of a physical simple die: I disassembled it and measured every part, sketched each component freehand, designed it in 3D and produced its drawings. Built with <strong>Autodesk Inventor</strong>.",
+      "fab.obra.matriz.paso1":"The original die",
+      "fab.obra.matriz.paso2":"Disassembly and measurement",
+      "fab.obra.matriz.paso3":"Freehand sketches",
+      "fab.obra.matriz.paso4":"3D design",
+      "fab.obra.matriz.paso5":"Drawings",
+      "fab.obra.cab.story.titulo":"Storyboard · clamp",
+      "fab.obra.cab.story.desc":"3D design project of a clamp, told as a storyboard: the parts take shape and the assembly ends exploded in the air.",
       "fab.obra.chapa.titulo":"Sheet-metal nesting",
-      "fab.obra.chapa.desc":"Sheet-metal nesting study for flat-part cutting: layout of the blanks over the coil, scrap minimisation and grain-direction control. Carried out in <strong>AutoCAD</strong> on .dwg files.",
-      "fab.obra.chapa.files.titulo":".dwg drawings",
-      "fab.obra.chapa.files.desc":"Development and nesting drafting in AutoCAD.",
+      "fab.obra.chapa.desc":"Sheet-metal nesting study for flat-part cutting: layout of the blanks over the coil, scrap minimisation and grain-direction control. At the end of the study, the 3D design of the die that produces the part is created.",
       "fab.form.titulo":"Education",
       "fab.form.item1.titulo":"Mechanical Manufacturing Design","fab.form.item1.texto":"The degree that turned me into a part thinker: technical drawing, machine-element calculation, tolerances, geometry and representation, CAD/CAM and manufacturing organisation. The foundation of everything on this page.","fab.form.item1.centro":"CP San Jaime Apóstol · Moncada (Valencia)",
       "fab.tools.titulo":"Tools","fab.tools.sub":"The design and management software I use daily on the shop floor, from the parametric part to the shop-floor drawing and materials control.","fab.tools.experto":"Expert",
@@ -516,12 +654,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "fab.exp.sub":"<strong>Over five years at the Weidner Ibérica plant</strong> in Carlet (Valencia), as industrial draughtsman and mechanical designer. From the parametric model in <strong>CATIA V5</strong> to the sealed fabrication drawing, with the <strong>Geinprod</strong> ERP for materials management and the bill of materials. A craft of precision, tolerances and deadlines.",
       "fab.exp.wiberica.titulo":"Weidner Ibérica","fab.exp.wiberica.texto":"Spanish manufacturer of plastic products and stacking systems for the logistics and automotive industry, based in Carlet (Valencia). Design of stacking columns and product technical documentation.",
       "fab.exp.wmexico.titulo":"Weidner México","fab.exp.wmexico.texto":"Mexican subsidiary of the Weidner Group. Joint work on product definition and technical documentation for the American market.",
-      "fab.exp.stp.titulo":"3D assemblies","fab.exp.stp.desc":"Stacking tower for the automotive industry with an intelligent cam system. I designed it entirely myself after a long process of analysing stresses, materials and functionality; I built several prototypes and the final versions are the 3D models below. The product was manufactured and sold commercially at the Weidner Ibérica plant in Carlet (Valencia).",
       "fab.exp.cadenas.titulo":"Column with chains","fab.exp.cadenas.desc":"My own R&D project for the company, in the spirit of the SLI column: a stacking column with a chain system and ergonomic levers integrated into the body, so the operator tensions or releases the load without bending down. The whole assembly is modelled and documented in CATIA V5, with a full 3D viewer.",
       "fab.exp.casos.titulo":"Project cases · problem → solution → result","fab.exp.casos.desc":"Three real engineering problems, told by what they solved.","fab.exp.casos.problema":"Problem","fab.exp.casos.solucion":"Solution","fab.exp.casos.resultado":"Result",
-      "fab.exp.caso1.tag":"Weidner Ibérica · Automotive","fab.exp.caso1.titulo":"Stacking column with no manual unlocking","fab.exp.caso1.problema":"Competitor stacking columns required the operator to remove the part from the rack by hand to release the lock on every cycle: finger-entrapment risk, forced postures and lost seconds that piled up shift after shift on the automotive line.","fab.exp.caso1.solucion":"Design of a locking mechanism whose lever is triggered by the part's own weight as it is lifted off the rack: unloading it releases the catch by itself, leaving the column ready for the next stacking without the operator touching the mechanism.","fab.exp.caso1.resultado":"A faster, safer cycle: zero manual unlocking actions, less entrapment risk and a steadier assembly pace for the operator.","fab.exp.caso1.stat4":"faster cycle",
-      "fab.exp.caso2.tag":"Weidner Ibérica · Ergonomics","fab.exp.caso2.titulo":"Chain column with ergonomic levers","fab.exp.caso2.problema":"To tension or release the column's retention chains, the operator had to bend down to the floor on every adjustment: a forced, repetitive posture that strained the back and built up fatigue over the shift.","fab.exp.caso2.solucion":"Design of raised, short-stroke control levers integrated into the frame that let the chains be tensioned and released standing up and with one hand, with no need to bend down to floor level.","fab.exp.caso2.resultado":"Ergonomic work: the forced bending posture disappears, accumulated fatigue drops and chain adjustment becomes a comfortable step in the assembly cycle.","fab.exp.caso2.stat4":"less fatigue per shift",
-      "fab.exp.caso3.tag":"Product engineering","fab.exp.caso3.titulo":"Fabrication documentation and bill of materials","fab.exp.caso3.problema":"A new product had to go from the 3D model to the shop floor with clean drawings, a coherent bill of materials, a single nomenclature and clear tolerances: without that closed package, the shop stopped to ask and assembly slipped.","fab.exp.caso3.solucion":"Parametric modelling in CATIA V5, STEP export for exchange, a general-assembly drawing, an exploded view with bill of materials and detail drawings with tolerances and treatments defined, all under a single reference coding.","fab.exp.caso3.resultado":"A closed fabrication package: the shop receives drawing, detail and bill of materials with no questions and can start machining without back-and-forth with engineering.","fab.exp.caso3.stat4":"years in CATIA V5",
+      "fab.exp.caso1.tag":"Weidner Ibérica · Automotive","fab.exp.caso1.titulo":"Stacking column with no manual unlocking","fab.exp.caso1.problema":"Competitor stacking columns required the operator to remove the part from the rack by hand to release the lock on every cycle: finger-entrapment risk, forced postures and lost seconds that piled up shift after shift on the automotive line.","fab.exp.caso1.solucion":"Design of a locking mechanism whose lever is triggered by the part's own weight as it is lifted off the rack: unloading it releases the catch by itself, leaving the column ready for the next stacking without the operator touching the mechanism.","fab.exp.caso1.resultado":"A faster, safer cycle: zero manual unlocking actions, less entrapment risk and a steadier assembly pace for the operator.","fab.exp.caso1.stat1":"manual unlocking removed","fab.exp.caso1.stat2":"mechanism parts","fab.exp.caso1.stat3":"automotive","fab.exp.caso1.stat4":"faster cycle",
+      "fab.exp.caso2.tag":"Weidner Ibérica · Ergonomics","fab.exp.caso2.titulo":"Chain column with ergonomic levers","fab.exp.caso2.problema":"To tension or release the column's retention chains, the operator had to bend down to the floor on every adjustment: a forced, repetitive posture that strained the back and built up fatigue over the shift.","fab.exp.caso2.solucion":"Design of raised, short-stroke control levers integrated into the frame that let the chains be tensioned and released standing up and with one hand, with no need to bend down to floor level.","fab.exp.caso2.resultado":"Ergonomic work: the forced bending posture disappears, accumulated fatigue drops and chain adjustment becomes a comfortable step in the assembly cycle.","fab.exp.caso2.stat1":"ergonomic levers","fab.exp.caso2.stat2":"forced posture reduced","fab.exp.caso2.stat3":"assembly line","fab.exp.caso2.stat4":"less fatigue per shift",
+      "fab.exp.caso3.tag":"Product engineering","fab.exp.caso3.titulo":"Fabrication documentation and bill of materials","fab.exp.caso3.problema":"A new product had to go from the 3D model to the shop floor with clean drawings, a coherent bill of materials, a single nomenclature and clear tolerances: without that closed package, the shop stopped to ask and assembly slipped.","fab.exp.caso3.solucion":"Parametric modelling in CATIA V5, STEP export for exchange, a general-assembly drawing, an exploded view with bill of materials and detail drawings with tolerances and treatments defined, all under a single reference coding.","fab.exp.caso3.resultado":"A closed fabrication package: the shop receives drawing, detail and bill of materials with no questions and can start machining without back-and-forth with engineering.","fab.exp.caso3.stat1":"assembly drawings","fab.exp.caso3.stat2":"STEP format","fab.exp.caso3.stat3":"bill of materials","fab.exp.caso3.stat4":"years in CATIA V5",
       "fab.exp.weidner.titulo":"Weidner Ibérica · Design and documentation",
       "fab.exp.weidner.desc":"Design of <em>stacking columns</em> for the automotive sector: self-locking columns, winches and retention systems. From the parametric model in CATIA V5 to the sealed fabrication drawing, with the Geinprod ERP for materials management. Here is the result: navigable 3D models and the winch drawing.",
       "fab.exp.listas.titulo":"Product presentation",
@@ -594,7 +731,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "v.ref.titulo":"References","v.ref.sub":"Eight names that explain where my way of editing and composing comes from. From them I inherit the criterion, not the copy.","v.ref.cine":"Film references","v.ref.music":"Music references",
       "v.ref.r1.texto":"Suspense as editing: knowing what will happen and making the audience wait.","v.ref.r2.texto":"Narrative clarity: story ahead of the effect.","v.ref.r3.texto":"Handheld energy: the shot as a rhythmic beat.","v.ref.r4.texto":"Editing at the service of music: cutting on the beat.",
       "v.ref.r5.texto":"Melodic minimalism: repeating until the idea breathes.","v.ref.r6.texto":"Sound architecture: the pattern as the structure of the piece.","v.ref.r7.texto":"Piano that accompanies the image: emotion without shouting.","v.ref.r8.texto":"A motif that returns: melody as the thread of the narrative.",
-      "v.lastfm.titulo":"What I listen to","v.lastfm.sub":"My music can be heard in the music section; here, what is playing on my headphones thanks to the Last.fm API.","v.lastfm.tit":"Artists I listen to the most","v.lastfm.nota":"Live data from my Last.fm profile.","v.lastfm.btn":"Listen to my music","v.lastfm.carga":"Loading artists…","v.lastfm.fuente":"Data from the public API of","v.lastfm.vacio":"Set LASTFM_KEY and LASTFM_USER in script.js to see my Last.fm artists.","v.lastfm.sin_datos":"My Last.fm profile has no artists registered yet. Listen to some music and come back!"
+      "v.spotify.titulo":"What I listen to","v.spotify.sub":"Connect your Spotify account and your most played artists of the last month will appear here, straight from the official Spotify API.","v.spotify.tit":"Your most played artists","v.spotify.nota":"Data from your Spotify account (last 30 days).","v.spotify.btn":"Connect Spotify","v.spotify.carga":"Connecting to Spotify…","v.spotify.fuente":"Data from the official API of","v.spotify.vacio":"To see your artists, set your app Client ID in script.js and authorise access (read-only).","v.spotify.sin_datos":"Not enough data on your account yet: listen to something and come back.","v.spotify.salir":"Disconnect","v.spotify.expira":"Your session expired. Please connect again.",
     }
   };
   const i18nEls = [...document.querySelectorAll("[data-i18n]")];
@@ -1107,6 +1244,7 @@ document.addEventListener("DOMContentLoaded", () => {
     enlazarTema(".bn__cta", "diseno");
     enlazarTema(".bn__cta--video", "video");
     enlazarTema("[data-bn-cta-fab]", "fab");
+    enlazarTema(".bn__cta--dam", "dam");
 
     const vidSlide = bn.querySelector(".bn__slide--video");
     if (vidSlide) {
@@ -1293,6 +1431,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pags.forEach((p) => p.addEventListener("click", () => ir(Number(p.dataset.bnTo) || 0)));
 
+    const damGrid = document.querySelector(".bn__dam-grid");
+    if (damGrid) {
+      const cuenta = { n1: 0, n2: 0 };
+      damGrid.querySelectorAll(".bn__dam-celda").forEach((c) => {
+        ["n1", "n2"].forEach((n) => {
+          if (c.classList.contains("bn__dam-celda--" + n)) c.style.setProperty("--i", String(cuenta[n]++));
+        });
+      });
+      const up = damGrid.querySelector("[data-dam-reveal]");
+      if (up) {
+        up.addEventListener("click", () => {
+          if (damGrid.classList.contains("is-reveal")) { location.href = "dam.html"; return; }
+          damGrid.classList.add("is-reveal");
+        });
+      }
+    }
+
     document.addEventListener("keydown", (e) => {
       if (!visible || e.altKey || e.ctrlKey || e.metaKey) return;
       const t = e.target;
@@ -1338,44 +1493,60 @@ document.addEventListener("DOMContentLoaded", () => {
         t:"Sí, manejo el paquete Adobe completo: Photoshop, Illustrator, InDesign, Acrobat, Premiere, Audition y Lightroom. La evidencia está en mi obra de diseño gráfico y en mi trabajo fotográfico.",
         tEn:"Yes, I use the full Adobe suite: Photoshop, Illustrator, InDesign, Acrobat, Premiere, Audition and Lightroom. The proof is in my graphic design work and my photography.",
         b:[["diseno.html","Ver diseño","See design"],["fotografia.html","Ver fotografía","See photography"]] },
-      { k:["fotograf","camara","luz","retrato","paisaje","bodegon","lightroom","photo","camera"],
-        t:"Formé mi criterio fotográfico en la EASD de València y trabajé en encargos para la ETSID de la UPV: paisaje, arquitectura, reportaje, moda, bodegón y retrato. Puedes verlo en la subweb de fotografía, incluida la sección de herramientas.",
-        tEn:"I trained my eye at the EASD de València and worked on commissions for the ETSID at the UPV: landscape, architecture, reportage, fashion, still life and portrait. You can see it in the photography sub-site, including the tools section.",
+      { k:["fotograf","camara","luz","retrato","paisaje","bodegon","lightroom","photo","camera","flipsnack","catalogo de maquinaria"],
+        t:"Formé mi criterio fotográfico en la EASD de València y trabajé en encargos para la ETSID de la UPV: paisaje, arquitectura, reportaje, moda, bodegón y retrato. Puedes verlo en la subweb de fotografía, con la sección de herramientas y el catálogo de maquinaria Weidner publicado en Flipsnack.",
+        tEn:"I trained my eye at the EASD de València and worked on commissions for the ETSID at the UPV: landscape, architecture, reportage, fashion, still life and portrait. You can see it in the photography sub-site, with the tools section and the Weidner machinery catalogue published on Flipsnack.",
         b:[["fotografia.html","Ver fotografía","See photography"],["fotografia.html#t-tools","Herramientas","Tools"]] },
-      { k:["catia","autocad","inventor","mecanic","fabricac","matrices","moldes","geinprod","delineante","stacking","plano","cad"],
-        t:"Sí: más de cinco años en Weidner Ibérica diseñando stacking columns con CATIA V5, planimetría y gestión de fabricación con el ERP Geinprod (además de Inventor). El detalle está en Sobre mí; la subweb de mecánica aún está en preparación.",
-        tEn:"Yes: over five years at Weidner Ibérica designing stacking columns with CATIA V5, drafting and manufacturing management with the Geinprod ERP (plus Inventor). The details are in About me; the machining sub-site is still under preparation.",
-        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
+      { k:["catia","autocad","inventor","mecanic","fabricac","matrices","moldes","geinprod","delineante","stacking","plano","cad","tolerancias","iso 286","ajuste"],
+        t:"Sí: más de cinco años en Weidner Ibérica diseñando stacking columns con CATIA V5, planimetría y gestión de fabricación con el ERP Geinprod (además de Inventor). La subweb de mecánica tiene los planos, el modelo 3D, la matriz simple y hasta una calculadora de ajustes ISO 286 que funciona sin conexión.",
+        tEn:"Yes: over five years at Weidner Ibérica designing stacking columns with CATIA V5, drafting and manufacturing management with the Geinprod ERP (plus Inventor). The machining sub-site has the drawings, the 3D model, the simple die and even an offline ISO 286 fit calculator.",
+        b:[["dfm.html","Ver mecánica","See machining"],["dfm.html#t-obra","Ver obra","See work"]] },
       { k:["diseñ","disen","grafic","editorial","identidad","logo","folio","poster","portfolio","ilustr","dibujo","design"],
         t:"Sí: diseño gráfico y editorial (retícula, identidad, catálogos, folletos, pósters) con Illustrator e InDesign, aplicado en proyectos reales como Weidner Ibérica y SEF UV. Toda la obra está en la subweb de diseño.",
         tEn:"Yes: graphic and editorial design (grid, identity, catalogues, brochures, posters) with Illustrator and InDesign, applied on real projects like Weidner Ibérica and SEF UV. All the work is in the design sub-site.",
         b:[["diseno.html","Ver diseño","See design"],["diseno.html#sub-identidad","Identidad","Identity"],["diseno.html#sub-posters","Pósters","Posters"]] },
       { k:["program","codigo","html","css","javascript","python","java","android","dam","git","base de datos","videojuego","simon","code","programming"],
-        t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La sección DAM de la web está en preparación; mientras tanto, el resumen está en Sobre mí.",
-        tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The DAM section of the site is under construction; meanwhile, the summary is in About me.",
-        b:[["#t-sobre","Ver en Sobre mí","See in About me"]] },
+        t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La subweb de Programación lo recoge todo: el Simon escrito en Processing y su versión en la placa Arduino, el juego de ritmo Teclas, la interfaz TuCafé de smartwatch en Figma, APIs en vivo (GitHub y Dev.to) y esta misma web construida con herramientas de IA.",
+        tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The Programming sub-site has it all: Simon written in Processing and its Arduino board version, the Teclas rhythm game, the TuCafé smartwatch interface in Figma, live APIs (GitHub and Dev.to) and this very site built with AI tools.",
+        b:[["dam.html","Ver programación","See programming"],["dam.html#t-obra","Ver obra","See work"]] },
+      { k:["arduino","hardware","electronica","sensor","raspberry","placa","motor","electronics"],
+        t:"Sí: tengo el Simon —el juego de los cuatro colores— implementado en una placa Arduino real, con pulsadores, LEDs y zumbador, compilado con el IDE de Arduino. Es el mismo juego de Processing llevado al hardware, y está en la subweb de Programación.",
+        tEn:"Yes: I have Simon —the four-colour game— implemented on a real Arduino board with buttons, LEDs and a buzzer, compiled with the Arduino IDE. It is the same Processing game ported to hardware, on the Programming sub-site.",
+        b:[["dam.html#sub-arduino","Ver Arduino","See Arduino"],["dam.html","Programación","Programming"]] },
+      { k:["teclas","piano","ritmo","metronomo","rhythm"],
+        t:"Teclas es mi videojuego de ritmo: las notas cruzan el pentagrama y tienes que tocarlas en el piano justo a tiempo. Cada ronda sube el tempo y el número de notas, con modo fácil y difícil. Está en la subweb de Programación, hecho con WebAudio y sin librerías.",
+        tEn:"Teclas is my rhythm game: notes cross the staff and you must play them on the piano right on time. Every round raises the tempo and the note count, with easy and hard modes. It lives on the Programming sub-site, built with WebAudio and no libraries.",
+        b:[["dam.html#sub-teclas","Jugar a Teclas","Play Teclas"],["dam.html","Programación","Programming"]] },
+      { k:["inteligencia artificial","chatbot","asistente","herramientas de ia","artificial intelligence","ai tools"],
+        t:"Esta misma web ES el proyecto: un portafolio hecho con herramientas de IA avanzadas —APIs en vivo, este chatbot, visores 3D, traducción ES/EN y verificación con Chrome headless— sin frameworks ni constructores. En «Del boceto a la web» tienes las 25 fases del proceso.",
+        tEn:"This very site IS the project: a portfolio built with advanced AI tools —live APIs, this chatbot, 3D viewers, ES/EN translation and Chrome headless verification— with no frameworks or build tools. “From sketch to the web” shows the 25 steps of the process.",
+        b:[["dam.html#sub-proceso","Ver el proceso","See the process"],["dam.html","Programación","Programming"]] },
+      { k:["figma","prototipo","wireframe","mockup","prototip"],
+        t:"Figma es mi herramienta de diseño de interfaces: prototipos, componentes y guías de estilo. El ejemplo mayor es TuCafé, una app de café para smartwatch con sus cinco pantallas embebidas en la subweb de Programación.",
+        tEn:"Figma is my interface design tool: prototypes, components and style guides. The biggest example is TuCafé, a coffee app for smartwatch with its five screens embedded in the Programming sub-site.",
+        b:[["dam.html#t-obra","Ver obra","See work"],["diseno.html","Ver diseño","See design"]] },
       { k:["video","montaje","edicion","postproduccion","cortometraje","reel"],
         t:"Edición de vídeo con Premiere y audio con Audition (reels, cortometrajes y podcasts para Interpreta Natura). Toda la obra —MissR, ECO, ARTE y más— está en la subweb de vídeo y música.",
         tEn:"Video editing with Premiere and audio with Audition (reels, short films and podcasts for Interpreta Natura). All the work —MissR, ECO, ARTE and more— is in the video & music sub-site.",
         b:[["video.html","Ver vídeo y música","See video & music"],["video.html#sub-video","Ver obra","See work"]] },
       { k:["musica","audio","garageband","banda sonora","podcast","cancion","music"],
-        t:"Creo música con GarageBand: bandas sonoras para Mis piezas, MissR, ECO y ARTE, además de podcasts para Interpreta Natura. Puedes escucharlas en la subweb de vídeo y música.",
-        tEn:"I create music with GarageBand: soundtracks for my own pieces, MissR, ECO and ARTE, plus podcasts for Interpreta Natura. You can listen to them in the video & music sub-site.",
+        t:"Creo música con GarageBand: bandas sonoras para Mis piezas, MissR, ECO y ARTE, además de podcasts para Interpreta Natura. Puedes escucharlas en la subweb de vídeo y música, donde además puedes conectar tu Spotify para ver lo que escucho.",
+        tEn:"I create music with GarageBand: soundtracks for my own pieces, MissR, ECO and ARTE, plus podcasts for Interpreta Natura. You can listen to them in the video & music sub-site, where you can also connect Spotify to see what I listen to.",
         b:[["video.html#sub-musica","Escuchar música","Listen to music"],["video.html","Ver vídeo y música","See video & music"]] },
       { k:["quien","salvador","sobre mi","perfil","cv","experiencia","formacion","resumen","who"],
         t:"Salvador Llácer Ivars, técnico superior multidisciplinar de Valencia: fotografía, diseño gráfico/editorial, fabricación mecánica (CATIA) y DAM en curso, con experiencia en Weidner Ibérica e Interpreta Natura. Tienes el resumen completo en Sobre mí.",
         tEn:"Salvador Llácer Ivars, multidisciplinary higher technician from Valencia: photography, graphic/editorial design, mechanical manufacturing (CATIA) and DAM in progress, with experience at Weidner Ibérica and Interpreta Natura. The full summary is in About me.",
         b:[["#t-sobre","Leer Sobre mí","Read About me"]] },
       { k:["hola","buenas","buenos dias","que tal","hey","hello","hi"],
-        t:"¡Hola! Soy el asistente del portfolio de Salvador. Pregúntame por software (Photoshop, CATIA…), disciplinas o por dónde ver su obra.",
-        tEn:"Hello! I am Salvador's portfolio assistant. Ask me about software (Photoshop, CATIA…), disciplines or where to see his work." },
+        t:"¡Hola! Soy el asistente del portfolio de Salvador. Pregúltame por software (Photoshop, CATIA…), por las cinco subwebs (fotografía, diseño, vídeo, mecánica y programación) o por dónde ver su obra.",
+        tEn:"Hello! I am Salvador's portfolio assistant. Ask me about software (Photoshop, CATIA…), about the five sub-sites (photography, design, video, machining and programming) or where to see his work." },
       { k:["gracias","genial","perfecto","thanks","great"],
         t:"¡A ti! Si quieres, pregunta por alguna habilidad concreta o te llevo directo a la subweb que te interese.",
         tEn:"You're welcome! If you like, ask about a specific skill and I'll take you straight to the sub-site you're interested in." }
     ];
     const FALLBACK = { t:"No tengo una respuesta para eso todavía. Puedo ayudarte con sus habilidades (Adobe, CATIA, programación, fotografía, música…), contarte quién es o llevarte a las subwebs.",
       tEn:"I don't have an answer for that yet. I can help with his skills (Adobe, CATIA, programming, photography, music…), tell you who he is, or take you to the sub-sites.",
-      b:[["fotografia.html","Ver fotografía","See photography"],["diseno.html","Ver diseño","See design"],["#t-sobre","Sobre mí","About me"]] };
+      b:[["fotografia.html","Ver fotografía","See photography"],["diseno.html","Ver diseño","See design"],["dfm.html","Ver mecánica","See machining"],["video.html","Ver vídeo y música","See video & music"],["dam.html","Ver programación","See programming"],["#t-sobre","Sobre mí","About me"]] };
     const buscar = (q) => { const n = norm(q); for (const r of REGLAS) if (r.k.some((k) => n.includes(norm(k)))) return r; return FALLBACK; };
     const addMsg = (quien, txt, btns) => {
       const m = document.createElement("div");
@@ -1614,7 +1785,18 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     const fmt = (s) => { if (!isFinite(s) || s < 0) return "0:00"; const m = Math.floor(s / 60), x = Math.floor(s % 60); return m + ":" + String(x).padStart(2, "0"); };
     let sonando = null;
-  window.__pausaMusica = () => { if (sonando && sonando.audio && !sonando.audio.paused) { sonando.audio.pause(); sonando.rep.classList.remove("is-playing"); } };
+  window.__pausaMusica = () => {
+      if (sonando && sonando.audio && !sonando.audio.paused) {
+        const a = sonando.audio, v0 = a.volume;
+        let i = 0;
+        const id = setInterval(() => {
+          i++;
+          a.volume = Math.max(0, v0 * (1 - i / 8));
+          if (i >= 8) { clearInterval(id); a.pause(); a.volume = v0; }
+        }, 28);
+        sonando.rep.classList.remove("is-playing");
+      }
+    };
     document.querySelectorAll(".repro[data-repro]").forEach((rep) => {
       const tracks = LISTAS[rep.dataset.playlist] || [];
       const audio = rep.querySelector("[data-repro-audio]");
@@ -1633,7 +1815,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const arrancar = () => {
         if (sonando && sonando.audio !== audio) { sonando.audio.pause(); sonando.rep.classList.remove("is-playing"); }
         sonando = { audio, rep };
-        return audio.play().then(() => true, () => { rep.classList.remove("is-playing"); return false; });
+        return audio.play().then(() => {
+          if (window.__fadeAudio) window.__fadeAudio(audio, 0, 1, 800);
+          return true;
+        }, () => { rep.classList.remove("is-playing"); return false; });
       };
       const cargar = (k, darPlay) => {
         idx = ((k % tracks.length) + tracks.length) % tracks.length;
@@ -1708,36 +1893,106 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  /* ░░ Widget Last.fm (vídeo y música) ░░ */
+  /* ░░ Fade de audio (entradas y salidas suaves) ░░ */
+  window.__fadeAudio = (a, from, to, ms) => {
+    try {
+      a.volume = Math.max(0, Math.min(1, from));
+      const t0 = performance.now();
+      const paso = (t) => {
+        const k = Math.min(1, (t - t0) / ms);
+        a.volume = Math.max(0, Math.min(1, from + (to - from) * k));
+        if (k < 1 && !a.paused) requestAnimationFrame(paso);
+      };
+      requestAnimationFrame(paso);
+    } catch (e) {}
+  };
+
+  /* ░░ Widget Spotify (vídeo y música) · OAuth PKCE ░░ */
   (() => {
-    const root = document.querySelector("[data-lastfm]");
+    const root = document.querySelector("[data-spotify]");
     if (!root) return;
-    const grid = root.querySelector("[data-lastfm-grid]");
+    const grid = root.querySelector("[data-spotify-grid]");
+    const btn = root.querySelector("[data-spotify-btn]");
+    const CLIENT_ID = "";
+    const KEY_V = "miweb_sp_verify", KEY_T = "miweb_sp_token";
     const dic = () => I18N[langActual()] || I18N.es;
-    const LASTFM_KEY = "98b1049b6143764f87f00e6457d05710";
-    const LASTFM_USER = "Feristan24";
-    const estado = (txt) => {
+    const t = (k) => dic()["v.spotify." + k] || "";
+    const estado = (k) => {
       grid.textContent = "";
       const e = document.createElement("li");
-      e.className = "lastfm__estado";
-      e.textContent = txt;
+      e.className = "api__estado";
+      e.textContent = t(k) || k;
       grid.appendChild(e);
     };
-    const pintar = (artistas) => {
+    const pintarBtn = (conectado) => {
+      if (!btn) return;
+      btn.querySelector("span").textContent = conectado ? t("salir") || "Desconectar" : t("btn") || "Conectar Spotify";
+    };
+    const b64url = (buf) => btoa(String.fromCharCode.apply(null, new Uint8Array(buf)))
+      .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    const tieneToken = () => { try { return !!sessionStorage.getItem(KEY_T); } catch (e) { return false; } };
+    const login = async () => {
+      if (!CLIENT_ID) { estado("vacio"); return; }
+      try {
+        const verifier = b64url(crypto.getRandomValues(new Uint8Array(64)));
+        sessionStorage.setItem(KEY_V, verifier);
+        const challenge = b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
+        const params = new URLSearchParams({
+          client_id: CLIENT_ID,
+          response_type: "code",
+          code_challenge_method: "S256",
+          code_challenge: challenge,
+          redirect_uri: location.origin + location.pathname,
+          scope: "user-top-read"
+        });
+        location.href = "https://accounts.spotify.com/authorize?" + params;
+      } catch (e) { estado("vacio"); }
+    };
+    const canjear = async (code) => {
+      const verifier = sessionStorage.getItem(KEY_V);
+      const body = new URLSearchParams({
+        grant_type: "authorization_code", code,
+        redirect_uri: location.origin + location.pathname,
+        client_id: CLIENT_ID, code_verifier: verifier || ""
+      });
+      const r = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body
+      });
+      if (!r.ok) throw 0;
+      const tk = await r.json();
+      sessionStorage.setItem(KEY_T, JSON.stringify({
+        access: tk.access_token, exp: Date.now() + tk.expires_in * 1000, refresh: tk.refresh_token || ""
+      }));
+    };
+    const refrescar = async (store) => {
+      const body = new URLSearchParams({
+        grant_type: "refresh_token", refresh_token: store.refresh, client_id: CLIENT_ID
+      });
+      const r = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body
+      });
+      if (!r.ok) throw 0;
+      const tk = await r.json();
+      const nueva = { access: tk.access_token, exp: Date.now() + tk.expires_in * 1000, refresh: tk.refresh_token || store.refresh };
+      sessionStorage.setItem(KEY_T, JSON.stringify(nueva));
+      return nueva.access;
+    };
+    const pintar = (items) => {
       grid.textContent = "";
       const esEn = langActual() === "en";
-      artistas.forEach((a) => {
+      const frag = document.createDocumentFragment();
+      items.forEach((art) => {
         const li = document.createElement("li");
         const link = document.createElement("a");
         link.className = "lastfm__item";
-        link.href = a.url || "https://www.last.fm";
+        link.href = art.external_urls && art.external_urls.spotify || "https://open.spotify.com";
         link.target = "_blank"; link.rel = "noopener";
-        const imgs = (a.image || []).filter((x) => x && x["#text"]);
+        const imgs = (art.images || []).filter((x) => x && x.url);
         if (imgs.length) {
           const img = document.createElement("img");
           img.className = "lastfm__img";
-          img.src = imgs[imgs.length - 1]["#text"];
-          img.alt = a.name || "Last.fm";
+          img.src = imgs[imgs.length - 1].url;
+          img.alt = art.name || "Spotify";
           img.loading = "lazy"; img.decoding = "async";
           img.width = 200; img.height = 200;
           link.appendChild(img);
@@ -1746,33 +2001,65 @@ document.addEventListener("DOMContentLoaded", () => {
         info.className = "lastfm__info";
         const name = document.createElement("span");
         name.className = "lastfm__name";
-        name.textContent = a.name || "";
-        const plays = document.createElement("span");
-        plays.className = "lastfm__plays";
-        const n = Number(a.playcount || 0);
-        plays.textContent = n.toLocaleString(esEn ? "en-US" : "es-ES") + " " + (esEn ? "plays" : "reproducciones");
-        info.appendChild(name); info.appendChild(plays);
+        name.textContent = art.name || "";
+        const fans = document.createElement("span");
+        fans.className = "lastfm__plays";
+        const n = Number((art.followers && art.followers.total) || 0);
+        fans.textContent = n.toLocaleString(esEn ? "en-US" : "es-ES") + " " + (esEn ? "followers" : "seguidores");
+        info.appendChild(name); info.appendChild(fans);
         link.appendChild(info);
         li.appendChild(link);
-        grid.appendChild(li);
+        frag.appendChild(li);
       });
+      grid.appendChild(frag);
     };
-    const pedir = async () => {
-      if (!LASTFM_KEY || !LASTFM_USER) { estado(dic()["v.lastfm.vacio"]); return; }
-      estado(dic()["v.lastfm.carga"]);
+    const cargar = async () => {
+      let store = null;
+      try { store = JSON.parse(sessionStorage.getItem(KEY_T) || "null"); } catch (e) {}
+      if (!store || !store.access) { pintarBtn(false); estado("vacio"); return; }
+      pintarBtn(true);
+      estado("carga");
       try {
-        const url = "https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=" + encodeURIComponent(LASTFM_USER) + "&api_key=" + encodeURIComponent(LASTFM_KEY) + "&limit=8&format=json";
-        const r = await fetch(url, { cache: "no-store" });
+        let access = store.access;
+        if (Date.now() > store.exp - 60000) access = await refrescar(store);
+        const r = await fetch("https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=8", {
+          headers: { Authorization: "Bearer " + access }
+        });
+        if (r.status === 401) throw 401;
         if (!r.ok) throw 0;
         const d = await r.json();
-        const lista = d.topartists && d.topartists.artist;
-        if (!lista || !lista.length) { estado(dic()["v.lastfm.sin_datos"]); return; }
-        pintar(lista);
+        const items = (d && d.items) || [];
+        if (!items.length) { estado("sin_datos"); return; }
+        estado("");
+        pintar(items);
       } catch (e) {
-        estado(dic()["v.lastfm.vacio"]);
+        if (e === 401) {
+          try { sessionStorage.removeItem(KEY_T); } catch (err) {}
+          pintarBtn(false);
+          estado("expira");
+        } else {
+          estado("vacio");
+        }
       }
     };
-    pedir();
+    if (btn) btn.addEventListener("click", () => {
+      if (tieneToken()) {
+        try { sessionStorage.removeItem(KEY_T); } catch (e) {}
+        cargar();
+      } else {
+        login();
+      }
+    });
+    const urlp = new URLSearchParams(location.search);
+    if (urlp.get("code")) {
+      (async () => {
+        try { await canjear(urlp.get("code")); } catch (e) {}
+        history.replaceState({}, "", location.pathname);
+        cargar();
+      })();
+    } else {
+      cargar();
+    }
   })();
 
   /* ░░ Vídeos YouTube: IFrame Player API (click-to-play) ░░ */
@@ -1844,7 +2131,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "foto": ["#a06f3a", "#161411"],
       "diseno": ["#19b6d6", "#e0118a"],
       "video": ["#2ee6ff", "#b026ff"],
-      "fab": ["#f97316", "#1e293b"]
+      "fab": ["#f97316", "#1e293b"],
+      "dam": ["#22c55e", "#022c22"]
     };
     const uri = (fg, bg) => {
       const body = paths.map((d) => '<path fill="' + fg + '" d="' + d + '"/>').join("");
@@ -1872,7 +2160,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const introAud = document.querySelector(".bn__slide--intro audio[data-bn-audio]");
     const playIntro = () => {
-      if (introAud && introAud.paused && introAud.dataset.mute !== "1") introAud.play().catch(() => {});
+      if (introAud && introAud.paused && introAud.dataset.mute !== "1") {
+        introAud.play().then(() => { if (window.__fadeAudio) window.__fadeAudio(introAud, 0, 1, 900); }, () => {});
+      }
     };
     const gestoIntro = () => {
       playIntro();
@@ -1898,13 +2188,15 @@ document.addEventListener("DOMContentLoaded", () => {
       foto: ["#a06f3a", "#d4a574"],
       diseno: ["#19b6d6", "#e0118a"],
       video: ["#2ee6ff", "#b026ff"],
-      fab: ["#f97316", "#fb923c"]
+      fab: ["#f97316", "#fb923c"],
+      dam: ["#22c55e", "#86efac"]
     };
     const BAR = [
       ["#a06f3a", "#d4a574"],
       ["#19b6d6", "#e0118a"],
       ["#2ee6ff", "#b026ff"],
-      ["#f97316", "#fb923c"]
+      ["#f97316", "#fb923c"],
+      ["#22c55e", "#86efac"]
     ];
     let logoCapa = 0;
     const setLogo = (k) => {
@@ -1924,7 +2216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!fill) return;
       if (!(p >= 0)) p = 0;
       fill.style.width = (p * 100).toFixed(1) + "%";
-      const b = p >= 1 ? COL.index : (BAR[Math.min(3, Math.max(0, Math.floor(p * 4)))] || BAR[0]);
+      const b = p >= 1 ? COL.index : (BAR[Math.min(4, Math.max(0, Math.floor(p * 5)))] || BAR[0]);
       fill.style.background = "linear-gradient(90deg," + b[0] + "," + b[1] + ")";
     };
 
@@ -1953,7 +2245,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setBar(p);
         if (p < 1) { requestAnimationFrame(tick); return; }
         carga.classList.add("is-fin");
-        const seq = ["foto", "diseno", "video", "fab"];
+        const seq = ["foto", "diseno", "video", "fab", "dam"];
         seq.forEach((k, j) => setTimeout(() => {
           if (done) return;
           if (temas[j]) temas[j].classList.add("is-on");
@@ -1975,4 +2267,70 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cta) cta.addEventListener("click", (e) => { e.stopPropagation(); finish(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { if (!done) { e.preventDefault(); finish(); } } });
   })();
+  /* ░░─ Indicador de música en el nav (parpadea mientras suena algo) ░░─ */
+  (() => {
+    const marca = () => {
+      let el = document.querySelector(".nav__son");
+      if (!el) {
+        el = document.createElement("span");
+        el.className = "nav__son";
+        el.setAttribute("aria-hidden", "true");
+        el.innerHTML = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/></svg>';
+        const miga = document.querySelector(".miga");
+        if (miga && miga.parentNode) miga.parentNode.insertBefore(el, miga);
+        else {
+          const der = document.querySelector(".nav__derecha");
+          if (der) der.insertBefore(el, der.firstChild);
+        }
+      }
+      return el;
+    };
+    const actualizar = () => {
+      const hay = Array.prototype.some.call(document.querySelectorAll("audio"), (a) =>
+        !a.paused && !a.ended && a.volume > 0.02 && a.dataset.mute !== "1");
+      marca().classList.toggle("is-on", hay);
+    };
+    ["play", "pause", "ended", "volumechange"].forEach((ev) => document.addEventListener(ev, actualizar, true));
+    setInterval(actualizar, 1200);
+  })();
+
+  /* ░░─ Lightbox para las imágenes estáticas de mecánica ░░─ */
+  (() => {
+    const lb = document.getElementById("lightbox");
+    if (!lb) return;
+    const fig = lb.querySelector("img");
+    if (!fig) return;
+    const grupos = Array.prototype.slice.call(document.querySelectorAll(".infografia, .fotos-cuad"));
+    if (!grupos.length) return;
+    let actuales = [], idx = 0;
+    const abrir = (items, i) => {
+      actuales = items; idx = i;
+      fig.src = items[i].src; fig.alt = items[i].alt || "";
+      lb.classList.add("is-open");
+      lb.setAttribute("aria-hidden", "false");
+    };
+    const cerrar = () => { lb.classList.remove("is-open"); lb.setAttribute("aria-hidden", "true"); };
+    const mover = (d) => { if (!actuales.length) return; idx = (idx + d + actuales.length) % actuales.length; fig.src = actuales[idx].src; fig.alt = actuales[idx].alt || ""; };
+    grupos.forEach((g) => {
+      const imgs = Array.prototype.slice.call(g.querySelectorAll("img"));
+      imgs.forEach((im, i) => {
+        im.addEventListener("click", () => abrir(imgs.map((x) => ({ src: x.src, alt: x.alt })), i));
+      });
+    });
+    const cerrarBtn = lb.querySelector("[data-lb-cerrar]");
+    const fondo = lb.querySelector("[data-lb-fondo]");
+    const prev = lb.querySelector("[data-lb-prev]");
+    const next = lb.querySelector("[data-lb-next]");
+    if (cerrarBtn) cerrarBtn.addEventListener("click", cerrar);
+    if (fondo) fondo.addEventListener("click", cerrar);
+    if (prev) prev.addEventListener("click", () => mover(-1));
+    if (next) next.addEventListener("click", () => mover(1));
+    document.addEventListener("keydown", (e) => {
+      if (!lb.classList.contains("is-open")) return;
+      if (e.key === "Escape") cerrar();
+      if (e.key === "ArrowLeft") mover(-1);
+      if (e.key === "ArrowRight") mover(1);
+    });
+  })();
 });
+

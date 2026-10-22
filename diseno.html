@@ -17,7 +17,6 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="fuentes.css" />
 
-    <script src="https://cdn.lordicon.com/lordicon.js" defer></script>
 
     <link rel="preload" as="image" href="Imagenes/Diseño_grafico_sobremi.webp" fetchpriority="high" />
 
@@ -173,7 +172,22 @@
             <a class="nav__grp" href="dfm.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
         </div>
-        <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
+        <div class="nav__item">
+          <a href="dam.html" data-tema="dam" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.dam">Programación</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="dam.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="dam.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="dam.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="dam.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="dam.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="dam.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="dam.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+            <a class="nav__grp" href="dam.html#t-api"><span data-i18n="dam.api.nav">API en vivo</span></a>
+          </div>
+        </div>
       </nav>
       <div class="nav__derecha">
         <nav class="miga" aria-label="Migas de pan">
@@ -616,46 +630,6 @@
                    referrerpolicy="no-referrer-when-downgrade"
                  ></iframe>
                </div>
-
-            <div class="pdf-card" style="margin-top:1.6rem">
-              <span class="pdf-card__ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
-              </span>
-              <div class="pdf-card__txt">
-                <h3><span data-i18n="d.exp.wid.logic.titulo">Presentación LogicPalet</span></h3>
-                <p><span data-i18n="d.exp.wid.logic.texto">Presentación de producto del <strong>palé modular LogicPalet</strong>, premiado como mejor invención española. Maquetación técnica bilingüe: características, ventajas logísticas, montaje en tres pasos y fichas de producto.</span></p>
-                <a class="boton boton--verde" href="Imagenes/dise%C3%B1o/Weidner/Presentaci%C3%B3n%20LogicPalet%20ALTA.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&zoom=page-fit" target="_blank" rel="noopener"><span data-i18n="d.exp.wid.logic.btn">Ver presentación (PDF)</span> <span class="flecha">→</span></a>
-              </div>
-            </div>
-            <div class="pdf-shell">
-              <iframe
-                class="pdf-view"
-                src="Imagenes/dise%C3%B1o/Weidner/Presentaci%C3%B3n%20LogicPalet%20ALTA.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit"
-                title="Presentación LogicPalet"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-
-            <div class="pdf-card" style="margin-top:1.6rem">
-              <span class="pdf-card__ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
-              </span>
-              <div class="pdf-card__txt">
-                <h3><span data-i18n="d.exp.wid.dulce.titulo">Presentación Dulce de Leche</span></h3>
-                <p><span data-i18n="d.exp.wid.dulce.texto">Presentación de <strong>soluciones sostenibles para el sector alimentario</strong> (bandejas, pelotas de pádel y tenis, cepillos). Maquetación editorial que traduce un mensaje de economía circular —reciclar, reutilizar, recuperar— en piezas claras y visuales.</span></p>
-                <a class="boton boton--verde" href="Imagenes/dise%C3%B1o/Weidner/Presentaci%C3%B3n%20Dulce%20de%20Leche.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&zoom=page-fit" target="_blank" rel="noopener"><span data-i18n="d.exp.wid.dulce.btn">Ver presentación (PDF)</span> <span class="flecha">→</span></a>
-              </div>
-            </div>
-            <div class="pdf-shell">
-              <iframe
-                class="pdf-view"
-                src="Imagenes/dise%C3%B1o/Weidner/Presentaci%C3%B3n%20Dulce%20de%20Leche.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit"
-                title="Presentación Dulce de Leche"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
           </div>
         </div>
       </section>
@@ -743,18 +717,6 @@
               <p class="lab__nota"><span data-i18n="d.lab.fuente">Fuentes servidas por la API pública de</span> <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a></p>
             </div>
 
-            <div class="lab__bloque">
-              <h3 class="lab__tit"><span data-i18n="d.lab.iconos">Iconos animados</span></h3>
-              <div class="lab__icons">
-                <figure class="lab__ico"><lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="hover" delay="1500" colors="primary:#19b6d6,secondary:#ffffff" style="width:64px;height:64px"></lord-icon><figcaption>Instagram</figcaption></figure>
-                <figure class="lab__ico"><lord-icon src="https://cdn.lordicon.com/gqzlxjhc.json" trigger="hover" delay="1500" colors="primary:#19b6d6,secondary:#ffffff" style="width:64px;height:64px"></lord-icon><figcaption>Correo</figcaption></figure>
-                <figure class="lab__ico"><lord-icon src="https://cdn.lordicon.com/jgnwfzrv.json" trigger="hover" delay="1500" colors="primary:#19b6d6,secondary:#ffffff" style="width:64px;height:64px"></lord-icon><figcaption>Creatividad</figcaption></figure>
-                <figure class="lab__ico"><lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="hover" delay="1500" colors="primary:#19b6d6,secondary:#ffffff" style="width:64px;height:64px"></lord-icon><figcaption>Envío</figcaption></figure>
-                <figure class="lab__ico"><lord-icon src="https://cdn.lordicon.com/vwslozcx.json" trigger="hover" delay="1500" colors="primary:#19b6d6,secondary:#ffffff" style="width:64px;height:64px"></lord-icon><figcaption>Compartir</figcaption></figure>
-                <figure class="lab__ico"><lord-icon src="https://cdn.lordicon.com/wloilxup.json" trigger="hover" delay="1500" colors="primary:#19b6d6,secondary:#ffffff" style="width:64px;height:64px"></lord-icon><figcaption>Enlace</figcaption></figure>
-              </div>
-              <p class="lab__nota"><span data-i18n="d.lab.iconos.nota">Animaciones Lottie de</span> <a href="https://lordicon.com" target="_blank" rel="noopener">Lordicon</a> <span data-i18n="d.lab.iconos.plan">(plan gratuito)</span></p>
-            </div>
           </div>
         </div>
       </section>
@@ -765,11 +727,14 @@
         <div class="pie__grid">
           <div class="pie__col">
             <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
-            <a href="mailto:salllaiva@alu.edu.gva.es" data-copy-email class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
-            <button class="pie__contacto js-contacto reveal" type="button">
+            <div class="pie__mail-fila reveal">
+              <a href="mailto:salllaiva@alu.edu.gva.es" data-copy-email class="pie__mail" style="color:var(--text)">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+              <span class="nav__sep pie__sep" aria-hidden="true"></span>
+              <button class="pie__contacto js-contacto reveal" type="button">
               <span data-i18n="m.contacto">Contacto</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
             </button>
+            </div>
             <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
             <div class="clima reveal" data-clima>
               <span class="clima__ico" aria-hidden="true"></span>
@@ -791,12 +756,12 @@
           </div>
           <div class="pie__loc reveal">
             <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
-            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
             <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
+            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
           </div>
         </div>
 
-        <p class="copyright"><a class="nav__volver" href="index.html">← Volver al inicio</a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
+        <p class="copyright"><a class="nav__volver" href="index.html"><span data-i18n="pie.volver">← Volver al inicio</span></a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
       </div>
     </footer>
 
@@ -824,6 +789,7 @@
         <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
         <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
         <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+<button type="button" data-q="Ver programación" data-q-en="See programming" data-i18n="bot.q6">Ver programación</button>
       </div>
       <form class="bot__form" data-bot-form autocomplete="off">
         <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta." />

@@ -114,7 +114,7 @@
               <a class="nav__grp-t" href="#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
               <div class="nav__sub">
                 <a href="#sub-cabrestante"><span data-i18n="fab.obra.cab.titulo">Cabrestante</span></a>
-                <a href="#sub-matriz"><span data-i18n="fab.obra.matriz.titulo">Utillaje de chapa</span></a>
+                <a href="#sub-matriz"><span data-i18n="fab.obra.matriz.titulo">Proyecto matriz simple</span></a>
                 <a href="#sub-chapa"><span data-i18n="fab.obra.chapa.titulo">Aprovechamiento de chapa</span></a>
               </div>
             </div>
@@ -123,7 +123,6 @@
             <div class="nav__grp has-sub">
               <a class="nav__grp-t" href="#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
               <div class="nav__sub">
-                <a href="#sub-stp"><span data-i18n="fab.exp.stp.titulo">Torre de apilamiento: sistema de levas inteligentes</span></a>
                 <a href="#sub-cadenas"><span data-i18n="fab.exp.cadenas.titulo">Columna de apilamiento con cadenas</span></a>
                 <a href="#sub-listas"><span data-i18n="fab.exp.listas.titulo">Presentación</span></a>
                 <a href="#sub-casos"><span data-i18n="fab.exp.casos.titulo">Casos de proyecto</span></a>
@@ -134,7 +133,22 @@
             <a class="nav__grp" href="#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
         </div>
-        <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
+        <div class="nav__item">
+          <a href="dam.html" data-tema="dam" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.dam">Programación</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="dam.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="dam.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="dam.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="dam.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="dam.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="dam.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="dam.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+            <a class="nav__grp" href="dam.html#t-api"><span data-i18n="dam.api.nav">API en vivo</span></a>
+          </div>
+        </div>
       </nav>
       <div class="nav__derecha">
         <nav class="miga" aria-label="Migas de pan">
@@ -197,79 +211,58 @@
               </div>
             </div>
 
-            <div class="pdf-card" style="margin-top:1.6rem">
-              <span class="pdf-card__ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
-              </span>
-              <div class="pdf-card__txt">
-                <h3><span data-i18n="fab.obra.cab.pdf.titulo">Planos del cabrestante</span></h3>
-                <p><span data-i18n="fab.obra.cab.pdf.desc">Veinte planos en PDF con navegación previa/siguiente. Cada plano abre en su página, con su nomenclatura y sus vistas.</span></p>
-              </div>
+            <div class="vid-tit">
+              <h4><span data-i18n="fab.obra.cab.story.titulo">Storyboard · mordaza</span></h4>
+              <p><span data-i18n="fab.obra.cab.story.desc">Proyecto de diseño 3D de una mordaza, contado en storyboard: las piezas toman forma y el conjunto acaba explotado en el aire.</span></p>
             </div>
-            <div class="pager-wrap" data-pdf-files='["dfm/planos cabrestante/01%20conjunto%20cabrestante.pdf","dfm/planos cabrestante/02%20plano%20explosionado%20y%20lista%20de%20piezas.pdf","dfm/planos cabrestante/03%20Subconjunto%20soldado.pdf","dfm/planos cabrestante/04%20IPL%20subconjuto%20soldado%201.pdf","dfm/planos cabrestante/05%20perfiles%20subconjunto%20soldado.pdf","dfm/planos cabrestante/06%20chapas%20laterales.pdf","dfm/planos cabrestante/07%20base.pdf","dfm/planos cabrestante/08%20mango.pdf","dfm/planos cabrestante/09%20eje%201.pdf","dfm/planos cabrestante/10%20eje%202.pdf","dfm/planos cabrestante/11%20eje%203.pdf","dfm/planos cabrestante/12%20engranaje%201.pdf","dfm/planos cabrestante/13%20Engranaje%202%2C%203.pdf","dfm/planos cabrestante/14%20tambor%20engranaje%204.pdf","dfm/planos cabrestante/15%20engranaje%204.pdf","dfm/planos cabrestante/16%20tambor.pdf","dfm/planos cabrestante/17%20subconjunto%20manivela.pdf","dfm/planos cabrestante/18%20manivela.pdf","dfm/planos cabrestante/19%20maneta.pdf","dfm/planos cabrestante/20%20trinquete.pdf"]' data-pager-start='1'>
-              <div class="vpager">
-                <button class="vpager__btn" data-pager-prev type="button"><span data-i18n="fab.planos.anterior">Anterior</span></button>
-                <span class="vpager__info" data-pager-info><b>1</b> / 20</span>
-                <button class="vpager__btn" data-pager-next type="button"><span data-i18n="fab.planos.siguiente">Siguiente</span></button>
-                <select class="vpager__sel" data-pager-sel aria-label="Elegir plano"></select>
-              </div>
-              <div class="pdf-shell">
-                <iframe class="pdf-view" src="dfm/planos cabrestante/01%20conjunto%20cabrestante.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit" title="Planos del cabrestante" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="vidfab" data-vidfab>
+              <video preload="metadata" playsinline muted src="dfm/storyboard-mordaza.mp4"></video>
+              <div class="vidfab__bar">
+                <button class="vidfab__btn" data-v-play type="button" aria-label="Reproducir"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+                <div class="vidfab__prog" data-v-prog><i></i></div>
+                <span class="vidfab__t" data-v-t>0:00 / 0:00</span>
               </div>
             </div>
           </div>
 
           <div class="subserie" id="sub-matriz">
             <div class="subserie__head">
-              <h3 class="serie__titulo"><span data-i18n="fab.obra.matriz.titulo">Utillaje de chapa · Proyecto 1 · Matriz</span></h3>
-              <p class="serie__desc"><span data-i18n="fab.obra.matriz.desc">Proyecto de utillaje de chapa: diseño de la matriz de corte y grabado para una pieza estampada. Desarrollo del troquel, análisis de la secuencia de operación, holguras de ajuste, guías y ejectores. El archivo fuente es un ensamble de <strong>Autodesk Inventor</strong> (.ipt/.iam), sin visor web nativo; aquí se documenta el trabajo con sus datos.</span></p>
+              <h3 class="serie__titulo"><span data-i18n="fab.obra.matriz.titulo">Proyecto matriz simple</span></h3>
+              <p class="serie__desc"><span data-i18n="fab.obra.matriz.desc">Réplica en 3D de una matriz simple física: la desmonté y medí pieza a pieza, dibujé bocetos a mano alzada de cada componente, la diseñé en 3D y generé sus planos. Desarrollado con <strong>Autodesk Inventor</strong>.</span></p>
             </div>
-            <div class="pdf-card">
-              <span class="pdf-card__ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16M4 9h16"/></svg>
-              </span>
-              <div class="pdf-card__txt">
-                <h3><span data-i18n="fab.obra.matriz.files.titulo">Archivos del proyecto</span></h3>
-                <p><span data-i18n="fab.obra.matriz.files.desc">Ensambles y piezas del proyecto, en formato nativo de Inventor.</span></p>
-              </div>
-            </div>
-            <div class="ph">
-              <span class="ph__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v12l-8 4-8-4V6z"/><path d="M12 22V12M4 6l8 4 8-4"/></svg></span>
-              <div>
-                <h3>Autodesk Inventor · Proyecto 1 Matriz</h3>
-                <p>Ensamble (.iam) y piezas (.ipt) de la matriz de estampación. Formato propietario sin visor web; se muestra la ficha del proyecto.</p>
-                <ul class="ph__files">
-                  <li>Proyecto 1 Matriz.iam</li>
-                  <li>*.ipt (piezas del troquel)</li>
-                </ul>
-              </div>
+            <div class="infografia">
+              <figure class="infografia__paso">
+                <img src="dfm/Matriz/matriz-001.webp" alt="La matriz simple original" width="342" height="251" loading="lazy" decoding="async" />
+                <figcaption><b>1</b><span data-i18n="fab.obra.matriz.paso1">La matriz original</span></figcaption>
+              </figure>
+              <figure class="infografia__paso">
+                <img src="dfm/Matriz/matriz-006.webp" alt="Desmontaje y medición de la matriz" width="484" height="361" loading="lazy" decoding="async" />
+                <figcaption><b>2</b><span data-i18n="fab.obra.matriz.paso2">Desmontaje y medición</span></figcaption>
+              </figure>
+              <figure class="infografia__paso">
+                <img src="dfm/Matriz/matriz-005.webp" alt="Boceto a mano alzada de la matriz" width="613" height="819" loading="lazy" decoding="async" />
+                <figcaption><b>3</b><span data-i18n="fab.obra.matriz.paso3">Bocetos a mano alzada</span></figcaption>
+              </figure>
+              <figure class="infografia__paso">
+                <img src="dfm/Matriz/matriz-004.webp" alt="Diseño 3D de la matriz" width="384" height="321" loading="lazy" decoding="async" />
+                <figcaption><b>4</b><span data-i18n="fab.obra.matriz.paso4">Diseño 3D</span></figcaption>
+              </figure>
+              <figure class="infografia__paso">
+                <img src="dfm/Matriz/matriz-007.webp" alt="Planos de la matriz" width="1200" height="848" loading="lazy" decoding="async" />
+                <figcaption><b>5</b><span data-i18n="fab.obra.matriz.paso5">Planos</span></figcaption>
+              </figure>
             </div>
           </div>
 
           <div class="subserie" id="sub-chapa">
             <div class="subserie__head">
               <h3 class="serie__titulo"><span data-i18n="fab.obra.chapa.titulo">Aprovechamiento de chapa</span></h3>
-              <p class="serie__desc"><span data-i18n="fab.obra.chapa.desc">Estudio de aprovechamiento de chapa para el corte de piezas planas: disposición de los trozos sobre el rollo, minimización del sobrante y control del sentido de fibra. Trabajo realizado en <strong>AutoCAD</strong> sobre archivos .dwg.</span></p>
+              <p class="serie__desc"><span data-i18n="fab.obra.chapa.desc">Estudio del aprovechamiento de la chapa para el corte de piezas planas: disposición de los trozos sobre el rollo, minimización del sobrante y control del sentido de fibra. Al final del estudio se crea el diseño 3D de la matriz que produce la pieza.</span></p>
             </div>
-            <div class="pdf-card">
-              <span class="pdf-card__ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M3 7h18v10H3z"/><path d="M7 7v10M12 7v10M17 7v10"/></svg>
-              </span>
-              <div class="pdf-card__txt">
-                <h3><span data-i18n="fab.obra.chapa.files.titulo">Planos .dwg</span></h3>
-                <p><span data-i18n="fab.obra.chapa.files.desc">Delineado de desarrollo y nesting en AutoCAD.</span></p>
-              </div>
-            </div>
-            <div class="ph">
-              <span class="ph__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></span>
-              <div>
-                <h3>AutoCAD · Desarrollo de chapa</h3>
-                <p>Archivos .dwg del nesting y desarrollo plano. Sin conversor nativo en el navegador; se documenta el estudio de aprovechamiento.</p>
-                <ul class="ph__files">
-                  <li>Desarrollo chapa.dwg</li>
-                  <li>Nesting.dwg</li>
-                </ul>
-              </div>
+            <div class="fotos-cuad">
+              <img src="dfm/Matriz/aprovechamiento-001.webp" alt="Aprovechamiento de chapa 1" width="1000" height="562" loading="lazy" decoding="async" />
+              <img src="dfm/Matriz/aprovechamiento-002.webp" alt="Aprovechamiento de chapa 2" width="1000" height="467" loading="lazy" decoding="async" />
+              <img src="dfm/Matriz/aprovechamiento-003.webp" alt="Aprovechamiento de chapa 3" width="1000" height="751" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -385,39 +378,18 @@
             </div>
           </div>
 
-          <div class="subserie" id="sub-stp">
-            <div class="subserie__head">
-              <h3 class="serie__titulo"><span data-i18n="fab.exp.stp.titulo">Torre de apilamiento: sistema de levas inteligentes</span></h3>
-              <p class="serie__desc"><span data-i18n="fab.exp.stp.desc">Torre de apilamiento para automociÃ³n con sistema de levas inteligente. La diseÃ±Ã© Ã­ntegramente yo tras un largo proceso de anÃ¡lisis de tensiones, materiales y funcionalidad; construÃ­ varios prototipos y las versiones definitivas son los modelos 3D de abajo. Este producto se ha fabricado y vendido comercialmente en la planta de Weidner IbÃ©rica, en Carlet (Valencia).</span></p>
-            </div>
-            <div class="v3d-grid">
-<div class="v3d" data-mv="agr_pos1" data-mv-orbit="20deg 74deg 74%">
-<span class="v3d__marca">AGR_POS1</span>
-                <span class="v3d__cargando">Cargando modelo 3D…</span>
-                <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
-              </div>
-<div class="v3d" data-mv="agr_v1" data-mv-orbit="20deg 74deg 74%">
-<span class="v3d__marca">AGR_V1_POS1</span>
-                <span class="v3d__cargando">Cargando modelo 3D…</span>
-                <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
-              </div>
-<div class="v3d" data-mv="agr_v3" data-mv-orbit="20deg 74deg 74%">
-<span class="v3d__marca">AGR_V3_POS1</span>
-                <span class="v3d__cargando">Cargando modelo 3D…</span>
-                <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
-              </div>
-            </div>
-          </div>
-
           <div class="subserie" id="sub-cadenas">
             <div class="subserie__head">
               <h3 class="serie__titulo"><span data-i18n="fab.exp.cadenas.titulo">Columna de apilamiento con cadenas</span></h3>
               <p class="serie__desc"><span data-i18n="fab.exp.cadenas.desc">Proyecto de I+D propio para la compa&ntilde;&iacute;a, en la l&iacute;nea de la columna SLA/SLI: columna de apilamiento con sistema de cadenas y palancas ergon&oacute;micas integradas en el cuerpo, para que el operario tense o libere la carga sin agacharse. Todo el ensamblaje est&aacute; modelado y documentado en CATIA V5, con visor 3D completo.</span></p>
             </div>
-<div class="v3d v3d--ancho" data-mv="cadenas" data-mv-orbit="0deg 78deg 80%">
-<span class="v3d__marca">CADENAS_WEIDNER_V2</span>
-              <span class="v3d__cargando">Cargando modelo 3D…</span>
-              <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
+            <div class="fila-cadenas">
+              <img src="dfm/Columnas/cadenas1.webp" alt="Columna de apilamiento con cadenas" width="1200" height="1099" loading="lazy" decoding="async" />
+              <div class="v3d" data-mv="cadenas" data-mv-orbit="0deg 78deg 80%">
+                <span class="v3d__marca">CADENAS_WEIDNER_V2</span>
+                <span class="v3d__cargando">Cargando modelo 3D…</span>
+                <span class="v3d__err">No se pudo cargar el modelo 3D.</span>
+              </div>
             </div>
           </div>
 
@@ -484,14 +456,14 @@
               <div class="pdf-card__txt">
                 <h3><span data-i18n="fab.exp.listas.titulo">Presentación de producto</span></h3>
                 <p><span data-i18n="fab.exp.listas.desc">Presentación de las columnas de apilamiento de Weidner, abierta en la página de producto. Maquetación técnica con secuencia de montaje, códigos de color y fichas de producto.</span></p>
-                <a class="boton boton--verde" href="dfm/Presentaci%C3%B3n%20Productos%20Weidner%20-%20Columnas%20(Espa%C3%B1ol).pdf#page=4&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&zoom=page-fit" target="_blank" rel="noopener"><span data-i18n="fab.exp.listas.btn">Ver presentación (PDF)</span> <span class="flecha">→</span></a>
+                <a class="boton boton--verde" href="Imagenes/dise%C3%B1o/Weidner/Columnas%20muestra.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&zoom=page-fit" target="_blank" rel="noopener"><span data-i18n="fab.exp.listas.btn">Ver presentación (PDF)</span> <span class="flecha">→</span></a>
               </div>
             </div>
             <div class="pdf-shell">
               <iframe
                 class="pdf-view"
-                src="dfm/Presentaci%C3%B3n%20Productos%20Weidner%20-%20Columnas%20(Espa%C3%B1ol).pdf#page=4&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit"
-                title="Presentación Productos Weidner - Columnas"
+                src="Imagenes/dise%C3%B1o/Weidner/Columnas%20muestra.pdf#page=1&toolbar=0&navpanes=0&statusbar=0&scrollbar=0&view=Fit"
+                title="Columnas muestra"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
@@ -613,11 +585,14 @@
         <div class="pie__grid">
           <div class="pie__col">
             <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
-            <a href="mailto:salllaiva@alu.edu.gva.es" data-copy-email class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
-            <button class="pie__contacto js-contacto reveal" type="button">
+            <div class="pie__mail-fila reveal">
+              <a href="mailto:salllaiva@alu.edu.gva.es" data-copy-email class="pie__mail" style="color:var(--text)">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+              <span class="nav__sep pie__sep" aria-hidden="true"></span>
+              <button class="pie__contacto js-contacto reveal" type="button">
               <span data-i18n="m.contacto">Contacto</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
             </button>
+            </div>
             <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
             <div class="clima reveal" data-clima>
               <span class="clima__ico" aria-hidden="true"></span>
@@ -639,12 +614,12 @@
           </div>
           <div class="pie__loc reveal">
             <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
-            <div class="mapa"><iframe title="Ubicación de Weidner Ibérica en Carlet" src="https://www.google.com/maps?q=Weidner+Ib%C3%A9rica+Carlet&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
             <address class="pie__dir">Weidner Ibérica · Carlet (Valencia)</address>
+            <div class="mapa"><iframe title="Ubicación de Weidner Ibérica en Carlet" src="https://www.google.com/maps?q=Weidner+Ib%C3%A9rica+Carlet&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
           </div>
         </div>
 
-        <p class="copyright"><a class="nav__volver" href="index.html">← Volver al inicio</a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
+        <p class="copyright"><a class="nav__volver" href="index.html"><span data-i18n="pie.volver">← Volver al inicio</span></a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
       </div>
     </footer>
 
@@ -672,6 +647,7 @@
         <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
         <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
         <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+<button type="button" data-q="Ver programación" data-q-en="See programming" data-i18n="bot.q6">Ver programación</button>
       </div>
       <form class="bot__form" data-bot-form autocomplete="off">
         <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta." />
@@ -701,6 +677,14 @@
           <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.</span></p>
         </form>
       </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+      <div class="lightbox__fondo" data-lb-fondo></div>
+      <button class="lightbox__cerrar" data-lb-cerrar aria-label="Cerrar">✕</button>
+      <button class="lightbox__nav lightbox__nav--prev" data-lb-prev aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="lightbox__nav lightbox__nav--next" data-lb-next aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      <figure class="lightbox__fig"><img src="" alt="" /></figure>
     </div>
   </body>
 </html>

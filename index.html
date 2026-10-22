@@ -36,6 +36,7 @@
         <li class="carga__tema" data-tema-carga="diseno" data-i18n="carga.tema.diseno">Dise&ntilde;o</li>
         <li class="carga__tema" data-tema-carga="video" data-i18n="carga.tema.video">V&iacute;deo y m&uacute;sica</li>
         <li class="carga__tema" data-tema-carga="fab" data-i18n="carga.tema.fab">Fabricaci&oacute;n mec&aacute;nica</li>
+        <li class="carga__tema" data-tema-carga="dam" data-i18n="carga.tema.dam">Programaci&oacute;n</li>
       </ul>
       <button class="carga__cta" id="carga-cta" type="button" data-i18n="carga.entrar">ENTRAR</button>
     </div>
@@ -184,7 +185,22 @@
             <a class="nav__grp" href="dfm.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
         </div>
-        <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
+        <div class="nav__item">
+          <a href="dam.html" data-tema="dam" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.dam">Programación</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="dam.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="dam.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="dam.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="dam.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="dam.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="dam.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="dam.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+            <a class="nav__grp" href="dam.html#t-api"><span data-i18n="dam.api.nav">API en vivo</span></a>
+          </div>
+        </div>
       </nav>
       <div class="nav__derecha">
         <div class="lang" role="group" aria-label="Idioma / Language">
@@ -201,7 +217,7 @@
 
     <main id="contenido" tabindex="-1">
       <section class="seccion seccion--hero" aria-label="Inicio">
-        <div class="bn" data-bn role="region" aria-roledescription="carrusel" tabindex="0" aria-label="Láminas interactivas: fotografía, diseño y vídeo">
+        <div class="bn" data-bn role="region" aria-roledescription="carrusel" tabindex="0" aria-label="Láminas interactivas: fotografía, diseño, vídeo y programación">
           <div class="bn__track" data-bn-track>
             <div class="bn__slide bn__slide--intro is-on" data-bn-slide>
               <div class="bn__intro">
@@ -299,6 +315,50 @@
                 </div>
               </div>
             </div>
+            <div class="bn__slide bn__slide--dam" data-bn-slide inert>
+              <div class="bn__dam-fondo" aria-hidden="true">
+                <video data-bn-video muted loop playsinline preload="none" poster="Imagenes/DAM_sobremi.webp" src="dam/fondo dam.mp4"></video>
+                <span class="bn__dam-oscuro"></span>
+                <span class="bn__dam-rejilla"></span>
+              </div>
+              <div class="bn__dam-col">
+                <div class="bn__dam-txt">
+                  <span class="bn__etq" data-i18n="bn.dam.etq">05 — PROGRAMACIÓN</span>
+                  <h3 class="bn__tit" data-i18n="bn.dam.tit">Código que se puede tocar</h3>
+                  <p class="bn__desc" data-i18n="bn.dam.desc">Simon en Processing y en Arduino, una app de smartwatch en Figma y esta misma web hecha con IA: APIs en vivo, chatbot y verificación sin navegador.</p>
+                  <a class="bn__cta bn__cta--dam" href="dam.html" data-i18n="bn.ver">VER PORTFOLIO</a>
+                </div>
+                <div class="bn__dam-rombo">
+                <div class="bn__dam-grid">
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/android.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/arduino.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/csharp.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/figma.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/linux.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/markdown.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/html5.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/css.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/javascript.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/mysql.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/nodedotjs.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/python.svg" alt="" loading="lazy" decoding="async" /></span>
+                <button class="bn__dam-celda bn__dam-celda--up" type="button" data-dam-reveal aria-label="Mostrar las tecnologías de Programación"><span aria-hidden="true">↑</span></button>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/java.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/npm.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/php.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/git.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/github.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n1"><img src="Imagenes/logos/processing.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/react.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/sqlite.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/typescript.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/xampp.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/xcode.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="bn__dam-celda bn__dam-celda--n2"><img src="Imagenes/logos/visualstudiocode.svg" alt="" loading="lazy" decoding="async" /></span>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="bn__pag" aria-label="Láminas">
             <button class="bn__pag-i is-on" type="button" data-bn-to="0"><span>00</span></button>
@@ -306,8 +366,9 @@
             <button class="bn__pag-i" type="button" data-bn-to="2"><span>02</span></button>
             <button class="bn__pag-i" type="button" data-bn-to="3"><span>03</span></button>
             <button class="bn__pag-i" type="button" data-bn-to="4"><span>04</span></button>
+            <button class="bn__pag-i" type="button" data-bn-to="5"><span>05</span></button>
           </div>
-          <div class="bn__conteo" aria-hidden="true"><b data-bn-cur>01</b><i>/</i>05</div>
+          <div class="bn__conteo" aria-hidden="true"><b data-bn-cur>01</b><i>/</i>06</div>
         </div>
       </section>
 
@@ -325,6 +386,7 @@
               <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
               <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
               <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+              <button type="button" data-q="Ver programación" data-q-en="See programming" data-i18n="bot.q6">Ver programación</button>
             </div>
             <form class="bot__form" data-bot-form autocomplete="off">
               <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta…" />

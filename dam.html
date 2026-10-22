@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es" data-mode="dark" data-tema="dam" data-view="std">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Salvador Llácer Ivars — Programación. Proyectos del CFGS DAM: el Simon escrito en Processing y llevado a Arduino, la app de smartwatch TuCafé en Figma y APIs en vivo de GitHub y Dev.to, con HTML, CSS y JavaScript a mano." />
+    <meta name="theme-color" content="#021b14" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Programación - Salvador Llácer Ivars" />
+    <meta property="og:description" content="Proyectos del CFGS DAM: Simon con el sonido original, robot Arduino, rediseño TuCafé en Figma y APIs en vivo, con HTML, CSS y JavaScript a mano." />
+    <meta property="og:image" content="logo2.svg" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+    <title>Programación — Salvador Llácer Ivars</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20id%3D%22Capa_1%22%20data-name%3D%22Capa%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20368%20378.59%22%3E%0A%20%20%3Cpath%20d%3D%22M192.39%2C151.33V12.33l13.82%2C1.18c2.98%2C7.65%2C3.27%2C21.19%2C6.43%2C28.07.7%2C1.53.99%2C1.79%2C2.5%2C2.5%2C6.54%2C3.05%2C17.45%2C4.07%2C24.55%2C7.1l22.17-21.83%2C28.33%2C16.17c1.65%2C2.79-7.81%2C26.36-8.47%2C31.33l17.62%2C19.01%2C28.81-8.38c1.31-.44%2C1.81.05%2C2.72.85%2C2.13%2C1.89%2C15.55%2C26.39%2C15.5%2C28.53l-22.78%2C23.11c3.05%2C5.98%2C3.38%2C18.47%2C6%2C23.67%2C2.19%2C4.34%2C27.03%2C5.65%2C30.33%2C8.67%2C2.99%2C2.73%2C1.39%2C29.44.39%2C34.94l-30.91%2C7.84-5.86%2C24.55%2C22.83%2C22.17c-1.52%2C4-3.22%2C8.04-5.17%2C11.85-1.48%2C2.9-8.51%2C15.1-10.33%2C16.68-1.53%2C1.33-1.93.99-3.7.8-5.17-.54-24.71-8.97-27.33-8.57l-17.34%2C18.44c-1.55%2C4.59%2C7.02%2C23.02%2C7.72%2C29.08.16%2C1.36.06%2C1.71-.76%2C2.79-1.52%2C2.01-25.32%2C16.33-27.68%2C16.46-1.46.08-1.86-.31-2.96-.96-4.97-2.94-16.44-20.02-20.15-20.91l-25.6%2C6.82-7.15%2C30.08-13.55%2C1.95v-215ZM295.39%2C169.33c-7.22-43.42-41.3-81.59-85-90v47.5c18.37%2C8.02%2C33.31%2C22.93%2C39%2C42.5h46ZM295.39%2C209.33h-45.5c-7.2%2C17.92-20.29%2C35.2-39.5%2C41v49c43.76-8.92%2C77.91-46.15%2C85-90Z%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M174.17%2C355.16c-29.6-2.2-57.81-11.04-82.5-27.6C32.58%2C287.92%2C6.64%2C215.16%2C24.68%2C146.12%2C42.37%2C78.38%2C104.02%2C27.74%2C174.17%2C24.44v-12.1C64.61%2C18.79-11.24%2C120.56%2C11.06%2C228.17c15.75%2C76.01%2C84.95%2C136.58%2C163.11%2C138.02v-11.03Z%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M174.17%2C314.19c-84.03-4.85-137.94-89.57-108.54-169.12%2C16.56-44.82%2C60.77-77.3%2C108.54-79.61V31.37C72.01%2C37.81%2C3.78%2C137.28%2C32.45%2C235.78c18.44%2C63.35%2C75.84%2C108.68%2C141.72%2C111.99v-33.58Z%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M174.17%2C290.2c-69.14-4.04-112.31-76.64-85.24-140.83%2C14.12-33.48%2C48.65-58.39%2C85.24-59.95v-13.93c-51.2%2C3.39-94.96%2C40.89-104.51%2C91.62-13%2C69.11%2C34.74%2C132.42%2C104.51%2C137.09v-14Z%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M174.17%2C274.71c-27.44-1.53-54.39-19.49-67.3-43.35-29.6-54.69%2C5.94-121.61%2C67.3-125.88v-8.88c-19.33%2C2.32-37.66%2C8.69-52.79%2C21.23-64.18%2C53.19-29.45%2C159.63%2C52.79%2C165.4v-8.52Z%22%2F%3E%0A%3C%2Fsvg%3E" />
+
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="fuentes.css" />
+
+    <link rel="preload" as="image" href="Imagenes/DAM_sobremi.webp" fetchpriority="high" />
+
+    <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="script.js" defer></script>
+    <script src="dam.js" defer></script>
+    <script src="teclas.js" defer></script>
+    <noscript><style>.reveal{opacity:1}</style></noscript>
+  </head>
+
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div class="fondo" aria-hidden="true">
+      <span class="fondo__degradado"></span>
+      <span class="fondo__velo"></span>
+      <span class="fondo__patron"></span>
+      <span class="fondo__objetos">
+        <svg class="obj obj--1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+        <svg class="obj obj--2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg>
+        <svg class="obj obj--3" viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v10M9 9v6M13 9v10M17 9v6M21 5v4"/></svg>
+        <svg class="obj obj--4" viewBox="0 0 24 24"><path d="M12 3l2 4h-4zM8 7h8l-1 5H9zM9 12h6v3H9zM10 15h4v6h-4z"/></svg>
+        <svg class="obj obj--5" viewBox="0 0 24 24"><path d="M4 6h16v4H4zM4 14h16v4H4zM8 6v12M16 6v12"/></svg>
+        <svg class="obj obj--6" viewBox="0 0 24 24"><path d="M4 8h10a4 4 0 0 1 0 8H4zM4 8v8M14 8l4-3M14 16l4 3"/><circle cx="9" cy="12" r="1.4"/></svg>
+        <svg class="obj obj--7" viewBox="0 0 24 24"><path d="M6 4l4 4-4 4-4-4zM14 4l4 4-4 4-4-4zM10 12v8M8 20h4"/></svg>
+        <svg class="obj obj--8" viewBox="0 0 24 24"><path d="M14 4a4 4 0 0 0-4 6L4 16l4 4 6-6a4 4 0 0 0 6-4l-3 3-3-1-1-3z"/></svg>
+        <svg class="obj obj--9" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 3v18M4 7.5l16 9M20 7.5l-16 9"/></svg>
+        <svg class="obj obj--10" viewBox="0 0 24 24"><path d="M7 3l3 3-4 4-3-3zM10 6l7 7-5 5-7-7zM15 16l2 2-1 3-3-1z"/></svg>
+        <svg class="obj obj--11" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16.5l9 5 9-5"/></svg>
+        <svg class="obj obj--12" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/><path d="M4 3l8 5 8-5"/></svg>
+        <svg class="obj obj--13" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M8 11v5a3 3 0 0 0 3 3h2M16 13V8a3 3 0 0 0-3-3h-2"/></svg>
+        <svg class="obj obj--14" viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+      </span>
+    </div>
+
+    <header class="nav" aria-label="Principal">
+      <a class="logo" href="index.html" aria-label="Volver al inicio">
+        <span class="logo__marcas" aria-hidden="true"></span>
+        <span class="logo__svg" aria-hidden="true"></span>
+        <span class="logo__nombre">Salvador <span>Llácer</span></span>
+      </a>
+      <nav class="nav__menu" aria-label="Secciones">
+        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+          <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.foto">Foto</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="fotografia.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="fotografia.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="fotografia.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="fotografia.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="fotografia.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="diseno.html" data-tema="diseno" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.diseno">Diseño</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="diseno.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="diseno.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="diseno.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="diseno.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="diseno.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="video.html" data-tema="video" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.video">Vídeo y música</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="video.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="video.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="video.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="video.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="video.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="dfm.html" data-tema="fab" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.mec">Mecánica</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="dfm.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="dfm.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="dfm.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="dfm.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="dfm.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="dfm.html#t-api"><span data-i18n="fab.api.nav">Normas y materiales</span></a>
+            <a class="nav__grp" href="dfm.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="dfm.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="dam.html" data-tema="dam" class="nav__toggle" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            <span data-i18n="m.dam">Programación</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+            <a class="nav__grp" href="#t-api"><span data-i18n="dam.api.nav">API en vivo</span></a>
+          </div>
+        </div>
+      </nav>
+      <div class="nav__derecha">
+        <nav class="miga" aria-label="Migas de pan">
+          <a href="index.html">Inicio</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Programación</span>
+        </nav>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button class="lang__btn is-active" data-lang="es" aria-pressed="true" aria-label="ES (Español)">ES</button>
+          <button class="lang__btn" data-lang="en" aria-pressed="false" aria-label="EN (English)">EN</button>
+        </div>
+        <button class="nav__cta js-contacto" type="button">
+          <span data-i18n="m.contacto">Contacto</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </button>
+        <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+      <h1 class="sr-only" data-i18n="h1.dam">Programación — Salvador Llácer Ivars</h1>
+      <section class="seccion seccion--hero" aria-labelledby="t-sobre">
+        <div class="contenedor reveal">
+          <div class="seccion__head"><span class="seccion__num">01</span><h2 class="seccion__titulo" id="t-sobre"><span data-i18n="dam.sobre.titulo">Sobre mí</span></h2></div>
+          <figure class="escena">
+            <img class="escena__foto" src="Imagenes/DAM_sobremi.webp" alt="Programación de Salvador Llácer Ivars" width="1400" height="773" fetchpriority="high" decoding="async" />
+            <figcaption class="escena__texto">
+              <h3 class="escena__titulo"><span data-i18n="dam.escena.titulo">Programación: código con nombre propio</span></h3>
+              <p><span data-i18n="dam.escena.texto">Curso el CFGS de <strong>DAM</strong> en el <strong>IES Doctor Luis Simarro</strong> de Xàtiva, donde programo en <strong>Java</strong>, <strong>Python</strong> y <strong>JavaScript</strong>, trabajo con <strong>SQLite</strong> y uso <strong>Git</strong> para no perder nada. Todo lo que ves aquí está escrito a mano, sin frameworks ni librerías: HTML, CSS y JavaScript puro. La misma inquietud de siempre —entender cómo funciona cada pieza— aplicada ahora a la pantalla: interfaces, APIs y bases de datos que responden de verdad.</span></p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="seccion" aria-labelledby="t-obra">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">02</span><h2 class="seccion__titulo" id="t-obra"><span data-i18n="dam.obra.titulo">Obra</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="dam.obra.sub">Tres proyectos que cuentan la misma historia desde tres ángulos: el videojuego <strong>Simon</strong> que programé en Processing como proyecto de automatismos de mi ciclo de Fabricación Mecánica, <strong>ese mismo juego llevado a una placa Arduino</strong> con sus pulsadores y LEDs, y una interfaz de <strong>smartwatch</strong> para la app TuCafé diseñada en Figma.</span></p>
+
+          <div class="subserie" id="sub-simon">
+            <div class="dam-fila">
+              <div class="dam-fila__col">
+                <h3 class="serie__titulo"><span data-i18n="dam.obra.simon.titulo">Simon · videojuego escrito en Processing</span></h3>
+                <p class="serie__desc"><span data-i18n="dam.obra.simon.desc">En la asignatura de Automatismos del CFGS de Diseño en Fabricación Mecánica aprendimos a programar con <strong>Processing</strong>, el lenguaje gráfico sobre Java, y el proyecto fue recrear el Simon de los ochenta: cuatro colores, memoria creciente y dificultad progresiva. Esta es esa misma versión traída al navegador, reconstruida a mano en HTML, CSS y JavaScript con los tonos originales en WAV, hasta 30 rondas y el menú del juego original. Mira, memoriza y repite.</span></p>
+                <div class="dam-fila__caja">
+                  <div class="simon-shell" data-simon>
+                    <div class="simon" role="group" aria-label="Juego Simon">
+                      <div class="simon__menu">
+                        <button class="simon__play" type="button" data-simon-play aria-label="Jugar al Simon"></button>
+                        <img class="simon__flecha" src="juego/Simon_vAlpha/data/flecha.png" alt="" />
+                        <p class="simon__titulo" aria-hidden="true">SIMON</p>
+                        <p class="simon__jugar" data-simon-jugar aria-hidden="true">Jugar!</p>
+                        <p class="simon__msg" data-simon-msg role="status" hidden></p>
+                      </div>
+                      <div class="simon__juego" data-simon-juego>
+                        <button class="simon__pad simon__pad--r" type="button" data-pad="0" aria-label="Pad rojo"></button>
+                        <button class="simon__pad simon__pad--g" type="button" data-pad="1" aria-label="Pad verde"></button>
+                        <button class="simon__pad simon__pad--b" type="button" data-pad="2" aria-label="Pad azul"></button>
+                        <button class="simon__pad simon__pad--a" type="button" data-pad="3" aria-label="Pad amarillo"></button>
+                        <img class="simon__marco" src="juego/Simon_vAlpha/data/fondo.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dam-fila__col" id="sub-arduino">
+                <h3 class="serie__titulo"><span data-i18n="dam.obra.arduino.titulo">Arduino · el mismo Simon, sobre la placa</span></h3>
+                <p class="serie__desc"><span data-i18n="dam.obra.arduino.desc">La segunda parte del proyecto: el código del Simon compilado con el <strong>IDE de Arduino</strong> sobre una placa real. La placa lanza la secuencia con los LEDs y el zumbador, el jugador responde con los cuatro pulsadores, y a medida que se acierta la ronda se encadena sin límite hasta que se falla. Del esquema de cableado al C++, es el mismo juego funcionando sin navegador y sin pantalla.</span></p>
+                <div class="dam-fila__caja dam-fila__caja--video">
+                  <video controls preload="metadata" playsinline src="juego/Arduino.mp4"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-figma">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="dam.obra.figma.titulo">TuCafé · interfaz para smartwatch</span></h3>
+              <p class="serie__desc"><span data-i18n="dam.obra.figma.desc">TuCafé es la app de café para smartwatch que diseñué entera en <strong>Figma</strong>: definí el flujo de las cinco pantallas —bienvenida, menú, pedido, detalle y confirmación— con componentes reutilizables, jerarquía pensada para la muñeca y un modo oscuro que ahorra batería en las pantallas OLED. Abajo tienes el lienzo completo con los controles de zoom del visor.</span></p>
+            </div>
+            <div class="figma-marco figma-marco--full">
+              <iframe title="TuCafé · lienzo completo en Figma" loading="lazy" allow="clipboard-write" referrerpolicy="no-referrer-when-downgrade" src="https://embed.figma.com/design/25Nqqis5JIrT6a2lyfFXsK/TuCaf%C3%A9?embed-host=share"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--cv" aria-labelledby="t-form">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">03</span><h2 class="seccion__titulo" id="t-form"><span data-i18n="dam.form.titulo">Formación</span></h2></div>
+          <div class="formacion">
+            <article class="formacion__item">
+              <span class="media">
+                <img src="Imagenes/IES_LuisSimarro.jpg" alt="IES Doctor Luis Simarro · Xàtiva" width="650" height="339" loading="lazy" decoding="async" style="object-fit:cover;background:#0b0d12" />
+                <span class="media__fb">IES</span>
+              </span>
+              <span class="formacion__grado">CFGS</span>
+              <h3><span data-i18n="dam.form.item1.titulo">Desarrollo de Aplicaciones Multiplataforma</span></h3>
+              <p><span data-i18n="dam.form.item1.texto">El ciclo que une lógica y oficio: programación en Java y Kotlin, bases de datos relacionales, acceso a datos, interfaces de usuario, procesos y entornos de desarrollo. La base de todo lo que hay en esta página.</span></p>
+              <p class="formacion__centro"><span data-i18n="dam.form.item1.centro">IES Doctor Luis Simarro · Xàtiva (Valencia)</span></p>
+            </article>
+            <article class="formacion__item">
+              <a class="media" href="https://colegio.sanjaimemoncada.es/" target="_blank" rel="noopener" data-wiki="Colegio Parroquial San Jaime Apóstol Moncada">
+                <img src="Imagenes/SJA.jpg" alt="CP San Jaime Apóstol · Moncada" width="640" height="960" loading="lazy" decoding="async" style="object-fit:cover;background:#0b0d12" />
+                <span class="media__fb">SJ</span>
+              </a>
+              <span class="formacion__grado">CFGS</span>
+              <h3><span data-i18n="dam.form.item2.titulo">Diseño en Fabricación Mecánica</span></h3>
+              <p><span data-i18n="dam.form.item2.texto">Antes del código, el oficio de la pieza: dibujo técnico, CAD/CAM y tolerancias. De ahí me traje el método: medir dos veces, dibujar una.</span></p>
+              <p class="formacion__centro"><span data-i18n="dam.form.item2.centro">CP San Jaime Apóstol · Moncada (Valencia)</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--cv" aria-labelledby="t-tools">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">04</span><h2 class="seccion__titulo" id="t-tools"><span data-i18n="dam.tools.titulo">Herramientas</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="dam.tools.sub">El entorno diario del DAM: del editor de texto al control de versiones, pasando por el servidor local y la herramienta de diseño.</span></p>
+          <div class="tools">
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/html5.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">HTML5</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/javascript.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">JavaScript</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/php.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">PHP</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/processing.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">Processing</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/xampp.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">XAMPP</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/visualstudiocode.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">Visual Studio Code</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/git.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">Git</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/github.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">GitHub</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-card__top">
+                <span class="tool-card__logo"><img src="Imagenes/tools/figma.svg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="tool-card__name">Figma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--cv" aria-labelledby="t-exp">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">05</span><h2 class="seccion__titulo" id="t-exp"><span data-i18n="dam.exp.titulo">Proyectos en curso</span></h2></div>
+          <p class="seccion__sub"><span class="apichip">GitHub API</span><span data-i18n="dam.exp.sub">Lo que está en la mesa ahora mismo: los repositorios en vivo desde la API de GitHub y el proceso paso a paso que sostiene esta web.</span></p>
+
+          <div class="api" data-gh>
+            <h3 class="api__h"><span data-i18n="dam.api.gh.titulo">GitHub</span></h3>
+            <p class="api__nota"><span data-i18n="dam.api.gh.sub">Datos en vivo de la API pública de</span> <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
+            <div class="gh-grid" data-gh-grid></div>
+            <p class="api__estado" data-gh-estado></p>
+            <a class="boton boton--verde api__btn" href="https://github.com/SalvaLlacer26" target="_blank" rel="noopener"><span data-i18n="dam.api.gh.btn">Ver perfil</span> <span class="flecha">→</span></a>
+          </div>
+
+          <div class="subserie" id="sub-teclas">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="dam.teclas.titulo">Teclas · ritmo y piano</span></h3>
+              <p class="serie__desc"><span data-i18n="dam.teclas.desc">Proyecto personal de videojuego: un piano sobre fondo de escenario donde el metrónomo nunca para.</span></p>
+            </div>
+            <div class="teclas" data-teclas>
+              <div class="teclas__escena">
+                <div class="teclas__luz" aria-hidden="true"></div>
+                <div class="teclas__barra">
+                  <div class="teclas__metro" data-tn-metro aria-hidden="true">
+                    <span class="teclas__metro-beats">
+                      <span class="teclas__metro-beat" data-tn-beat="0"></span>
+                      <span class="teclas__metro-beat" data-tn-beat="1"></span>
+                      <span class="teclas__metro-beat" data-tn-beat="2"></span>
+                      <span class="teclas__metro-beat" data-tn-beat="3"></span>
+                    </span>
+                    <span class="teclas__bpm"><b data-tn-bpm>72</b> bpm</span>
+                  </div>
+                  <div class="teclas__staff" data-tn-staff aria-hidden="true">
+                    <svg class="teclas__lines" viewBox="0 0 320 84" preserveAspectRatio="none">
+                      <line x1="0" y1="18" x2="320" y2="18"/><line x1="0" y1="31" x2="320" y2="31"/>
+                      <line x1="0" y1="44" x2="320" y2="44"/><line x1="0" y1="57" x2="320" y2="57"/>
+                      <line x1="0" y1="70" x2="320" y2="70"/>
+                    </svg>
+                    <div class="teclas__notas" data-tn-notas></div>
+                  </div>
+                  <div class="teclas__hud-r">
+                    <p class="teclas__ronda"><span data-i18n="dam.teclas.ctl.ronda">Ronda</span> <b data-tn-ronda>1</b></p>
+                    <div class="teclas__tiempo" aria-hidden="true"><div class="teclas__tiempo-barra" data-tn-tiempo></div></div>
+                  </div>
+                </div>
+                <p class="teclas__estado" data-tn-estado role="status"></p>
+                <div class="teclas__piano" data-tn-piano role="group" aria-label="Piano"></div>
+              </div>
+              <div class="teclas__menu" data-tn-menu>
+                <button class="boton boton--verde teclas__jugar" type="button" data-tn-jugar><span data-i18n="dam.teclas.ctl.jugar">Jugar</span> <span class="flecha">→</span></button>
+                <div class="teclas__dif" role="group" aria-label="Dificultad">
+                  <button type="button" data-tn-dif="facil" class="is-on" data-i18n="dam.teclas.ctl.facil">Fácil</button>
+                  <button type="button" data-tn-dif="dificil" data-i18n="dam.teclas.ctl.dificil">Difícil</button>
+                </div>
+                <p class="teclas__ayuda" data-i18n="dam.teclas.ctl.ayuda">Teclado: A S D F G · W E para las negras · o toca las teclas</p>
+              </div>
+              <div class="teclas__over" data-tn-over hidden aria-hidden="true"><p class="teclas__over-txt">GAME OVER</p></div>
+            </div>
+          </div>
+
+          <div class="subserie" id="sub-proceso">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="dam.inf.titulo">Del boceto a la web</span></h3>
+              <p class="serie__desc"><span data-i18n="dam.inf.sub">Cuatro fases y un bucle de revisión: así viaja una idea desde la libreta hasta el navegador.</span></p>
+            </div>
+            <div class="proceso">
+              <div class="proceso__fase">
+                <div class="proceso__head"><span class="proceso__num">1</span><h4 class="proceso__tit"><span data-i18n="dam.inf.f1.titulo">Ideación y diseño</span></h4></div>
+                <p class="proceso__desc"><span data-i18n="dam.inf.f1.desc">Antes del editor: la libreta, el mapa de la web y el prototipo.</span></p>
+                <ul class="proceso__pasos">
+                      <li><b>1.1</b><img src="dam/proceso-1.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s1">Boceto en papel de la portada</span></li>
+                      <li><b>1.2</b><span data-i18n="dam.inf.s2">Mapa de la web: cinco subwebs</span></li>
+                      <li><b>1.3</b><span data-i18n="dam.inf.s3">Wireframes y prototipo TuCafé en Figma</span></li>
+                      <li><b>1.4</b><span data-i18n="dam.inf.s4">Paleta y variables por tema</span></li>
+                      <li><b>1.5</b><span data-i18n="dam.inf.s5">Tipografía y escala responsive</span></li>
+                      <li><b>1.6</b><span data-i18n="dam.inf.s6">Historias de usuario del visitante</span></li>
+                </ul>
+              </div>
+              <div class="proceso__fase">
+                <div class="proceso__head"><span class="proceso__num">2</span><h4 class="proceso__tit"><span data-i18n="dam.inf.f2.titulo">Estructura y estilo</span></h4></div>
+                <p class="proceso__desc"><span data-i18n="dam.inf.f2.desc">El esqueleto semántico y el sistema visual: HTML, CSS y cinco identidades.</span></p>
+                <ul class="proceso__pasos">
+                      <li><b>2.1</b><img src="dam/proceso-2.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s7">HTML semántico página a página</span></li>
+                      <li><b>2.2</b><img src="dam/proceso-3.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s8">CSS a mano con variables y capas</span></li>
+                      <li><b>2.3</b><span data-i18n="dam.inf.s9">Menú interactivo con drops por disciplina</span></li>
+                      <li><b>2.4</b><span data-i18n="dam.inf.s10">Identidad de cada lámina: rombo, mosaico y foco</span></li>
+                      <li><b>2.5</b><span data-i18n="dam.inf.s11">Adaptativo de 320 px a escritorio</span></li>
+                      <li><b>2.6</b><span data-i18n="dam.inf.s12">Accesibilidad: foco, aria y reduced-motion</span></li>
+                </ul>
+              </div>
+              <div class="proceso__fase">
+                <div class="proceso__head"><span class="proceso__num">3</span><h4 class="proceso__tit"><span data-i18n="dam.inf.f3.titulo">Lógica y datos</span></h4></div>
+                <p class="proceso__desc"><span data-i18n="dam.inf.f3.desc">La parte viva: carrusel, temas, i18n, APIs, sonido y juegos.</span></p>
+                <ul class="proceso__pasos">
+                      <li><b>3.1</b><img src="dam/proceso-4.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s13">Carrusel del índice: arrastre, rueda y teclado</span></li>
+                      <li><b>3.2</b><span data-i18n="dam.inf.s14">Cambio de tema al pasar por cada CTA</span></li>
+                      <li><b>3.3</b><img src="dam/proceso-5.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s15">Loader con las cinco caras del proyecto</span></li>
+                      <li><b>3.4</b><span data-i18n="dam.inf.s16">i18n ES/EN persistente en las seis páginas</span></li>
+                      <li><b>3.5</b><img src="dam/proceso-6.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s17">APIs en vivo: GitHub, meme y consejos</span></li>
+                      <li><b>3.6</b><span data-i18n="dam.inf.s18">Simon: port fiel con WAV y tiempos del sketch</span></li>
+                      <li><b>3.7</b><span data-i18n="dam.inf.s19">Teclas: juego de ritmo con WebAudio</span></li>
+                      <li><b>3.8</b><span data-i18n="dam.inf.s20">Visor 3D embebido en Fabricación</span></li>
+                      <li><b>3.9</b><span data-i18n="dam.inf.s21">FAV, clima, copia de correo y guía de secciones</span></li>
+                </ul>
+              </div>
+              <div class="proceso__fase">
+                <div class="proceso__head"><span class="proceso__num">4</span><h4 class="proceso__tit"><span data-i18n="dam.inf.f4.titulo">Publicación y mejora</span></h4></div>
+                <p class="proceso__desc"><span data-i18n="dam.inf.f4.desc">Git, revisión headless y despliegue; después, volver y pulir.</span></p>
+                <ul class="proceso__pasos">
+                      <li><b>4.1</b><span data-i18n="dam.inf.s22">Historial Git con un tema por commit</span></li>
+                      <li><b>4.2</b><span data-i18n="dam.inf.s23">Verificación sin navegador: Chrome headless</span></li>
+                      <li><b>4.3</b><img src="dam/proceso-7.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s24">Auditoría de peso: webp y lazy loading</span></li>
+                      <li><b>4.4</b><img src="dam/proceso-8.svg" alt="" width="44" height="33" loading="lazy" decoding="async" /><span data-i18n="dam.inf.s25">GitHub Pages y revisión final</span></li>
+                </ul>
+              </div>
+              <p class="proceso__loop"><b data-i18n="dam.inf.loopTit">Bucle de revisión</b><span data-i18n="dam.inf.loop">Cada vuelta vuelve al boceto, se corrige y se vuelve a publicar: el proyecto nunca se da por terminado.</span></p>
+              <div class="proceso__dets">
+                <article class="proceso__det"><h5><span data-i18n="dam.inf.det1.titulo">El índice es la portada</span></h5><p><span data-i18n="dam.inf.det1.texto">La home no es una lista de enlaces: es un carrusel de seis láminas que se mueven con arrastre, rueda y flechas.</span></p></article>
+                <article class="proceso__det"><h5><span data-i18n="dam.inf.det2.titulo">Cinco mundos, un solo CSS</span></h5><p><span data-i18n="dam.inf.det2.texto">Un único estilos.css con variables en :root sostiene las cinco subwebs; data-tema decide la paleta.</span></p></article>
+                <article class="proceso__det"><h5><span data-i18n="dam.inf.det3.titulo">La web habla tu idioma</span></h5><p><span data-i18n="dam.inf.det3.texto">Diccionario ES/EN en script.js, persistido en localStorage, con re-render automático de los bloques de API.</span></p></article>
+                <article class="proceso__det"><h5><span data-i18n="dam.inf.det4.titulo">El sonido es parte del diseño</span></h5><p><span data-i18n="dam.inf.det4.texto">Simon con los WAV originales y tiempos del sketch; Teclas sintetiza sus notas con WebAudio.</span></p></article>
+                <article class="proceso__det"><h5><span data-i18n="dam.inf.det5.titulo">Sin frameworks, sin excusas</span></h5><p><span data-i18n="dam.inf.det5.texto">Cero npm, cero build: HTML, CSS y JavaScript planos que se abren con doble clic.</span></p></article>
+                <article class="proceso__det"><h5><span data-i18n="dam.inf.det6.titulo">Cómo lo compruebo</span></h5><p><span data-i18n="dam.inf.det6.texto">Volcados con Chrome headless, capturas de cada sección, pruebas de humo y una pasada de accesibilidad.</span></p></article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--cv" aria-labelledby="t-comp">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">06</span><h2 class="seccion__titulo" id="t-comp"><span data-i18n="dam.comp.titulo">Competencias</span></h2></div>
+          <div class="bloques">
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg></span><h3><span data-i18n="dam.comp.b1.titulo">Programación</span></h3><p><span data-i18n="dam.comp.b1.texto">Java, Kotlin y JavaScript: de la lógica del algoritmo a la interfaz que responde.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 3 2.6 15 0 18M12 3c-2.6 3-2.6 15 0 18"/></svg></span><h3><span data-i18n="dam.comp.b2.titulo">Desarrollo web</span></h3><p><span data-i18n="dam.comp.b2.texto">HTML y CSS a mano, sin frameworks: rápido, accesible y mantenible.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span><h3><span data-i18n="dam.comp.b3.titulo">Bases de datos</span></h3><p><span data-i18n="dam.comp.b3.texto">SQLite y MySQL: modelado, consultas SQL y acceso a datos desde la app.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="7" r="2.4"/><path d="M6 8.4v7.2M6 12c0-3 12-2.4 12-2.6"/></svg></span><h3><span data-i18n="dam.comp.b4.titulo">Control de versiones</span></h3><p><span data-i18n="dam.comp.b4.texto">Git y GitHub: historial limpio, ramas por tema y copias en la nube.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M3 4h18v16H3zM3 9h18M9 9v11"/></svg></span><h3><span data-i18n="dam.comp.b5.titulo">UI/UX</span></h3><p><span data-i18n="dam.comp.b5.texto">Figma: prototipos, componentes y guías de estilo antes de escribir código.</span></p></article>
+            <article class="bloque"><span class="bloque__ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2zM19 17l.9 2.1L22 20l-2.1.9L19 23l-.9-2.1L16 20l2.1-.9z"/></svg></span><h3><span data-i18n="dam.comp.b6.titulo">IA aplicada</span></h3><p><span data-i18n="dam.comp.b6.texto">Prompt engineering y asistentes de IA como parte del flujo de trabajo diario.</span></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--cv" aria-labelledby="t-ref">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">07</span><h2 class="seccion__titulo" id="t-ref"><span data-i18n="dam.ref.titulo">Referentes</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="dam.ref.sub">Cuatro nombres que resumen dos formas de entender la tecnología: construirla y explicarla.</span></p>
+          <div class="referentes">
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/John_Carmack" target="_blank" rel="noopener" >
+                <img src="Imagenes/ref_carmack.jpg" alt="John Carmack" width="800" height="600" loading="lazy" decoding="async" />
+                <span class="media__fb">John Carmack</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/John_Carmack" target="_blank" rel="noopener">John Carmack<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r1.texto">El motor como oficio: exprimir cada ciclo y publicar el código cuando sirve a todos.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/Neil_Druckmann" target="_blank" rel="noopener" >
+                <img src="Imagenes/ref_druckmann.jpg" alt="Neil Druckmann" width="960" height="1371" loading="lazy" decoding="async" />
+                <span class="media__fb">Neil Druckmann</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Neil_Druckmann" target="_blank" rel="noopener">Neil Druckmann<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r2.texto">Narrativa y sistemas: contar una historia jugable sin renunciar al diseño.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://es.wikipedia.org/wiki/Steve_Wozniak" target="_blank" rel="noopener" >
+                <img src="Imagenes/ref_wozniak.jpg" alt="Steve Wozniak" width="960" height="1283" loading="lazy" decoding="async" />
+                <span class="media__fb">Steve Wozniak</span>
+              </a>
+              <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Steve_Wozniak" target="_blank" rel="noopener">Steve Wozniak<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r3.texto">Hacerlo a mano: entender cada capa del hardware y construirlo con las propias manos.</span></p>
+            </article>
+            <article class="ref">
+              <a class="media ref__media" href="https://www.alvamajo.com" target="_blank" rel="noopener" >
+                <img src="Imagenes/ref_majo.jpg" alt="Alva Majo" width="900" height="900" loading="lazy" decoding="async" />
+                <span class="media__fb">Alva Majo</span>
+              </a>
+              <h3><a class="ref__link" href="https://www.alvamajo.com" target="_blank" rel="noopener">Alva Majo<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r4.texto">Divulgar con rigor: explicar la tecnología sin humo y con ejemplos que se pueden tocar.</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--cv" aria-labelledby="t-api">
+        <div class="contenedor caja reveal">
+          <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-api"><span data-i18n="dam.api.titulo">API y datos en vivo</span></h2></div>
+          <p class="seccion__sub"><span class="apichip">Dev.to API</span><span data-i18n="dam.api.sub">Artículos de la comunidad de desarrollo en tiempo real, servidos por la API pública y gratuita de Dev.to: sin claves, sin caché y sin intermediarios.</span></p>
+          <div class="api" data-devto>
+            <h3 class="api__h"><span data-i18n="dam.api.devto.titulo">Qué está leyendo la comunidad</span></h3>
+            <p class="api__nota"><span data-i18n="dam.api.devto.sub">Una selección de artículos técnicos recién publicados, con su autor y sus reacciones, pedida directamente a la API de Dev.to.</span></p>
+            <ul class="devto-grid" data-devto-grid aria-live="polite">
+              <li class="api__estado" data-devto-estado><span data-i18n="dam.api.devto.carga">Cargando artículos…</span></li>
+            </ul>
+            <a class="boton boton--verde api__btn" href="https://dev.to" target="_blank" rel="noopener"><span data-i18n="dam.api.devto.btn">Explorar Dev.to</span> <span class="flecha">→</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <div class="pie__grid">
+          <div class="pie__col">
+            <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
+            <div class="pie__mail-fila reveal">
+              <a href="mailto:salllaiva@alu.edu.gva.es" data-copy-email class="pie__mail" style="color:var(--text)">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+              <span class="nav__sep pie__sep" aria-hidden="true"></span>
+              <button class="pie__contacto js-contacto reveal" type="button">
+              <span data-i18n="m.contacto">Contacto</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            </button>
+            </div>
+            <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
+            <div class="clima reveal" data-clima>
+              <span class="clima__ico" aria-hidden="true"></span>
+              <div class="clima__cuerpo">
+                <span class="clima__lugar">Xàtiva · Valencia</span>
+                <div class="clima__fila"><span class="clima__temp">–</span><span class="clima__desc">Cargando…</span></div>
+                <span class="clima__meta"></span>
+              </div>
+              <label class="clima__selector">
+                <span class="clima__selector-txt"><span data-i18n="clima.ubicacion">Ubicación</span></span>
+                <select class="clima__select" aria-label="Elegir ubicación">
+                  <option value="xativa">Xàtiva</option>
+                  <option value="valencia">València</option>
+                  <option value="jaraguas">Jaraguas</option>
+                  <option value="lapobla">La Pobla Llarga</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="pie__loc reveal">
+            <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
+            <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
+            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro en Xàtiva" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+          </div>
+        </div>
+
+        <p class="copyright"><a class="nav__volver" href="index.html"><span data-i18n="pie.volver">← Volver al inicio</span></a> · © <span id="anio"></span> Salvador Llácer Ivars</p>
+      </div>
+    </footer>
+
+    <div class="fab">
+      <button class="fab__btn fab__top" id="toTop" type="button" aria-label="Subir arriba">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+      <button class="fab__btn fab__toc" id="tocBtn" type="button" aria-label="Índice de secciones" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      </button>
+      <button class="fab__btn fab__chat is-on" data-bot-toggle type="button" aria-label="Abrir asistente" aria-expanded="false" aria-controls="botPanel">
+        <span class="fab__ico-logo" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <section class="bot bot--fab" id="botPanel" data-bot aria-label="Asistente del portfolio">
+      <header class="bot__head" data-bot-close>
+        <span class="bot__avatar bot__avatar-logo" aria-hidden="true"></span>
+        <span class="bot__tit"><strong data-i18n="bot.titulo">Asistente PORTFOLIO</strong><small data-i18n="bot.sub">Pregúntame por mis habilidades o por dónde verlas</small></span>
+      </header>
+      <div class="bot__log" data-bot-log role="log" aria-live="polite"></div>
+      <div class="bot__sug">
+        <button type="button" data-q="¿Maneja Photoshop?" data-q-en="Do you use Photoshop?" data-i18n="bot.q1">¿Maneja Photoshop?</button>
+        <button type="button" data-q="Ver fotografía" data-q-en="See photography" data-i18n="bot.q2">Ver fotografía</button>
+        <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
+        <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
+        <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+        <button type="button" data-q="Ver programación" data-q-en="See programming" data-i18n="bot.q6">Ver programación</button>
+      </div>
+      <form class="bot__form" data-bot-form autocomplete="off">
+        <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta…" />
+        <button type="submit" data-i18n="bot.enviar">Enviar</button>
+      </form>
+    </section>
+    <div class="toc__scrim" id="tocScrim"></div>
+    <aside class="toc" id="toc" aria-hidden="true" aria-label="Índice de secciones">
+      <header class="toc__head">
+        <h3>Secciones</h3>
+        <button class="toc__cerrar" id="tocClose" aria-label="Cerrar índice">✕</button>
+      </header>
+      <nav class="toc__list" id="tocList"></nav>
+    </aside>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__fondo" data-cerrar></div>
+      <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button class="modal__cerrar" data-cerrar aria-label="Cerrar">✕</button>
+        <p class="modal__eyebrow"><span data-i18n="modal.eyebrow">Hablemos</span></p>
+        <h2 class="modal__titulo" id="modal-titulo"><span data-i18n="modal.titulo">Cuéntame tu proyecto</span></h2>
+        <form class="form" id="form" novalidate>
+          <label class="form__campo"><span data-i18n="form.nombre">Nombre</span><input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre" /></label>
+          <label class="form__campo"><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email" placeholder="tu@correo.com" /></label>
+          <label class="form__campo"><span data-i18n="form.mensaje">Mensaje</span><textarea name="mensaje" rows="4" required placeholder="¿En qué puedo ayudarte?"></textarea></label>
+          <button type="submit" class="boton boton--verde"><span data-i18n="form.enviar">Enviar mensaje</span> <span class="flecha">→</span></button>
+          <p class="form__exito" id="exito" hidden><span data-i18n="form.exito">✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.</span></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

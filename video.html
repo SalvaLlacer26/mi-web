@@ -171,7 +171,22 @@
             <a class="nav__grp" href="dfm.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
         </div>
-        <a href="#" data-soon data-tema="dam"><span data-i18n="m.dam">DAM</span></a>
+        <div class="nav__item">
+          <a href="dam.html" data-tema="dam" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+            <span data-i18n="m.dam">Programación</span>
+            <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__drop">
+            <a class="nav__grp" href="dam.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+            <a class="nav__grp" href="dam.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <a class="nav__grp" href="dam.html#t-form"><span data-i18n="sec.form">Formación</span></a>
+            <a class="nav__grp" href="dam.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
+            <a class="nav__grp" href="dam.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <a class="nav__grp" href="dam.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
+            <a class="nav__grp" href="dam.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
+            <a class="nav__grp" href="dam.html#t-api"><span data-i18n="dam.api.nav">API en vivo</span></a>
+          </div>
+        </div>
       </nav>
       <div class="nav__derecha">
         <nav class="miga" aria-label="Migas de pan">
@@ -839,21 +854,21 @@
 
       <section class="seccion" aria-labelledby="t-lastfm">
         <div class="contenedor caja reveal">
-          <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-lastfm"><span data-i18n="v.lastfm.titulo">Lo que escucho</span></h2></div>
-          <p class="seccion__sub"><span data-i18n="v.lastfm.sub">Mi música se escucha en la sección de música; aquí, lo que está sonando en mis cascos gracias a la API de Last.fm.</span></p>
-          <div class="lastfm" data-lastfm>
+          <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-lastfm"><span data-i18n="v.spotify.titulo">Lo que escucho</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="v.spotify.sub">Conecta tu cuenta de Spotify y descubrirás aquí tus artistas más escuchados del último mes, directamente desde la API oficial de Spotify.</span></p>
+          <div class="lastfm" data-spotify>
             <div class="lastfm__head">
               <span class="lastfm__ico" aria-hidden="true">♪</span>
               <div class="lastfm__txt">
-                <h3><span data-i18n="v.lastfm.tit">Artistas que más escucho</span></h3>
-                <p><span data-i18n="v.lastfm.nota">Datos en vivo de mi perfil de Last.fm.</span></p>
+                <h3><span data-i18n="v.spotify.tit">Tus artistas más escuchados</span></h3>
+                <p><span data-i18n="v.spotify.nota">Datos de tu cuenta de Spotify (últimos 30 días).</span></p>
               </div>
-              <a class="boton boton--verde" href="#sub-musica"><span data-i18n="v.lastfm.btn">Escuchar mi música</span> <span class="flecha">→</span></a>
+              <button class="boton boton--verde" type="button" data-spotify-btn><span data-i18n="v.spotify.btn">Conectar Spotify</span> <span class="flecha">→</span></button>
             </div>
-            <ul class="lastfm__grid" data-lastfm-grid aria-live="polite">
-              <li class="lastfm__estado" data-lastfm-estado data-i18n="v.lastfm.carga">Cargando artistas…</li>
+            <ul class="lastfm__grid" data-spotify-grid aria-live="polite">
+              <li class="api__estado" data-spotify-estado data-i18n="v.spotify.vacio">Conecta tu Spotify para ver tus artistas.</li>
             </ul>
-            <p class="lastfm__credito"><span data-i18n="v.lastfm.fuente">Datos de la API pública de</span> <a href="https://www.last.fm" target="_blank" rel="noopener">Last.fm</a></p>
+            <p class="lastfm__credito"><span data-i18n="v.spotify.fuente">Datos de la API oficial de</span> <a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a></p>
           </div>
         </div>
       </section>
@@ -864,11 +879,14 @@
         <div class="pie__grid">
           <div class="pie__col">
             <p class="pie__eyebrow reveal"><span data-i18n="pie.eyebrow">¿Tienes un proyecto?</span></p>
-            <a href="mailto:salllaiva@alu.edu.gva.es" data-copy-email class="pie__mail reveal">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
-            <button class="pie__contacto js-contacto reveal" type="button">
+            <div class="pie__mail-fila reveal">
+              <a href="mailto:salllaiva@alu.edu.gva.es" data-copy-email class="pie__mail" style="color:var(--text)">salllaiva@alu.edu.gva.es <span class="flecha">→</span></a>
+              <span class="nav__sep pie__sep" aria-hidden="true"></span>
+              <button class="pie__contacto js-contacto reveal" type="button">
               <span data-i18n="m.contacto">Contacto</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
             </button>
+            </div>
             <p class="pie__nota reveal"><span data-i18n="pie.nota">Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.</span></p>
             <div class="clima reveal" data-clima>
               <span class="clima__ico" aria-hidden="true"></span>
@@ -890,8 +908,8 @@
           </div>
           <div class="pie__loc reveal">
             <p class="pie__loc-titulo"><span data-i18n="pie.loc">Localización</span></p>
-            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
             <address class="pie__dir">IES Luis Simarro · Xàtiva (Valencia)</address>
+            <div class="mapa"><iframe title="Ubicación del IES Luis Simarro" src="https://www.google.com/maps?q=IES+Luis+Simarro+Xativa&z=16&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
           </div>
         </div>
 
@@ -923,6 +941,7 @@
         <button type="button" data-q="Ver diseño" data-q-en="See design" data-i18n="bot.q3">Ver diseño</button>
         <button type="button" data-q="¿Quién es Salvador?" data-q-en="Who is Salvador?" data-i18n="bot.q4">¿Quién es Salvador?</button>
         <button type="button" data-q="¿Cómo contacto?" data-q-en="How do I contact you?" data-i18n="bot.q5">¿Cómo contacto?</button>
+<button type="button" data-q="Ver programación" data-q-en="See programming" data-i18n="bot.q6">Ver programación</button>
       </div>
       <form class="bot__form" data-bot-form autocomplete="off">
         <input type="text" data-bot-in data-i18n-ph="bot.ph" aria-label="Escribe tu pregunta" placeholder="Escribe tu pregunta." />
