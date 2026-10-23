@@ -1096,6 +1096,12 @@ html[data-tema="video"] .yt{border-color:rgba(46,230,255,.28)}
 .ytc{display:flex;flex-direction:column;gap:.5rem;text-decoration:none;color:inherit;transition:transform .3s}
 .ytc:hover{transform:translateY(-3px)}
 .ytc__thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:rgba(128,128,128,.18);border:1px solid var(--line)}
+.ytc__toggle{position:absolute;inset:0;z-index:4;display:grid;place-items:center;background:rgba(6,8,12,.3);border:0;padding:0;cursor:pointer;color:#fff;opacity:.8;transition:opacity .25s,background .25s}
+.ytc__toggle svg{width:42px;height:42px;fill:currentColor;filter:drop-shadow(0 3px 10px rgba(0,0,0,.7))}
+.ytc__toggle.is-sonando{background:rgba(6,8,12,.12);opacity:.55}
+.ytc__toggle:hover,.ytc__toggle:focus-visible{opacity:1;background:rgba(6,8,12,.42)}
+.ytc__toggle:focus-visible{outline:2px solid #fff;outline-offset:-5px}
+@media (hover:none){.ytc__toggle.is-sonando{opacity:.75}}
 .ytc__thumb--v{aspect-ratio:9/16;max-width:200px}
 .ytg .ytc__thumb--v{max-width:none}
 .ytc__thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease,filter .4s ease}
@@ -1432,8 +1438,11 @@ html[data-tema="dam"] .bn__slide--dam{--dam-etq:#86efac;--dam-etq-b:rgba(34,197,
   .bn__dam-col{flex-direction:column;align-items:flex-start;justify-content:center;gap:1.1rem}
   .bn__dam-col>.bn__dam-txt{position:static;width:100%;max-width:100%;transform:none;opacity:0}
   .bn__slide--dam.is-open .bn__dam-col>.bn__dam-txt{transform:none;opacity:1}
-  .bn__slide--dam.is-open .bn__dam-rombo{transform:none}
-  .bn__dam-rombo{width:min(72vw,300px);align-self:center}
+  .bn__slide--dam.is-open .bn__dam-rombo{transform:translateY(-10px)}
+  .bn__dam-rombo{width:min(72vw,300px);align-self:center;transform:translateY(-10px)}
+  .bn__pop{top:auto;bottom:calc(100% + 16px);transform:translate(-50%,-12px)}
+  .bn__pal:hover .bn__pop,.bn__pal:focus .bn__pop{transform:translate(-50%,0)}
+  .bn__mano::after{transform:translateY(-3px)}
 }
 
 /* ─── Simon (dam): port fiel del sketch Processing ─── */

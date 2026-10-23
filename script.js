@@ -404,6 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "v.exp.missr.titulo":"MissR · reduce, repara, reutiliza","v.exp.missr.desc":"Campaña audiovisual sobre los tres erres. Edité las piezas para redes, participé en la grabación y compuse la banda sonora de cada una. La banda sonora, en formato de audio, está debajo.",
       "v.exp.eco.titulo":"ECO · La història d'ECO","v.exp.eco.desc":"Serie documental en valenciano: prólogo y ocho capítulos sobre el territorio, la gente y la tierra. Montaje de las nueve entregas y música propia para la serie.",
       "v.exp.arte.titulo":"ARTE","v.exp.arte.desc":"Nueve episodios del proyecto ARTE. La <strong>música es mía</strong>; la <strong>narración y las ilustraciones</strong> son de Esther Torres.",
+      "v.short.pause":"Pausar el vídeo","v.short.play":"Reproducir el vídeo",
       "v.exp.ods.titulo":"ODS · Objetivos de Desarrollo Sostenible","v.exp.ods.desc":"Serie de shorts en valenciano sobre los Objetivos de Desarrollo Sostenible. Edición de las piezas y música original para cada una.",
       "v.exp.reviu.titulo":"Reviu lo Rural","v.exp.reviu.desc":"Proyecto audiovisual para revivir el mundo rural: cinco piezas sobre el territorio, la gente y la casa. Edición y música propias.",
       "v.exp.otros.titulo":"Otros proyectos con Interpreta Natura","v.exp.otros.desc":"Música propia para los proyectos de Interpreta Natura.","v.exp.otros.musica":"música propia",
@@ -749,6 +750,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "v.exp.missr.titulo":"MissR · reduce, repair, reuse","v.exp.missr.desc":"Audiovisual campaign about the three Rs. I edited the social pieces, took part in the shooting and composed the soundtrack for each one. The soundtrack, in audio format, is just below.",
       "v.exp.eco.titulo":"ECO · La història d'ECO","v.exp.eco.desc":"Documentary series in Valencian: a prologue and eight chapters about the land, its people and the soil. Editing of all nine instalments and my own music for the series.",
       "v.exp.arte.titulo":"ARTE","v.exp.arte.desc":"Nine episodes of the ARTE project. The <strong>music is mine</strong>; the <strong>narration and illustrations</strong> are by Esther Torres.",
+      "v.short.pause":"Pause the video","v.short.play":"Play the video",
       "v.exp.ods.titulo":"SDGs · Sustainable Development Goals","v.exp.ods.desc":"Series of shorts in Valencian about the Sustainable Development Goals. Editing of the pieces and original music for each one.",
       "v.exp.reviu.titulo":"Reviu lo Rural","v.exp.reviu.desc":"Audiovisual project to revive rural life: five pieces about the land, its people and the home. My own editing and music.",
       "v.exp.otros.titulo":"Other projects with Interpreta Natura","v.exp.otros.desc":"Own music for Interpreta Natura projects.","v.exp.otros.musica":"own music",
@@ -1402,6 +1404,11 @@ document.addEventListener("DOMContentLoaded", () => {
           if (g) g.classList.remove("is-reveal");
         }
       });
+      const sig = slides[i + 1];
+      if (sig) {
+        const sv = sig.querySelector("video[data-bn-video]");
+        if (sv && sv.preload === "none" && !bajo) { sv.preload = "auto"; sv.load(); }
+      }
       pags.forEach((p, k) => p.classList.toggle("is-on", k === i));
       if (conteo) conteo.textContent = String(i + 1).padStart(2, "0");
       if (camReset) camReset();
@@ -2062,18 +2069,55 @@ document.addEventListener("DOMContentLoaded", () => {
     tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
     const cuandoApi = (f) => { if (apiOk) f(); else cola.push(f); };
+    const jugadores = [];
+    window.__ytJug = jugadores;
+    const I = (k) => (I18N[langActual()] || I18N.es)[k] || k;
+    const montarToggle = (caja, player) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "ytc__toggle";
+      caja.appendChild(b);
+      const pintar = (sonando) => {
+        b.classList.toggle("is-sonando", sonando);
+        b.innerHTML = sonando
+          ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>'
+          : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
+        b.setAttribute("aria-label", I(sonando ? "v.short.pause" : "v.short.play"));
+      };
+      pintar(true);
+      b.addEventListener("click", (ev) => {
+        ev.preventDefault(); ev.stopPropagation();
+        try {
+          if (player.getPlayerState() === 1) { player.pauseVideo(); pintar(false); }
+          else {
+            jugadores.forEach((j) => { if (j !== player) { try { j.pauseVideo(); } catch (e) {} } });
+            player.playVideo(); pintar(true);
+          }
+        } catch (e) {}
+      });
+    };
     const reproducir = (caja, id, titulo) => {
       if (esFile) { window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener"); return; }
       cuandoApi(() => {
+        jugadores.forEach((j) => { try { j.pauseVideo(); } catch (e) {} });
         const div = document.createElement("div");
         div.style.cssText = "position:absolute;inset:0;width:100%;height:100%";
         caja.textContent = "";
         caja.appendChild(div);
-        new YT.Player(div, {
+        let webMute = false;
+        try { webMute = localStorage.getItem("miweb_son") === "mute"; } catch (e) {}
+        const player = new YT.Player(div, {
           videoId: id,
           playerVars: { playsinline: 1, rel: 0 },
-          events: { onReady: (e) => { if (window.__pausaMusica) window.__pausaMusica(); e.target.playVideo(); if (titulo) e.target.getIframe().title = titulo; } }
+          events: { onReady: (e) => {
+            if (window.__pausaMusica) window.__pausaMusica();
+            e.target.playVideo();
+            if (webMute) { try { e.target.mute(); } catch (e2) {} }
+            if (titulo) e.target.getIframe().title = titulo;
+            if (caja.classList && caja.classList.contains("ytc__thumb")) montarToggle(caja, e.target);
+          } }
         });
+        jugadores.push(player);
       });
     };
     document.querySelectorAll(".yt--dest[data-yt]").forEach((caja) => {
@@ -2261,6 +2305,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ─── Indicador de música en el nav (botón: silencia en toda la web hasta volver a pulsar) ─── */
   (() => {
     const KEY = "miweb_son";
+    if (!document.querySelector("[data-bn-audio],[data-repro-audio],.simon")) return;
     const dic = () => I18N[langActual()] || I18N.es;
     let muteado = false;
     try { muteado = localStorage.getItem(KEY) === "mute"; } catch (e) {}
@@ -2268,6 +2313,11 @@ document.addEventListener("DOMContentLoaded", () => {
       muteado = on;
       document.querySelectorAll("audio").forEach((a) => { a.muted = on; });
       if (window.__sonReg) window.__sonReg.forEach((a) => { a.muted = on; });
+      if (window.__ytJug) window.__ytJug.forEach((j) => { try { if (on) j.mute(); else j.unMute(); } catch (e) {} });
+      document.querySelectorAll("video").forEach((v) => {
+        if (on) { if (!v.muted) { try { v.dataset.son0 = "1"; } catch (e) {} v.muted = true; } }
+        else if (v.dataset.son0) { v.muted = false; delete v.dataset.son0; }
+      });
       try { localStorage.setItem(KEY, on ? "mute" : "on"); } catch (e) {}
       const el = document.querySelector(".nav__son");
       if (el) pintarBtn(el);
@@ -2297,7 +2347,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return el;
     };
     document.addEventListener("play", (e) => {
-      if (muteado && e.target && e.target.tagName === "AUDIO") e.target.muted = true;
+      const t = e.target;
+      if (!muteado || !t) return;
+      const medio = t.tagName === "AUDIO" || t.tagName === "VIDEO";
+      if (medio && !t.muted) { t.muted = true; try { t.dataset.son0 = "1"; } catch (err) {} }
     }, true);
     marca();
     aplicar(muteado);
