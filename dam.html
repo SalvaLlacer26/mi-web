@@ -20,6 +20,7 @@
     <link rel="preload" as="image" href="Imagenes/DAM_sobremi.webp" fetchpriority="high" />
 
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <script>if(matchMedia("(pointer:coarse)").matches)document.documentElement.setAttribute("data-touch","1");</script>
     <link rel="preconnect" href="https://embed.figma.com" crossorigin />
     <link rel="preconnect" href="https://dev.to" crossorigin />
     <link rel="stylesheet" href="estilos.css" />
@@ -59,7 +60,16 @@
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
       <nav class="nav__menu" aria-label="Secciones">
-        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+                <a href="index.html" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+                  <span data-i18n="m.inicio">Inicio</span>
+                  <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </a>
+                <div class="nav__drop">
+                  <a class="nav__grp" href="index.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+                  <a class="nav__grp" href="index.html#t-gustos"><span data-i18n="sec.gustos">Mis gustos</span></a>
+                </div>
+              </div>
         <div class="nav__item">
           <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
             <span data-i18n="m.foto">Foto</span>
@@ -67,10 +77,28 @@
           </a>
           <div class="nav__drop">
             <a class="nav__grp" href="fotografia.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
-            <a class="nav__grp" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-paisaje"><span data-i18n="sub.paisaje">Paisaje</span></a>
+                <a href="fotografia.html#sub-robados"><span data-i18n="sub.robados">Robados</span></a>
+                <a href="fotografia.html#sub-personal"><span data-i18n="sub.personal">Visión personal</span></a>
+                <a href="fotografia.html#sub-bodegon"><span data-i18n="sub.bodegon">Bodegón publicitario</span></a>
+                <a href="fotografia.html#sub-moda"><span data-i18n="sub.moda">Moda</span></a>
+                <a href="fotografia.html#sub-retrato"><span data-i18n="sub.retrato">Retrato</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="fotografia.html#t-form"><span data-i18n="sec.form">Formación</span></a>
             <a class="nav__grp" href="fotografia.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
-            <a class="nav__grp" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-etsid"><span data-i18n="sub.etsid">ETSID · UPV</span></a>
+                <a href="fotografia.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+                <a href="fotografia.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="fotografia.html#sub-bodas"><span data-i18n="sub.bodas">Bodas y eventos</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="fotografia.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
             <a class="nav__grp" href="fotografia.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
@@ -82,10 +110,28 @@
           </a>
           <div class="nav__drop">
             <a class="nav__grp" href="diseno.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
-            <a class="nav__grp" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-posters"><span data-i18n="sub.posters">Pósters</span></a>
+                <a href="diseno.html#sub-folletos"><span data-i18n="sub.folletos">Folletos</span></a>
+                <a href="diseno.html#sub-flyers"><span data-i18n="sub.flyers">Flyers</span></a>
+                <a href="diseno.html#sub-identidad"><span data-i18n="sub.identidad">Identidad</span></a>
+                <a href="diseno.html#sub-otros"><span data-i18n="sub.otros">Otros productos</span></a>
+                <a href="diseno.html#sub-portfolio"><span data-i18n="sub.portfolio">Portfolio</span></a>
+                <a href="diseno.html#sub-encantado"><span data-i18n="sub.encantado">Universo encantado</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="diseno.html#t-form"><span data-i18n="sec.form">Formación</span></a>
             <a class="nav__grp" href="diseno.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
-            <a class="nav__grp" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-sef"><span data-i18n="sub.sef">SEF · Deporte UV</span></a>
+                <a href="diseno.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="diseno.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="diseno.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
             <a class="nav__grp" href="diseno.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
@@ -97,10 +143,27 @@
           </a>
           <div class="nav__drop">
             <a class="nav__grp" href="video.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
-            <a class="nav__grp" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-video"><span data-i18n="sub.video">Vídeo</span></a>
+                <a href="video.html#sub-musica"><span data-i18n="sub.musica">Música</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="video.html#t-form"><span data-i18n="sec.form">Formación</span></a>
             <a class="nav__grp" href="video.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
-            <a class="nav__grp" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-interpreta"><span data-i18n="sub.interpreta">Interpreta Natura</span></a>
+                <a href="video.html#sub-missr"><span data-i18n="sub.missr">MissR · 3R</span></a>
+                <a href="video.html#sub-eco"><span data-i18n="sub.eco">ECO</span></a>
+                <a href="video.html#sub-arte"><span data-i18n="sub.arte">ARTE</span></a>
+                <a href="video.html#sub-ods"><span data-i18n="sub.ods">ODS</span></a>
+                <a href="video.html#sub-reviu"><span data-i18n="sub.reviu">Reviu lo Rural</span></a>
+                <a href="video.html#sub-otros"><span data-i18n="sub.otrosvideos">Otros proyectos</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="video.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
             <a class="nav__grp" href="video.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
@@ -385,6 +448,14 @@
                 </ul>
               </div>
               <p class="proceso__loop"><b data-i18n="dam.inf.loopTit">Bucle de revisión</b><span data-i18n="dam.inf.loop">Cada vuelta vuelve al boceto, se corrige y se vuelve a publicar: el proyecto nunca se da por terminado.</span></p>
+            <div class="metricas" aria-label="La web en cifras">
+              <div class="metrica"><b class="metrica__num" data-count="6">0</b><span class="metrica__lbl" data-i18n="dam.metricas.pags">páginas</span></div>
+              <div class="metrica"><b class="metrica__num" data-count="741">0</b><span class="metrica__lbl" data-i18n="dam.metricas.keys">claves de traducción</span></div>
+              <div class="metrica"><b class="metrica__num" data-count="5">0</b><span class="metrica__lbl" data-i18n="dam.metricas.temas">temas visuales</span></div>
+              <div class="metrica"><b class="metrica__num" data-count="2">0</b><span class="metrica__lbl" data-i18n="dam.metricas.idiomas">idiomas</span></div>
+              <div class="metrica"><b class="metrica__num" data-count="0">0</b><span class="metrica__lbl" data-i18n="dam.metricas.deps">dependencias npm</span></div>
+              <div class="metrica"><b class="metrica__num" data-count="14">0</b><span class="metrica__lbl" data-i18n="dam.metricas.rules">reglas del chatbot</span></div>
+            </div>
               <div class="proceso__dets">
                 <article class="proceso__det"><h5><span data-i18n="dam.inf.det1.titulo">El índice es la portada</span></h5><p><span data-i18n="dam.inf.det1.texto">La home no es una lista de enlaces: es un carrusel de seis láminas que se mueven con arrastre, rueda y flechas.</span></p></article>
                 <article class="proceso__det"><h5><span data-i18n="dam.inf.det2.titulo">Cinco mundos, un solo CSS</span></h5><p><span data-i18n="dam.inf.det2.texto">Un único estilos.css con variables en :root sostiene las cinco subwebs; data-tema decide la paleta.</span></p></article>
@@ -452,7 +523,7 @@
       <section class="seccion seccion--cv" aria-labelledby="t-api">
         <div class="contenedor caja reveal">
           <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-api"><span data-i18n="dam.api.titulo">API y datos en vivo</span></h2></div>
-          <p class="seccion__sub"><span class="apichip">Dev.to API</span><span data-i18n="dam.api.sub">Artículos de la comunidad de desarrollo en tiempo real, servidos por la API pública y gratuita de Dev.to: sin claves, sin caché y sin intermediarios.</span></p>
+          <p class="seccion__sub"><span class="apichip">Dev.to · Hacker News · APIs sin clave</span><span data-i18n="dam.api.sub">Artículos de la comunidad de desarrollo en tiempo real, servidos por la API pública y gratuita de Dev.to: sin claves, sin caché y sin intermediarios.</span></p>
           <div class="api" data-devto>
             <h3 class="api__h"><span data-i18n="dam.api.devto.titulo">Qué está leyendo la comunidad</span></h3>
             <p class="api__nota"><span data-i18n="dam.api.devto.sub">Una selección de artículos técnicos recién publicados, con su autor y sus reacciones, pedida directamente a la API de Dev.to.</span></p>
@@ -460,6 +531,14 @@
               <li class="api__estado" data-devto-estado><span data-i18n="dam.api.devto.carga">Cargando artículos…</span></li>
             </ul>
             <a class="boton boton--verde api__btn" href="https://dev.to" target="_blank" rel="noopener"><span data-i18n="dam.api.devto.btn">Explorar Dev.to</span> <span class="flecha">→</span></a>
+          </div>
+          <div class="api" data-hn>
+            <h3 class="api__h"><span data-i18n="dam.api.hn.titulo">Lo que se comenta en Hacker News</span></h3>
+            <p class="api__nota"><span data-i18n="dam.api.hn.sub">Portada de Hacker News en vivo vía su API pública: titulares, puntos y comentarios, sin clave.</span></p>
+            <ul class="devto-grid" data-hn-grid aria-live="polite">
+              <li class="api__estado" data-hn-estado data-i18n="dam.api.hn.carga">Cargando titulares…</li>
+            </ul>
+            <a class="boton boton--verde api__btn" href="https://news.ycombinator.com" target="_blank" rel="noopener"><span data-i18n="dam.api.hn.btn">Ver en Hacker News</span> <span class="flecha">→</span></a>
           </div>
         </div>
       </section>
