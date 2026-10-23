@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en <strong>CATIA V5</strong>, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER PORTFOLIO","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble",
       "bajo.aria":"Modo bajo rendimiento","info.aria.on":"Desactivar la guía de interacción","info.aria.off":"Activar la guía de interacción",
       "info.lam":"Desliza las láminas con el ratón o el dedo para recorrer el portfolio.","info.bot":"Pregunta al asistente: te lleva a cualquier sección de la web.",
-      "info.lang":"Cambia entre español e inglés.","info.self":"Pulsa este mismo botón para volver a la web normal.","info.top":"Sube al principio de la página.","info.view":"Cambia la vista entre carrusel y mosaico.","info.subv":"En cada sección, alterna entre carrusel y mosaico.","info.flip":"Pasa de página con las flechas del catálogo.","info.vplay":"Pulsa para reproducir el vídeo.","info.son":"Pulsa el altavoz del menú para silenciar la música.","info.low":"Si tu equipo va lento, activa el modo de bajo rendimiento.","info.contacto":"Escríbeme desde el botón Contacto.",
+      "info.lang":"Cambia entre español e inglés.","info.self":"Pulsa este mismo botón para volver a la web normal.","info.top":"Sube al principio de la página.","info.view":"Cambia la vista entre carrusel y mosaico.","info.subv":"En cada sección, alterna entre carrusel y mosaico.","info.flip":"Pasa de página con las flechas del catálogo.","info.vplay":"Pulsa para reproducir el vídeo.","info.son":"Pulsa el altavoz del menú para silenciar o reactivar el sonido de la web.","info.low":"Si tu equipo va lento, activa el modo de bajo rendimiento.","info.contacto":"Escríbeme desde el botón Contacto.",
       
       
       "info.repro":"Pulsa el play de cada lista para escuchar tu música.",
@@ -125,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "gustos.juegos.tit":"Videojuegos","gustos.juegos.desc":"Historias inmersivas, mundos abiertos y la satisfacción de explorar.",
       "pn.cv.tit":"Currículum","pn.cv.sub":"Próximamente disponible",
       "pie.volver":"← Volver al inicio",
+      "pie.legal":"Todo el contenido de este sitio web —textos, fotografías, vídeos, música, diseño y código— pertenece a Salvador Llácer Ivars. Queda prohibida su reproducción, distribución, comunicación pública o transformación sin consentimiento expreso y por escrito del autor.",
       "sel.foto":"Fotografía","sel.foto.sub":"Luz, encuadre y narrativa","sel.diseno":"Diseño gráfico e ilustración","sel.diseno.sub":"Retícula, tinta y trazo","sel.video":"Edición de vídeo","sel.video.sub":"Ritmo, sonido y color","sel.musica":"Música","sel.musica.sub":"Composición y montaje sonoro","sel.dam":"DAM y videojuegos","sel.dam.sub":"Código, apps y Simon Says","sel.fab":"Fabricación mecánica","sel.fab.sub":"<strong>CATIA</strong>, planos y ERP",
       "pie.eyebrow":"¿Tienes un proyecto?","pie.nota":"Abierto a nuevas oportunidades. Diseño, desarrollo y administración en una sola persona.","pie.loc":"Localización","clima.ubicacion":"Ubicación",
       "pie.copy.ok":"Email copiado","modal.eyebrow":"Hablemos","modal.titulo":"Cuéntame tu proyecto","form.nombre":"Nombre","form.email":"Email","form.mensaje":"Mensaje","form.enviar":"Enviar mensaje","form.exito":"✓ Mensaje enviado. Gracias por tu contacto; me pondré en contacto contigo muy pronto.","toast.soon":"Subweb en construcción",
@@ -438,7 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in <strong>CATIA V5</strong>, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW PORTFOLIO","bn.fab.hint":"Mouse wheel: scroll up to reveal",
       "bajo.aria":"Low performance mode","info.aria.on":"Disable the interaction guide","info.aria.off":"Enable the interaction guide",
       "info.lam":"Swipe or drag the slides to browse the portfolio.","info.bot":"Ask the assistant: it takes you to any section.",
-      "info.lang":"Switch between Spanish and English.","info.self":"Press this same button to return to the normal site.","info.top":"Back to the top of the page.","info.view":"Switch between carousel and grid view.","info.subv":"In each section, toggle between carousel and grid.","info.flip":"Turn pages with the catalogue arrows.","info.vplay":"Tap to play the video.","info.son":"Tap the menu speaker to mute the music.","info.low":"If your computer is slow, enable low-performance mode.","info.contacto":"Write to me from the Contact button.",
+      "info.lang":"Switch between Spanish and English.","info.self":"Press this same button to return to the normal site.","info.top":"Back to the top of the page.","info.view":"Switch between carousel and grid view.","info.subv":"In each section, toggle between carousel and grid.","info.flip":"Turn pages with the catalogue arrows.","info.vplay":"Tap to play the video.","info.son":"Tap the menu speaker to mute or unmute the site's sound.","info.low":"If your computer is slow, enable low-performance mode.","info.contacto":"Write to me from the Contact button.",
       
       
       "info.repro":"Tap play on each list to hear your music.",
@@ -467,6 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "gustos.juegos.tit":"Video games","gustos.juegos.desc":"Immersive stories, open worlds and the satisfaction of exploring.",
       "pn.cv.tit":"CV","pn.cv.sub":"Coming soon",
       "pie.volver":"← Back to home",
+      "pie.legal":"All content on this website —texts, photographs, videos, music, design and code— belongs to Salvador Llácer Ivars. Reproduction, distribution, public communication or alteration without the author's express written consent is prohibited.",
       "sel.foto":"Photography","sel.foto.sub":"Light, framing and narrative","sel.diseno":"Graphic design & illustration","sel.diseno.sub":"Grid, ink and line","sel.video":"Video editing","sel.video.sub":"Rhythm, sound and colour","sel.musica":"Music","sel.musica.sub":"Composition and sound editing","sel.dam":"DAM & video games","sel.dam.sub":"Code, apps and Simon Says","sel.fab":"Mechanical manufacturing","sel.fab.sub":"<strong>CATIA</strong>, blueprints and ERP",
       "pie.eyebrow":"Have a project?","pie.nota":"Open to new opportunities. Design, development and administration in one person.","pie.loc":"Location","clima.ubicacion":"Location",
       "pie.copy.ok":"Email copied","modal.eyebrow":"Let's talk","modal.titulo":"Tell me about your project","form.nombre":"Name","form.email":"Email","form.mensaje":"Message","form.enviar":"Send message","form.exito":"✓ Message sent. Thank you for reaching out; I'll get back to you very soon.","toast.soon":"Sub-web under construction",
@@ -2259,6 +2261,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const aplicar = (on) => {
       muteado = on;
       document.querySelectorAll("audio").forEach((a) => { a.muted = on; });
+      if (window.__sonReg) window.__sonReg.forEach((a) => { a.muted = on; });
       try { localStorage.setItem(KEY, on ? "mute" : "on"); } catch (e) {}
       const el = document.querySelector(".nav__son");
       if (el) pintarBtn(el);
@@ -2290,10 +2293,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("play", (e) => {
       if (muteado && e.target && e.target.tagName === "AUDIO") e.target.muted = true;
     }, true);
+    marca();
     aplicar(muteado);
     const actualizar = () => {
       const el = marca();
-      if (!el || muteado) { if (el) el.classList.remove("is-on"); return; }
+      if (!el) return;
+      if (muteado) { el.classList.remove("is-on"); return; }
       const hay = Array.prototype.some.call(document.querySelectorAll("audio"), (a) =>
         !a.paused && !a.ended && !a.muted && a.volume > 0.02 && a.dataset.mute !== "1");
       el.classList.toggle("is-on", hay);

@@ -70,6 +70,8 @@
     const jugSon = [0, 1, 2, 3].map((i) => crear("nota" + (i + 5) + ".wav", 0.316));
     const fallo = crear("error.wav", 0.178);
     const todos = simonSon.concat(jugSon, [fallo]);
+    if (!window.__sonReg) window.__sonReg = new Set();
+    todos.forEach((a) => window.__sonReg.add(a));
     const suena = (a) => {
       try {
         a.currentTime = 0;
