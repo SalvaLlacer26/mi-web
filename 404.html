@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="fuentes.css" />
     <script>try{var p=(location.pathname+" "+location.search+" "+document.referrer).toLowerCase(),t="index";if(p.indexOf("fotografia")>=0)t="foto";else if(p.indexOf("diseno")>=0)t="diseno";else if(p.indexOf("video")>=0)t="video";else if(p.indexOf("dfm")>=0||p.indexOf("fabric")>=0)t="fab";document.documentElement.setAttribute("data-tema",t);}catch(e){}</script>
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <script>if(matchMedia("(pointer:coarse)").matches)document.documentElement.setAttribute("data-touch","1");</script>
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
     <noscript><style>.reveal{opacity:1}</style></noscript>

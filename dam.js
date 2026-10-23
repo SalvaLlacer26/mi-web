@@ -13,7 +13,10 @@
       "gh.vacio": "Aún no hay repositorios públicos.",
       "devto.carga": "Cargando artículos…",
       "devto.error": "No se pudieron cargar los artículos. Inténtalo de nuevo.",
-      "devto.vacio": "La API de Dev.to no ha devuelto artículos. Inténtalo de nuevo."
+      "devto.vacio": "La API de Dev.to no ha devuelto artículos. Inténtalo de nuevo.",
+      "hn.carga": "Cargando titulares…",
+      "hn.error": "No se pudieron cargar los titulares. Inténtalo de nuevo.",
+      "hn.vacio": "La API no ha devuelto titulares."
     },
     en: {
       "simon.jugar": "Play!",
@@ -25,7 +28,10 @@
       "gh.vacio": "There are no public repositories yet.",
       "devto.carga": "Loading articles…",
       "devto.error": "Could not load the articles. Try again.",
-      "devto.vacio": "The Dev.to API returned no articles. Try again."
+      "devto.vacio": "The Dev.to API returned no articles. Try again.",
+      "hn.carga": "Loading headlines…",
+      "hn.error": "Could not load the headlines. Try again.",
+      "hn.vacio": "The API returned no headlines."
     }
   };
   const L = (k) => (DICT[lang()] || DICT.es)[k] || k;
@@ -306,62 +312,60 @@
     cargar();
   })();
 
-  /* ── API artículos: Dev.to (pública, sin clave) ── */
+  /* ─── API Hacker News (portada en vivo, Algolia · sin clave) ─── */
   (() => {
-    const root = document.querySelector("[data-devto]");
+    const root = document.querySelector("[data-hn]");
     if (!root) return;
-    const grid = root.querySelector("[data-devto-grid]");
+    const grid = root.querySelector("[data-hn-grid]");
     let estadoKey = "carga";
-    const estado = (k) => {
+    const render = () => {
+      if (!estadoKey) return;
       grid.textContent = "";
       const li = document.createElement("li");
       li.className = "api__estado";
-      li.textContent = k ? L("devto." + k) : "";
+      li.textContent = L("hn." + estadoKey) || estadoKey;
       grid.appendChild(li);
     };
-    const pintar = (arts) => {
-      grid.textContent = "";
-      const frag = document.createDocumentFragment();
-      arts.forEach((art) => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.className = "devto-card";
-        a.href = art.url || "https://dev.to";
-        a.target = "_blank";
-        a.rel = "noopener";
-        const cab = document.createElement("span");
-        cab.className = "devto-card__cab";
-        const aut = document.createElement("span");
-        aut.className = "devto-card__aut";
-        aut.textContent = (art.user && art.user.name) || "";
-        const reac = document.createElement("b");
-        reac.className = "devto-card__reac";
-        reac.textContent = "♥ " + Number(art.positive_reactions_count || 0).toLocaleString(lang() === "en" ? "en-US" : "es-ES");
-        cab.appendChild(aut); cab.appendChild(reac);
-        const tit = document.createElement("span");
-        tit.className = "devto-card__tit";
-        tit.textContent = art.title || "";
-        const tags = document.createElement("span");
-        tags.className = "devto-card__tags";
-        tags.textContent = (art.tag_list || []).slice(0, 3).map((t) => "#" + t).join(" ");
-        a.appendChild(cab); a.appendChild(tit); a.appendChild(tags);
-        li.appendChild(a);
-        frag.appendChild(li);
-      });
-      grid.appendChild(frag);
-    };
-    const render = () => { if (estadoKey) estado(estadoKey); };
     renders.push(render);
     const cargar = async () => {
       estadoKey = "carga";
       render();
       try {
-        const r = await fetch("https://dev.to/api/articles?per_page=6&top=7");
+        const r = await fetch("https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=6");
         if (!r.ok) throw 0;
         const d = await r.json();
-        if (!Array.isArray(d) || !d.length) { estadoKey = "vacio"; render(); return; }
+        const hits = (d && d.hits) || [];
+        if (!hits.length) { estadoKey = "vacio"; render(); return; }
         estadoKey = "";
-        pintar(d);
+        const frag = document.createDocumentFragment();
+        hits.forEach((h) => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.className = "devto-card";
+          a.href = h.url || ("https://news.ycombinator.com/item?id=" + h.objectID);
+          a.target = "_blank";
+          a.rel = "noopener";
+          const cab = document.createElement("span");
+          cab.className = "devto-card__cab";
+          const aut = document.createElement("span");
+          aut.className = "devto-card__aut";
+          aut.textContent = "Hacker News";
+          const reac = document.createElement("b");
+          reac.className = "devto-card__reac";
+          reac.textContent = "\u2665 " + Number(h.points || 0).toLocaleString(lang() === "en" ? "en-US" : "es-ES") + " \u00b7 \ud83d\udcac " + Number(h.num_comments || 0);
+          cab.appendChild(aut); cab.appendChild(reac);
+          const tit = document.createElement("span");
+          tit.className = "devto-card__tit";
+          tit.textContent = h.title || "";
+          const tags = document.createElement("span");
+          tags.className = "devto-card__tags";
+          tags.textContent = "front page · " + (h.author || "hn");
+          a.appendChild(cab); a.appendChild(tit); a.appendChild(tags);
+          li.appendChild(a);
+          frag.appendChild(li);
+        });
+        grid.textContent = "";
+        grid.appendChild(frag);
       } catch (e) {
         estadoKey = "error";
         render();
@@ -370,7 +374,7 @@
     cargar();
   })();
 
-  /* ── Re-render de textos dinámicos al cambiar de idioma ── */
+  /* ─── Re-render de textos dinámicos al cambiar de idioma ─── */  /* ── Re-render de textos dinámicos al cambiar de idioma ── */
   if ("MutationObserver" in window) {
     new MutationObserver(() => renders.forEach((r) => r())).observe(html, { attributes: true, attributeFilter: ["lang"] });
   }

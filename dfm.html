@@ -20,6 +20,7 @@
     <link rel="preload" as="image" href="Imagenes/Fabmec_sobremi.webp" fetchpriority="high" />
 
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <script>if(matchMedia("(pointer:coarse)").matches)document.documentElement.setAttribute("data-touch","1");</script>
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
     <script src="dfm.js" defer></script>
@@ -57,7 +58,16 @@
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
       <nav class="nav__menu" aria-label="Secciones">
-        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+                <a href="index.html" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+                  <span data-i18n="m.inicio">Inicio</span>
+                  <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </a>
+                <div class="nav__drop">
+                  <a class="nav__grp" href="index.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+                  <a class="nav__grp" href="index.html#t-gustos"><span data-i18n="sec.gustos">Mis gustos</span></a>
+                </div>
+              </div>
         <div class="nav__item">
           <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
             <span data-i18n="m.foto">Foto</span>
@@ -65,10 +75,28 @@
           </a>
           <div class="nav__drop">
             <a class="nav__grp" href="fotografia.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
-            <a class="nav__grp" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-paisaje"><span data-i18n="sub.paisaje">Paisaje</span></a>
+                <a href="fotografia.html#sub-robados"><span data-i18n="sub.robados">Robados</span></a>
+                <a href="fotografia.html#sub-personal"><span data-i18n="sub.personal">Visión personal</span></a>
+                <a href="fotografia.html#sub-bodegon"><span data-i18n="sub.bodegon">Bodegón publicitario</span></a>
+                <a href="fotografia.html#sub-moda"><span data-i18n="sub.moda">Moda</span></a>
+                <a href="fotografia.html#sub-retrato"><span data-i18n="sub.retrato">Retrato</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="fotografia.html#t-form"><span data-i18n="sec.form">Formación</span></a>
             <a class="nav__grp" href="fotografia.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
-            <a class="nav__grp" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="fotografia.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="fotografia.html#sub-etsid"><span data-i18n="sub.etsid">ETSID · UPV</span></a>
+                <a href="fotografia.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+                <a href="fotografia.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="fotografia.html#sub-bodas"><span data-i18n="sub.bodas">Bodas y eventos</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="fotografia.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
             <a class="nav__grp" href="fotografia.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
@@ -80,10 +108,28 @@
           </a>
           <div class="nav__drop">
             <a class="nav__grp" href="diseno.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
-            <a class="nav__grp" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-posters"><span data-i18n="sub.posters">Pósters</span></a>
+                <a href="diseno.html#sub-folletos"><span data-i18n="sub.folletos">Folletos</span></a>
+                <a href="diseno.html#sub-flyers"><span data-i18n="sub.flyers">Flyers</span></a>
+                <a href="diseno.html#sub-identidad"><span data-i18n="sub.identidad">Identidad</span></a>
+                <a href="diseno.html#sub-otros"><span data-i18n="sub.otros">Otros productos</span></a>
+                <a href="diseno.html#sub-portfolio"><span data-i18n="sub.portfolio">Portfolio</span></a>
+                <a href="diseno.html#sub-encantado"><span data-i18n="sub.encantado">Universo encantado</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="diseno.html#t-form"><span data-i18n="sec.form">Formación</span></a>
             <a class="nav__grp" href="diseno.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
-            <a class="nav__grp" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="diseno.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="diseno.html#sub-sef"><span data-i18n="sub.sef">SEF · Deporte UV</span></a>
+                <a href="diseno.html#sub-weidner"><span data-i18n="sub.weidner">Weidner</span></a>
+                <a href="diseno.html#sub-casos"><span data-i18n="sub.casos">Casos de proyecto</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="diseno.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
             <a class="nav__grp" href="diseno.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
@@ -95,10 +141,27 @@
           </a>
           <div class="nav__drop">
             <a class="nav__grp" href="video.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
-            <a class="nav__grp" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-obra"><span data-i18n="sec.obra">Obra</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-video"><span data-i18n="sub.video">Vídeo</span></a>
+                <a href="video.html#sub-musica"><span data-i18n="sub.musica">Música</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="video.html#t-form"><span data-i18n="sec.form">Formación</span></a>
             <a class="nav__grp" href="video.html#t-tools"><span data-i18n="sec.tools">Herramientas</span></a>
-            <a class="nav__grp" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span></a>
+            <div class="nav__grp has-sub">
+              <a class="nav__grp-t" href="video.html#t-exp"><span data-i18n="sec.exp">Experiencia</span><svg class="nav__grp-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+              <div class="nav__sub">
+                <a href="video.html#sub-interpreta"><span data-i18n="sub.interpreta">Interpreta Natura</span></a>
+                <a href="video.html#sub-missr"><span data-i18n="sub.missr">MissR · 3R</span></a>
+                <a href="video.html#sub-eco"><span data-i18n="sub.eco">ECO</span></a>
+                <a href="video.html#sub-arte"><span data-i18n="sub.arte">ARTE</span></a>
+                <a href="video.html#sub-ods"><span data-i18n="sub.ods">ODS</span></a>
+                <a href="video.html#sub-reviu"><span data-i18n="sub.reviu">Reviu lo Rural</span></a>
+                <a href="video.html#sub-otros"><span data-i18n="sub.otrosvideos">Otros proyectos</span></a>
+              </div>
+            </div>
             <a class="nav__grp" href="video.html#t-comp"><span data-i18n="sec.comp">Competencias</span></a>
             <a class="nav__grp" href="video.html#t-ref"><span data-i18n="sec.ref">Referentes</span></a>
           </div>
@@ -383,6 +446,7 @@
               <h3 class="serie__titulo"><span data-i18n="fab.exp.cadenas.titulo">Columna de apilamiento con cadenas</span></h3>
               <p class="serie__desc"><span data-i18n="fab.exp.cadenas.desc">Proyecto de I+D propio para la compa&ntilde;&iacute;a, en la l&iacute;nea de la columna SLA/SLI: columna de apilamiento con sistema de cadenas y palancas ergon&oacute;micas integradas en el cuerpo, para que el operario tense o libere la carga sin agacharse. Todo el ensamblaje est&aacute; modelado y documentado en CATIA V5, con visor 3D completo.</span></p>
             </div>
+            <p class="serie__desc v3d-hint"><span data-i18n="fab.v3d.hint">Inspecciona el modelo en 3D: arrástralo para rotarlo, acerca con la rueda o pellizcando y desplázate para recorrerlo.</span> <span class="v3d-hint__t" aria-hidden="true">⟳</span></p>
             <div class="fila-cadenas">
               <img src="dfm/Columnas/cadenas1.webp" alt="Columna de apilamiento con cadenas" width="1200" height="1099" loading="lazy" decoding="async" />
               <div class="v3d" data-mv="cadenas" data-mv-orbit="0deg 78deg 80%">

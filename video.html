@@ -20,6 +20,7 @@
     <link rel="preload" as="image" href="Imagenes/Video_sobremi.webp" fetchpriority="high" />
 
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <script>if(matchMedia("(pointer:coarse)").matches)document.documentElement.setAttribute("data-touch","1");</script>
     <link rel="preconnect" href="https://api.deezer.com" crossorigin />
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
@@ -57,7 +58,16 @@
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
       <nav class="nav__menu" aria-label="Secciones">
-        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+                <a href="index.html" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+                  <span data-i18n="m.inicio">Inicio</span>
+                  <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </a>
+                <div class="nav__drop">
+                  <a class="nav__grp" href="index.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+                  <a class="nav__grp" href="index.html#t-gustos"><span data-i18n="sec.gustos">Mis gustos</span></a>
+                </div>
+              </div>
         <div class="nav__item">
           <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
             <span data-i18n="m.foto">Foto</span>
