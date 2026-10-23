@@ -56,3 +56,8 @@ Doble clic en `index.html`, o un servidor local si prefieres (`python -m http.se
 ## Despliegue
 
 GitHub Pages sirve la rama `Rediseño-Web`. No hay pasos de build: subir cambios basta.
+
+El repositorio incluye **todos los medios** (fotos, vídeos, música, modelos 3D, fuentes y
+catálogos) para que un clone muestre la web completa sin nada externo. Excepciones: originales
+de más de 100 MB (límite duro de GitHub) y backups sin referencia en el código (`Imagenes/jpeg/`,
+aplicaciones de escritorio de Processing, `.7z`), que no afectan a la web.

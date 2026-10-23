@@ -1,4 +1,4 @@
-/* dam.js — Programación: Simon (port del sketch original), API GitHub, artículos Dev.to */
+/* dam.js — Programación: Simon (port del sketch original), API GitHub, Hacker News */
 (() => {
   const html = document.documentElement;
   const lang = () => html.getAttribute("lang") || "es";
@@ -11,9 +11,6 @@
       "gh.carga": "Cargando repositorios…",
       "gh.error": "No se pudieron cargar los repositorios. Inténtalo de nuevo.",
       "gh.vacio": "Aún no hay repositorios públicos.",
-      "devto.carga": "Cargando artículos…",
-      "devto.error": "No se pudieron cargar los artículos. Inténtalo de nuevo.",
-      "devto.vacio": "La API de Dev.to no ha devuelto artículos. Inténtalo de nuevo.",
       "hn.carga": "Cargando titulares…",
       "hn.error": "No se pudieron cargar los titulares. Inténtalo de nuevo.",
       "hn.vacio": "La API no ha devuelto titulares."
@@ -26,9 +23,6 @@
       "gh.carga": "Loading repositories…",
       "gh.error": "Could not load the repositories. Try again.",
       "gh.vacio": "There are no public repositories yet.",
-      "devto.carga": "Loading articles…",
-      "devto.error": "Could not load the articles. Try again.",
-      "devto.vacio": "The Dev.to API returned no articles. Try again.",
       "hn.carga": "Loading headlines…",
       "hn.error": "Could not load the headlines. Try again.",
       "hn.vacio": "The API returned no headlines."

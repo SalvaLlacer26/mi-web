@@ -94,7 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
       "carga.titulo":"PORTFOLIO","carga.bienvenida":"Bienvenido","carga.entrar":"ENTRAR","carga.tema.foto":"Fotograf&iacute;a","carga.tema.diseno":"Dise&ntilde;o","carga.tema.video":"V&iacute;deo y m&uacute;sica","carga.tema.fab":"Fabricaci&oacute;n mec&aacute;nica","carga.tema.dam":"Programaci&oacute;n",
       "bn.diseno.etq":"02 — DISEÑO GRÁFICO","bn.diseno.tit":"Ideas que se ven","bn.diseno.desc":"Flyers, marca, editorial e iconografía. Haz clic en el mosaico para descubrir el portfolio.",
       "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en <strong>CATIA V5</strong>, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER PORTFOLIO","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble",
-      "bajo.aria":"Modo bajo rendimiento","nav.son.on":"Silenciar música","nav.son.off":"Activar música","bajo.aria.off":"Activar modo bajo rendimiento","bajo.aria.on":"Desactivar modo bajo rendimiento",
+      "bajo.aria":"Modo bajo rendimiento","info.aria.on":"Desactivar la guía de interacción","info.aria.off":"Activar la guía de interacción",
+      "info.lam":"Desliza las láminas con el ratón o el dedo para recorrer el portfolio.","info.bot":"Pregunta al asistente: te lleva a cualquier sección de la web.",
+      "info.lang":"Cambia entre español e inglés.","info.self":"Pulsa este mismo botón para volver a la web normal.","info.top":"Sube al principio de la página.","info.view":"Cambia la vista entre carrusel y mosaico.","info.subv":"En cada sección, alterna entre carrusel y mosaico.","info.flip":"Pasa de página con las flechas del catálogo.","info.vplay":"Pulsa para reproducir el vídeo.","info.son":"Pulsa el altavoz del menú para silenciar la música.","info.low":"Si tu equipo va lento, activa el modo de bajo rendimiento.","info.contacto":"Escríbeme desde el botón Contacto.",
+      
+      
+      "info.repro":"Pulsa el play de cada lista para escuchar tu música.",
+      "info.v3d":"Arrastra el modelo 3D para rotarlo; rueda o pellizca para acercar.","info.tol":"Elige agujero y eje y pulsa Calcular ajuste.","info.pdf":"Desplaza el ratón dentro del catálogo para pasar páginas.",
+      "info.simon":"¡Echa una partida!","info.figma":"Interactúa con el lienzo de Figma: zoom y desplazamiento.","info.apis":"GitHub y Hacker News se actualizan solos.","nav.son.on":"Silenciar música","nav.son.off":"Activar música","bajo.aria.off":"Activar modo bajo rendimiento","bajo.aria.on":"Desactivar modo bajo rendimiento",
       "bn.dam.etq":"05 — PROGRAMACIÓN","bn.dam.tit":"Código que se puede tocar","bn.dam.desc":"Simon en <strong>Processing</strong> y en <strong>Arduino</strong>, una app de smartwatch en <strong>Figma</strong> y esta misma web hecha con IA: APIs en vivo, chatbot y verificación sin navegador.",
       "bot.titulo":"Asistente PORTFOLIO","bot.sub":"Pregúntame por mis habilidades o por dónde verlas","bot.ph":"Escribe tu pregunta…","bot.enviar":"Enviar",
       "bot.q1":"¿Maneja Photoshop?","bot.q2":"Ver fotografía","bot.q3":"Ver diseño","bot.q4":"¿Quién es Salvador?","bot.q5":"¿Cómo contacto?","bot.q6":"Ver programación",
@@ -252,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.inf.s7":"HTML semántico página a página","dam.inf.s8":"CSS a mano con variables y capas","dam.inf.s9":"Menú interactivo con drops por disciplina",
       "dam.inf.s10":"Identidad de cada lámina: rombo, mosaico y foco","dam.inf.s11":"Adaptativo de 320 px a escritorio","dam.inf.s12":"Accesibilidad: foco, aria y reduced-motion",
       "dam.inf.s13":"Carrusel del índice: arrastre, rueda y teclado","dam.inf.s14":"Cambio de tema al pasar por cada CTA","dam.inf.s15":"Loader con las cinco caras del proyecto",
-      "dam.inf.s16":"i18n ES/EN persistente en las seis páginas","dam.inf.s17":"APIs en vivo: GitHub y Dev.to","dam.inf.s18":"Simon: port fiel con WAV y tiempos del sketch",
+      "dam.inf.s16":"i18n ES/EN persistente en las seis páginas","dam.inf.s17":"APIs en vivo: GitHub y Hacker News","dam.inf.s18":"Simon: port fiel con WAV y tiempos del sketch",
       "dam.inf.s19":"Modo de bajo rendimiento para equipos modestos","dam.inf.s20":"Visor 3D embebido en Fabricación","dam.inf.s21":"FAV, clima, copia de correo y guía de secciones",
       "dam.inf.s22":"Historial Git con un tema por commit","dam.inf.s23":"Verificación sin navegador: Chrome headless","dam.inf.s24":"Auditoría de peso: webp y lazy loading",
       "dam.inf.s25":"GitHub Pages y revisión final","dam.inf.loopTit":"Bucle de revisión","dam.inf.loop":"Cada vuelta vuelve al boceto, se corrige y se vuelve a publicar: el proyecto nunca se da por terminado.",
@@ -275,10 +282,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.exp.sub":"Lo que está en la mesa ahora mismo: los repositorios en vivo desde la API de <strong>Git</strong>Hub, las optimizaciones de la web y el proceso paso a paso que la sostiene.",
       "dam.api.nav":"API en vivo",
       "dam.api.titulo":"API y datos en vivo",
-      "dam.api.sub":"Artículos de la comunidad de desarrollo en tiempo real, servidos por la API pública y gratuita de Dev.to: sin claves, sin caché y sin intermediarios.",
+      "dam.api.sub":"Titulares de Hacker News y repositorios de GitHub en tiempo real, servidos por APIs públicas y gratuitas: sin claves, sin caché y sin intermediarios.",
       "dam.metricas.titulo":"La web en cifras","dam.metricas.pags":"páginas","dam.metricas.keys":"claves de traducción","dam.metricas.temas":"temas visuales","dam.metricas.idiomas":"idiomas","dam.metricas.deps":"dependencias npm","dam.metricas.rules":"reglas del chatbot",
       "dam.api.hn.titulo":"Lo que se comenta en Hacker News","dam.api.hn.sub":"Portada de Hacker News en vivo vía su API pública: titulares, puntos y comentarios, sin clave.","dam.api.hn.btn":"Ver en Hacker News","dam.api.hn.carga":"Cargando titulares…","dam.api.hn.error":"No se pudieron cargar los titulares. Inténtalo de nuevo.","dam.api.hn.vacio":"La API no ha devuelto titulares.",
-      "dam.api.devto.titulo":"Qué está leyendo la comunidad","dam.api.devto.sub":"Una selección de artículos técnicos recién publicados, con su autor y sus reacciones, pedida directamente a la API de Dev.to.","dam.api.devto.btn":"Explorar Dev.to","dam.api.devto.carga":"Cargando artículos…","dam.api.devto.error":"No se pudieron cargar los artículos. Inténtalo de nuevo.","dam.api.devto.vacio":"La API de Dev.to no ha devuelto artículos. Inténtalo de nuevo.",
+      
       "dam.api.gh.titulo":"GitHub",
       "dam.api.gh.sub":"Datos en vivo de la API pública de",
       "dam.api.gh.carga":"Cargando repositorios…",
@@ -429,7 +436,14 @@ document.addEventListener("DOMContentLoaded", () => {
       "carga.titulo":"PORTFOLIO","carga.bienvenida":"Welcome","carga.entrar":"ENTER","carga.tema.foto":"Photography","carga.tema.diseno":"Design","carga.tema.video":"Video &amp; music","carga.tema.fab":"Mechanical manufacturing","carga.tema.dam":"Programming",
       "bn.diseno.etq":"02 — GRAPHIC DESIGN","bn.diseno.tit":"Ideas you can see","bn.diseno.desc":"Flyers, branding, editorial and iconography. Click the mosaic to discover the portfolio.",
       "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in <strong>CATIA V5</strong>, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW PORTFOLIO","bn.fab.hint":"Mouse wheel: scroll up to reveal",
-      "bajo.aria":"Low performance mode","nav.son.on":"Mute music","nav.son.off":"Unmute music","bajo.aria.off":"Enable low performance mode","bajo.aria.on":"Disable low performance mode",
+      "bajo.aria":"Low performance mode","info.aria.on":"Disable the interaction guide","info.aria.off":"Enable the interaction guide",
+      "info.lam":"Swipe or drag the slides to browse the portfolio.","info.bot":"Ask the assistant: it takes you to any section.",
+      "info.lang":"Switch between Spanish and English.","info.self":"Press this same button to return to the normal site.","info.top":"Back to the top of the page.","info.view":"Switch between carousel and grid view.","info.subv":"In each section, toggle between carousel and grid.","info.flip":"Turn pages with the catalogue arrows.","info.vplay":"Tap to play the video.","info.son":"Tap the menu speaker to mute the music.","info.low":"If your computer is slow, enable low-performance mode.","info.contacto":"Write to me from the Contact button.",
+      
+      
+      "info.repro":"Tap play on each list to hear your music.",
+      "info.v3d":"Drag the 3D model to rotate it; scroll or pinch to zoom.","info.tol":"Pick hole and shaft grades and press Calculate fit.","info.pdf":"Move the mouse inside the catalogue to turn pages.",
+      "info.simon":"Have a game!","info.figma":"Interact with the embedded Figma canvas: zoom and pan.","info.apis":"GitHub and Hacker News refresh on their own.","nav.son.on":"Mute music","nav.son.off":"Unmute music","bajo.aria.off":"Enable low performance mode","bajo.aria.on":"Disable low performance mode",
       "bn.dam.etq":"05 — PROGRAMMING","bn.dam.tit":"Code you can touch","bn.dam.desc":"Simon in <strong>Processing</strong> and on <strong>Arduino</strong>, a smartwatch app in <strong>Figma</strong> and this very site built with AI: live APIs, a chatbot and browser-free verification.",
       "bot.titulo":"PORTFOLIO Assistant","bot.sub":"Ask me about my skills or where to see them","bot.ph":"Type your question…","bot.enviar":"Send",
       "bot.q1":"Do you use Photoshop?","bot.q2":"See photography","bot.q3":"See design","bot.q4":"Who is Salvador?","bot.q5":"How can I contact you?","bot.q6":"See programming",
@@ -515,7 +529,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.inf.s7":"Semantic HTML page by page","dam.inf.s8":"Hand-written CSS with variables and layers","dam.inf.s9":"Interactive menu with per-discipline dropdowns",
       "dam.inf.s10":"Identity per slide: diamond, mosaic and light","dam.inf.s11":"Responsive from 320 px to desktop","dam.inf.s12":"Accessibility: focus, aria and reduced-motion",
       "dam.inf.s13":"Index carousel: drag, wheel and keyboard","dam.inf.s14":"Theme switch on hovering each CTA","dam.inf.s15":"Loader with the project’s five faces",
-      "dam.inf.s16":"Persistent ES/EN i18n across six pages","dam.inf.s17":"Live APIs: GitHub and Dev.to","dam.inf.s18":"Simon: faithful port with WAV and sketch timing",
+      "dam.inf.s16":"Persistent ES/EN i18n across six pages","dam.inf.s17":"Live APIs: GitHub and Hacker News","dam.inf.s18":"Simon: faithful port with WAV and sketch timing",
       "dam.inf.s19":"Low-performance mode for modest computers","dam.inf.s20":"Embedded 3D viewer in Manufacturing","dam.inf.s21":"FAV, weather, copy-email and section guide",
       "dam.inf.s22":"Git history with one topic per commit","dam.inf.s23":"Testing without a browser: Chrome headless","dam.inf.s24":"Weight audit: webp and lazy loading",
       "dam.inf.s25":"GitHub Pages and final review","dam.inf.loopTit":"Review loop","dam.inf.loop":"Every lap goes back to the sketch, gets fixed and published again: the project is never finished.",
@@ -537,10 +551,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.exp.sub":"What is on the desk right now: the live repositories from the <strong>Git</strong>Hub API, the site optimisations and the step-by-step process behind it.",
       "dam.api.nav":"Live APIs",
       "dam.api.titulo":"Live APIs and data",
-      "dam.api.sub":"Development community articles in real time, served by the free and public Dev.to API: no keys, no cache, no middlemen.",
+      "dam.api.sub":"Hacker News headlines and GitHub repositories in real time, served by free public APIs: no keys, no cache, no middlemen.",
       "dam.metricas.titulo":"The site in numbers","dam.metricas.pags":"pages","dam.metricas.keys":"translation keys","dam.metricas.temas":"visual themes","dam.metricas.idiomas":"languages","dam.metricas.deps":"npm dependencies","dam.metricas.rules":"chatbot rules",
       "dam.api.hn.titulo":"What is trending on Hacker News","dam.api.hn.sub":"The Hacker News front page live through its public API: headlines, points and comments, no keys.","dam.api.hn.btn":"View on Hacker News","dam.api.hn.carga":"Loading headlines…","dam.api.hn.error":"Could not load the headlines. Try again.","dam.api.hn.vacio":"The API returned no headlines.",
-      "dam.api.devto.titulo":"What the community is reading","dam.api.devto.sub":"A selection of freshly published technical articles with their author and reactions, requested straight from the Dev.to API.","dam.api.devto.btn":"Explore Dev.to","dam.api.devto.carga":"Loading articles…","dam.api.devto.error":"Could not load the articles. Try again.","dam.api.devto.vacio":"The Dev.to API returned no articles. Try again.",
+      
       "dam.api.gh.titulo":"GitHub",
       "dam.api.gh.sub":"Live data from the public API of",
       "dam.api.gh.carga":"Loading repositories…",
@@ -1338,14 +1352,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!mos || mosDone) return;
       mosDone = true;
       const celdas = Array.from(mos.children);
-      if (html.hasAttribute("data-touch")) {
-        celdas.forEach((c) => c.classList.add("is-pulse"));
-        setTimeout(() => {
-          mos.classList.add("is-out");
-          if (final) final.classList.add("is-on");
-        }, 760);
-        return;
-      }
       const orden = celdas.map((_, k) => k);
       for (let k = orden.length - 1; k > 0; k--) {
         const j = Math.floor(Math.random() * (k + 1));
@@ -1473,7 +1479,7 @@ document.addEventListener("DOMContentLoaded", () => {
           timers.forEach(clearTimeout);
           timers = [
             setTimeout(() => damSlide.classList.add("is-n2"), reduce ? 80 : 1900),
-            setTimeout(() => damSlide.classList.add("is-open"), reduce ? 160 : 4300)
+            setTimeout(() => damSlide.classList.add("is-open"), reduce ? 160 : 3950)
           ];
         });
       }
@@ -1537,8 +1543,8 @@ document.addEventListener("DOMContentLoaded", () => {
         tEn:"Yes: graphic and editorial design (grid, identity, catalogues, brochures, posters) with Illustrator and InDesign, applied on real projects like Weidner Ibérica and SEF UV. All the work is in the design sub-site.",
         b:[["diseno.html","Ver diseño","See design"],["diseno.html#sub-identidad","Identidad","Identity"],["diseno.html#sub-posters","Pósters","Posters"]] },
       { k:["program","codigo","html","css","javascript","python","java","android","dam","git","base de datos","videojuego","simon","code","programming","api","apis","modo bajo","rendimiento"],
-        t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La subweb de Programación lo recoge todo: el Simon escrito en Processing y su versión en la placa Arduino, la interfaz TuCafé de smartwatch en Figma, APIs en vivo (GitHub y Dev.to) y esta misma web construida con herramientas de IA.",
-        tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The Programming sub-site has it all: Simon written in Processing and its Arduino board version, the TuCafé smartwatch interface in Figma, live APIs (GitHub and Dev.to) and this very site built with AI tools.",
+        t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La subweb de Programación lo recoge todo: el Simon escrito en Processing y su versión en la placa Arduino, la interfaz TuCafé de smartwatch en Figma, APIs en vivo (GitHub y Hacker News) y esta misma web construida con herramientas de IA.",
+        tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The Programming sub-site has it all: Simon written in Processing and its Arduino board version, the TuCafé smartwatch interface in Figma, live APIs (GitHub and Hacker News) and this very site built with AI tools.",
         b:[["dam.html","Ver programación","See programming"],["dam.html#t-obra","Ver obra","See work"]] },
       { k:["arduino","hardware","electronica","sensor","raspberry","placa","motor","electronics"],
         t:"Sí: tengo el Simon —el juego de los cuatro colores— implementado en una placa Arduino real, con pulsadores, LEDs y zumbador, compilado con el IDE de Arduino. Es el mismo juego de Processing llevado al hardware, y está en la subweb de Programación.",
@@ -1865,6 +1871,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const marcar = () => { if (lista) lista.querySelectorAll("button").forEach((b, k) => b.classList.toggle("is-on", k === idx)); };
       const arrancar = () => {
         if (sonando && sonando.audio !== audio) { sonando.audio.pause(); sonando.rep.classList.remove("is-playing"); }
+        document.querySelectorAll("audio").forEach((a) => { if (a !== audio && !a.paused) { try { a.pause(); } catch (e) {} } });
         sonando = { audio, rep };
         return audio.play().then(() => {
           if (window.__fadeAudio) window.__fadeAudio(audio, 0, 1, 800);
@@ -1934,7 +1941,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const gesto = (e) => {
             if (e && e.type === "pointerdown" && rep.contains(e.target)) return;
             soltar();
-            arrancar();
+            const ocupado = sonando && sonando.audio && sonando.audio !== audio && !sonando.audio.paused;
+            if (!ocupado) arrancar();
           };
           document.addEventListener("pointerdown", gesto);
           document.addEventListener("keydown", gesto);
@@ -2242,16 +2250,30 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cta) cta.addEventListener("click", (e) => { e.stopPropagation(); finish(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { if (!done) { e.preventDefault(); finish(); } } });
   })();
-  /* ─── Indicador de música en el nav (botón: silencia sin persistir entre páginas) ─── */
+  /* ─── Indicador de música en el nav (botón: silencia en toda la web hasta volver a pulsar) ─── */
   (() => {
+    const KEY = "miweb_son";
     const dic = () => I18N[langActual()] || I18N.es;
+    let muteado = false;
+    try { muteado = localStorage.getItem(KEY) === "mute"; } catch (e) {}
+    const aplicar = (on) => {
+      muteado = on;
+      document.querySelectorAll("audio").forEach((a) => { a.muted = on; });
+      try { localStorage.setItem(KEY, on ? "mute" : "on"); } catch (e) {}
+      const el = document.querySelector(".nav__son");
+      if (el) pintarBtn(el);
+    };
+    const pintarBtn = (el) => {
+      el.classList.toggle("is-mute", muteado);
+      el.setAttribute("aria-pressed", muteado ? "true" : "false");
+      el.setAttribute("aria-label", (dic()[muteado ? "nav.son.off" : "nav.son.on"] || "Silenciar música"));
+    };
     const marca = () => {
       let el = document.querySelector(".nav__son");
       if (!el) {
         el = document.createElement("button");
         el.type = "button";
         el.className = "nav__son";
-        el.setAttribute("aria-pressed", "false");
         el.innerHTML = '<svg class="son-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/></svg>' +
           '<svg class="son-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm14.7 3 2.6-2.6-1.4-1.4-2.6 2.6-2.6-2.6-1.4 1.4 2.6 2.6-2.6 2.6 1.4 1.4 2.6-2.6 2.6 2.6 1.4-1.4-2.6-2.6z"/></svg>';
         const miga = document.querySelector(".miga");
@@ -2260,34 +2282,30 @@ document.addEventListener("DOMContentLoaded", () => {
           const der = document.querySelector(".nav__derecha");
           if (der) der.insertBefore(el, der.firstChild);
         }
-        el.addEventListener("click", () => {
-          const audios = [...document.querySelectorAll("audio")];
-          const muteado = el.classList.toggle("is-mute");
-          el.setAttribute("aria-pressed", muteado ? "true" : "false");
-          el.setAttribute("aria-label", (muteado ? (dic()["nav.son.off"] || "Activar música") : (dic()["nav.son.on"] || "Silenciar música")));
-          audios.forEach((a) => {
-            if (muteado) {
-              if (!a.paused) { a.dataset.sonaba = "1"; a.pause(); }
-              a.muted = true;
-            } else {
-              a.muted = false;
-              if (a.dataset.sonaba) { delete a.dataset.sonaba; a.play().catch(() => {}); }
-            }
-          });
-        });
+        el.addEventListener("click", () => aplicar(!muteado));
       }
+      pintarBtn(el);
       return el;
     };
+    document.addEventListener("play", (e) => {
+      if (muteado && e.target && e.target.tagName === "AUDIO") e.target.muted = true;
+    }, true);
+    aplicar(muteado);
     const actualizar = () => {
       const el = marca();
-      if (!el || el.classList.contains("is-mute")) return;
+      if (!el || muteado) { if (el) el.classList.remove("is-on"); return; }
       const hay = Array.prototype.some.call(document.querySelectorAll("audio"), (a) =>
-        !a.paused && !a.ended && a.volume > 0.02 && a.dataset.mute !== "1");
+        !a.paused && !a.ended && !a.muted && a.volume > 0.02 && a.dataset.mute !== "1");
       el.classList.toggle("is-on", hay);
     };
     ["play", "pause", "ended", "volumechange"].forEach((ev) => document.addEventListener(ev, actualizar, true));
     setInterval(actualizar, 1200);
   })();
+
+  /* Al salir de la página se corta todo el audio/vídeo (evita fugas al cambiar de subweb) */
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll("audio,video").forEach((v) => { try { v.pause(); } catch (e) {} });
+  });
 
   /* ░░─ Lightbox para las imágenes estáticas de mecánica ░░─ */
   (() => {
@@ -2400,9 +2418,22 @@ document.addEventListener("DOMContentLoaded", () => {
         .observe(htmlEl, { attributes: true, attributeFilter: ["lang"] });
     }
   })();
+  /* Logo sobre la hoja del sobre-mí (solo modo apilado) */
+  (() => {
+    document.querySelectorAll(".escena").forEach((fig) => {
+      if (fig.querySelector(".escena__marco")) return;
+      const img = fig.querySelector(".escena__foto");
+      if (!img) return;
+      const wrap = document.createElement("div");
+      wrap.className = "escena__marco";
+      img.parentNode.insertBefore(wrap, img);
+      wrap.appendChild(img);
+    });
+  })();
+
   /* ─── Teléfono en el pie + hint táctil de la persiana + secciones visitadas ─── */
   (() => {
-    const TELEFONO = "+34 XXX XXX XXX";
+    const TELEFONO = "+34601002297";
     const tel = () => {
       const fila = document.querySelector(".pie__mail-fila");
       if (!fila || fila.querySelector(".pie__tel")) return;
@@ -2411,9 +2442,7 @@ document.addEventListener("DOMContentLoaded", () => {
       a.href = "tel:" + TELEFONO.replace(/\s/g, "");
       a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>' + TELEFONO + "</span>";
       a.setAttribute("aria-label", (I18N[langActual()] || I18N.es)["pie.tel.aria"] || "Call by phone");
-      const mail = fila.querySelector(".pie__mail");
-      if (mail && mail.nextSibling) fila.insertBefore(a, mail.nextSibling.nextSibling);
-      else fila.appendChild(a);
+      fila.parentNode.insertBefore(a, fila.nextSibling);
     };
     tel();
 
@@ -2428,17 +2457,113 @@ document.addEventListener("DOMContentLoaded", () => {
     pintarHint();
 
     const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    let vis = [];
-    try { vis = JSON.parse(localStorage.getItem("miweb_vis") || "[]"); } catch (e) {}
-    if (page && !vis.includes(page)) { vis.push(page); try { localStorage.setItem("miweb_vis", JSON.stringify(vis)); } catch (e) {} }
-    document.querySelectorAll(".nav__toggle").forEach((t) => {
-      const href = (t.getAttribute("href") || "").split("#")[0].toLowerCase();
-      if (href && vis.includes(href)) t.classList.add("is-visto");
-    });
+    const activa = ["fotografia", "diseno", "video", "dfm", "dam"].find((x) => page.startsWith(x)) || "";
+    if (activa) html.setAttribute("data-page", activa);
 
     if ("MutationObserver" in window) {
       new MutationObserver(() => { pintarHint(); tel(); }).observe(html, { attributes: true, attributeFilter: ["lang"] });
     }
   })();
+  /* ─── Modo guía (info): atenúa la web y señala las interacciones de cada página ─── */
+  (() => {
+    const htmlEl = document.documentElement;
+    const fab = document.querySelector(".fab");
+    if (!fab) return;
+    const scrim = document.createElement("div");
+    scrim.className = "info-scrim";
+    scrim.setAttribute("aria-hidden", "true");
+    document.body.appendChild(scrim);
+    const btn = document.createElement("button");
+    btn.className = "fab__btn fab__info is-on";
+    btn.type = "button";
+    btn.id = "infoBtn";
+    btn.setAttribute("aria-pressed", "false");
+    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.2"/><path d="M12 7.8v.2"/></svg>';
+    fab.appendChild(btn);
+    const dic = () => I18N[langActual()] || I18N.es;
+    const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    const COMUN = [[".lang", "info.lang"], [".nav__derecha > .nav__cta", "info.contacto"], [".nav__son", "info.son"],
+                   [".fab__low", "info.low"], [".fab__info", "info.self"], [".fab__top", "info.top"]];
+    const SETS = {
+      index:     COMUN.concat([["[data-bn]", "info.lam"]]),
+      fotografia:COMUN.concat([["#viewToggle", "info.view"], [".subview", "info.subv"], [".embed-shell", "info.flip"], ["[data-bot-toggle]", "info.bot"]]),
+      diseno:    COMUN.concat([["#viewToggle", "info.view"], [".subview", "info.subv"], [".embed-shell", "info.flip"], ["[data-bot-toggle]", "info.bot"]]),
+      video:     COMUN.concat([["[data-repro-play]", "info.repro"], ["[data-yt='Xy1YzVNv-iA'] .yt__play", "info.vplay"], [".ytg--fill .ytc", "info.vplay"], ["[data-bot-toggle]", "info.bot"]]),
+      dfm:       COMUN.concat([["[data-mv]", "info.v3d"], ["[data-tol-form]", "info.tol"], [".pdf-view", "info.pdf"], ["[data-bot-toggle]", "info.bot"]]),
+      dam:       COMUN.concat([["[data-simon]", "info.simon"], [".figma-marco", "info.figma"], ["[data-hn]", "info.apis"], ["[data-bot-toggle]", "info.bot"]])
+    };
+    const key = Object.keys(SETS).find((k) => page.startsWith(k)) || "";
+    const hints = [];
+    const limpiar = () => { hints.forEach((h) => h.remove()); hints.length = 0; };
+    const posicionar = (el, k) => {
+      const r = el.getBoundingClientRect();
+      if (r.width < 10 || r.bottom < 40 || r.top > innerHeight - 40) return;
+      const h = document.createElement("div");
+      h.className = "info-hint";
+      const wrap = document.createElement("span");
+      wrap.textContent = dic()[k] || k;
+      h.appendChild(wrap);
+      const ancho = Math.min(320, innerWidth * 0.82);
+      h.style.maxWidth = ancho + "px";
+      if (r.left > ancho + 16) {
+        h.style.right = (innerWidth - r.left + 12) + "px";
+      } else {
+        h.style.left = Math.min(innerWidth - ancho - 12, Math.max(12, r.right + 12)) + "px";
+      }
+      h.style.top = Math.max(84, Math.min(innerHeight - 100, r.top + r.height / 2 - 34)) + "px";
+      document.body.appendChild(h);
+      requestAnimationFrame(() => h.classList.add("is-on"));
+      hints.push(h);
+    };
+    const ajustar = () => {
+      const datos = hints.map((h) => ({ h, t: parseFloat(h.style.top) || 0, alto: h.getBoundingClientRect().height }));
+      datos.sort((a, b) => a.t - b.t);
+      let prevBottom = -Infinity;
+      datos.forEach((d) => {
+        let t = d.t;
+        if (t < prevBottom + 10) t = prevBottom + 10;
+        if (t + d.alto > innerHeight - 10) t = Math.max(84, innerHeight - 10 - d.alto);
+        d.h.style.top = t + "px";
+        prevBottom = t + d.alto;
+      });
+    };
+    const activar = () => {
+      htmlEl.setAttribute("data-info", "on");
+      btn.classList.add("is-active");
+      btn.setAttribute("aria-pressed", "true");
+      btn.setAttribute("aria-label", dic()["info.aria.on"] || "Disable guide");
+      ["main", ".nav", "footer", ".bot--fab"].forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el) => el.setAttribute("inert", ""));
+      });
+      limpiar();
+      if (!key) return;
+      SETS[key].forEach(([sel, k]) => {
+        const el = document.querySelector(sel);
+        if (el) posicionar(el, k);
+      });
+      ajustar();
+    };
+    const desactivar = () => {
+      htmlEl.removeAttribute("data-info");
+      btn.classList.remove("is-active");
+      btn.setAttribute("aria-pressed", "false");
+      btn.setAttribute("aria-label", dic()["info.aria.off"] || "Enable guide");
+      ["main", ".nav", "footer", ".bot--fab"].forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el) => el.removeAttribute("inert"));
+      });
+      limpiar();
+    };
+    btn.addEventListener("click", () => {
+      if (htmlEl.hasAttribute("data-info")) desactivar(); else activar();
+    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && htmlEl.hasAttribute("data-info")) desactivar(); });
+    if ("MutationObserver" in window) {
+      new MutationObserver(() => {
+        if (htmlEl.hasAttribute("data-info")) { desactivar(); activar(); }
+        else btn.setAttribute("aria-pressed", "false");
+      }).observe(htmlEl, { attributes: true, attributeFilter: ["lang"] });
+    }
+  })();
 });
+
 
