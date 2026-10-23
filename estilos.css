@@ -412,6 +412,7 @@ html[data-tema="diseno"] .subview[aria-pressed="true"]{background:var(--t3);colo
 .pdf-card__txt p{margin:0;color:var(--muted);font-size:.9rem}
 .pdf-card__txt .boton{margin-top:.8rem}
 .pdf-shell{position:relative;margin-top:1rem;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#0c0a09;box-shadow:0 22px 48px -26px rgba(0,0,0,.6)}
+html[data-touch] .pdf-shell{display:none}
 .pdf-shell--portada{background:#171310}
 .pdf-view{display:block;width:100%;height:min(78vh,720px);border:0;background:#0c0a09}
 .pdf-view--portada{height:min(88vh,900px);background:#171310}
