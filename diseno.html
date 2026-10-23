@@ -21,6 +21,7 @@
     <link rel="preload" as="image" href="Imagenes/Diseño_grafico_sobremi.webp" fetchpriority="high" />
 
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <script>if(matchMedia("(pointer:coarse)").matches)document.documentElement.setAttribute("data-touch","1");</script>
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
     <noscript><style>.reveal{opacity:1}</style></noscript>
@@ -57,7 +58,16 @@
         <span class="logo__nombre">Salvador <span>Llácer</span></span>
       </a>
       <nav class="nav__menu" aria-label="Secciones">
-        <a href="index.html"><span data-i18n="m.inicio">Inicio</span></a>
+        <div class="nav__item">
+                <a href="index.html" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
+                  <span data-i18n="m.inicio">Inicio</span>
+                  <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </a>
+                <div class="nav__drop">
+                  <a class="nav__grp" href="index.html#t-sobre"><span data-i18n="sec.sobre">Sobre mí</span></a>
+                  <a class="nav__grp" href="index.html#t-gustos"><span data-i18n="sec.gustos">Mis gustos</span></a>
+                </div>
+              </div>
         <div class="nav__item">
           <a href="fotografia.html" data-tema="foto" class="nav__toggle" aria-haspopup="true" aria-expanded="false">
             <span data-i18n="m.foto">Foto</span>
@@ -228,7 +238,21 @@
         </div>
       </section>
 
-      <section class="seccion" aria-labelledby="t-obra">
+      <div class="subserie" id="sub-var">
+            <div class="subserie__head">
+              <h3 class="serie__titulo"><span data-i18n="d.var.titulo">Variantes de identidad</span></h3>
+              <p class="serie__desc"><span data-i18n="d.var.desc">El mismo símbolo en distintos formatos y pesos: pruebas de la marca del portfolio en SVG, webp e iconos de instalación.</span></p>
+            </div>
+            <div class="galeria-fila">
+              <img src="logo2.svg" alt="Marca del portfolio en SVG" width="512" height="512" loading="lazy" decoding="async" />
+              <img src="Imagenes/Logo.webp" alt="Marca del portfolio en webp" width="512" height="512" loading="lazy" decoding="async" />
+            </div>
+            <div class="galeria-fila">
+              <img src="Imagenes/icono-192.png" alt="Icono de instalación de 192 px" width="192" height="192" loading="lazy" decoding="async" />
+              <img src="Imagenes/icono-512.png" alt="Icono de instalación de 512 px" width="512" height="512" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <section class="seccion" aria-labelledby="t-obra">
         <div class="contenedor caja reveal">
           <div class="seccion__head"><span class="seccion__num">02</span><h2 class="seccion__titulo" id="t-obra"><span data-i18n="d.obra.titulo">Obra</span></h2></div>
           <p class="seccion__sub"><span data-i18n="d.obra.sub">Diseño editorial y gráfico aplicado: <strong>Folletos</strong> (dípticos y trípticos), <strong>Flyers</strong>, <strong>Pósters</strong>, <strong>Identidad corporativa</strong>, <strong>Otros productos</strong> y el proyecto personal de ilustración <strong>Universo encantado</strong>. Cada pieza, en su sitio y con su criterio.</span></p>
