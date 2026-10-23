@@ -20,10 +20,11 @@
     <link rel="preload" as="image" href="Imagenes/DAM_sobremi.webp" fetchpriority="high" />
 
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <link rel="preconnect" href="https://embed.figma.com" crossorigin />
+    <link rel="preconnect" href="https://dev.to" crossorigin />
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
     <script src="dam.js" defer></script>
-    <script src="teclas.js" defer></script>
     <noscript><style>.reveal{opacity:1}</style></noscript>
   </head>
 
@@ -328,52 +329,6 @@
             <a class="boton boton--verde api__btn" href="https://github.com/SalvaLlacer26" target="_blank" rel="noopener"><span data-i18n="dam.api.gh.btn">Ver perfil</span> <span class="flecha">→</span></a>
           </div>
 
-          <div class="subserie" id="sub-teclas">
-            <div class="subserie__head">
-              <h3 class="serie__titulo"><span data-i18n="dam.teclas.titulo">Teclas · ritmo y piano</span></h3>
-              <p class="serie__desc"><span data-i18n="dam.teclas.desc">Proyecto personal de videojuego: un piano sobre fondo de escenario donde el metrónomo nunca para.</span></p>
-            </div>
-            <div class="teclas" data-teclas>
-              <div class="teclas__escena">
-                <div class="teclas__luz" aria-hidden="true"></div>
-                <div class="teclas__barra">
-                  <div class="teclas__metro" data-tn-metro aria-hidden="true">
-                    <span class="teclas__metro-beats">
-                      <span class="teclas__metro-beat" data-tn-beat="0"></span>
-                      <span class="teclas__metro-beat" data-tn-beat="1"></span>
-                      <span class="teclas__metro-beat" data-tn-beat="2"></span>
-                      <span class="teclas__metro-beat" data-tn-beat="3"></span>
-                    </span>
-                    <span class="teclas__bpm"><b data-tn-bpm>72</b> bpm</span>
-                  </div>
-                  <div class="teclas__staff" data-tn-staff aria-hidden="true">
-                    <svg class="teclas__lines" viewBox="0 0 320 84" preserveAspectRatio="none">
-                      <line x1="0" y1="18" x2="320" y2="18"/><line x1="0" y1="31" x2="320" y2="31"/>
-                      <line x1="0" y1="44" x2="320" y2="44"/><line x1="0" y1="57" x2="320" y2="57"/>
-                      <line x1="0" y1="70" x2="320" y2="70"/>
-                    </svg>
-                    <div class="teclas__notas" data-tn-notas></div>
-                  </div>
-                  <div class="teclas__hud-r">
-                    <p class="teclas__ronda"><span data-i18n="dam.teclas.ctl.ronda">Ronda</span> <b data-tn-ronda>1</b></p>
-                    <div class="teclas__tiempo" aria-hidden="true"><div class="teclas__tiempo-barra" data-tn-tiempo></div></div>
-                  </div>
-                </div>
-                <p class="teclas__estado" data-tn-estado role="status"></p>
-                <div class="teclas__piano" data-tn-piano role="group" aria-label="Piano"></div>
-              </div>
-              <div class="teclas__menu" data-tn-menu>
-                <button class="boton boton--verde teclas__jugar" type="button" data-tn-jugar><span data-i18n="dam.teclas.ctl.jugar">Jugar</span> <span class="flecha">→</span></button>
-                <div class="teclas__dif" role="group" aria-label="Dificultad">
-                  <button type="button" data-tn-dif="facil" class="is-on" data-i18n="dam.teclas.ctl.facil">Fácil</button>
-                  <button type="button" data-tn-dif="dificil" data-i18n="dam.teclas.ctl.dificil">Difícil</button>
-                </div>
-                <p class="teclas__ayuda" data-i18n="dam.teclas.ctl.ayuda">Teclado: A S D F G · W E para las negras · o toca las teclas</p>
-              </div>
-              <div class="teclas__over" data-tn-over hidden aria-hidden="true"><p class="teclas__over-txt">GAME OVER</p></div>
-            </div>
-          </div>
-
           <div class="subserie" id="sub-proceso">
             <div class="subserie__head">
               <h3 class="serie__titulo"><span data-i18n="dam.inf.titulo">Del boceto a la web</span></h3>
@@ -464,28 +419,28 @@
           <div class="referentes">
             <article class="ref">
               <a class="media ref__media" href="https://es.wikipedia.org/wiki/John_Carmack" target="_blank" rel="noopener" >
-                <img src="Imagenes/ref_carmack.jpg" alt="John Carmack" width="800" height="600" loading="lazy" decoding="async" />
+                <img src="Imagenes/ref_carmack.jpg" alt="" width="800" height="600" loading="lazy" decoding="async" />
                 <span class="media__fb">John Carmack</span>
               </a>
               <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/John_Carmack" target="_blank" rel="noopener">John Carmack<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r1.texto">El motor como oficio: exprimir cada ciclo y publicar el código cuando sirve a todos.</span></p>
             </article>
             <article class="ref">
               <a class="media ref__media" href="https://es.wikipedia.org/wiki/Neil_Druckmann" target="_blank" rel="noopener" >
-                <img src="Imagenes/ref_druckmann.jpg" alt="Neil Druckmann" width="960" height="1371" loading="lazy" decoding="async" />
+                <img src="Imagenes/ref_druckmann.jpg" alt="" width="960" height="1371" loading="lazy" decoding="async" />
                 <span class="media__fb">Neil Druckmann</span>
               </a>
               <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Neil_Druckmann" target="_blank" rel="noopener">Neil Druckmann<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r2.texto">Narrativa y sistemas: contar una historia jugable sin renunciar al diseño.</span></p>
             </article>
             <article class="ref">
               <a class="media ref__media" href="https://es.wikipedia.org/wiki/Steve_Wozniak" target="_blank" rel="noopener" >
-                <img src="Imagenes/ref_wozniak.jpg" alt="Steve Wozniak" width="960" height="1283" loading="lazy" decoding="async" />
+                <img src="Imagenes/ref_wozniak.jpg" alt="" width="960" height="1283" loading="lazy" decoding="async" />
                 <span class="media__fb">Steve Wozniak</span>
               </a>
               <h3><a class="ref__link" href="https://es.wikipedia.org/wiki/Steve_Wozniak" target="_blank" rel="noopener">Steve Wozniak<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r3.texto">Hacerlo a mano: entender cada capa del hardware y construirlo con las propias manos.</span></p>
             </article>
             <article class="ref">
               <a class="media ref__media" href="https://www.alvamajo.com" target="_blank" rel="noopener" >
-                <img src="Imagenes/ref_majo.jpg" alt="Alva Majo" width="900" height="900" loading="lazy" decoding="async" />
+                <img src="Imagenes/ref_majo.jpg" alt="" width="900" height="900" loading="lazy" decoding="async" />
                 <span class="media__fb">Alva Majo</span>
               </a>
               <h3><a class="ref__link" href="https://www.alvamajo.com" target="_blank" rel="noopener">Alva Majo<span class="ref__ext" aria-hidden="true">↗</span></a></h3><p><span data-i18n="dam.ref.r4.texto">Divulgar con rigor: explicar la tecnología sin humo y con ejemplos que se pueden tocar.</span></p>

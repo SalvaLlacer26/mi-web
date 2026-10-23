@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.ver":"VER PORTFOLIO","bn.rec":"REC · 01 — FOTOGRAFÍA",
       "carga.titulo":"PORTFOLIO","carga.bienvenida":"Bienvenido","carga.entrar":"ENTRAR","carga.tema.foto":"Fotograf&iacute;a","carga.tema.diseno":"Dise&ntilde;o","carga.tema.video":"V&iacute;deo y m&uacute;sica","carga.tema.fab":"Fabricaci&oacute;n mec&aacute;nica","carga.tema.dam":"Programaci&oacute;n",
       "bn.diseno.etq":"02 — DISEÑO GRÁFICO","bn.diseno.tit":"Ideas que se ven","bn.diseno.desc":"Flyers, marca, editorial e iconografía. Haz clic en el mosaico para descubrir el portfolio.",
-      "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER PORTFOLIO","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble","bn.dam.etq":"05 — PROGRAMACIÓN","bn.dam.tit":"Código que se puede tocar","bn.dam.desc":"HTML, CSS y JavaScript a mano, APIs en vivo y una interfaz verde de terminal. Entra y sigue el rastro del código.",
+      "bn.fab.etq":"04 — FABRICACIÓN MECÁNICA","bn.fab.tit":"<span>Si puedes <i>imaginarlo</i></span><span>lo puedes <i>fabricar</i></span>","bn.fab.desc":"Torres de apilamiento para automoción en CATIA V5, planos y modelos 3D. Del boceto paramétrico a la pieza sellada.","bn.fab.cta":"VER PORTFOLIO","bn.fab.hint":"Gira la rueda del ratón arriba para descubrir el ensamble",
+      "bajo.aria":"Modo bajo rendimiento","bajo.aria.off":"Activar modo bajo rendimiento","bajo.aria.on":"Desactivar modo bajo rendimiento",
       "bn.dam.etq":"05 — PROGRAMACIÓN","bn.dam.tit":"Código que se puede tocar","bn.dam.desc":"Simon en Processing y en Arduino, una app de smartwatch en Figma y esta misma web hecha con IA: APIs en vivo, chatbot y verificación sin navegador.",
       "bot.titulo":"Asistente PORTFOLIO","bot.sub":"Pregúntame por mis habilidades o por dónde verlas","bot.ph":"Escribe tu pregunta…","bot.enviar":"Enviar",
       "bot.q1":"¿Maneja Photoshop?","bot.q2":"Ver fotografía","bot.q3":"Ver diseño","bot.q4":"¿Quién es Salvador?","bot.q5":"¿Cómo contacto?","bot.q6":"Ver programación",
@@ -232,11 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.obra.arduino.desc":"La segunda parte del proyecto: el código del Simon compilado con el <strong>IDE de Arduino</strong> sobre una placa real. La placa lanza la secuencia con los LEDs y el zumbador, el jugador responde con los cuatro pulsadores, y a medida que se acierta la ronda se encadena sin límite hasta que se falla. Del esquema de cableado al C++, es el mismo juego funcionando sin navegador y sin pantalla.",
       "dam.obra.figma.titulo":"TuCafé · interfaz para smartwatch",
       "dam.obra.figma.desc":"TuCafé es la app de café para smartwatch que diseñé entera en <strong>Figma</strong>: definí el flujo de las cinco pantallas —bienvenida, menú, pedido, detalle y confirmación— con componentes reutilizables, jerarquía pensada para la muñeca y un modo oscuro que ahorra batería en las pantallas OLED. Abajo tienes el lienzo completo con los controles de zoom del visor.",
-      "dam.teclas.titulo":"Teclas · ritmo y piano",
-      "dam.teclas.desc":"Un videojuego de ritmo hecho a mano: un piano sobre un escenario con focos, un metrónomo que no para nunca y un pentagrama por el que cruzan las notas que hay que tocar a tiempo. En cada ronda sube el número de notas y el tempo; si pulsas una tecla equivocada o se te acaba el tiempo, la partida termina. Dos niveles —fácil y difícil— que deciden cuántas teclas del piano despiertan. HTML, CSS y WebAudio puros.",
-      "dam.teclas.ctl.jugar":"Jugar","dam.teclas.ctl.facil":"Fácil","dam.teclas.ctl.dificil":"Difícil",
-      "dam.teclas.ctl.ronda":"Ronda","dam.teclas.ctl.mira":"Mira la secuencia…","dam.teclas.ctl.toca":"¡Te toca!",
-      "dam.teclas.ctl.win":"¡Bien! Siguiente ronda…","dam.teclas.ctl.ayuda":"Teclado: A S D F G · W E para las negras · o toca las teclas",
       "dam.inf.titulo":"Del boceto a la web",
       "dam.inf.sub":"El proyecto que sostiene esta página: crear un portafolio personal con herramientas avanzadas de inteligencia artificial —APIs en vivo, chatbot, visores 3D, traducción automática y verificación sin navegador— sin frameworks ni constructores. Cuatro fases, veinticinco pasos y un bucle de revisión que nunca cierra del todo.",
       "dam.inf.f1.titulo":"Ideación y diseño","dam.inf.f1.desc":"Antes del editor: la libreta, el mapa de la web y el prototipo que sirve de contrato visual.",
@@ -249,13 +245,13 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.inf.s10":"Identidad de cada lámina: rombo, mosaico y foco","dam.inf.s11":"Adaptativo de 320 px a escritorio","dam.inf.s12":"Accesibilidad: foco, aria y reduced-motion",
       "dam.inf.s13":"Carrusel del índice: arrastre, rueda y teclado","dam.inf.s14":"Cambio de tema al pasar por cada CTA","dam.inf.s15":"Loader con las cinco caras del proyecto",
       "dam.inf.s16":"i18n ES/EN persistente en las seis páginas","dam.inf.s17":"APIs en vivo: GitHub y Dev.to","dam.inf.s18":"Simon: port fiel con WAV y tiempos del sketch",
-      "dam.inf.s19":"Teclas: juego de ritmo con WebAudio","dam.inf.s20":"Visor 3D embebido en Fabricación","dam.inf.s21":"FAV, clima, copia de correo y guía de secciones",
+      "dam.inf.s19":"Modo de bajo rendimiento para equipos modestos","dam.inf.s20":"Visor 3D embebido en Fabricación","dam.inf.s21":"FAV, clima, copia de correo y guía de secciones",
       "dam.inf.s22":"Historial Git con un tema por commit","dam.inf.s23":"Verificación sin navegador: Chrome headless","dam.inf.s24":"Auditoría de peso: webp y lazy loading",
       "dam.inf.s25":"GitHub Pages y revisión final","dam.inf.loopTit":"Bucle de revisión","dam.inf.loop":"Cada vuelta vuelve al boceto, se corrige y se vuelve a publicar: el proyecto nunca se da por terminado.",
       "dam.inf.det1.titulo":"El índice es la portada","dam.inf.det1.texto":"La home no es una lista de enlaces: es un carrusel de seis láminas —intro, foto, diseño, vídeo, fabricación y programación— que se mueven con arrastre, rueda de ratón y flechas. Cada lámina tiene su CTA, y al pasar el ratón por encima la web entera cambia de tema: los colores, el favicon y la pantalla de carga se tiñen de la disciplina antes de que hagas clic.",
       "dam.inf.det2.titulo":"Cinco mundos, un solo CSS","dam.inf.det2.texto":"Un único estilos.css con variables en :root sostiene las cinco subwebs. El atributo data-tema en <html> decide la paleta; Programación añade su rombo con vídeo de fondo y revelado por clic, Foto su blanco y negro de laboratorio y Fabricación sus visores 3D. Nada de frameworks: si el navegador lo entiende, aquí se usa.",
       "dam.inf.det3.titulo":"La web habla tu idioma","dam.inf.det3.texto":"Todo el texto está en un diccionario ES/EN dentro de script.js: seis páginas, más de doscientas claves, persistidas en localStorage. Los bloques que viven de APIs —repositorios, artículos y juegos— se vuelven a soltar solos cuando cambias de idioma, gracias a un observador sobre el atributo lang.",
-      "dam.inf.det4.titulo":"El sonido es parte del diseño","dam.inf.det4.texto":"El Simon usa los WAV originales del juego y su secuencia de tiempos está medida en frames del sketch original y traducida a milisegundos. El juego Teclas, en cambio, sintetiza sus notas con WebAudio: un metrónomo que no para nunca, un piano con foco de escenario y notas que cruzan el pentagrama al ritmo de los pulsos.",
+      "dam.inf.det4.titulo":"El sonido es parte del diseño","dam.inf.det4.texto":"El Simon usa los WAV originales del juego con su secuencia de tiempos medida en frames del sketch original y traducida a milisegundos, y una banda sonora propia que entra con fundido en los menús y se aparta durante la partida.",
       "dam.inf.det5.titulo":"Sin frameworks, sin excusas","dam.inf.det5.texto":"Cero dependencias de npm, cero pasos de compilación: HTML, CSS y JavaScript planos que se abren con doble clic. Las únicas piezas de terceros son locales y embebidas a mano —el visor 3D de Fabricación— para que la web funcione también sin red.",
       "dam.inf.det6.titulo":"Cómo lo compruebo","dam.inf.det6.texto":"Antes de cada publicación: volcado del DOM con Chrome headless, capturas de cada sección en escritorio y móvil, pruebas de humo de las APIs y del sonido, y una lectura de accesibilidad —foco visible, contrastes y respeto de prefers-reduced-motion. Cuando algo falla, se corrige y se vuelve a desplegar.",
       "dam.form.titulo":"Formación",
@@ -268,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.tools.titulo":"Herramientas",
       "dam.tools.sub":"El entorno diario del DAM: del editor de texto al control de versiones, pasando por el servidor local y la herramienta de diseño.",
       "dam.exp.titulo":"Proyectos en curso",
-      "dam.exp.sub":"Lo que está en la mesa ahora mismo: los repositorios en vivo desde la API de GitHub y el proceso paso a paso que sostiene esta web.",
+      "dam.exp.sub":"Lo que está en la mesa ahora mismo: los repositorios en vivo desde la API de GitHub, las optimizaciones de la web y el proceso paso a paso que la sostiene.",
       "dam.api.nav":"API en vivo",
       "dam.api.titulo":"API y datos en vivo",
       "dam.api.sub":"Artículos de la comunidad de desarrollo en tiempo real, servidos por la API pública y gratuita de Dev.to: sin claves, sin caché y sin intermediarios.",
@@ -420,7 +416,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "bn.ver":"VIEW PORTFOLIO","bn.rec":"REC · 01 — PHOTOGRAPHY",
       "carga.titulo":"PORTFOLIO","carga.bienvenida":"Welcome","carga.entrar":"ENTER","carga.tema.foto":"Photography","carga.tema.diseno":"Design","carga.tema.video":"Video &amp; music","carga.tema.fab":"Mechanical manufacturing","carga.tema.dam":"Programming",
       "bn.diseno.etq":"02 — GRAPHIC DESIGN","bn.diseno.tit":"Ideas you can see","bn.diseno.desc":"Flyers, branding, editorial and iconography. Click the mosaic to discover the portfolio.",
-      "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in CATIA V5, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW PORTFOLIO","bn.fab.hint":"Mouse wheel: scroll up to reveal","bn.dam.etq":"05 — PROGRAMMING","bn.dam.tit":"Code you can touch","bn.dam.desc":"Hand-written HTML, CSS and JavaScript, live APIs and a green terminal interface. Come in and follow the code trail.",
+      "bn.fab.etq":"04 — MECHANICAL MANUFACTURING","bn.fab.tit":"<span>If you can <i>imagine it</i></span><span>you can <i>build it</i></span>","bn.fab.desc":"Automotive stacking columns in CATIA V5, drawings and 3D models. From parametric sketch to sealed part.","bn.fab.cta":"VIEW PORTFOLIO","bn.fab.hint":"Mouse wheel: scroll up to reveal",
+      "bajo.aria":"Low performance mode","bajo.aria.off":"Enable low performance mode","bajo.aria.on":"Disable low performance mode",
       "bn.dam.etq":"05 — PROGRAMMING","bn.dam.tit":"Code you can touch","bn.dam.desc":"Simon in Processing and on Arduino, a smartwatch app in Figma and this very site built with AI: live APIs, a chatbot and browser-free verification.",
       "bot.titulo":"PORTFOLIO Assistant","bot.sub":"Ask me about my skills or where to see them","bot.ph":"Type your question…","bot.enviar":"Send",
       "bot.q1":"Do you use Photoshop?","bot.q2":"See photography","bot.q3":"See design","bot.q4":"Who is Salvador?","bot.q5":"How can I contact you?","bot.q6":"See programming",
@@ -489,11 +486,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.obra.arduino.desc":"The second part of the project: the Simon code compiled with the <strong>Arduino IDE</strong> on a real board. The board plays the sequence with its LEDs and buzzer, the player answers with four push buttons, and every correct round chains on without a limit until you miss. From the wiring diagram to C++, the same game running with no browser and no screen.",
       "dam.obra.figma.titulo":"TuCafé · a smartwatch interface",
       "dam.obra.figma.desc":"TuCafé is the coffee app for smartwatch that I designed entirely in <strong>Figma</strong>: I defined the flow of the five screens —welcome, menu, order, detail and confirmation— with reusable components, hierarchy tuned for the wrist and a dark mode that saves battery on OLED displays. The full canvas with the viewer’s zoom controls is below.",
-      "dam.teclas.titulo":"Teclas · rhythm and piano",
-      "dam.teclas.desc":"A rhythm game built by hand: a piano on a stage-lit background, a metronome that never stops and a staff where notes cross by that you must hit in time. Every round increases the number of notes and the tempo; press the wrong key or run out of time and the game ends. Two levels —easy and hard— decide how many piano keys wake up. Pure HTML, CSS and WebAudio.",
-      "dam.teclas.ctl.jugar":"Play","dam.teclas.ctl.facil":"Easy","dam.teclas.ctl.dificil":"Hard",
-      "dam.teclas.ctl.ronda":"Round","dam.teclas.ctl.mira":"Watch the sequence…","dam.teclas.ctl.toca":"Your turn!",
-      "dam.teclas.ctl.win":"Nice! Next round…","dam.teclas.ctl.ayuda":"Keyboard: A S D F G · W E for the black keys · or tap the keys",
       "dam.inf.titulo":"From sketch to the web",
       "dam.inf.sub":"The project behind this page: building a personal portfolio with advanced artificial intelligence tools —live APIs, a chatbot, 3D viewers, automatic translation and browser-free verification — with no frameworks or build tools. Four phases, twenty-five steps and a review loop that never quite closes.",
       "dam.inf.f1.titulo":"Ideation and design","dam.inf.f1.desc":"Before the editor: the notebook, the site map and the prototype that acts as a visual contract.",
@@ -506,13 +498,13 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.inf.s10":"Identity per slide: diamond, mosaic and light","dam.inf.s11":"Responsive from 320 px to desktop","dam.inf.s12":"Accessibility: focus, aria and reduced-motion",
       "dam.inf.s13":"Index carousel: drag, wheel and keyboard","dam.inf.s14":"Theme switch on hovering each CTA","dam.inf.s15":"Loader with the project’s five faces",
       "dam.inf.s16":"Persistent ES/EN i18n across six pages","dam.inf.s17":"Live APIs: GitHub and Dev.to","dam.inf.s18":"Simon: faithful port with WAV and sketch timing",
-      "dam.inf.s19":"Teclas: rhythm game with WebAudio","dam.inf.s20":"Embedded 3D viewer in Manufacturing","dam.inf.s21":"FAV, weather, copy-email and section guide",
+      "dam.inf.s19":"Low-performance mode for modest computers","dam.inf.s20":"Embedded 3D viewer in Manufacturing","dam.inf.s21":"FAV, weather, copy-email and section guide",
       "dam.inf.s22":"Git history with one topic per commit","dam.inf.s23":"Testing without a browser: Chrome headless","dam.inf.s24":"Weight audit: webp and lazy loading",
       "dam.inf.s25":"GitHub Pages and final review","dam.inf.loopTit":"Review loop","dam.inf.loop":"Every lap goes back to the sketch, gets fixed and published again: the project is never finished.",
       "dam.inf.det1.titulo":"The index is the cover","dam.inf.det1.texto":"The home is not a list of links: it is a carousel of six slides —intro, photo, design, video, manufacturing and programming— moved by drag, mouse wheel and arrows. Every slide has its CTA, and hovering it retints the whole site: colours, favicon and loading screen adopt the discipline before you even click.",
       "dam.inf.det2.titulo":"Five worlds, one CSS","dam.inf.det2.texto":"A single estilos.css with :root variables holds the five sub-sites. The data-tema attribute on <html> picks the palette; Programming adds its diamond with background video and click reveal, Photo its darkroom black & white and Manufacturing its 3D viewers. No frameworks: if the browser understands it, it is used here.",
       "dam.inf.det3.titulo":"The site speaks your language","dam.inf.det3.texto":"All copy lives in an ES/EN dictionary inside script.js: six pages, over two hundred keys, persisted in localStorage. Blocks fed by APIs —repositories, articles and games— re-render themselves when you switch language, thanks to an observer on the lang attribute.",
-      "dam.inf.det4.titulo":"Sound is part of the design","dam.inf.det4.texto":"Simon uses the game’s original WAV files and its timing chain is measured in frames of the original sketch and translated to milliseconds. The Teclas game, in turn, synthesises its notes with WebAudio: a metronome that never stops, a stage-lit piano and notes crossing the staff to the beat.",
+      "dam.inf.det4.titulo":"Sound is part of the design","dam.inf.det4.texto":"Simon uses the game’s original WAV files with its timing chain measured in frames of the original sketch and translated to milliseconds, plus its own soundtrack that fades in on the menus and steps aside during play.",
       "dam.inf.det5.titulo":"No frameworks, no excuses","dam.inf.det5.texto":"Zero npm dependencies, zero build steps: plain HTML, CSS and JavaScript that open with a double click. The only third-party pieces are local and embedded by hand —the Manufacturing 3D viewer— so the site also works offline.",
       "dam.inf.det6.titulo":"How I verify it","dam.inf.det6.texto":"Before every publish: DOM dumps with Chrome headless, screenshots of every section on desktop and mobile, smoke tests of the APIs and the sound, and an accessibility pass —visible focus, contrast and prefers-reduced-motion. When something breaks, it gets fixed and redeployed.",
       "dam.form.item1.titulo":"Multiplatform Application Development",
@@ -524,7 +516,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "dam.tools.titulo":"Tools",
       "dam.tools.sub":"The daily DAM environment: from the text editor to version control, through the local server and the design tool.",
       "dam.exp.titulo":"Projects in progress",
-      "dam.exp.sub":"What is on the desk right now: the live repositories from the GitHub API, the Teclas game and the step-by-step process behind this site.",
+      "dam.exp.sub":"What is on the desk right now: the live repositories from the GitHub API, the site optimisations and the step-by-step process behind it.",
       "dam.api.nav":"Live APIs",
       "dam.api.titulo":"Live APIs and data",
       "dam.api.sub":"Development community articles in real time, served by the free and public Dev.to API: no keys, no cache, no middlemen.",
@@ -1356,15 +1348,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const activar = () => {
       html.setAttribute("data-tema", "index");
+      const bajo = html.hasAttribute("data-bajo");
       slides.forEach((s, k) => {
         const on = k === i;
         s.classList.toggle("is-on", on);
         if (on) s.removeAttribute("inert"); else s.setAttribute("inert", "");
         s.setAttribute("aria-hidden", on ? "false" : "true");
         const v = s.querySelector("video[data-bn-video]");
-        if (v) { if (on) { v.play().catch(() => {}); } else v.pause(); }
+        if (v) { if (on && !bajo) { v.play().catch(() => {}); } else v.pause(); }
         const a = s.querySelector("audio[data-bn-audio]");
-        if (a) { if (on && a.dataset.mute !== "1") { a.play().catch(() => {}); } else a.pause(); }
+        if (a) { if (on && !bajo && a.dataset.mute !== "1") { a.play().catch(() => {}); } else a.pause(); }
+        if (!on && s.classList.contains("bn__slide--dam")) {
+          s.classList.remove("is-play", "is-n2", "is-open");
+          const g = s.querySelector(".bn__dam-grid");
+          if (g) g.classList.remove("is-reveal");
+        }
       });
       pags.forEach((p, k) => p.classList.toggle("is-on", k === i));
       if (conteo) conteo.textContent = String(i + 1).padStart(2, "0");
@@ -1440,10 +1438,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
       const up = damGrid.querySelector("[data-dam-reveal]");
-      if (up) {
+      const damSlide = damGrid.closest(".bn__slide--dam");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (up && damSlide) {
+        let timers = [];
         up.addEventListener("click", () => {
           if (damGrid.classList.contains("is-reveal")) { location.href = "dam.html"; return; }
           damGrid.classList.add("is-reveal");
+          damSlide.classList.add("is-play");
+          timers.forEach(clearTimeout);
+          timers = [
+            setTimeout(() => damSlide.classList.add("is-n2"), reduce ? 80 : 2150),
+            setTimeout(() => damSlide.classList.add("is-open"), reduce ? 160 : 5000)
+          ];
         });
       }
     }
@@ -1506,17 +1513,13 @@ document.addEventListener("DOMContentLoaded", () => {
         tEn:"Yes: graphic and editorial design (grid, identity, catalogues, brochures, posters) with Illustrator and InDesign, applied on real projects like Weidner Ibérica and SEF UV. All the work is in the design sub-site.",
         b:[["diseno.html","Ver diseño","See design"],["diseno.html#sub-identidad","Identidad","Identity"],["diseno.html#sub-posters","Pósters","Posters"]] },
       { k:["program","codigo","html","css","javascript","python","java","android","dam","git","base de datos","videojuego","simon","code","programming"],
-        t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La subweb de Programación lo recoge todo: el Simon escrito en Processing y su versión en la placa Arduino, el juego de ritmo Teclas, la interfaz TuCafé de smartwatch en Figma, APIs en vivo (GitHub y Dev.to) y esta misma web construida con herramientas de IA.",
-        tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The Programming sub-site has it all: Simon written in Processing and its Arduino board version, the Teclas rhythm game, the TuCafé smartwatch interface in Figma, live APIs (GitHub and Dev.to) and this very site built with AI tools.",
+        t:"Actualmente curso el CFGS de DAM: programación, bases de datos, Git/GitHub, Figma y fundamentos de IA. La subweb de Programación lo recoge todo: el Simon escrito en Processing y su versión en la placa Arduino, la interfaz TuCafé de smartwatch en Figma, APIs en vivo (GitHub y Dev.to) y esta misma web construida con herramientas de IA.",
+        tEn:"I am currently studying the DAM higher degree: programming, databases, Git/GitHub, Figma and AI fundamentals. The Programming sub-site has it all: Simon written in Processing and its Arduino board version, the TuCafé smartwatch interface in Figma, live APIs (GitHub and Dev.to) and this very site built with AI tools.",
         b:[["dam.html","Ver programación","See programming"],["dam.html#t-obra","Ver obra","See work"]] },
       { k:["arduino","hardware","electronica","sensor","raspberry","placa","motor","electronics"],
         t:"Sí: tengo el Simon —el juego de los cuatro colores— implementado en una placa Arduino real, con pulsadores, LEDs y zumbador, compilado con el IDE de Arduino. Es el mismo juego de Processing llevado al hardware, y está en la subweb de Programación.",
         tEn:"Yes: I have Simon —the four-colour game— implemented on a real Arduino board with buttons, LEDs and a buzzer, compiled with the Arduino IDE. It is the same Processing game ported to hardware, on the Programming sub-site.",
         b:[["dam.html#sub-arduino","Ver Arduino","See Arduino"],["dam.html","Programación","Programming"]] },
-      { k:["teclas","piano","ritmo","metronomo","rhythm"],
-        t:"Teclas es mi videojuego de ritmo: las notas cruzan el pentagrama y tienes que tocarlas en el piano justo a tiempo. Cada ronda sube el tempo y el número de notas, con modo fácil y difícil. Está en la subweb de Programación, hecho con WebAudio y sin librerías.",
-        tEn:"Teclas is my rhythm game: notes cross the staff and you must play them on the piano right on time. Every round raises the tempo and the note count, with easy and hard modes. It lives on the Programming sub-site, built with WebAudio and no libraries.",
-        b:[["dam.html#sub-teclas","Jugar a Teclas","Play Teclas"],["dam.html","Programación","Programming"]] },
       { k:["inteligencia artificial","chatbot","asistente","herramientas de ia","artificial intelligence","ai tools"],
         t:"Esta misma web ES el proyecto: un portafolio hecho con herramientas de IA avanzadas —APIs en vivo, este chatbot, visores 3D, traducción ES/EN y verificación con Chrome headless— sin frameworks ni constructores. En «Del boceto a la web» tienes las 25 fases del proceso.",
         tEn:"This very site IS the project: a portfolio built with advanced AI tools —live APIs, this chatbot, 3D viewers, ES/EN translation and Chrome headless verification— with no frameworks or build tools. “From sketch to the web” shows the 25 steps of the process.",
@@ -1870,7 +1873,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       cargar(0, false);
-      if (rep.dataset.autoplay) {
+      if (rep.dataset.autoplay && !document.documentElement.hasAttribute("data-bajo")) {
         const k = tracks.findIndex((t) => t[1] === rep.dataset.autoplay);
         cargar(k >= 0 ? k : 0, false);
         arrancar().then((ok) => {
@@ -2160,6 +2163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const introAud = document.querySelector(".bn__slide--intro audio[data-bn-audio]");
     const playIntro = () => {
+      if (html.hasAttribute("data-bajo")) return;
       if (introAud && introAud.paused && introAud.dataset.mute !== "1") {
         introAud.play().then(() => { if (window.__fadeAudio) window.__fadeAudio(introAud, 0, 1, 900); }, () => {});
       }
@@ -2332,5 +2336,77 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "ArrowRight") mover(1);
     });
   })();
+  /* ─── Botón y lógica del modo bajo rendimiento (opt-in) ─── */
+  (() => {
+    const KEY = "miweb_bajo";
+    const htmlEl = document.documentElement;
+    const fab = document.querySelector(".fab");
+    if (!fab) return;
+    const btn = document.createElement("button");
+    btn.className = "fab__btn fab__low is-on";
+    btn.type = "button";
+    btn.id = "lowBtn";
+    btn.setAttribute("aria-pressed", "false");
+    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7.5" width="16" height="9" rx="2.5"/><path d="M21 10.5v3"/><path d="M11.5 9.5l-2.5 2.75h3L9.5 14.5"/></svg>';
+    fab.appendChild(btn);
+    const dic = () => I18N[langActual()] || I18N.es;
+    const aria = (on) => btn.setAttribute("aria-label", dic()[on ? "bajo.aria.on" : "bajo.aria.off"] || "Low performance mode");
+    let prevPerf = null;
+    const guardar = () => {
+      document.querySelectorAll("video[data-bn-video], .dragvid__video").forEach((v) => {
+        if (v.paused) return;
+        v.dataset.bajoPaused = "1";
+        try { v.pause(); } catch (e) {}
+      });
+      document.querySelectorAll(".mapa iframe, .figma-marco iframe").forEach((f) => {
+        const box = f.parentElement;
+        if (!box || box.classList.contains("is-low")) return;
+        box.classList.add("is-low");
+        box.dataset.lowSrc = f.src;
+        f.removeAttribute("src");
+        box.addEventListener("click", () => {
+          if (!htmlEl.hasAttribute("data-bajo")) return;
+          if (box.dataset.lowSrc && !f.getAttribute("src")) {
+            f.src = box.dataset.lowSrc;
+            box.classList.remove("is-low");
+          }
+        });
+      });
+    };
+    const aplicar = (on, persistir) => {
+      if (on) {
+        htmlEl.setAttribute("data-bajo", "on");
+        if (prevPerf === null) prevPerf = htmlEl.getAttribute("data-perf");
+        htmlEl.setAttribute("data-perf", "low");
+        guardar();
+        if (persistir) { try { localStorage.setItem(KEY, "1"); } catch (e) {} }
+      } else {
+        htmlEl.removeAttribute("data-bajo");
+        if (prevPerf) htmlEl.setAttribute("data-perf", prevPerf);
+        else htmlEl.removeAttribute("data-perf");
+        document.querySelectorAll(".mapa.is-low, .figma-marco.is-low").forEach((box) => {
+          const f = box.querySelector("iframe");
+          if (f && box.dataset.lowSrc) { f.src = box.dataset.lowSrc; }
+          box.classList.remove("is-low");
+          delete box.dataset.lowSrc;
+        });
+        document.querySelectorAll("video[data-bajoPaused]").forEach((v) => {
+          delete v.dataset.bajoPaused;
+          v.play().catch(() => {});
+        });
+        if (persistir) { try { localStorage.removeItem(KEY); } catch (e) {} }
+      }
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.classList.toggle("is-active", on);
+      aria(on);
+    };
+    btn.addEventListener("click", () => aplicar(!htmlEl.hasAttribute("data-bajo"), true));
+    let on = false;
+    try { on = localStorage.getItem(KEY) === "1"; } catch (e) {}
+    aplicar(on, false);
+    if ("MutationObserver" in window) {
+      new MutationObserver(() => aria(htmlEl.hasAttribute("data-bajo")))
+        .observe(htmlEl, { attributes: true, attributeFilter: ["lang"] });
+    }
+  })();
 });
-

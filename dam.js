@@ -42,6 +42,22 @@
     const pads = [...sim.querySelectorAll("[data-pad]")];
     if (!play || !jugar || !juego || pads.length !== 4) return;
 
+    const vid = document.querySelector(".dam-fila__caja--video video");
+    if (vid) {
+      const box = vid.parentElement;
+      const fit = () => {
+        const W = box.clientWidth, H = box.clientHeight;
+        if (!W || !H) return;
+        const vw = vid.videoWidth || 16, vh = vid.videoHeight || 9;
+        const sc = Math.min(W / vh, H / vw);
+        vid.style.width = Math.round(vw * sc) + "px";
+        vid.style.height = Math.round(vh * sc) + "px";
+      };
+      vid.addEventListener("loadedmetadata", fit);
+      window.addEventListener("resize", fit);
+      fit();
+    }
+
     const RUTA = "juego/Simon_vAlpha/data/";
     const crear = (f, v) => {
       const a = new Audio();
@@ -81,16 +97,19 @@
     fondo.src = "musica/Personal/Creatividad.m4a";
     fondo.loop = true;
     fondo.volume = 0;
-    let fadeOn = 0, fadeOff = 0;
+    let fadeOn = 0, fadeOff = 0, partidaActiva = false;
     const fondoInicia = () => {
+      if (partidaActiva) return;
       clearInterval(fadeOn); clearInterval(fadeOff);
       try {
         fondo.currentTime = 0;
         const pr = fondo.play();
-        if (pr && pr.catch) pr.catch(() => {});
+        if (pr && pr.then) pr.then(() => { if (partidaActiva) { try { fondo.pause(); } catch (e) {} } }, () => {});
+        else if (pr && pr.catch) pr.catch(() => {});
       } catch (e) {}
       let v = 0;
       fadeOn = setInterval(() => {
+        if (partidaActiva) { clearInterval(fadeOn); return; }
         v = Math.min(0.32, v + 0.032);
         fondo.volume = v;
         if (v >= 0.32) clearInterval(fadeOn);
@@ -174,9 +193,11 @@
 
     const terminar = (ganado) => {
       gameOver = true;
+      if (raf) { cancelAnimationFrame(raf); raf = 0; }
       gano = !!ganado;
       fase = "fin";
-      fondoPara();
+      partidaActiva = false;
+      fondoInicia();
       encender(-1, false);
       juego.classList.remove("is-turno");
       pantalla(false);
@@ -200,7 +221,8 @@
       sonOff = false;
       pantalla(true);
       setMsg();
-      fondoInicia();
+      partidaActiva = true;
+      fondoPara();
       if (!raf) raf = requestAnimationFrame(bucle);
     };
 
@@ -271,6 +293,10 @@
     });
 
     play.addEventListener("click", empezar);
+    fondoInicia();
+    sim.addEventListener("pointerdown", () => {
+      if (fondo.paused && fase !== "jugando") fondoInicia();
+    });
     render();
   })();
 
