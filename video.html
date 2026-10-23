@@ -20,8 +20,7 @@
     <link rel="preload" as="image" href="Imagenes/Video_sobremi.webp" fetchpriority="high" />
 
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
-    <link rel="preconnect" href="https://accounts.spotify.com" crossorigin />
-    <link rel="preconnect" href="https://api.spotify.com" crossorigin />
+    <link rel="preconnect" href="https://api.deezer.com" crossorigin />
     <link rel="stylesheet" href="estilos.css" />
     <script src="script.js" defer></script>
     <noscript><style>.reveal{opacity:1}</style></noscript>
@@ -856,21 +855,20 @@
 
       <section class="seccion" aria-labelledby="t-lastfm">
         <div class="contenedor caja reveal">
-          <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-lastfm"><span data-i18n="v.spotify.titulo">Lo que escucho</span></h2></div>
-          <p class="seccion__sub"><span data-i18n="v.spotify.sub">Conecta tu cuenta de Spotify y descubrirás aquí tus artistas más escuchados del último mes, directamente desde la API oficial de Spotify.</span></p>
-          <div class="lastfm" data-spotify>
+          <div class="seccion__head"><span class="seccion__num">08</span><h2 class="seccion__titulo" id="t-lastfm"><span data-i18n="v.mus.titulo">Lo que suena ahora</span></h2></div>
+          <p class="seccion__sub"><span data-i18n="v.mus.sub">Los temas que más están sonando en el mundo, en directo desde la API gratuita de Deezer: sin claves, sin registro y sin instalar nada.</span></p>
+          <div class="lastfm" data-deezer>
             <div class="lastfm__head">
               <span class="lastfm__ico" aria-hidden="true">♪</span>
               <div class="lastfm__txt">
-                <h3><span data-i18n="v.spotify.tit">Tus artistas más escuchados</span></h3>
-                <p><span data-i18n="v.spotify.nota">Datos de tu cuenta de Spotify (últimos 30 días).</span></p>
+                <h3><span data-i18n="v.mus.tit">Top de canciones del momento</span></h3>
+                <p><span data-i18n="v.mus.nota">Datos en vivo del gráfico global de Deezer.</span></p>
               </div>
-              <button class="boton boton--verde" type="button" data-spotify-btn><span data-i18n="v.spotify.btn">Conectar Spotify</span> <span class="flecha">→</span></button>
             </div>
-            <ul class="lastfm__grid" data-spotify-grid aria-live="polite">
-              <li class="api__estado" data-spotify-estado data-i18n="v.spotify.vacio">Conecta tu Spotify para ver tus artistas.</li>
+            <ul class="lastfm__grid" data-deezer-grid aria-live="polite">
+              <li class="api__estado" data-deezer-estado data-i18n="v.mus.carga">Cargando temas…</li>
             </ul>
-            <p class="lastfm__credito"><span data-i18n="v.spotify.fuente">Datos de la API oficial de</span> <a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a></p>
+            <p class="lastfm__credito"><span data-i18n="v.mus.fuente">Datos de la API gratuita de</span> <a href="https://www.deezer.com" target="_blank" rel="noopener">Deezer</a></p>
           </div>
         </div>
       </section>

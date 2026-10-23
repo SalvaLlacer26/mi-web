@@ -1,4 +1,4 @@
-/* dam.js — Programación: Simon (port del sketch original + música de fondo), API GitHub, artículos Dev.to */
+/* dam.js — Programación: Simon (port del sketch original), API GitHub, artículos Dev.to */
 (() => {
   const html = document.documentElement;
   const lang = () => html.getAttribute("lang") || "es";
@@ -92,41 +92,6 @@
       });
     };
 
-    const fondo = new Audio();
-    fondo.preload = "none";
-    fondo.src = "musica/Personal/Creatividad.m4a";
-    fondo.loop = true;
-    fondo.volume = 0;
-    let fadeOn = 0, fadeOff = 0, partidaActiva = false;
-    const fondoInicia = () => {
-      if (partidaActiva) return;
-      clearInterval(fadeOn); clearInterval(fadeOff);
-      try {
-        fondo.currentTime = 0;
-        const pr = fondo.play();
-        if (pr && pr.then) pr.then(() => { if (partidaActiva) { try { fondo.pause(); } catch (e) {} } }, () => {});
-        else if (pr && pr.catch) pr.catch(() => {});
-      } catch (e) {}
-      let v = 0;
-      fadeOn = setInterval(() => {
-        if (partidaActiva) { clearInterval(fadeOn); return; }
-        v = Math.min(0.32, v + 0.032);
-        fondo.volume = v;
-        if (v >= 0.32) clearInterval(fadeOn);
-      }, 100);
-    };
-    const fondoPara = () => {
-      clearInterval(fadeOn);
-      if (fondo.paused) return;
-      let v = fondo.volume;
-      clearInterval(fadeOff);
-      fadeOff = setInterval(() => {
-        v = Math.max(0, v - 0.055);
-        fondo.volume = v;
-        if (v <= 0) { clearInterval(fadeOff); try { fondo.pause(); } catch (e) {} }
-      }, 55);
-    };
-
     const ON = 183, OFF = 600, FIN = 750;
     const partida = [];
     let posicion = 0, longitud = 0, turnoSimon = false, gameOver = true, gano = false;
@@ -196,8 +161,6 @@
       if (raf) { cancelAnimationFrame(raf); raf = 0; }
       gano = !!ganado;
       fase = "fin";
-      partidaActiva = false;
-      fondoInicia();
       encender(-1, false);
       juego.classList.remove("is-turno");
       pantalla(false);
@@ -221,8 +184,6 @@
       sonOff = false;
       pantalla(true);
       setMsg();
-      partidaActiva = true;
-      fondoPara();
       if (!raf) raf = requestAnimationFrame(bucle);
     };
 
@@ -293,10 +254,6 @@
     });
 
     play.addEventListener("click", empezar);
-    fondoInicia();
-    sim.addEventListener("pointerdown", () => {
-      if (fondo.paused && fase !== "jugando") fondoInicia();
-    });
     render();
   })();
 

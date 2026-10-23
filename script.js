@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "v.ref.titulo":"Referentes","v.ref.sub":"Ocho nombres que explican de dónde viene mi manera de montar y de componer. De ellos heredo el criterio, no la copia.","v.ref.cine":"Referentes cinematográficos","v.ref.music":"Referentes musicales",
       "v.ref.r1.texto":"El suspense como montaje: saber qué va a pasar y hacerlo esperar.","v.ref.r2.texto":"Claridad narrativa: la historia por delante del efecto.","v.ref.r3.texto":"Cámara en mano y energía: el plano como golpe de ritmo.","v.ref.r4.texto":"Montaje al servicio de la música: cortar siguiendo el compás.",
       "v.ref.r5.texto":"Minimalismo melódico: repetir hasta que la idea respire.","v.ref.r6.texto":"Arquitectura sonora: el patrón como estructura de la pieza.","v.ref.r7.texto":"Piano que acompaña imagen: emoción sin gritar.","v.ref.r8.texto":"Motivo que vuelve: la melodía como hilo de la narración.",
-      "v.spotify.titulo":"Lo que escucho","v.spotify.sub":"Conecta tu cuenta de Spotify y descubrirás aquí tus artistas más escuchados del último mes, directamente desde la API oficial de Spotify.","v.spotify.tit":"Tus artistas más escuchados","v.spotify.nota":"Datos de tu cuenta de Spotify (últimos 30 días).","v.spotify.btn":"Conectar Spotify","v.spotify.carga":"Conectando con Spotify…","v.spotify.fuente":"Datos de la API oficial de","v.spotify.vacio":"Para ver tus artistas hace falta configurar el Client ID de tu app en script.js y autorizar el acceso (solo lectura).","v.spotify.sin_datos":"Todavía no hay datos suficientes en tu cuenta: escucha algo y vuelve.","v.spotify.salir":"Desconectar","v.spotify.expira":"Tu sesión ha caducado. Conéctate de nuevo.",
+      "v.mus.titulo":"Lo que suena ahora","v.mus.sub":"Los temas que más están sonando en el mundo, en directo desde la API gratuita de Deezer: sin claves, sin registro y sin instalar nada.","v.mus.tit":"Top de canciones del momento","v.mus.nota":"Datos en vivo del gráfico global de Deezer.","v.mus.carga":"Cargando temas…","v.mus.fuente":"Datos de la API gratuita de","v.mus.error":"No se pudieron cargar los temas. Inténtalo de nuevo.",
     },
     en:{ "m.inicio":"Home","m.foto":"Photo","m.diseno":"Design","m.video":"Video & music","m.musica":"Music","m.dam":"Programming","m.mec":"Machining","m.contacto":"Contact",
       "sec.sobre":"About me","sec.obra":"Work","sec.form":"Education","sec.tools":"Tools","sec.exp":"Experience","h1.foto":"Photography — Salvador Llácer Ivars","h1.diseno":"Graphic design — Salvador Llácer Ivars","h1.video":"Video & music — Salvador Llácer Ivars","h1.fab":"Mechanical manufacturing — Salvador Llácer Ivars","h1.dam":"Programming — Salvador Llácer Ivars","sec.comp":"Skills","sec.ref":"References","sec.lastfm":"What I listen to","sec.inspo":"Living inspiration","sec.lab":"Typography &amp; motion",
@@ -723,7 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "v.ref.titulo":"References","v.ref.sub":"Eight names that explain where my way of editing and composing comes from. From them I inherit the criterion, not the copy.","v.ref.cine":"Film references","v.ref.music":"Music references",
       "v.ref.r1.texto":"Suspense as editing: knowing what will happen and making the audience wait.","v.ref.r2.texto":"Narrative clarity: story ahead of the effect.","v.ref.r3.texto":"Handheld energy: the shot as a rhythmic beat.","v.ref.r4.texto":"Editing at the service of music: cutting on the beat.",
       "v.ref.r5.texto":"Melodic minimalism: repeating until the idea breathes.","v.ref.r6.texto":"Sound architecture: the pattern as the structure of the piece.","v.ref.r7.texto":"Piano that accompanies the image: emotion without shouting.","v.ref.r8.texto":"A motif that returns: melody as the thread of the narrative.",
-      "v.spotify.titulo":"What I listen to","v.spotify.sub":"Connect your Spotify account and your most played artists of the last month will appear here, straight from the official Spotify API.","v.spotify.tit":"Your most played artists","v.spotify.nota":"Data from your Spotify account (last 30 days).","v.spotify.btn":"Connect Spotify","v.spotify.carga":"Connecting to Spotify…","v.spotify.fuente":"Data from the official API of","v.spotify.vacio":"To see your artists, set your app Client ID in script.js and authorise access (read-only).","v.spotify.sin_datos":"Not enough data on your account yet: listen to something and come back.","v.spotify.salir":"Disconnect","v.spotify.expira":"Your session expired. Please connect again.",
+      "v.mus.titulo":"What is playing now","v.mus.sub":"The tracks trending worldwide, live from the free Deezer API: no keys, no sign-up and nothing to install.","v.mus.tit":"Top tracks right now","v.mus.nota":"Live data from the Deezer global chart.","v.mus.carga":"Loading tracks…","v.mus.fuente":"Data from the free API of","v.mus.error":"Could not load the tracks. Try again.",
     }
   };
   const i18nEls = [...document.querySelectorAll("[data-i18n]")];
@@ -773,7 +773,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ░░ Revelado ░░ */
   const rev=document.querySelectorAll(".reveal");
   if(!reduce&&"IntersectionObserver" in window){ rev.forEach((el,i)=>{el.style.animationDelay=(i%6)*0.07+"s";});
-    const obs=new IntersectionObserver((es)=>es.forEach((e)=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}}),{threshold:.12}); rev.forEach((el)=>obs.observe(el));
+    const obs=new IntersectionObserver((es)=>es.forEach((e)=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}}),{threshold:0,rootMargin:"0px 0px -8% 0px"}); rev.forEach((el)=>obs.observe(el));
   } else rev.forEach((el)=>el.classList.add("visible"));
 
   /* ░░ Barras y bolitas de herramientas: entran al llegar, se reinician al salir ░░ */
@@ -1448,8 +1448,8 @@ document.addEventListener("DOMContentLoaded", () => {
           damSlide.classList.add("is-play");
           timers.forEach(clearTimeout);
           timers = [
-            setTimeout(() => damSlide.classList.add("is-n2"), reduce ? 80 : 2150),
-            setTimeout(() => damSlide.classList.add("is-open"), reduce ? 160 : 5000)
+            setTimeout(() => damSlide.classList.add("is-n2"), reduce ? 80 : 1900),
+            setTimeout(() => damSlide.classList.add("is-open"), reduce ? 160 : 4300)
           ];
         });
       }
@@ -1533,8 +1533,8 @@ document.addEventListener("DOMContentLoaded", () => {
         tEn:"Video editing with Premiere and audio with Audition (reels, short films and podcasts for Interpreta Natura). All the work —MissR, ECO, ARTE and more— is in the video & music sub-site.",
         b:[["video.html","Ver vídeo y música","See video & music"],["video.html#sub-video","Ver obra","See work"]] },
       { k:["musica","audio","garageband","banda sonora","podcast","cancion","music"],
-        t:"Creo música con GarageBand: bandas sonoras para Mis piezas, MissR, ECO y ARTE, además de podcasts para Interpreta Natura. Puedes escucharlas en la subweb de vídeo y música, donde además puedes conectar tu Spotify para ver lo que escucho.",
-        tEn:"I create music with GarageBand: soundtracks for my own pieces, MissR, ECO and ARTE, plus podcasts for Interpreta Natura. You can listen to them in the video & music sub-site, where you can also connect Spotify to see what I listen to.",
+        t:"Creo música con GarageBand: bandas sonoras para Mis piezas, MissR, ECO y ARTE, además de podcasts para Interpreta Natura. Puedes escucharlas en la subweb de vídeo y música, donde además tienes el último top mundial de canciones en directo.",
+        tEn:"I create music with GarageBand: soundtracks for my own pieces, MissR, ECO and ARTE, plus podcasts for Interpreta Natura. You can listen to them in the video & music sub-site, which also has the live worldwide top tracks.",
         b:[["video.html#sub-musica","Escuchar música","Listen to music"],["video.html","Ver vídeo y música","See video & music"]] },
       { k:["quien","salvador","sobre mi","perfil","cv","experiencia","formacion","resumen","who"],
         t:"Salvador Llácer Ivars, técnico superior multidisciplinar de Valencia: fotografía, diseño gráfico/editorial, fabricación mecánica (CATIA) y DAM en curso, con experiencia en Weidner Ibérica e Interpreta Natura. Tienes el resumen completo en Sobre mí.",
@@ -1896,7 +1896,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  /* ░░ Fade de audio (entradas y salidas suaves) ░░ */
+  /* ─── Fade de audio (entradas y salidas suaves) ─── */
   window.__fadeAudio = (a, from, to, ms) => {
     try {
       a.volume = Math.max(0, Math.min(1, from));
@@ -1910,159 +1910,82 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (e) {}
   };
 
-  /* ░░ Widget Spotify (vídeo y música) · OAuth PKCE ░░ */
+  /* ─── Widget de música: Deezer vía JSONP (API gratuita, sin clave) ─── */
   (() => {
-    const root = document.querySelector("[data-spotify]");
+    const root = document.querySelector("[data-deezer]");
     if (!root) return;
-    const grid = root.querySelector("[data-spotify-grid]");
-    const btn = root.querySelector("[data-spotify-btn]");
-    const CLIENT_ID = "";
-    const KEY_V = "miweb_sp_verify", KEY_T = "miweb_sp_token";
+    const grid = root.querySelector("[data-deezer-grid]");
     const dic = () => I18N[langActual()] || I18N.es;
-    const t = (k) => dic()["v.spotify." + k] || "";
+    const t = (k) => dic()["v.mus." + k] || "";
+    let renderPendiente = null;
     const estado = (k) => {
       grid.textContent = "";
       const e = document.createElement("li");
       e.className = "api__estado";
-      e.textContent = t(k) || k;
+      e.textContent = k ? (t(k) || k) : "";
       grid.appendChild(e);
     };
-    const pintarBtn = (conectado) => {
-      if (!btn) return;
-      btn.querySelector("span").textContent = conectado ? t("salir") || "Desconectar" : t("btn") || "Conectar Spotify";
-    };
-    const b64url = (buf) => btoa(String.fromCharCode.apply(null, new Uint8Array(buf)))
-      .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-    const tieneToken = () => { try { return !!sessionStorage.getItem(KEY_T); } catch (e) { return false; } };
-    const login = async () => {
-      if (!CLIENT_ID) { estado("vacio"); return; }
-      try {
-        const verifier = b64url(crypto.getRandomValues(new Uint8Array(64)));
-        sessionStorage.setItem(KEY_V, verifier);
-        const challenge = b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
-        const params = new URLSearchParams({
-          client_id: CLIENT_ID,
-          response_type: "code",
-          code_challenge_method: "S256",
-          code_challenge: challenge,
-          redirect_uri: location.origin + location.pathname,
-          scope: "user-top-read"
-        });
-        location.href = "https://accounts.spotify.com/authorize?" + params;
-      } catch (e) { estado("vacio"); }
-    };
-    const canjear = async (code) => {
-      const verifier = sessionStorage.getItem(KEY_V);
-      const body = new URLSearchParams({
-        grant_type: "authorization_code", code,
-        redirect_uri: location.origin + location.pathname,
-        client_id: CLIENT_ID, code_verifier: verifier || ""
-      });
-      const r = await fetch("https://accounts.spotify.com/api/token", {
-        method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body
-      });
-      if (!r.ok) throw 0;
-      const tk = await r.json();
-      sessionStorage.setItem(KEY_T, JSON.stringify({
-        access: tk.access_token, exp: Date.now() + tk.expires_in * 1000, refresh: tk.refresh_token || ""
-      }));
-    };
-    const refrescar = async (store) => {
-      const body = new URLSearchParams({
-        grant_type: "refresh_token", refresh_token: store.refresh, client_id: CLIENT_ID
-      });
-      const r = await fetch("https://accounts.spotify.com/api/token", {
-        method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body
-      });
-      if (!r.ok) throw 0;
-      const tk = await r.json();
-      const nueva = { access: tk.access_token, exp: Date.now() + tk.expires_in * 1000, refresh: tk.refresh_token || store.refresh };
-      sessionStorage.setItem(KEY_T, JSON.stringify(nueva));
-      return nueva.access;
-    };
-    const pintar = (items) => {
+    const pintar = (tracks) => {
+      if (renderPendiente) return;
+      renderPendiente = tracks;
       grid.textContent = "";
       const esEn = langActual() === "en";
       const frag = document.createDocumentFragment();
-      items.forEach((art) => {
+      tracks.forEach((tr) => {
         const li = document.createElement("li");
-        const link = document.createElement("a");
-        link.className = "lastfm__item";
-        link.href = art.external_urls && art.external_urls.spotify || "https://open.spotify.com";
-        link.target = "_blank"; link.rel = "noopener";
-        const imgs = (art.images || []).filter((x) => x && x.url);
-        if (imgs.length) {
+        const a = document.createElement("a");
+        a.className = "lastfm__item";
+        a.href = tr.link || "https://www.deezer.com";
+        a.target = "_blank"; a.rel = "noopener";
+        const cover = tr.album && tr.album.cover_medium;
+        if (cover) {
           const img = document.createElement("img");
           img.className = "lastfm__img";
-          img.src = imgs[imgs.length - 1].url;
-          img.alt = art.name || "Spotify";
+          img.src = cover;
+          img.alt = tr.title || "Deezer";
           img.loading = "lazy"; img.decoding = "async";
           img.width = 200; img.height = 200;
-          link.appendChild(img);
+          a.appendChild(img);
         }
         const info = document.createElement("span");
         info.className = "lastfm__info";
         const name = document.createElement("span");
         name.className = "lastfm__name";
-        name.textContent = art.name || "";
-        const fans = document.createElement("span");
-        fans.className = "lastfm__plays";
-        const n = Number((art.followers && art.followers.total) || 0);
-        fans.textContent = n.toLocaleString(esEn ? "en-US" : "es-ES") + " " + (esEn ? "followers" : "seguidores");
-        info.appendChild(name); info.appendChild(fans);
-        link.appendChild(info);
-        li.appendChild(link);
+        name.textContent = tr.title || "";
+        const art = document.createElement("span");
+        art.className = "lastfm__plays";
+        art.textContent = (tr.artist && tr.artist.name) || "";
+        info.appendChild(name); info.appendChild(art);
+        a.appendChild(info);
+        li.appendChild(a);
         frag.appendChild(li);
       });
       grid.appendChild(frag);
+      renderPendiente = null;
     };
-    const cargar = async () => {
-      let store = null;
-      try { store = JSON.parse(sessionStorage.getItem(KEY_T) || "null"); } catch (e) {}
-      if (!store || !store.access) { pintarBtn(false); estado("vacio"); return; }
-      pintarBtn(true);
+    const cargar = () => {
       estado("carga");
-      try {
-        let access = store.access;
-        if (Date.now() > store.exp - 60000) access = await refrescar(store);
-        const r = await fetch("https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=8", {
-          headers: { Authorization: "Bearer " + access }
-        });
-        if (r.status === 401) throw 401;
-        if (!r.ok) throw 0;
-        const d = await r.json();
-        const items = (d && d.items) || [];
-        if (!items.length) { estado("sin_datos"); return; }
+      const cb = "dzcb" + Date.now();
+      const sc = document.createElement("script");
+      let fin = false;
+      const limpiar = () => { delete window[cb]; sc.remove(); };
+      window[cb] = (d) => {
+        if (fin) return; fin = true; limpiar();
+        const list = d && d.data;
+        if (!list || !list.length) { estado("error"); return; }
         estado("");
-        pintar(items);
-      } catch (e) {
-        if (e === 401) {
-          try { sessionStorage.removeItem(KEY_T); } catch (err) {}
-          pintarBtn(false);
-          estado("expira");
-        } else {
-          estado("vacio");
-        }
-      }
+        pintar(list);
+      };
+      sc.onerror = () => { if (fin) return; fin = true; limpiar(); estado("error"); };
+      sc.src = "https://api.deezer.com/chart/0/tracks?limit=8&output=jsonp&callback=" + cb;
+      document.head.appendChild(sc);
+      setTimeout(() => { if (!fin) { fin = true; limpiar(); estado("error"); } }, 12000);
     };
-    if (btn) btn.addEventListener("click", () => {
-      if (tieneToken()) {
-        try { sessionStorage.removeItem(KEY_T); } catch (e) {}
-        cargar();
-      } else {
-        login();
-      }
-    });
-    const urlp = new URLSearchParams(location.search);
-    if (urlp.get("code")) {
-      (async () => {
-        try { await canjear(urlp.get("code")); } catch (e) {}
-        history.replaceState({}, "", location.pathname);
-        cargar();
-      })();
-    } else {
-      cargar();
+    const render = () => { if (renderPendiente) { const p = renderPendiente; renderPendiente = null; pintar(p); } };
+    if ("MutationObserver" in window) {
+      new MutationObserver(render).observe(html, { attributes: true, attributeFilter: ["lang"] });
     }
+    cargar();
   })();
 
   /* ░░ Vídeos YouTube: IFrame Player API (click-to-play) ░░ */
