@@ -32,6 +32,23 @@ GitHub Pages desde la rama `Rediseño-Web`.
 7. **Verificación sin navegador.** Chrome headless (`--dump-dom`, `--screenshot`) y CDP con
    Node para probar interactividad; las capturas se hacen sobre una copia en ruta ASCII.
 
+## Decisiones de diseño
+
+- **Una plantilla, seis páginas.** El mismo esqueleto (nav con drops, secciones numeradas,
+  footer de dos columnas) repetido en portada y cinco subwebs; la identidad cambia solo con
+  variables de tema, nunca duplicando maquetación.
+- **Verde terminal para Programación, papel para Fabricación, blanco de laboratorio para
+  Fotografía…** cada tema define `--t1/--t2/--t3` y la paleta se propaga a nav, botones,
+  favicon y footer sin reglas específicas por componente.
+- **Movimiento con intención.** Los reveals entran al hacer scroll; la lámina de Programación
+  cuenta su historia por estados (flecha → logo → cascada → texto); en móvil, donde no hay
+  hover, cada lámina aplica su tema sola y las animaciones de foto/diseño son exclusivas de
+  táctil. Todo respeta `prefers-reduced-motion`.
+- **Tipografía y ritmo:** dos familias (título/texto), escalas con `clamp()`, radios de 12-22 px
+  y espaciados en `rem` coherentes entre tarjetas, fichas y secciones.
+- **Accesibilidad como restricción de diseño:** foco visible siempre, contraste por tema,
+  `aria` en la interacción y contenido legible antes que decoración.
+
 ## Cómo verla
 
 Doble clic en `index.html`, o un servidor local si prefieres (`python -m http.server`).
