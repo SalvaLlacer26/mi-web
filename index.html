@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="fuentes.css" />
 
     <script>(function(){try{var m=matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches;var dm=navigator.deviceMemory;var hc=navigator.hardwareConcurrency;var sd=!!(navigator.connection&&navigator.connection.saveData);var low=m||sd||(dm&&dm<=4)||(hc&&hc<=4);document.documentElement.setAttribute('data-perf',low?'low':'full');}catch(e){document.documentElement.setAttribute('data-perf','full');}})();</script>
+    <script>if(matchMedia("(pointer:coarse)").matches)document.documentElement.setAttribute("data-touch","1");</script>
     <script>(function(){try{var s=false;try{s=sessionStorage.getItem('miweb-nav')==='1';if(s)sessionStorage.removeItem('miweb-nav');}catch(e){}var r=false;try{var n=performance.getEntriesByType('navigation')[0];r=!!n&&n.type!=='navigate';}catch(e){}if(!s&&!r)document.documentElement.setAttribute('data-carga','1');}catch(e){document.documentElement.setAttribute('data-carga','1');}})();</script>
     <link rel="preload" as="image" href="Imagenes/foto/paisaje/horizontal/paisaje-horizontal-001.webp" fetchpriority="high" />
     <link rel="stylesheet" href="estilos.css" />
